@@ -1,0 +1,21 @@
+finish $ /clear
+
+/prep7
+*set,g,9.806 $ acel,,,g  !重力加速度，设为Z方向, m/s^2
+/input,defElementType,mac,,,0  				!1. 定义单元类型
+/input,defMaterial,mac,,,0  			    !2. 定义材料属性
+/input,defSection,mac,,,0					!3. 定义截面数据
+/input,defReal,mac,,,0  					!4. 定义实常数
+/input,defKeyPoint,mac,,,0					!5. 定义关键点
+/input,defLine,mac,,,0						!6. 定义线
+/input,defLineAttribution,mac,,,0           !7. 定义Line的属性
+/input,defLineMesh,mac,,0                   !8. 划分单元
+/input,defConstraint,mac,,,0				!9. 定义约束
+/input,defLoad,mac,,,0						!10. 定义荷载
+/input,defCoupling,mac,,,0                  !11. 定义耦合
+save,NonHanger,db
+finish
+
+! 分析与求解选项设置
+/input,defSolve,mac,,,0                     !12. 求解选项设置与求解
+

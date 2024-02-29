@@ -1,0 +1,12 @@
+/solu
+resume,Iter_1,db
+antype,static
+nropt,full
+nlgeom,off
+sstif,off
+nsubst,0,0,0
+time,1
+outres,all,last
+save,Iter_1,db
+solve
+finish

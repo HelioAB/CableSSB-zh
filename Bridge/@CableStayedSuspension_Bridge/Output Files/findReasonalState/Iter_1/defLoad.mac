@@ -1,0 +1,966 @@
+! Load Name: StayedCable_1_TowerForce_X
+allsel $ ksel,s,,,364 $ nslk,s $ f,all,FX,1.219122e+06
+allsel $ ksel,s,,,365 $ nslk,s $ f,all,FX,1.781358e+06
+allsel $ ksel,s,,,366 $ nslk,s $ f,all,FX,2.315922e+06
+allsel $ ksel,s,,,367 $ nslk,s $ f,all,FX,2.825164e+06
+allsel $ ksel,s,,,368 $ nslk,s $ f,all,FX,3.311114e+06
+allsel $ ksel,s,,,369 $ nslk,s $ f,all,FX,3.775551e+06
+allsel $ ksel,s,,,370 $ nslk,s $ f,all,FX,4.220061e+06
+allsel $ ksel,s,,,371 $ nslk,s $ f,all,FX,4.646064e+06
+allsel $ ksel,s,,,372 $ nslk,s $ f,all,FX,5.054843e+06
+allsel $ ksel,s,,,373 $ nslk,s $ f,all,FX,5.447558e+06
+allsel $ ksel,s,,,374 $ nslk,s $ f,all,FX,5.825269e+06
+allsel $ ksel,s,,,375 $ nslk,s $ f,all,FX,6.188940e+06
+allsel $ ksel,s,,,376 $ nslk,s $ f,all,FX,6.539456e+06
+allsel $ ksel,s,,,377 $ nslk,s $ f,all,FX,6.877626e+06
+allsel
+!-----------------------------------------------------------------------------------------------
+! Load Name: StayedCable_1_TowerForce_Y
+allsel $ ksel,s,,,364 $ nslk,s $ f,all,FY,4.799279e+05
+allsel $ ksel,s,,,365 $ nslk,s $ f,all,FY,4.675074e+05
+allsel $ ksel,s,,,366 $ nslk,s $ f,all,FY,4.558506e+05
+allsel $ ksel,s,,,367 $ nslk,s $ f,all,FY,4.448692e+05
+allsel $ ksel,s,,,368 $ nslk,s $ f,all,FY,4.344917e+05
+allsel $ ksel,s,,,369 $ nslk,s $ f,all,FY,4.246596e+05
+allsel $ ksel,s,,,370 $ nslk,s $ f,all,FY,4.153244e+05
+allsel $ ksel,s,,,371 $ nslk,s $ f,all,FY,4.064446e+05
+allsel $ ksel,s,,,372 $ nslk,s $ f,all,FY,3.979846e+05
+allsel $ ksel,s,,,373 $ nslk,s $ f,all,FY,3.899131e+05
+allsel $ ksel,s,,,374 $ nslk,s $ f,all,FY,3.822024e+05
+allsel $ ksel,s,,,375 $ nslk,s $ f,all,FY,3.748276e+05
+allsel $ ksel,s,,,376 $ nslk,s $ f,all,FY,3.677665e+05
+allsel $ ksel,s,,,377 $ nslk,s $ f,all,FY,3.609989e+05
+allsel
+!-----------------------------------------------------------------------------------------------
+! Load Name: StayedCable_1_TowerForce_Z
+allsel $ ksel,s,,,364 $ nslk,s $ f,all,FZ,-2.951484e+06
+allsel $ ksel,s,,,365 $ nslk,s $ f,all,FZ,-2.958804e+06
+allsel $ ksel,s,,,366 $ nslk,s $ f,all,FZ,-2.967514e+06
+allsel $ ksel,s,,,367 $ nslk,s $ f,all,FZ,-2.977225e+06
+allsel $ ksel,s,,,368 $ nslk,s $ f,all,FZ,-2.987659e+06
+allsel $ ksel,s,,,369 $ nslk,s $ f,all,FZ,-2.998620e+06
+allsel $ ksel,s,,,370 $ nslk,s $ f,all,FZ,-3.009970e+06
+allsel $ ksel,s,,,371 $ nslk,s $ f,all,FZ,-3.021615e+06
+allsel $ ksel,s,,,372 $ nslk,s $ f,all,FZ,-3.033487e+06
+allsel $ ksel,s,,,373 $ nslk,s $ f,all,FZ,-3.045535e+06
+allsel $ ksel,s,,,374 $ nslk,s $ f,all,FZ,-3.057725e+06
+allsel $ ksel,s,,,375 $ nslk,s $ f,all,FZ,-3.070029e+06
+allsel $ ksel,s,,,376 $ nslk,s $ f,all,FZ,-3.082426e+06
+allsel $ ksel,s,,,377 $ nslk,s $ f,all,FZ,-3.094900e+06
+allsel
+!-----------------------------------------------------------------------------------------------
+! Load Name: StayedCable_1_GirderForce_X
+allsel $ ksel,s,,,252 $ nslk,s $ f,all,FX,-1.219122e+06
+allsel $ ksel,s,,,253 $ nslk,s $ f,all,FX,-1.781358e+06
+allsel $ ksel,s,,,254 $ nslk,s $ f,all,FX,-2.315922e+06
+allsel $ ksel,s,,,255 $ nslk,s $ f,all,FX,-2.825164e+06
+allsel $ ksel,s,,,256 $ nslk,s $ f,all,FX,-3.311114e+06
+allsel $ ksel,s,,,257 $ nslk,s $ f,all,FX,-3.775551e+06
+allsel $ ksel,s,,,258 $ nslk,s $ f,all,FX,-4.220061e+06
+allsel $ ksel,s,,,259 $ nslk,s $ f,all,FX,-4.646064e+06
+allsel $ ksel,s,,,260 $ nslk,s $ f,all,FX,-5.054843e+06
+allsel $ ksel,s,,,261 $ nslk,s $ f,all,FX,-5.447558e+06
+allsel $ ksel,s,,,262 $ nslk,s $ f,all,FX,-5.825269e+06
+allsel $ ksel,s,,,263 $ nslk,s $ f,all,FX,-6.188940e+06
+allsel $ ksel,s,,,264 $ nslk,s $ f,all,FX,-6.539456e+06
+allsel $ ksel,s,,,265 $ nslk,s $ f,all,FX,-6.877626e+06
+allsel
+!-----------------------------------------------------------------------------------------------
+! Load Name: StayedCable_1_GirderForce_Y
+allsel $ ksel,s,,,252 $ nslk,s $ f,all,FY,-4.799279e+05
+allsel $ ksel,s,,,253 $ nslk,s $ f,all,FY,-4.675074e+05
+allsel $ ksel,s,,,254 $ nslk,s $ f,all,FY,-4.558506e+05
+allsel $ ksel,s,,,255 $ nslk,s $ f,all,FY,-4.448692e+05
+allsel $ ksel,s,,,256 $ nslk,s $ f,all,FY,-4.344917e+05
+allsel $ ksel,s,,,257 $ nslk,s $ f,all,FY,-4.246596e+05
+allsel $ ksel,s,,,258 $ nslk,s $ f,all,FY,-4.153244e+05
+allsel $ ksel,s,,,259 $ nslk,s $ f,all,FY,-4.064446e+05
+allsel $ ksel,s,,,260 $ nslk,s $ f,all,FY,-3.979846e+05
+allsel $ ksel,s,,,261 $ nslk,s $ f,all,FY,-3.899131e+05
+allsel $ ksel,s,,,262 $ nslk,s $ f,all,FY,-3.822024e+05
+allsel $ ksel,s,,,263 $ nslk,s $ f,all,FY,-3.748276e+05
+allsel $ ksel,s,,,264 $ nslk,s $ f,all,FY,-3.677665e+05
+allsel $ ksel,s,,,265 $ nslk,s $ f,all,FY,-3.609989e+05
+allsel
+!-----------------------------------------------------------------------------------------------
+! Load Name: StayedCable_1_GirderForce_Z
+allsel $ ksel,s,,,252 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,253 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,254 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,255 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,256 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,257 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,258 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,259 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,260 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,261 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,262 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,263 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,264 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,265 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel
+!-----------------------------------------------------------------------------------------------
+! Load Name: StayedCable_2_TowerForce_X
+allsel $ ksel,s,,,378 $ nslk,s $ f,all,FX,1.219122e+06
+allsel $ ksel,s,,,379 $ nslk,s $ f,all,FX,1.781358e+06
+allsel $ ksel,s,,,380 $ nslk,s $ f,all,FX,2.315922e+06
+allsel $ ksel,s,,,381 $ nslk,s $ f,all,FX,2.825164e+06
+allsel $ ksel,s,,,382 $ nslk,s $ f,all,FX,3.311114e+06
+allsel $ ksel,s,,,383 $ nslk,s $ f,all,FX,3.775551e+06
+allsel $ ksel,s,,,384 $ nslk,s $ f,all,FX,4.220061e+06
+allsel $ ksel,s,,,385 $ nslk,s $ f,all,FX,4.646064e+06
+allsel $ ksel,s,,,386 $ nslk,s $ f,all,FX,5.054843e+06
+allsel $ ksel,s,,,387 $ nslk,s $ f,all,FX,5.447558e+06
+allsel $ ksel,s,,,388 $ nslk,s $ f,all,FX,5.825269e+06
+allsel $ ksel,s,,,389 $ nslk,s $ f,all,FX,6.188940e+06
+allsel $ ksel,s,,,390 $ nslk,s $ f,all,FX,6.539456e+06
+allsel $ ksel,s,,,391 $ nslk,s $ f,all,FX,6.877626e+06
+allsel
+!-----------------------------------------------------------------------------------------------
+! Load Name: StayedCable_2_TowerForce_Y
+allsel $ ksel,s,,,378 $ nslk,s $ f,all,FY,-4.799279e+05
+allsel $ ksel,s,,,379 $ nslk,s $ f,all,FY,-4.675074e+05
+allsel $ ksel,s,,,380 $ nslk,s $ f,all,FY,-4.558506e+05
+allsel $ ksel,s,,,381 $ nslk,s $ f,all,FY,-4.448692e+05
+allsel $ ksel,s,,,382 $ nslk,s $ f,all,FY,-4.344917e+05
+allsel $ ksel,s,,,383 $ nslk,s $ f,all,FY,-4.246596e+05
+allsel $ ksel,s,,,384 $ nslk,s $ f,all,FY,-4.153244e+05
+allsel $ ksel,s,,,385 $ nslk,s $ f,all,FY,-4.064446e+05
+allsel $ ksel,s,,,386 $ nslk,s $ f,all,FY,-3.979846e+05
+allsel $ ksel,s,,,387 $ nslk,s $ f,all,FY,-3.899131e+05
+allsel $ ksel,s,,,388 $ nslk,s $ f,all,FY,-3.822024e+05
+allsel $ ksel,s,,,389 $ nslk,s $ f,all,FY,-3.748276e+05
+allsel $ ksel,s,,,390 $ nslk,s $ f,all,FY,-3.677665e+05
+allsel $ ksel,s,,,391 $ nslk,s $ f,all,FY,-3.609989e+05
+allsel
+!-----------------------------------------------------------------------------------------------
+! Load Name: StayedCable_2_TowerForce_Z
+allsel $ ksel,s,,,378 $ nslk,s $ f,all,FZ,-2.951484e+06
+allsel $ ksel,s,,,379 $ nslk,s $ f,all,FZ,-2.958804e+06
+allsel $ ksel,s,,,380 $ nslk,s $ f,all,FZ,-2.967514e+06
+allsel $ ksel,s,,,381 $ nslk,s $ f,all,FZ,-2.977225e+06
+allsel $ ksel,s,,,382 $ nslk,s $ f,all,FZ,-2.987659e+06
+allsel $ ksel,s,,,383 $ nslk,s $ f,all,FZ,-2.998620e+06
+allsel $ ksel,s,,,384 $ nslk,s $ f,all,FZ,-3.009970e+06
+allsel $ ksel,s,,,385 $ nslk,s $ f,all,FZ,-3.021615e+06
+allsel $ ksel,s,,,386 $ nslk,s $ f,all,FZ,-3.033487e+06
+allsel $ ksel,s,,,387 $ nslk,s $ f,all,FZ,-3.045535e+06
+allsel $ ksel,s,,,388 $ nslk,s $ f,all,FZ,-3.057725e+06
+allsel $ ksel,s,,,389 $ nslk,s $ f,all,FZ,-3.070029e+06
+allsel $ ksel,s,,,390 $ nslk,s $ f,all,FZ,-3.082426e+06
+allsel $ ksel,s,,,391 $ nslk,s $ f,all,FZ,-3.094900e+06
+allsel
+!-----------------------------------------------------------------------------------------------
+! Load Name: StayedCable_2_GirderForce_X
+allsel $ ksel,s,,,266 $ nslk,s $ f,all,FX,-1.219122e+06
+allsel $ ksel,s,,,267 $ nslk,s $ f,all,FX,-1.781358e+06
+allsel $ ksel,s,,,268 $ nslk,s $ f,all,FX,-2.315922e+06
+allsel $ ksel,s,,,269 $ nslk,s $ f,all,FX,-2.825164e+06
+allsel $ ksel,s,,,270 $ nslk,s $ f,all,FX,-3.311114e+06
+allsel $ ksel,s,,,271 $ nslk,s $ f,all,FX,-3.775551e+06
+allsel $ ksel,s,,,272 $ nslk,s $ f,all,FX,-4.220061e+06
+allsel $ ksel,s,,,273 $ nslk,s $ f,all,FX,-4.646064e+06
+allsel $ ksel,s,,,274 $ nslk,s $ f,all,FX,-5.054843e+06
+allsel $ ksel,s,,,275 $ nslk,s $ f,all,FX,-5.447558e+06
+allsel $ ksel,s,,,276 $ nslk,s $ f,all,FX,-5.825269e+06
+allsel $ ksel,s,,,277 $ nslk,s $ f,all,FX,-6.188940e+06
+allsel $ ksel,s,,,278 $ nslk,s $ f,all,FX,-6.539456e+06
+allsel $ ksel,s,,,279 $ nslk,s $ f,all,FX,-6.877626e+06
+allsel
+!-----------------------------------------------------------------------------------------------
+! Load Name: StayedCable_2_GirderForce_Y
+allsel $ ksel,s,,,266 $ nslk,s $ f,all,FY,4.799279e+05
+allsel $ ksel,s,,,267 $ nslk,s $ f,all,FY,4.675074e+05
+allsel $ ksel,s,,,268 $ nslk,s $ f,all,FY,4.558506e+05
+allsel $ ksel,s,,,269 $ nslk,s $ f,all,FY,4.448692e+05
+allsel $ ksel,s,,,270 $ nslk,s $ f,all,FY,4.344917e+05
+allsel $ ksel,s,,,271 $ nslk,s $ f,all,FY,4.246596e+05
+allsel $ ksel,s,,,272 $ nslk,s $ f,all,FY,4.153244e+05
+allsel $ ksel,s,,,273 $ nslk,s $ f,all,FY,4.064446e+05
+allsel $ ksel,s,,,274 $ nslk,s $ f,all,FY,3.979846e+05
+allsel $ ksel,s,,,275 $ nslk,s $ f,all,FY,3.899131e+05
+allsel $ ksel,s,,,276 $ nslk,s $ f,all,FY,3.822024e+05
+allsel $ ksel,s,,,277 $ nslk,s $ f,all,FY,3.748276e+05
+allsel $ ksel,s,,,278 $ nslk,s $ f,all,FY,3.677665e+05
+allsel $ ksel,s,,,279 $ nslk,s $ f,all,FY,3.609989e+05
+allsel
+!-----------------------------------------------------------------------------------------------
+! Load Name: StayedCable_2_GirderForce_Z
+allsel $ ksel,s,,,266 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,267 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,268 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,269 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,270 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,271 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,272 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,273 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,274 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,275 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,276 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,277 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,278 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,279 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel
+!-----------------------------------------------------------------------------------------------
+! Load Name: StayedCable_3_TowerForce_X
+allsel $ ksel,s,,,405 $ nslk,s $ f,all,FX,-6.877626e+06
+allsel $ ksel,s,,,404 $ nslk,s $ f,all,FX,-6.539456e+06
+allsel $ ksel,s,,,403 $ nslk,s $ f,all,FX,-6.188940e+06
+allsel $ ksel,s,,,402 $ nslk,s $ f,all,FX,-5.825269e+06
+allsel $ ksel,s,,,401 $ nslk,s $ f,all,FX,-5.447558e+06
+allsel $ ksel,s,,,400 $ nslk,s $ f,all,FX,-5.054843e+06
+allsel $ ksel,s,,,399 $ nslk,s $ f,all,FX,-4.646064e+06
+allsel $ ksel,s,,,398 $ nslk,s $ f,all,FX,-4.220061e+06
+allsel $ ksel,s,,,397 $ nslk,s $ f,all,FX,-3.775551e+06
+allsel $ ksel,s,,,396 $ nslk,s $ f,all,FX,-3.311114e+06
+allsel $ ksel,s,,,395 $ nslk,s $ f,all,FX,-2.825164e+06
+allsel $ ksel,s,,,394 $ nslk,s $ f,all,FX,-2.315922e+06
+allsel $ ksel,s,,,393 $ nslk,s $ f,all,FX,-1.781358e+06
+allsel $ ksel,s,,,392 $ nslk,s $ f,all,FX,-1.219122e+06
+allsel
+!-----------------------------------------------------------------------------------------------
+! Load Name: StayedCable_3_TowerForce_Y
+allsel $ ksel,s,,,405 $ nslk,s $ f,all,FY,3.609989e+05
+allsel $ ksel,s,,,404 $ nslk,s $ f,all,FY,3.677665e+05
+allsel $ ksel,s,,,403 $ nslk,s $ f,all,FY,3.748276e+05
+allsel $ ksel,s,,,402 $ nslk,s $ f,all,FY,3.822024e+05
+allsel $ ksel,s,,,401 $ nslk,s $ f,all,FY,3.899131e+05
+allsel $ ksel,s,,,400 $ nslk,s $ f,all,FY,3.979846e+05
+allsel $ ksel,s,,,399 $ nslk,s $ f,all,FY,4.064446e+05
+allsel $ ksel,s,,,398 $ nslk,s $ f,all,FY,4.153244e+05
+allsel $ ksel,s,,,397 $ nslk,s $ f,all,FY,4.246596e+05
+allsel $ ksel,s,,,396 $ nslk,s $ f,all,FY,4.344917e+05
+allsel $ ksel,s,,,395 $ nslk,s $ f,all,FY,4.448692e+05
+allsel $ ksel,s,,,394 $ nslk,s $ f,all,FY,4.558506e+05
+allsel $ ksel,s,,,393 $ nslk,s $ f,all,FY,4.675074e+05
+allsel $ ksel,s,,,392 $ nslk,s $ f,all,FY,4.799279e+05
+allsel
+!-----------------------------------------------------------------------------------------------
+! Load Name: StayedCable_3_TowerForce_Z
+allsel $ ksel,s,,,405 $ nslk,s $ f,all,FZ,-3.094900e+06
+allsel $ ksel,s,,,404 $ nslk,s $ f,all,FZ,-3.082426e+06
+allsel $ ksel,s,,,403 $ nslk,s $ f,all,FZ,-3.070029e+06
+allsel $ ksel,s,,,402 $ nslk,s $ f,all,FZ,-3.057725e+06
+allsel $ ksel,s,,,401 $ nslk,s $ f,all,FZ,-3.045535e+06
+allsel $ ksel,s,,,400 $ nslk,s $ f,all,FZ,-3.033487e+06
+allsel $ ksel,s,,,399 $ nslk,s $ f,all,FZ,-3.021615e+06
+allsel $ ksel,s,,,398 $ nslk,s $ f,all,FZ,-3.009970e+06
+allsel $ ksel,s,,,397 $ nslk,s $ f,all,FZ,-2.998620e+06
+allsel $ ksel,s,,,396 $ nslk,s $ f,all,FZ,-2.987659e+06
+allsel $ ksel,s,,,395 $ nslk,s $ f,all,FZ,-2.977225e+06
+allsel $ ksel,s,,,394 $ nslk,s $ f,all,FZ,-2.967514e+06
+allsel $ ksel,s,,,393 $ nslk,s $ f,all,FZ,-2.958804e+06
+allsel $ ksel,s,,,392 $ nslk,s $ f,all,FZ,-2.951484e+06
+allsel
+!-----------------------------------------------------------------------------------------------
+! Load Name: StayedCable_3_GirderForce_X
+allsel $ ksel,s,,,280 $ nslk,s $ f,all,FX,6.877626e+06
+allsel $ ksel,s,,,281 $ nslk,s $ f,all,FX,6.539456e+06
+allsel $ ksel,s,,,282 $ nslk,s $ f,all,FX,6.188940e+06
+allsel $ ksel,s,,,283 $ nslk,s $ f,all,FX,5.825269e+06
+allsel $ ksel,s,,,284 $ nslk,s $ f,all,FX,5.447558e+06
+allsel $ ksel,s,,,285 $ nslk,s $ f,all,FX,5.054843e+06
+allsel $ ksel,s,,,286 $ nslk,s $ f,all,FX,4.646064e+06
+allsel $ ksel,s,,,287 $ nslk,s $ f,all,FX,4.220061e+06
+allsel $ ksel,s,,,288 $ nslk,s $ f,all,FX,3.775551e+06
+allsel $ ksel,s,,,289 $ nslk,s $ f,all,FX,3.311114e+06
+allsel $ ksel,s,,,290 $ nslk,s $ f,all,FX,2.825164e+06
+allsel $ ksel,s,,,291 $ nslk,s $ f,all,FX,2.315922e+06
+allsel $ ksel,s,,,292 $ nslk,s $ f,all,FX,1.781358e+06
+allsel $ ksel,s,,,293 $ nslk,s $ f,all,FX,1.219122e+06
+allsel
+!-----------------------------------------------------------------------------------------------
+! Load Name: StayedCable_3_GirderForce_Y
+allsel $ ksel,s,,,280 $ nslk,s $ f,all,FY,-3.609989e+05
+allsel $ ksel,s,,,281 $ nslk,s $ f,all,FY,-3.677665e+05
+allsel $ ksel,s,,,282 $ nslk,s $ f,all,FY,-3.748276e+05
+allsel $ ksel,s,,,283 $ nslk,s $ f,all,FY,-3.822024e+05
+allsel $ ksel,s,,,284 $ nslk,s $ f,all,FY,-3.899131e+05
+allsel $ ksel,s,,,285 $ nslk,s $ f,all,FY,-3.979846e+05
+allsel $ ksel,s,,,286 $ nslk,s $ f,all,FY,-4.064446e+05
+allsel $ ksel,s,,,287 $ nslk,s $ f,all,FY,-4.153244e+05
+allsel $ ksel,s,,,288 $ nslk,s $ f,all,FY,-4.246596e+05
+allsel $ ksel,s,,,289 $ nslk,s $ f,all,FY,-4.344917e+05
+allsel $ ksel,s,,,290 $ nslk,s $ f,all,FY,-4.448692e+05
+allsel $ ksel,s,,,291 $ nslk,s $ f,all,FY,-4.558506e+05
+allsel $ ksel,s,,,292 $ nslk,s $ f,all,FY,-4.675074e+05
+allsel $ ksel,s,,,293 $ nslk,s $ f,all,FY,-4.799279e+05
+allsel
+!-----------------------------------------------------------------------------------------------
+! Load Name: StayedCable_3_GirderForce_Z
+allsel $ ksel,s,,,280 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,281 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,282 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,283 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,284 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,285 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,286 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,287 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,288 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,289 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,290 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,291 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,292 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,293 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel
+!-----------------------------------------------------------------------------------------------
+! Load Name: StayedCable_4_TowerForce_X
+allsel $ ksel,s,,,419 $ nslk,s $ f,all,FX,-6.877626e+06
+allsel $ ksel,s,,,418 $ nslk,s $ f,all,FX,-6.539456e+06
+allsel $ ksel,s,,,417 $ nslk,s $ f,all,FX,-6.188940e+06
+allsel $ ksel,s,,,416 $ nslk,s $ f,all,FX,-5.825269e+06
+allsel $ ksel,s,,,415 $ nslk,s $ f,all,FX,-5.447558e+06
+allsel $ ksel,s,,,414 $ nslk,s $ f,all,FX,-5.054843e+06
+allsel $ ksel,s,,,413 $ nslk,s $ f,all,FX,-4.646064e+06
+allsel $ ksel,s,,,412 $ nslk,s $ f,all,FX,-4.220061e+06
+allsel $ ksel,s,,,411 $ nslk,s $ f,all,FX,-3.775551e+06
+allsel $ ksel,s,,,410 $ nslk,s $ f,all,FX,-3.311114e+06
+allsel $ ksel,s,,,409 $ nslk,s $ f,all,FX,-2.825164e+06
+allsel $ ksel,s,,,408 $ nslk,s $ f,all,FX,-2.315922e+06
+allsel $ ksel,s,,,407 $ nslk,s $ f,all,FX,-1.781358e+06
+allsel $ ksel,s,,,406 $ nslk,s $ f,all,FX,-1.219122e+06
+allsel
+!-----------------------------------------------------------------------------------------------
+! Load Name: StayedCable_4_TowerForce_Y
+allsel $ ksel,s,,,419 $ nslk,s $ f,all,FY,-3.609989e+05
+allsel $ ksel,s,,,418 $ nslk,s $ f,all,FY,-3.677665e+05
+allsel $ ksel,s,,,417 $ nslk,s $ f,all,FY,-3.748276e+05
+allsel $ ksel,s,,,416 $ nslk,s $ f,all,FY,-3.822024e+05
+allsel $ ksel,s,,,415 $ nslk,s $ f,all,FY,-3.899131e+05
+allsel $ ksel,s,,,414 $ nslk,s $ f,all,FY,-3.979846e+05
+allsel $ ksel,s,,,413 $ nslk,s $ f,all,FY,-4.064446e+05
+allsel $ ksel,s,,,412 $ nslk,s $ f,all,FY,-4.153244e+05
+allsel $ ksel,s,,,411 $ nslk,s $ f,all,FY,-4.246596e+05
+allsel $ ksel,s,,,410 $ nslk,s $ f,all,FY,-4.344917e+05
+allsel $ ksel,s,,,409 $ nslk,s $ f,all,FY,-4.448692e+05
+allsel $ ksel,s,,,408 $ nslk,s $ f,all,FY,-4.558506e+05
+allsel $ ksel,s,,,407 $ nslk,s $ f,all,FY,-4.675074e+05
+allsel $ ksel,s,,,406 $ nslk,s $ f,all,FY,-4.799279e+05
+allsel
+!-----------------------------------------------------------------------------------------------
+! Load Name: StayedCable_4_TowerForce_Z
+allsel $ ksel,s,,,419 $ nslk,s $ f,all,FZ,-3.094900e+06
+allsel $ ksel,s,,,418 $ nslk,s $ f,all,FZ,-3.082426e+06
+allsel $ ksel,s,,,417 $ nslk,s $ f,all,FZ,-3.070029e+06
+allsel $ ksel,s,,,416 $ nslk,s $ f,all,FZ,-3.057725e+06
+allsel $ ksel,s,,,415 $ nslk,s $ f,all,FZ,-3.045535e+06
+allsel $ ksel,s,,,414 $ nslk,s $ f,all,FZ,-3.033487e+06
+allsel $ ksel,s,,,413 $ nslk,s $ f,all,FZ,-3.021615e+06
+allsel $ ksel,s,,,412 $ nslk,s $ f,all,FZ,-3.009970e+06
+allsel $ ksel,s,,,411 $ nslk,s $ f,all,FZ,-2.998620e+06
+allsel $ ksel,s,,,410 $ nslk,s $ f,all,FZ,-2.987659e+06
+allsel $ ksel,s,,,409 $ nslk,s $ f,all,FZ,-2.977225e+06
+allsel $ ksel,s,,,408 $ nslk,s $ f,all,FZ,-2.967514e+06
+allsel $ ksel,s,,,407 $ nslk,s $ f,all,FZ,-2.958804e+06
+allsel $ ksel,s,,,406 $ nslk,s $ f,all,FZ,-2.951484e+06
+allsel
+!-----------------------------------------------------------------------------------------------
+! Load Name: StayedCable_4_GirderForce_X
+allsel $ ksel,s,,,294 $ nslk,s $ f,all,FX,6.877626e+06
+allsel $ ksel,s,,,295 $ nslk,s $ f,all,FX,6.539456e+06
+allsel $ ksel,s,,,296 $ nslk,s $ f,all,FX,6.188940e+06
+allsel $ ksel,s,,,297 $ nslk,s $ f,all,FX,5.825269e+06
+allsel $ ksel,s,,,298 $ nslk,s $ f,all,FX,5.447558e+06
+allsel $ ksel,s,,,299 $ nslk,s $ f,all,FX,5.054843e+06
+allsel $ ksel,s,,,300 $ nslk,s $ f,all,FX,4.646064e+06
+allsel $ ksel,s,,,301 $ nslk,s $ f,all,FX,4.220061e+06
+allsel $ ksel,s,,,302 $ nslk,s $ f,all,FX,3.775551e+06
+allsel $ ksel,s,,,303 $ nslk,s $ f,all,FX,3.311114e+06
+allsel $ ksel,s,,,304 $ nslk,s $ f,all,FX,2.825164e+06
+allsel $ ksel,s,,,305 $ nslk,s $ f,all,FX,2.315922e+06
+allsel $ ksel,s,,,306 $ nslk,s $ f,all,FX,1.781358e+06
+allsel $ ksel,s,,,307 $ nslk,s $ f,all,FX,1.219122e+06
+allsel
+!-----------------------------------------------------------------------------------------------
+! Load Name: StayedCable_4_GirderForce_Y
+allsel $ ksel,s,,,294 $ nslk,s $ f,all,FY,3.609989e+05
+allsel $ ksel,s,,,295 $ nslk,s $ f,all,FY,3.677665e+05
+allsel $ ksel,s,,,296 $ nslk,s $ f,all,FY,3.748276e+05
+allsel $ ksel,s,,,297 $ nslk,s $ f,all,FY,3.822024e+05
+allsel $ ksel,s,,,298 $ nslk,s $ f,all,FY,3.899131e+05
+allsel $ ksel,s,,,299 $ nslk,s $ f,all,FY,3.979846e+05
+allsel $ ksel,s,,,300 $ nslk,s $ f,all,FY,4.064446e+05
+allsel $ ksel,s,,,301 $ nslk,s $ f,all,FY,4.153244e+05
+allsel $ ksel,s,,,302 $ nslk,s $ f,all,FY,4.246596e+05
+allsel $ ksel,s,,,303 $ nslk,s $ f,all,FY,4.344917e+05
+allsel $ ksel,s,,,304 $ nslk,s $ f,all,FY,4.448692e+05
+allsel $ ksel,s,,,305 $ nslk,s $ f,all,FY,4.558506e+05
+allsel $ ksel,s,,,306 $ nslk,s $ f,all,FY,4.675074e+05
+allsel $ ksel,s,,,307 $ nslk,s $ f,all,FY,4.799279e+05
+allsel
+!-----------------------------------------------------------------------------------------------
+! Load Name: StayedCable_4_GirderForce_Z
+allsel $ ksel,s,,,294 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,295 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,296 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,297 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,298 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,299 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,300 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,301 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,302 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,303 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,304 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,305 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,306 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,307 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel
+!-----------------------------------------------------------------------------------------------
+! Load Name: StayedCable_5_TowerForce_X
+allsel $ ksel,s,,,377 $ nslk,s $ f,all,FX,2.104766e+06
+allsel $ ksel,s,,,376 $ nslk,s $ f,all,FX,1.903951e+06
+allsel $ ksel,s,,,375 $ nslk,s $ f,all,FX,1.696119e+06
+allsel $ ksel,s,,,374 $ nslk,s $ f,all,FX,1.480807e+06
+allsel $ ksel,s,,,373 $ nslk,s $ f,all,FX,1.257513e+06
+allsel $ ksel,s,,,372 $ nslk,s $ f,all,FX,1.025686e+06
+allsel $ ksel,s,,,371 $ nslk,s $ f,all,FX,7.847229e+05
+allsel $ ksel,s,,,370 $ nslk,s $ f,all,FX,5.339583e+05
+allsel $ ksel,s,,,369 $ nslk,s $ f,all,FX,2.726568e+05
+allsel $ ksel,s,,,368 $ nslk,s $ f,all,FX,4.656613e-10
+allsel $ ksel,s,,,367 $ nslk,s $ f,all,FX,9.313226e-10
+allsel $ ksel,s,,,366 $ nslk,s $ f,all,FX,4.656613e-10
+allsel $ ksel,s,,,365 $ nslk,s $ f,all,FX,6.984919e-10
+allsel $ ksel,s,,,364 $ nslk,s $ f,all,FX,4.656613e-10
+allsel
+!-----------------------------------------------------------------------------------------------
+! Load Name: StayedCable_5_TowerForce_Y
+allsel $ ksel,s,,,377 $ nslk,s $ f,all,FY,7.188876e+05
+allsel $ ksel,s,,,376 $ nslk,s $ f,all,FY,7.327353e+05
+allsel $ ksel,s,,,375 $ nslk,s $ f,all,FY,7.471801e+05
+allsel $ ksel,s,,,374 $ nslk,s $ f,all,FY,7.622623e+05
+allsel $ ksel,s,,,373 $ nslk,s $ f,all,FY,7.780263e+05
+allsel $ ksel,s,,,372 $ nslk,s $ f,all,FY,7.945207e+05
+allsel $ ksel,s,,,371 $ nslk,s $ f,all,FY,8.117997e+05
+allsel $ ksel,s,,,370 $ nslk,s $ f,all,FY,8.299232e+05
+allsel $ ksel,s,,,369 $ nslk,s $ f,all,FY,8.489590e+05
+allsel $ ksel,s,,,368 $ nslk,s $ f,all,FY,8.689834e+05
+allsel $ ksel,s,,,367 $ nslk,s $ f,all,FY,8.897384e+05
+allsel $ ksel,s,,,366 $ nslk,s $ f,all,FY,9.117013e+05
+allsel $ ksel,s,,,365 $ nslk,s $ f,all,FY,9.350148e+05
+allsel $ ksel,s,,,364 $ nslk,s $ f,all,FY,9.598557e+05
+allsel
+!-----------------------------------------------------------------------------------------------
+! Load Name: StayedCable_5_TowerForce_Z
+allsel $ ksel,s,,,377 $ nslk,s $ f,all,FZ,-6.138288e+06
+allsel $ ksel,s,,,376 $ nslk,s $ f,all,FZ,-6.119462e+06
+allsel $ ksel,s,,,375 $ nslk,s $ f,all,FZ,-6.100741e+06
+allsel $ ksel,s,,,374 $ nslk,s $ f,all,FZ,-6.082145e+06
+allsel $ ksel,s,,,373 $ nslk,s $ f,all,FZ,-6.063699e+06
+allsel $ ksel,s,,,372 $ nslk,s $ f,all,FZ,-6.045436e+06
+allsel $ ksel,s,,,371 $ nslk,s $ f,all,FZ,-6.027399e+06
+allsel $ ksel,s,,,370 $ nslk,s $ f,all,FZ,-6.009644e+06
+allsel $ ksel,s,,,369 $ nslk,s $ f,all,FZ,-5.992248e+06
+allsel $ ksel,s,,,368 $ nslk,s $ f,all,FZ,-5.975319e+06
+allsel $ ksel,s,,,367 $ nslk,s $ f,all,FZ,-5.954451e+06
+allsel $ ksel,s,,,366 $ nslk,s $ f,all,FZ,-5.935027e+06
+allsel $ ksel,s,,,365 $ nslk,s $ f,all,FZ,-5.917608e+06
+allsel $ ksel,s,,,364 $ nslk,s $ f,all,FZ,-5.902967e+06
+allsel
+!-----------------------------------------------------------------------------------------------
+! Load Name: StayedCable_5_GirderForce_X
+allsel $ ksel,s,,,308 $ nslk,s $ f,all,FX,4.772860e+06
+allsel $ ksel,s,,,309 $ nslk,s $ f,all,FX,4.635505e+06
+allsel $ ksel,s,,,310 $ nslk,s $ f,all,FX,4.492822e+06
+allsel $ ksel,s,,,311 $ nslk,s $ f,all,FX,4.344462e+06
+allsel $ ksel,s,,,312 $ nslk,s $ f,all,FX,4.190045e+06
+allsel $ ksel,s,,,313 $ nslk,s $ f,all,FX,4.029156e+06
+allsel $ ksel,s,,,314 $ nslk,s $ f,all,FX,3.861342e+06
+allsel $ ksel,s,,,315 $ nslk,s $ f,all,FX,3.686103e+06
+allsel $ ksel,s,,,316 $ nslk,s $ f,all,FX,3.502895e+06
+allsel $ ksel,s,,,317 $ nslk,s $ f,all,FX,3.311114e+06
+allsel $ ksel,s,,,318 $ nslk,s $ f,all,FX,2.825164e+06
+allsel $ ksel,s,,,319 $ nslk,s $ f,all,FX,2.315922e+06
+allsel $ ksel,s,,,320 $ nslk,s $ f,all,FX,1.781358e+06
+allsel $ ksel,s,,,321 $ nslk,s $ f,all,FX,1.219122e+06
+allsel
+!-----------------------------------------------------------------------------------------------
+! Load Name: StayedCable_5_GirderForce_Y
+allsel $ ksel,s,,,308 $ nslk,s $ f,all,FY,-3.578887e+05
+allsel $ ksel,s,,,309 $ nslk,s $ f,all,FY,-3.649687e+05
+allsel $ ksel,s,,,310 $ nslk,s $ f,all,FY,-3.723525e+05
+allsel $ ksel,s,,,311 $ nslk,s $ f,all,FY,-3.800600e+05
+allsel $ ksel,s,,,312 $ nslk,s $ f,all,FY,-3.881132e+05
+allsel $ ksel,s,,,313 $ nslk,s $ f,all,FY,-3.965361e+05
+allsel $ ksel,s,,,314 $ nslk,s $ f,all,FY,-4.053551e+05
+allsel $ ksel,s,,,315 $ nslk,s $ f,all,FY,-4.145988e+05
+allsel $ ksel,s,,,316 $ nslk,s $ f,all,FY,-4.242993e+05
+allsel $ ksel,s,,,317 $ nslk,s $ f,all,FY,-4.344917e+05
+allsel $ ksel,s,,,318 $ nslk,s $ f,all,FY,-4.448692e+05
+allsel $ ksel,s,,,319 $ nslk,s $ f,all,FY,-4.558506e+05
+allsel $ ksel,s,,,320 $ nslk,s $ f,all,FY,-4.675074e+05
+allsel $ ksel,s,,,321 $ nslk,s $ f,all,FY,-4.799279e+05
+allsel
+!-----------------------------------------------------------------------------------------------
+! Load Name: StayedCable_5_GirderForce_Z
+allsel $ ksel,s,,,308 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,309 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,310 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,311 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,312 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,313 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,314 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,315 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,316 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,317 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,318 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,319 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,320 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,321 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel
+!-----------------------------------------------------------------------------------------------
+! Load Name: StayedCable_6_TowerForce_X
+allsel $ ksel,s,,,391 $ nslk,s $ f,all,FX,2.104766e+06
+allsel $ ksel,s,,,390 $ nslk,s $ f,all,FX,1.903951e+06
+allsel $ ksel,s,,,389 $ nslk,s $ f,all,FX,1.696119e+06
+allsel $ ksel,s,,,388 $ nslk,s $ f,all,FX,1.480807e+06
+allsel $ ksel,s,,,387 $ nslk,s $ f,all,FX,1.257513e+06
+allsel $ ksel,s,,,386 $ nslk,s $ f,all,FX,1.025686e+06
+allsel $ ksel,s,,,385 $ nslk,s $ f,all,FX,7.847229e+05
+allsel $ ksel,s,,,384 $ nslk,s $ f,all,FX,5.339583e+05
+allsel $ ksel,s,,,383 $ nslk,s $ f,all,FX,2.726568e+05
+allsel $ ksel,s,,,382 $ nslk,s $ f,all,FX,4.656613e-10
+allsel $ ksel,s,,,381 $ nslk,s $ f,all,FX,9.313226e-10
+allsel $ ksel,s,,,380 $ nslk,s $ f,all,FX,4.656613e-10
+allsel $ ksel,s,,,379 $ nslk,s $ f,all,FX,6.984919e-10
+allsel $ ksel,s,,,378 $ nslk,s $ f,all,FX,4.656613e-10
+allsel
+!-----------------------------------------------------------------------------------------------
+! Load Name: StayedCable_6_TowerForce_Y
+allsel $ ksel,s,,,391 $ nslk,s $ f,all,FY,-7.188876e+05
+allsel $ ksel,s,,,390 $ nslk,s $ f,all,FY,-7.327353e+05
+allsel $ ksel,s,,,389 $ nslk,s $ f,all,FY,-7.471801e+05
+allsel $ ksel,s,,,388 $ nslk,s $ f,all,FY,-7.622623e+05
+allsel $ ksel,s,,,387 $ nslk,s $ f,all,FY,-7.780263e+05
+allsel $ ksel,s,,,386 $ nslk,s $ f,all,FY,-7.945207e+05
+allsel $ ksel,s,,,385 $ nslk,s $ f,all,FY,-8.117997e+05
+allsel $ ksel,s,,,384 $ nslk,s $ f,all,FY,-8.299232e+05
+allsel $ ksel,s,,,383 $ nslk,s $ f,all,FY,-8.489590e+05
+allsel $ ksel,s,,,382 $ nslk,s $ f,all,FY,-8.689834e+05
+allsel $ ksel,s,,,381 $ nslk,s $ f,all,FY,-8.897384e+05
+allsel $ ksel,s,,,380 $ nslk,s $ f,all,FY,-9.117013e+05
+allsel $ ksel,s,,,379 $ nslk,s $ f,all,FY,-9.350148e+05
+allsel $ ksel,s,,,378 $ nslk,s $ f,all,FY,-9.598557e+05
+allsel
+!-----------------------------------------------------------------------------------------------
+! Load Name: StayedCable_6_TowerForce_Z
+allsel $ ksel,s,,,391 $ nslk,s $ f,all,FZ,-6.138288e+06
+allsel $ ksel,s,,,390 $ nslk,s $ f,all,FZ,-6.119462e+06
+allsel $ ksel,s,,,389 $ nslk,s $ f,all,FZ,-6.100741e+06
+allsel $ ksel,s,,,388 $ nslk,s $ f,all,FZ,-6.082145e+06
+allsel $ ksel,s,,,387 $ nslk,s $ f,all,FZ,-6.063699e+06
+allsel $ ksel,s,,,386 $ nslk,s $ f,all,FZ,-6.045436e+06
+allsel $ ksel,s,,,385 $ nslk,s $ f,all,FZ,-6.027399e+06
+allsel $ ksel,s,,,384 $ nslk,s $ f,all,FZ,-6.009644e+06
+allsel $ ksel,s,,,383 $ nslk,s $ f,all,FZ,-5.992248e+06
+allsel $ ksel,s,,,382 $ nslk,s $ f,all,FZ,-5.975319e+06
+allsel $ ksel,s,,,381 $ nslk,s $ f,all,FZ,-5.954451e+06
+allsel $ ksel,s,,,380 $ nslk,s $ f,all,FZ,-5.935027e+06
+allsel $ ksel,s,,,379 $ nslk,s $ f,all,FZ,-5.917608e+06
+allsel $ ksel,s,,,378 $ nslk,s $ f,all,FZ,-5.902967e+06
+allsel
+!-----------------------------------------------------------------------------------------------
+! Load Name: StayedCable_6_GirderForce_X
+allsel $ ksel,s,,,322 $ nslk,s $ f,all,FX,4.772860e+06
+allsel $ ksel,s,,,323 $ nslk,s $ f,all,FX,4.635505e+06
+allsel $ ksel,s,,,324 $ nslk,s $ f,all,FX,4.492822e+06
+allsel $ ksel,s,,,325 $ nslk,s $ f,all,FX,4.344462e+06
+allsel $ ksel,s,,,326 $ nslk,s $ f,all,FX,4.190045e+06
+allsel $ ksel,s,,,327 $ nslk,s $ f,all,FX,4.029156e+06
+allsel $ ksel,s,,,328 $ nslk,s $ f,all,FX,3.861342e+06
+allsel $ ksel,s,,,329 $ nslk,s $ f,all,FX,3.686103e+06
+allsel $ ksel,s,,,330 $ nslk,s $ f,all,FX,3.502895e+06
+allsel $ ksel,s,,,331 $ nslk,s $ f,all,FX,3.311114e+06
+allsel $ ksel,s,,,332 $ nslk,s $ f,all,FX,2.825164e+06
+allsel $ ksel,s,,,333 $ nslk,s $ f,all,FX,2.315922e+06
+allsel $ ksel,s,,,334 $ nslk,s $ f,all,FX,1.781358e+06
+allsel $ ksel,s,,,335 $ nslk,s $ f,all,FX,1.219122e+06
+allsel
+!-----------------------------------------------------------------------------------------------
+! Load Name: StayedCable_6_GirderForce_Y
+allsel $ ksel,s,,,322 $ nslk,s $ f,all,FY,3.578887e+05
+allsel $ ksel,s,,,323 $ nslk,s $ f,all,FY,3.649687e+05
+allsel $ ksel,s,,,324 $ nslk,s $ f,all,FY,3.723525e+05
+allsel $ ksel,s,,,325 $ nslk,s $ f,all,FY,3.800600e+05
+allsel $ ksel,s,,,326 $ nslk,s $ f,all,FY,3.881132e+05
+allsel $ ksel,s,,,327 $ nslk,s $ f,all,FY,3.965361e+05
+allsel $ ksel,s,,,328 $ nslk,s $ f,all,FY,4.053551e+05
+allsel $ ksel,s,,,329 $ nslk,s $ f,all,FY,4.145988e+05
+allsel $ ksel,s,,,330 $ nslk,s $ f,all,FY,4.242993e+05
+allsel $ ksel,s,,,331 $ nslk,s $ f,all,FY,4.344917e+05
+allsel $ ksel,s,,,332 $ nslk,s $ f,all,FY,4.448692e+05
+allsel $ ksel,s,,,333 $ nslk,s $ f,all,FY,4.558506e+05
+allsel $ ksel,s,,,334 $ nslk,s $ f,all,FY,4.675074e+05
+allsel $ ksel,s,,,335 $ nslk,s $ f,all,FY,4.799279e+05
+allsel
+!-----------------------------------------------------------------------------------------------
+! Load Name: StayedCable_6_GirderForce_Z
+allsel $ ksel,s,,,322 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,323 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,324 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,325 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,326 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,327 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,328 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,329 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,330 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,331 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,332 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,333 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,334 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,335 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel
+!-----------------------------------------------------------------------------------------------
+! Load Name: StayedCable_7_TowerForce_X
+allsel $ ksel,s,,,392 $ nslk,s $ f,all,FX,0.000000e+00
+allsel $ ksel,s,,,393 $ nslk,s $ f,all,FX,0.000000e+00
+allsel $ ksel,s,,,394 $ nslk,s $ f,all,FX,0.000000e+00
+allsel $ ksel,s,,,395 $ nslk,s $ f,all,FX,0.000000e+00
+allsel $ ksel,s,,,396 $ nslk,s $ f,all,FX,0.000000e+00
+allsel $ ksel,s,,,397 $ nslk,s $ f,all,FX,-2.726568e+05
+allsel $ ksel,s,,,398 $ nslk,s $ f,all,FX,-5.339583e+05
+allsel $ ksel,s,,,399 $ nslk,s $ f,all,FX,-7.847229e+05
+allsel $ ksel,s,,,400 $ nslk,s $ f,all,FX,-1.025686e+06
+allsel $ ksel,s,,,401 $ nslk,s $ f,all,FX,-1.257513e+06
+allsel $ ksel,s,,,402 $ nslk,s $ f,all,FX,-1.480807e+06
+allsel $ ksel,s,,,403 $ nslk,s $ f,all,FX,-1.696119e+06
+allsel $ ksel,s,,,404 $ nslk,s $ f,all,FX,-1.903951e+06
+allsel $ ksel,s,,,405 $ nslk,s $ f,all,FX,-2.104766e+06
+allsel
+!-----------------------------------------------------------------------------------------------
+! Load Name: StayedCable_7_TowerForce_Y
+allsel $ ksel,s,,,392 $ nslk,s $ f,all,FY,9.598557e+05
+allsel $ ksel,s,,,393 $ nslk,s $ f,all,FY,9.350148e+05
+allsel $ ksel,s,,,394 $ nslk,s $ f,all,FY,9.117013e+05
+allsel $ ksel,s,,,395 $ nslk,s $ f,all,FY,8.897384e+05
+allsel $ ksel,s,,,396 $ nslk,s $ f,all,FY,8.689834e+05
+allsel $ ksel,s,,,397 $ nslk,s $ f,all,FY,8.489590e+05
+allsel $ ksel,s,,,398 $ nslk,s $ f,all,FY,8.299232e+05
+allsel $ ksel,s,,,399 $ nslk,s $ f,all,FY,8.117997e+05
+allsel $ ksel,s,,,400 $ nslk,s $ f,all,FY,7.945207e+05
+allsel $ ksel,s,,,401 $ nslk,s $ f,all,FY,7.780263e+05
+allsel $ ksel,s,,,402 $ nslk,s $ f,all,FY,7.622623e+05
+allsel $ ksel,s,,,403 $ nslk,s $ f,all,FY,7.471801e+05
+allsel $ ksel,s,,,404 $ nslk,s $ f,all,FY,7.327353e+05
+allsel $ ksel,s,,,405 $ nslk,s $ f,all,FY,7.188876e+05
+allsel
+!-----------------------------------------------------------------------------------------------
+! Load Name: StayedCable_7_TowerForce_Z
+allsel $ ksel,s,,,392 $ nslk,s $ f,all,FZ,-5.902967e+06
+allsel $ ksel,s,,,393 $ nslk,s $ f,all,FZ,-5.917608e+06
+allsel $ ksel,s,,,394 $ nslk,s $ f,all,FZ,-5.935027e+06
+allsel $ ksel,s,,,395 $ nslk,s $ f,all,FZ,-5.954451e+06
+allsel $ ksel,s,,,396 $ nslk,s $ f,all,FZ,-5.975319e+06
+allsel $ ksel,s,,,397 $ nslk,s $ f,all,FZ,-5.992248e+06
+allsel $ ksel,s,,,398 $ nslk,s $ f,all,FZ,-6.009644e+06
+allsel $ ksel,s,,,399 $ nslk,s $ f,all,FZ,-6.027399e+06
+allsel $ ksel,s,,,400 $ nslk,s $ f,all,FZ,-6.045436e+06
+allsel $ ksel,s,,,401 $ nslk,s $ f,all,FZ,-6.063699e+06
+allsel $ ksel,s,,,402 $ nslk,s $ f,all,FZ,-6.082145e+06
+allsel $ ksel,s,,,403 $ nslk,s $ f,all,FZ,-6.100741e+06
+allsel $ ksel,s,,,404 $ nslk,s $ f,all,FZ,-6.119462e+06
+allsel $ ksel,s,,,405 $ nslk,s $ f,all,FZ,-6.138288e+06
+allsel
+!-----------------------------------------------------------------------------------------------
+! Load Name: StayedCable_7_GirderForce_X
+allsel $ ksel,s,,,336 $ nslk,s $ f,all,FX,-1.219122e+06
+allsel $ ksel,s,,,337 $ nslk,s $ f,all,FX,-1.781358e+06
+allsel $ ksel,s,,,338 $ nslk,s $ f,all,FX,-2.315922e+06
+allsel $ ksel,s,,,339 $ nslk,s $ f,all,FX,-2.825164e+06
+allsel $ ksel,s,,,340 $ nslk,s $ f,all,FX,-3.311114e+06
+allsel $ ksel,s,,,341 $ nslk,s $ f,all,FX,-3.502895e+06
+allsel $ ksel,s,,,342 $ nslk,s $ f,all,FX,-3.686103e+06
+allsel $ ksel,s,,,343 $ nslk,s $ f,all,FX,-3.861342e+06
+allsel $ ksel,s,,,344 $ nslk,s $ f,all,FX,-4.029156e+06
+allsel $ ksel,s,,,345 $ nslk,s $ f,all,FX,-4.190045e+06
+allsel $ ksel,s,,,346 $ nslk,s $ f,all,FX,-4.344462e+06
+allsel $ ksel,s,,,347 $ nslk,s $ f,all,FX,-4.492822e+06
+allsel $ ksel,s,,,348 $ nslk,s $ f,all,FX,-4.635505e+06
+allsel $ ksel,s,,,349 $ nslk,s $ f,all,FX,-4.772859e+06
+allsel
+!-----------------------------------------------------------------------------------------------
+! Load Name: StayedCable_7_GirderForce_Y
+allsel $ ksel,s,,,336 $ nslk,s $ f,all,FY,-4.799279e+05
+allsel $ ksel,s,,,337 $ nslk,s $ f,all,FY,-4.675074e+05
+allsel $ ksel,s,,,338 $ nslk,s $ f,all,FY,-4.558506e+05
+allsel $ ksel,s,,,339 $ nslk,s $ f,all,FY,-4.448692e+05
+allsel $ ksel,s,,,340 $ nslk,s $ f,all,FY,-4.344917e+05
+allsel $ ksel,s,,,341 $ nslk,s $ f,all,FY,-4.242993e+05
+allsel $ ksel,s,,,342 $ nslk,s $ f,all,FY,-4.145988e+05
+allsel $ ksel,s,,,343 $ nslk,s $ f,all,FY,-4.053551e+05
+allsel $ ksel,s,,,344 $ nslk,s $ f,all,FY,-3.965361e+05
+allsel $ ksel,s,,,345 $ nslk,s $ f,all,FY,-3.881132e+05
+allsel $ ksel,s,,,346 $ nslk,s $ f,all,FY,-3.800600e+05
+allsel $ ksel,s,,,347 $ nslk,s $ f,all,FY,-3.723525e+05
+allsel $ ksel,s,,,348 $ nslk,s $ f,all,FY,-3.649687e+05
+allsel $ ksel,s,,,349 $ nslk,s $ f,all,FY,-3.578887e+05
+allsel
+!-----------------------------------------------------------------------------------------------
+! Load Name: StayedCable_7_GirderForce_Z
+allsel $ ksel,s,,,336 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,337 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,338 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,339 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,340 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,341 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,342 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,343 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,344 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,345 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,346 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,347 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,348 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,349 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel
+!-----------------------------------------------------------------------------------------------
+! Load Name: StayedCable_8_TowerForce_X
+allsel $ ksel,s,,,406 $ nslk,s $ f,all,FX,0.000000e+00
+allsel $ ksel,s,,,407 $ nslk,s $ f,all,FX,0.000000e+00
+allsel $ ksel,s,,,408 $ nslk,s $ f,all,FX,0.000000e+00
+allsel $ ksel,s,,,409 $ nslk,s $ f,all,FX,0.000000e+00
+allsel $ ksel,s,,,410 $ nslk,s $ f,all,FX,0.000000e+00
+allsel $ ksel,s,,,411 $ nslk,s $ f,all,FX,-2.726568e+05
+allsel $ ksel,s,,,412 $ nslk,s $ f,all,FX,-5.339583e+05
+allsel $ ksel,s,,,413 $ nslk,s $ f,all,FX,-7.847229e+05
+allsel $ ksel,s,,,414 $ nslk,s $ f,all,FX,-1.025686e+06
+allsel $ ksel,s,,,415 $ nslk,s $ f,all,FX,-1.257513e+06
+allsel $ ksel,s,,,416 $ nslk,s $ f,all,FX,-1.480807e+06
+allsel $ ksel,s,,,417 $ nslk,s $ f,all,FX,-1.696119e+06
+allsel $ ksel,s,,,418 $ nslk,s $ f,all,FX,-1.903951e+06
+allsel $ ksel,s,,,419 $ nslk,s $ f,all,FX,-2.104766e+06
+allsel
+!-----------------------------------------------------------------------------------------------
+! Load Name: StayedCable_8_TowerForce_Y
+allsel $ ksel,s,,,406 $ nslk,s $ f,all,FY,-9.598557e+05
+allsel $ ksel,s,,,407 $ nslk,s $ f,all,FY,-9.350148e+05
+allsel $ ksel,s,,,408 $ nslk,s $ f,all,FY,-9.117013e+05
+allsel $ ksel,s,,,409 $ nslk,s $ f,all,FY,-8.897384e+05
+allsel $ ksel,s,,,410 $ nslk,s $ f,all,FY,-8.689834e+05
+allsel $ ksel,s,,,411 $ nslk,s $ f,all,FY,-8.489590e+05
+allsel $ ksel,s,,,412 $ nslk,s $ f,all,FY,-8.299232e+05
+allsel $ ksel,s,,,413 $ nslk,s $ f,all,FY,-8.117997e+05
+allsel $ ksel,s,,,414 $ nslk,s $ f,all,FY,-7.945207e+05
+allsel $ ksel,s,,,415 $ nslk,s $ f,all,FY,-7.780263e+05
+allsel $ ksel,s,,,416 $ nslk,s $ f,all,FY,-7.622623e+05
+allsel $ ksel,s,,,417 $ nslk,s $ f,all,FY,-7.471801e+05
+allsel $ ksel,s,,,418 $ nslk,s $ f,all,FY,-7.327353e+05
+allsel $ ksel,s,,,419 $ nslk,s $ f,all,FY,-7.188876e+05
+allsel
+!-----------------------------------------------------------------------------------------------
+! Load Name: StayedCable_8_TowerForce_Z
+allsel $ ksel,s,,,406 $ nslk,s $ f,all,FZ,-5.902967e+06
+allsel $ ksel,s,,,407 $ nslk,s $ f,all,FZ,-5.917608e+06
+allsel $ ksel,s,,,408 $ nslk,s $ f,all,FZ,-5.935027e+06
+allsel $ ksel,s,,,409 $ nslk,s $ f,all,FZ,-5.954451e+06
+allsel $ ksel,s,,,410 $ nslk,s $ f,all,FZ,-5.975319e+06
+allsel $ ksel,s,,,411 $ nslk,s $ f,all,FZ,-5.992248e+06
+allsel $ ksel,s,,,412 $ nslk,s $ f,all,FZ,-6.009644e+06
+allsel $ ksel,s,,,413 $ nslk,s $ f,all,FZ,-6.027399e+06
+allsel $ ksel,s,,,414 $ nslk,s $ f,all,FZ,-6.045436e+06
+allsel $ ksel,s,,,415 $ nslk,s $ f,all,FZ,-6.063699e+06
+allsel $ ksel,s,,,416 $ nslk,s $ f,all,FZ,-6.082145e+06
+allsel $ ksel,s,,,417 $ nslk,s $ f,all,FZ,-6.100741e+06
+allsel $ ksel,s,,,418 $ nslk,s $ f,all,FZ,-6.119462e+06
+allsel $ ksel,s,,,419 $ nslk,s $ f,all,FZ,-6.138288e+06
+allsel
+!-----------------------------------------------------------------------------------------------
+! Load Name: StayedCable_8_GirderForce_X
+allsel $ ksel,s,,,350 $ nslk,s $ f,all,FX,-1.219122e+06
+allsel $ ksel,s,,,351 $ nslk,s $ f,all,FX,-1.781358e+06
+allsel $ ksel,s,,,352 $ nslk,s $ f,all,FX,-2.315922e+06
+allsel $ ksel,s,,,353 $ nslk,s $ f,all,FX,-2.825164e+06
+allsel $ ksel,s,,,354 $ nslk,s $ f,all,FX,-3.311114e+06
+allsel $ ksel,s,,,355 $ nslk,s $ f,all,FX,-3.502895e+06
+allsel $ ksel,s,,,356 $ nslk,s $ f,all,FX,-3.686103e+06
+allsel $ ksel,s,,,357 $ nslk,s $ f,all,FX,-3.861342e+06
+allsel $ ksel,s,,,358 $ nslk,s $ f,all,FX,-4.029156e+06
+allsel $ ksel,s,,,359 $ nslk,s $ f,all,FX,-4.190045e+06
+allsel $ ksel,s,,,360 $ nslk,s $ f,all,FX,-4.344462e+06
+allsel $ ksel,s,,,361 $ nslk,s $ f,all,FX,-4.492822e+06
+allsel $ ksel,s,,,362 $ nslk,s $ f,all,FX,-4.635505e+06
+allsel $ ksel,s,,,363 $ nslk,s $ f,all,FX,-4.772859e+06
+allsel
+!-----------------------------------------------------------------------------------------------
+! Load Name: StayedCable_8_GirderForce_Y
+allsel $ ksel,s,,,350 $ nslk,s $ f,all,FY,4.799279e+05
+allsel $ ksel,s,,,351 $ nslk,s $ f,all,FY,4.675074e+05
+allsel $ ksel,s,,,352 $ nslk,s $ f,all,FY,4.558506e+05
+allsel $ ksel,s,,,353 $ nslk,s $ f,all,FY,4.448692e+05
+allsel $ ksel,s,,,354 $ nslk,s $ f,all,FY,4.344917e+05
+allsel $ ksel,s,,,355 $ nslk,s $ f,all,FY,4.242993e+05
+allsel $ ksel,s,,,356 $ nslk,s $ f,all,FY,4.145988e+05
+allsel $ ksel,s,,,357 $ nslk,s $ f,all,FY,4.053551e+05
+allsel $ ksel,s,,,358 $ nslk,s $ f,all,FY,3.965361e+05
+allsel $ ksel,s,,,359 $ nslk,s $ f,all,FY,3.881132e+05
+allsel $ ksel,s,,,360 $ nslk,s $ f,all,FY,3.800600e+05
+allsel $ ksel,s,,,361 $ nslk,s $ f,all,FY,3.723525e+05
+allsel $ ksel,s,,,362 $ nslk,s $ f,all,FY,3.649687e+05
+allsel $ ksel,s,,,363 $ nslk,s $ f,all,FY,3.578887e+05
+allsel
+!-----------------------------------------------------------------------------------------------
+! Load Name: StayedCable_8_GirderForce_Z
+allsel $ ksel,s,,,350 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,351 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,352 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,353 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,354 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,355 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,356 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,357 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,358 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,359 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,360 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,361 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,362 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,363 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel
+!-----------------------------------------------------------------------------------------------
+! Load Name: Hanger_1_GirderForce_X
+allsel $ ksel,s,,,208 $ nslk,s $ f,all,FX,0.000000e+00
+allsel $ ksel,s,,,209 $ nslk,s $ f,all,FX,0.000000e+00
+allsel $ ksel,s,,,210 $ nslk,s $ f,all,FX,0.000000e+00
+allsel $ ksel,s,,,211 $ nslk,s $ f,all,FX,0.000000e+00
+allsel $ ksel,s,,,212 $ nslk,s $ f,all,FX,0.000000e+00
+allsel $ ksel,s,,,213 $ nslk,s $ f,all,FX,0.000000e+00
+allsel $ ksel,s,,,214 $ nslk,s $ f,all,FX,0.000000e+00
+allsel $ ksel,s,,,215 $ nslk,s $ f,all,FX,0.000000e+00
+allsel $ ksel,s,,,216 $ nslk,s $ f,all,FX,0.000000e+00
+allsel $ ksel,s,,,217 $ nslk,s $ f,all,FX,0.000000e+00
+allsel $ ksel,s,,,218 $ nslk,s $ f,all,FX,0.000000e+00
+allsel $ ksel,s,,,219 $ nslk,s $ f,all,FX,0.000000e+00
+allsel $ ksel,s,,,220 $ nslk,s $ f,all,FX,0.000000e+00
+allsel $ ksel,s,,,221 $ nslk,s $ f,all,FX,0.000000e+00
+allsel $ ksel,s,,,222 $ nslk,s $ f,all,FX,0.000000e+00
+allsel $ ksel,s,,,223 $ nslk,s $ f,all,FX,0.000000e+00
+allsel $ ksel,s,,,224 $ nslk,s $ f,all,FX,0.000000e+00
+allsel $ ksel,s,,,225 $ nslk,s $ f,all,FX,0.000000e+00
+allsel $ ksel,s,,,226 $ nslk,s $ f,all,FX,0.000000e+00
+allsel $ ksel,s,,,227 $ nslk,s $ f,all,FX,0.000000e+00
+allsel $ ksel,s,,,228 $ nslk,s $ f,all,FX,0.000000e+00
+allsel $ ksel,s,,,229 $ nslk,s $ f,all,FX,0.000000e+00
+allsel
+!-----------------------------------------------------------------------------------------------
+! Load Name: Hanger_1_GirderForce_Y
+allsel $ ksel,s,,,208 $ nslk,s $ f,all,FY,-3.683579e+05
+allsel $ ksel,s,,,209 $ nslk,s $ f,all,FY,-3.607617e+05
+allsel $ ksel,s,,,210 $ nslk,s $ f,all,FY,-3.507769e+05
+allsel $ ksel,s,,,211 $ nslk,s $ f,all,FY,-3.373257e+05
+allsel $ ksel,s,,,212 $ nslk,s $ f,all,FY,-3.187145e+05
+allsel $ ksel,s,,,213 $ nslk,s $ f,all,FY,-2.922419e+05
+allsel $ ksel,s,,,214 $ nslk,s $ f,all,FY,-2.536348e+05
+allsel $ ksel,s,,,215 $ nslk,s $ f,all,FY,-1.966307e+05
+allsel $ ksel,s,,,216 $ nslk,s $ f,all,FY,-1.146700e+05
+allsel $ ksel,s,,,217 $ nslk,s $ f,all,FY,-1.149584e+04
+allsel $ ksel,s,,,218 $ nslk,s $ f,all,FY,7.353299e+04
+allsel $ ksel,s,,,219 $ nslk,s $ f,all,FY,7.353299e+04
+allsel $ ksel,s,,,220 $ nslk,s $ f,all,FY,-1.149584e+04
+allsel $ ksel,s,,,221 $ nslk,s $ f,all,FY,-1.146700e+05
+allsel $ ksel,s,,,222 $ nslk,s $ f,all,FY,-1.966307e+05
+allsel $ ksel,s,,,223 $ nslk,s $ f,all,FY,-2.536348e+05
+allsel $ ksel,s,,,224 $ nslk,s $ f,all,FY,-2.922419e+05
+allsel $ ksel,s,,,225 $ nslk,s $ f,all,FY,-3.187145e+05
+allsel $ ksel,s,,,226 $ nslk,s $ f,all,FY,-3.373257e+05
+allsel $ ksel,s,,,227 $ nslk,s $ f,all,FY,-3.507769e+05
+allsel $ ksel,s,,,228 $ nslk,s $ f,all,FY,-3.607617e+05
+allsel $ ksel,s,,,229 $ nslk,s $ f,all,FY,-3.683579e+05
+allsel
+!-----------------------------------------------------------------------------------------------
+! Load Name: Hanger_1_GirderForce_Z
+allsel $ ksel,s,,,208 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,209 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,210 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,211 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,212 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,213 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,214 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,215 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,216 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,217 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,218 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,219 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,220 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,221 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,222 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,223 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,224 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,225 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,226 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,227 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,228 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,229 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel
+!-----------------------------------------------------------------------------------------------
+! Load Name: Hanger_2_GirderForce_X
+allsel $ ksel,s,,,230 $ nslk,s $ f,all,FX,0.000000e+00
+allsel $ ksel,s,,,231 $ nslk,s $ f,all,FX,0.000000e+00
+allsel $ ksel,s,,,232 $ nslk,s $ f,all,FX,0.000000e+00
+allsel $ ksel,s,,,233 $ nslk,s $ f,all,FX,0.000000e+00
+allsel $ ksel,s,,,234 $ nslk,s $ f,all,FX,0.000000e+00
+allsel $ ksel,s,,,235 $ nslk,s $ f,all,FX,0.000000e+00
+allsel $ ksel,s,,,236 $ nslk,s $ f,all,FX,0.000000e+00
+allsel $ ksel,s,,,237 $ nslk,s $ f,all,FX,0.000000e+00
+allsel $ ksel,s,,,238 $ nslk,s $ f,all,FX,0.000000e+00
+allsel $ ksel,s,,,239 $ nslk,s $ f,all,FX,0.000000e+00
+allsel $ ksel,s,,,240 $ nslk,s $ f,all,FX,0.000000e+00
+allsel $ ksel,s,,,241 $ nslk,s $ f,all,FX,0.000000e+00
+allsel $ ksel,s,,,242 $ nslk,s $ f,all,FX,0.000000e+00
+allsel $ ksel,s,,,243 $ nslk,s $ f,all,FX,0.000000e+00
+allsel $ ksel,s,,,244 $ nslk,s $ f,all,FX,0.000000e+00
+allsel $ ksel,s,,,245 $ nslk,s $ f,all,FX,0.000000e+00
+allsel $ ksel,s,,,246 $ nslk,s $ f,all,FX,0.000000e+00
+allsel $ ksel,s,,,247 $ nslk,s $ f,all,FX,0.000000e+00
+allsel $ ksel,s,,,248 $ nslk,s $ f,all,FX,0.000000e+00
+allsel $ ksel,s,,,249 $ nslk,s $ f,all,FX,0.000000e+00
+allsel $ ksel,s,,,250 $ nslk,s $ f,all,FX,0.000000e+00
+allsel $ ksel,s,,,251 $ nslk,s $ f,all,FX,0.000000e+00
+allsel
+!-----------------------------------------------------------------------------------------------
+! Load Name: Hanger_2_GirderForce_Y
+allsel $ ksel,s,,,230 $ nslk,s $ f,all,FY,3.683579e+05
+allsel $ ksel,s,,,231 $ nslk,s $ f,all,FY,3.607617e+05
+allsel $ ksel,s,,,232 $ nslk,s $ f,all,FY,3.507769e+05
+allsel $ ksel,s,,,233 $ nslk,s $ f,all,FY,3.373257e+05
+allsel $ ksel,s,,,234 $ nslk,s $ f,all,FY,3.187145e+05
+allsel $ ksel,s,,,235 $ nslk,s $ f,all,FY,2.922419e+05
+allsel $ ksel,s,,,236 $ nslk,s $ f,all,FY,2.536348e+05
+allsel $ ksel,s,,,237 $ nslk,s $ f,all,FY,1.966307e+05
+allsel $ ksel,s,,,238 $ nslk,s $ f,all,FY,1.146700e+05
+allsel $ ksel,s,,,239 $ nslk,s $ f,all,FY,1.149584e+04
+allsel $ ksel,s,,,240 $ nslk,s $ f,all,FY,-7.353299e+04
+allsel $ ksel,s,,,241 $ nslk,s $ f,all,FY,-7.353299e+04
+allsel $ ksel,s,,,242 $ nslk,s $ f,all,FY,1.149584e+04
+allsel $ ksel,s,,,243 $ nslk,s $ f,all,FY,1.146700e+05
+allsel $ ksel,s,,,244 $ nslk,s $ f,all,FY,1.966307e+05
+allsel $ ksel,s,,,245 $ nslk,s $ f,all,FY,2.536348e+05
+allsel $ ksel,s,,,246 $ nslk,s $ f,all,FY,2.922419e+05
+allsel $ ksel,s,,,247 $ nslk,s $ f,all,FY,3.187145e+05
+allsel $ ksel,s,,,248 $ nslk,s $ f,all,FY,3.373257e+05
+allsel $ ksel,s,,,249 $ nslk,s $ f,all,FY,3.507769e+05
+allsel $ ksel,s,,,250 $ nslk,s $ f,all,FY,3.607617e+05
+allsel $ ksel,s,,,251 $ nslk,s $ f,all,FY,3.683579e+05
+allsel
+!-----------------------------------------------------------------------------------------------
+! Load Name: Hanger_2_GirderForce_Z
+allsel $ ksel,s,,,230 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,231 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,232 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,233 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,234 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,235 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,236 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,237 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,238 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,239 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,240 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,241 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,242 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,243 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,244 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,245 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,246 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,247 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,248 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,249 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,250 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel $ ksel,s,,,251 $ nslk,s $ f,all,FZ,2.884049e+06
+allsel
+!-----------------------------------------------------------------------------------------------

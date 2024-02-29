@@ -1,0 +1,28 @@
+! 材料名称: 主梁girder 
+! 作用于以下Structure: Girder_1, Girder_2, Girder_3
+mp,Ex,1,2.050000E+11 
+mp,prxy,1,3.100000E-01 
+mp,dens,1,8.005303E+03 
+mp,alpx,1,1.200000E-05 
+
+! 材料名称: 锚碇girder 
+! 作用于以下Structure: Girder_4, Girder_5
+mp,Ex,2,3.600000E+10 
+mp,prxy,2,2.000000E-01 
+mp,dens,2,2.549460E+03 
+mp,alpx,2,1.000000E-05 
+
+! 材料名称: 桥塔tower 
+! 作用于以下Structure: Tower_1, Tower_2
+mp,Ex,3,3.600000E+10 
+mp,prxy,3,2.000000E-01 
+mp,dens,3,2.549460E+03 
+mp,alpx,3,1.000000E-05 
+
+! 材料名称: 刚臂rigid beam 
+! 作用于以下Structure: RigidBeam_1, RigidBeam_2, RigidBeam_3, RigidBeam_4, RigidBeam_5, RigidBeam_6, RigidBeam_7, RigidBeam_8, RigidBeam_9, RigidBeam_10, RigidBeam_11, RigidBeam_12, RigidBeam_13, RigidBeam_14
+mp,Ex,5,1.000000E+15 
+mp,prxy,5,3.000000E-01 
+mp,dens,5,0.000000E+00 
+mp,alpx,5,0.000000E+00 
+

@@ -1,0 +1,22 @@
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       16:19:29
+
+ *** WARNING ***                         CP =       5.641   TIME= 16:19:44
+ Coefficient ratio exceeds 1.0e8 - Check results.                        
+
+ *** WARNING ***                         CP =       6.641   TIME= 16:19:44
+ A reference moment value times the tolerance is used by the             
+ Newton-Raphson method for checking convergence.  The calculated         
+ reference MOMENT CONVERGENCE VALUE = 279077456 is less than a           
+ threshold.  This threshold is internally calculated.  You can           
+ overwrite it by specifying MINREF on the CNVTOL command.  Check         
+ results carefully.                                                      
+
+ *** WARNING ***                         CP =      12.438   TIME= 16:20:26
+ /POST is not a recognized POST1 command, abbreviation, or macro.        
+  This command will be ignored.                                          
+
+ *** WARNING ***                         CP =      12.828   TIME= 16:20:27
+ The ETABLE command has requested item = SMISC, comp = 2 of element 1189 
+ (element type LINK10).  0.0 is output, as this component is not         
+ available.  Checking for this discontinues.                             
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       17:03:26

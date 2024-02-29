@@ -1,0 +1,11 @@
+/solu
+resume,NonCableSystem,db
+antype,static
+nlgeom,off
+sstif,off
+nsubst,0,0,0
+time,1
+outres,all,last
+save,NonCableSystem,db
+solve
+finish

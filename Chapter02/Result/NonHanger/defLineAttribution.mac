@@ -1,0 +1,914 @@
+! StayedCable_1
+lsel,s,,,373 $ latt,6,373,6
+lsel,s,,,374 $ latt,6,374,6
+lsel,s,,,375 $ latt,6,375,6
+lsel,s,,,376 $ latt,6,376,6
+lsel,s,,,377 $ latt,6,377,6
+lsel,s,,,378 $ latt,6,378,6
+lsel,s,,,379 $ latt,6,379,6
+lsel,s,,,380 $ latt,6,380,6
+lsel,s,,,381 $ latt,6,381,6
+lsel,s,,,382 $ latt,6,382,6
+lsel,s,,,383 $ latt,6,383,6
+lsel,s,,,384 $ latt,6,384,6
+lsel,s,,,385 $ latt,6,385,6
+lsel,s,,,386 $ latt,6,386,6
+
+! StayedCable_2
+lsel,s,,,387 $ latt,6,387,6
+lsel,s,,,388 $ latt,6,388,6
+lsel,s,,,389 $ latt,6,389,6
+lsel,s,,,390 $ latt,6,390,6
+lsel,s,,,391 $ latt,6,391,6
+lsel,s,,,392 $ latt,6,392,6
+lsel,s,,,393 $ latt,6,393,6
+lsel,s,,,394 $ latt,6,394,6
+lsel,s,,,395 $ latt,6,395,6
+lsel,s,,,396 $ latt,6,396,6
+lsel,s,,,397 $ latt,6,397,6
+lsel,s,,,398 $ latt,6,398,6
+lsel,s,,,399 $ latt,6,399,6
+lsel,s,,,400 $ latt,6,400,6
+
+! StayedCable_3
+lsel,s,,,401 $ latt,6,401,6
+lsel,s,,,402 $ latt,6,402,6
+lsel,s,,,403 $ latt,6,403,6
+lsel,s,,,404 $ latt,6,404,6
+lsel,s,,,405 $ latt,6,405,6
+lsel,s,,,406 $ latt,6,406,6
+lsel,s,,,407 $ latt,6,407,6
+lsel,s,,,408 $ latt,6,408,6
+lsel,s,,,409 $ latt,6,409,6
+lsel,s,,,410 $ latt,6,410,6
+lsel,s,,,411 $ latt,6,411,6
+lsel,s,,,412 $ latt,6,412,6
+lsel,s,,,413 $ latt,6,413,6
+lsel,s,,,414 $ latt,6,414,6
+
+! StayedCable_4
+lsel,s,,,415 $ latt,6,415,6
+lsel,s,,,416 $ latt,6,416,6
+lsel,s,,,417 $ latt,6,417,6
+lsel,s,,,418 $ latt,6,418,6
+lsel,s,,,419 $ latt,6,419,6
+lsel,s,,,420 $ latt,6,420,6
+lsel,s,,,421 $ latt,6,421,6
+lsel,s,,,422 $ latt,6,422,6
+lsel,s,,,423 $ latt,6,423,6
+lsel,s,,,424 $ latt,6,424,6
+lsel,s,,,425 $ latt,6,425,6
+lsel,s,,,426 $ latt,6,426,6
+lsel,s,,,427 $ latt,6,427,6
+lsel,s,,,428 $ latt,6,428,6
+
+! StayedCable_5
+lsel,s,,,429 $ latt,6,429,6
+lsel,s,,,430 $ latt,6,430,6
+lsel,s,,,431 $ latt,6,431,6
+lsel,s,,,432 $ latt,6,432,6
+lsel,s,,,433 $ latt,6,433,6
+lsel,s,,,434 $ latt,6,434,6
+lsel,s,,,435 $ latt,6,435,6
+lsel,s,,,436 $ latt,6,436,6
+lsel,s,,,437 $ latt,6,437,6
+lsel,s,,,438 $ latt,6,438,6
+lsel,s,,,439 $ latt,6,439,6
+lsel,s,,,440 $ latt,6,440,6
+lsel,s,,,441 $ latt,6,441,6
+lsel,s,,,442 $ latt,6,442,6
+
+! StayedCable_6
+lsel,s,,,443 $ latt,6,443,6
+lsel,s,,,444 $ latt,6,444,6
+lsel,s,,,445 $ latt,6,445,6
+lsel,s,,,446 $ latt,6,446,6
+lsel,s,,,447 $ latt,6,447,6
+lsel,s,,,448 $ latt,6,448,6
+lsel,s,,,449 $ latt,6,449,6
+lsel,s,,,450 $ latt,6,450,6
+lsel,s,,,451 $ latt,6,451,6
+lsel,s,,,452 $ latt,6,452,6
+lsel,s,,,453 $ latt,6,453,6
+lsel,s,,,454 $ latt,6,454,6
+lsel,s,,,455 $ latt,6,455,6
+lsel,s,,,456 $ latt,6,456,6
+
+! StayedCable_7
+lsel,s,,,457 $ latt,6,457,6
+lsel,s,,,458 $ latt,6,458,6
+lsel,s,,,459 $ latt,6,459,6
+lsel,s,,,460 $ latt,6,460,6
+lsel,s,,,461 $ latt,6,461,6
+lsel,s,,,462 $ latt,6,462,6
+lsel,s,,,463 $ latt,6,463,6
+lsel,s,,,464 $ latt,6,464,6
+lsel,s,,,465 $ latt,6,465,6
+lsel,s,,,466 $ latt,6,466,6
+lsel,s,,,467 $ latt,6,467,6
+lsel,s,,,468 $ latt,6,468,6
+lsel,s,,,469 $ latt,6,469,6
+lsel,s,,,470 $ latt,6,470,6
+
+! StayedCable_8
+lsel,s,,,471 $ latt,6,471,6
+lsel,s,,,472 $ latt,6,472,6
+lsel,s,,,473 $ latt,6,473,6
+lsel,s,,,474 $ latt,6,474,6
+lsel,s,,,475 $ latt,6,475,6
+lsel,s,,,476 $ latt,6,476,6
+lsel,s,,,477 $ latt,6,477,6
+lsel,s,,,478 $ latt,6,478,6
+lsel,s,,,479 $ latt,6,479,6
+lsel,s,,,480 $ latt,6,480,6
+lsel,s,,,481 $ latt,6,481,6
+lsel,s,,,482 $ latt,6,482,6
+lsel,s,,,483 $ latt,6,483,6
+lsel,s,,,484 $ latt,6,484,6
+
+! Girder_1
+lsel,s,,,1 
+latt,1,,1,,,,1 
+lsel,s,,,2 
+latt,1,,1,,,,1 
+lsel,s,,,3 
+latt,1,,1,,,,1 
+lsel,s,,,4 
+latt,1,,1,,,,1 
+lsel,s,,,5 
+latt,1,,1,,,,1 
+lsel,s,,,6 
+latt,1,,1,,,,1 
+lsel,s,,,7 
+latt,1,,1,,,,1 
+lsel,s,,,8 
+latt,1,,1,,,,1 
+lsel,s,,,9 
+latt,1,,1,,,,1 
+lsel,s,,,10 
+latt,1,,1,,,,1 
+lsel,s,,,11 
+latt,1,,1,,,,1 
+lsel,s,,,12 
+latt,1,,1,,,,1 
+lsel,s,,,13 
+latt,1,,1,,,,1 
+lsel,s,,,14 
+latt,1,,1,,,,1 
+lsel,s,,,15 
+latt,1,,1,,,,1 
+lsel,s,,,16 
+latt,1,,1,,,,1 
+lsel,s,,,17 
+latt,1,,1,,,,1 
+lsel,s,,,18 
+latt,1,,1,,,,1 
+lsel,s,,,19 
+latt,1,,1,,,,1 
+lsel,s,,,20 
+latt,1,,1,,,,1 
+lsel,s,,,21 
+latt,1,,1,,,,1 
+lsel,s,,,22 
+latt,1,,1,,,,1 
+lsel,s,,,23 
+latt,1,,1,,,,1 
+lsel,s,,,24 
+latt,1,,1,,,,1 
+lsel,s,,,25 
+latt,1,,1,,,,1 
+lsel,s,,,26 
+latt,1,,1,,,,1 
+lsel,s,,,27 
+latt,1,,1,,,,1 
+lsel,s,,,28 
+latt,1,,1,,,,1 
+lsel,s,,,29 
+latt,1,,1,,,,1 
+lsel,s,,,30 
+latt,1,,1,,,,1 
+lsel,s,,,31 
+latt,1,,1,,,,1 
+lsel,s,,,32 
+latt,1,,1,,,,1 
+lsel,s,,,33 
+latt,1,,1,,,,1 
+lsel,s,,,34 
+latt,1,,1,,,,1 
+lsel,s,,,35 
+latt,1,,1,,,,1 
+lsel,s,,,36 
+latt,1,,1,,,,1 
+lsel,s,,,37 
+latt,1,,1,,,,1 
+lsel,s,,,38 
+latt,1,,1,,,,1 
+lsel,s,,,39 
+latt,1,,1,,,,1 
+lsel,s,,,40 
+latt,1,,1,,,,1 
+lsel,s,,,41 
+latt,1,,1,,,,1 
+lsel,s,,,42 
+latt,1,,1,,,,1 
+lsel,s,,,43 
+latt,1,,1,,,,1 
+lsel,s,,,44 
+latt,1,,1,,,,1 
+lsel,s,,,45 
+latt,1,,1,,,,1 
+lsel,s,,,46 
+latt,1,,1,,,,1 
+lsel,s,,,47 
+latt,1,,1,,,,1 
+lsel,s,,,48 
+latt,1,,1,,,,1 
+lsel,s,,,49 
+latt,1,,1,,,,1 
+lsel,s,,,50 
+latt,1,,1,,,,1 
+lsel,s,,,51 
+latt,1,,1,,,,1 
+lsel,s,,,52 
+latt,1,,1,,,,1 
+lsel,s,,,53 
+latt,1,,1,,,,1 
+lsel,s,,,54 
+latt,1,,1,,,,1 
+lsel,s,,,55 
+latt,1,,1,,,,1 
+lsel,s,,,56 
+latt,1,,1,,,,1 
+lsel,s,,,57 
+latt,1,,1,,,,1 
+lsel,s,,,58 
+latt,1,,1,,,,1 
+lsel,s,,,59 
+latt,1,,1,,,,1 
+lsel,s,,,60 
+latt,1,,1,,,,1 
+lsel,s,,,61 
+latt,1,,1,,,,1 
+lsel,s,,,62 
+latt,1,,1,,,,1 
+lsel,s,,,63 
+latt,1,,1,,,,1 
+lsel,s,,,64 
+latt,1,,1,,,,1 
+lsel,s,,,65 
+latt,1,,1,,,,1 
+lsel,s,,,66 
+latt,1,,1,,,,1 
+lsel,s,,,67 
+latt,1,,1,,,,1 
+lsel,s,,,68 
+latt,1,,1,,,,1 
+lsel,s,,,69 
+latt,1,,1,,,,1 
+lsel,s,,,70 
+latt,1,,1,,,,1 
+lsel,s,,,71 
+latt,1,,1,,,,1 
+lsel,s,,,72 
+latt,1,,1,,,,1 
+lsel,s,,,73 
+latt,1,,1,,,,1 
+lsel,s,,,74 
+latt,1,,1,,,,1 
+lsel,s,,,75 
+latt,1,,1,,,,1 
+lsel,s,,,76 
+latt,1,,1,,,,1 
+lsel,s,,,77 
+latt,1,,1,,,,1 
+lsel,s,,,78 
+latt,1,,1,,,,1 
+lsel,s,,,79 
+latt,1,,1,,,,1 
+lsel,s,,,80 
+latt,1,,1,,,,1 
+lsel,s,,,81 
+latt,1,,1,,,,1 
+lsel,s,,,82 
+latt,1,,1,,,,1 
+lsel,s,,,83 
+latt,1,,1,,,,1 
+lsel,s,,,84 
+latt,1,,1,,,,1 
+lsel,s,,,85 
+latt,1,,1,,,,1 
+lsel,s,,,86 
+latt,1,,1,,,,1 
+lsel,s,,,87 
+latt,1,,1,,,,1 
+lsel,s,,,88 
+latt,1,,1,,,,1 
+lsel,s,,,89 
+latt,1,,1,,,,1 
+lsel,s,,,90 
+latt,1,,1,,,,1 
+lsel,s,,,91 
+latt,1,,1,,,,1 
+lsel,s,,,92 
+latt,1,,1,,,,1 
+
+! Girder_2
+lsel,s,,,93 
+latt,1,,1,,,,1 
+lsel,s,,,94 
+latt,1,,1,,,,1 
+lsel,s,,,95 
+latt,1,,1,,,,1 
+lsel,s,,,96 
+latt,1,,1,,,,1 
+lsel,s,,,97 
+latt,1,,1,,,,1 
+lsel,s,,,98 
+latt,1,,1,,,,1 
+lsel,s,,,99 
+latt,1,,1,,,,1 
+lsel,s,,,100 
+latt,1,,1,,,,1 
+lsel,s,,,101 
+latt,1,,1,,,,1 
+lsel,s,,,102 
+latt,1,,1,,,,1 
+lsel,s,,,103 
+latt,1,,1,,,,1 
+lsel,s,,,104 
+latt,1,,1,,,,1 
+lsel,s,,,105 
+latt,1,,1,,,,1 
+lsel,s,,,106 
+latt,1,,1,,,,1 
+lsel,s,,,107 
+latt,1,,1,,,,1 
+lsel,s,,,108 
+latt,1,,1,,,,1 
+lsel,s,,,109 
+latt,1,,1,,,,1 
+lsel,s,,,110 
+latt,1,,1,,,,1 
+lsel,s,,,111 
+latt,1,,1,,,,1 
+lsel,s,,,112 
+latt,1,,1,,,,1 
+lsel,s,,,113 
+latt,1,,1,,,,1 
+
+! Girder_3
+lsel,s,,,114 
+latt,1,,1,,,,1 
+lsel,s,,,115 
+latt,1,,1,,,,1 
+lsel,s,,,116 
+latt,1,,1,,,,1 
+lsel,s,,,117 
+latt,1,,1,,,,1 
+lsel,s,,,118 
+latt,1,,1,,,,1 
+lsel,s,,,119 
+latt,1,,1,,,,1 
+lsel,s,,,120 
+latt,1,,1,,,,1 
+lsel,s,,,121 
+latt,1,,1,,,,1 
+lsel,s,,,122 
+latt,1,,1,,,,1 
+lsel,s,,,123 
+latt,1,,1,,,,1 
+lsel,s,,,124 
+latt,1,,1,,,,1 
+lsel,s,,,125 
+latt,1,,1,,,,1 
+lsel,s,,,126 
+latt,1,,1,,,,1 
+lsel,s,,,127 
+latt,1,,1,,,,1 
+lsel,s,,,128 
+latt,1,,1,,,,1 
+lsel,s,,,129 
+latt,1,,1,,,,1 
+lsel,s,,,130 
+latt,1,,1,,,,1 
+lsel,s,,,131 
+latt,1,,1,,,,1 
+lsel,s,,,132 
+latt,1,,1,,,,1 
+lsel,s,,,133 
+latt,1,,1,,,,1 
+lsel,s,,,134 
+latt,1,,1,,,,1 
+
+! Girder_4
+lsel,s,,,135 
+latt,2,,2,,,,2 
+lsel,s,,,136 
+latt,2,,2,,,,2 
+
+! Girder_5
+lsel,s,,,137 
+latt,2,,2,,,,2 
+lsel,s,,,138 
+latt,2,,2,,,,2 
+
+! Tower_1
+lsel,s,,,139 
+latt,3,,3,,,,3 
+lsel,s,,,140 
+latt,3,,3,,,,3 
+lsel,s,,,141 
+latt,3,,3,,,,3 
+lsel,s,,,142 
+latt,3,,3,,,,3 
+lsel,s,,,143 
+latt,3,,3,,,,3 
+lsel,s,,,144 
+latt,3,,3,,,,3 
+lsel,s,,,145 
+latt,3,,3,,,,3 
+lsel,s,,,146 
+latt,3,,3,,,,3 
+lsel,s,,,147 
+latt,3,,3,,,,3 
+lsel,s,,,148 
+latt,3,,3,,,,3 
+lsel,s,,,149 
+latt,3,,3,,,,3 
+lsel,s,,,150 
+latt,3,,3,,,,3 
+lsel,s,,,151 
+latt,3,,3,,,,3 
+lsel,s,,,152 
+latt,3,,3,,,,3 
+lsel,s,,,153 
+latt,3,,3,,,,3 
+lsel,s,,,154 
+latt,3,,3,,,,3 
+lsel,s,,,155 
+latt,3,,3,,,,3 
+lsel,s,,,156 
+latt,3,,3,,,,3 
+lsel,s,,,157 
+latt,3,,3,,,,3 
+lsel,s,,,158 
+latt,3,,3,,,,3 
+lsel,s,,,159 
+latt,3,,3,,,,3 
+lsel,s,,,160 
+latt,3,,3,,,,3 
+lsel,s,,,161 
+latt,3,,3,,,,3 
+lsel,s,,,162 
+latt,3,,3,,,,3 
+lsel,s,,,163 
+latt,3,,3,,,,3 
+
+! Tower_2
+lsel,s,,,164 
+latt,3,,3,,,,3 
+lsel,s,,,165 
+latt,3,,3,,,,3 
+lsel,s,,,166 
+latt,3,,3,,,,3 
+lsel,s,,,167 
+latt,3,,3,,,,3 
+lsel,s,,,168 
+latt,3,,3,,,,3 
+lsel,s,,,169 
+latt,3,,3,,,,3 
+lsel,s,,,170 
+latt,3,,3,,,,3 
+lsel,s,,,171 
+latt,3,,3,,,,3 
+lsel,s,,,172 
+latt,3,,3,,,,3 
+lsel,s,,,173 
+latt,3,,3,,,,3 
+lsel,s,,,174 
+latt,3,,3,,,,3 
+lsel,s,,,175 
+latt,3,,3,,,,3 
+lsel,s,,,176 
+latt,3,,3,,,,3 
+lsel,s,,,177 
+latt,3,,3,,,,3 
+lsel,s,,,178 
+latt,3,,3,,,,3 
+lsel,s,,,179 
+latt,3,,3,,,,3 
+lsel,s,,,180 
+latt,3,,3,,,,3 
+lsel,s,,,181 
+latt,3,,3,,,,3 
+lsel,s,,,182 
+latt,3,,3,,,,3 
+lsel,s,,,183 
+latt,3,,3,,,,3 
+lsel,s,,,184 
+latt,3,,3,,,,3 
+lsel,s,,,185 
+latt,3,,3,,,,3 
+lsel,s,,,186 
+latt,3,,3,,,,3 
+lsel,s,,,187 
+latt,3,,3,,,,3 
+lsel,s,,,188 
+latt,3,,3,,,,3 
+
+! Pier_1
+lsel,s,,,189 
+latt,4,,4,,,,4 
+lsel,s,,,190 
+latt,4,,4,,,,4 
+lsel,s,,,191 
+latt,4,,4,,,,4 
+lsel,s,,,192 
+latt,4,,4,,,,4 
+lsel,s,,,193 
+latt,4,,4,,,,4 
+lsel,s,,,194 
+latt,4,,4,,,,4 
+lsel,s,,,195 
+latt,4,,4,,,,4 
+lsel,s,,,196 
+latt,4,,4,,,,4 
+
+! Pier_2
+lsel,s,,,197 
+latt,4,,4,,,,4 
+lsel,s,,,198 
+latt,4,,4,,,,4 
+lsel,s,,,199 
+latt,4,,4,,,,4 
+lsel,s,,,200 
+latt,4,,4,,,,4 
+lsel,s,,,201 
+latt,4,,4,,,,4 
+lsel,s,,,202 
+latt,4,,4,,,,4 
+lsel,s,,,203 
+latt,4,,4,,,,4 
+lsel,s,,,204 
+latt,4,,4,,,,4 
+
+! RigidBeam_1
+lsel,s,,,205 
+latt,5,,5,,,,5 
+lsel,s,,,206 
+latt,5,,5,,,,5 
+lsel,s,,,207 
+latt,5,,5,,,,5 
+lsel,s,,,208 
+latt,5,,5,,,,5 
+lsel,s,,,209 
+latt,5,,5,,,,5 
+lsel,s,,,210 
+latt,5,,5,,,,5 
+lsel,s,,,211 
+latt,5,,5,,,,5 
+lsel,s,,,212 
+latt,5,,5,,,,5 
+lsel,s,,,213 
+latt,5,,5,,,,5 
+lsel,s,,,214 
+latt,5,,5,,,,5 
+lsel,s,,,215 
+latt,5,,5,,,,5 
+lsel,s,,,216 
+latt,5,,5,,,,5 
+lsel,s,,,217 
+latt,5,,5,,,,5 
+lsel,s,,,218 
+latt,5,,5,,,,5 
+
+! RigidBeam_2
+lsel,s,,,219 
+latt,5,,5,,,,5 
+lsel,s,,,220 
+latt,5,,5,,,,5 
+lsel,s,,,221 
+latt,5,,5,,,,5 
+lsel,s,,,222 
+latt,5,,5,,,,5 
+lsel,s,,,223 
+latt,5,,5,,,,5 
+lsel,s,,,224 
+latt,5,,5,,,,5 
+lsel,s,,,225 
+latt,5,,5,,,,5 
+lsel,s,,,226 
+latt,5,,5,,,,5 
+lsel,s,,,227 
+latt,5,,5,,,,5 
+lsel,s,,,228 
+latt,5,,5,,,,5 
+lsel,s,,,229 
+latt,5,,5,,,,5 
+lsel,s,,,230 
+latt,5,,5,,,,5 
+lsel,s,,,231 
+latt,5,,5,,,,5 
+lsel,s,,,232 
+latt,5,,5,,,,5 
+
+! RigidBeam_3
+lsel,s,,,233 
+latt,5,,5,,,,5 
+lsel,s,,,234 
+latt,5,,5,,,,5 
+lsel,s,,,235 
+latt,5,,5,,,,5 
+lsel,s,,,236 
+latt,5,,5,,,,5 
+lsel,s,,,237 
+latt,5,,5,,,,5 
+lsel,s,,,238 
+latt,5,,5,,,,5 
+lsel,s,,,239 
+latt,5,,5,,,,5 
+lsel,s,,,240 
+latt,5,,5,,,,5 
+lsel,s,,,241 
+latt,5,,5,,,,5 
+lsel,s,,,242 
+latt,5,,5,,,,5 
+lsel,s,,,243 
+latt,5,,5,,,,5 
+lsel,s,,,244 
+latt,5,,5,,,,5 
+lsel,s,,,245 
+latt,5,,5,,,,5 
+lsel,s,,,246 
+latt,5,,5,,,,5 
+
+! RigidBeam_4
+lsel,s,,,247 
+latt,5,,5,,,,5 
+lsel,s,,,248 
+latt,5,,5,,,,5 
+lsel,s,,,249 
+latt,5,,5,,,,5 
+lsel,s,,,250 
+latt,5,,5,,,,5 
+lsel,s,,,251 
+latt,5,,5,,,,5 
+lsel,s,,,252 
+latt,5,,5,,,,5 
+lsel,s,,,253 
+latt,5,,5,,,,5 
+lsel,s,,,254 
+latt,5,,5,,,,5 
+lsel,s,,,255 
+latt,5,,5,,,,5 
+lsel,s,,,256 
+latt,5,,5,,,,5 
+lsel,s,,,257 
+latt,5,,5,,,,5 
+lsel,s,,,258 
+latt,5,,5,,,,5 
+lsel,s,,,259 
+latt,5,,5,,,,5 
+lsel,s,,,260 
+latt,5,,5,,,,5 
+
+! RigidBeam_5
+lsel,s,,,261 
+latt,5,,5,,,,5 
+lsel,s,,,262 
+latt,5,,5,,,,5 
+lsel,s,,,263 
+latt,5,,5,,,,5 
+lsel,s,,,264 
+latt,5,,5,,,,5 
+lsel,s,,,265 
+latt,5,,5,,,,5 
+lsel,s,,,266 
+latt,5,,5,,,,5 
+lsel,s,,,267 
+latt,5,,5,,,,5 
+lsel,s,,,268 
+latt,5,,5,,,,5 
+lsel,s,,,269 
+latt,5,,5,,,,5 
+lsel,s,,,270 
+latt,5,,5,,,,5 
+lsel,s,,,271 
+latt,5,,5,,,,5 
+lsel,s,,,272 
+latt,5,,5,,,,5 
+lsel,s,,,273 
+latt,5,,5,,,,5 
+lsel,s,,,274 
+latt,5,,5,,,,5 
+
+! RigidBeam_6
+lsel,s,,,275 
+latt,5,,5,,,,5 
+lsel,s,,,276 
+latt,5,,5,,,,5 
+lsel,s,,,277 
+latt,5,,5,,,,5 
+lsel,s,,,278 
+latt,5,,5,,,,5 
+lsel,s,,,279 
+latt,5,,5,,,,5 
+lsel,s,,,280 
+latt,5,,5,,,,5 
+lsel,s,,,281 
+latt,5,,5,,,,5 
+lsel,s,,,282 
+latt,5,,5,,,,5 
+lsel,s,,,283 
+latt,5,,5,,,,5 
+lsel,s,,,284 
+latt,5,,5,,,,5 
+lsel,s,,,285 
+latt,5,,5,,,,5 
+lsel,s,,,286 
+latt,5,,5,,,,5 
+lsel,s,,,287 
+latt,5,,5,,,,5 
+lsel,s,,,288 
+latt,5,,5,,,,5 
+
+! RigidBeam_7
+lsel,s,,,289 
+latt,5,,5,,,,5 
+lsel,s,,,290 
+latt,5,,5,,,,5 
+lsel,s,,,291 
+latt,5,,5,,,,5 
+lsel,s,,,292 
+latt,5,,5,,,,5 
+lsel,s,,,293 
+latt,5,,5,,,,5 
+lsel,s,,,294 
+latt,5,,5,,,,5 
+lsel,s,,,295 
+latt,5,,5,,,,5 
+lsel,s,,,296 
+latt,5,,5,,,,5 
+lsel,s,,,297 
+latt,5,,5,,,,5 
+lsel,s,,,298 
+latt,5,,5,,,,5 
+lsel,s,,,299 
+latt,5,,5,,,,5 
+lsel,s,,,300 
+latt,5,,5,,,,5 
+lsel,s,,,301 
+latt,5,,5,,,,5 
+lsel,s,,,302 
+latt,5,,5,,,,5 
+
+! RigidBeam_8
+lsel,s,,,303 
+latt,5,,5,,,,5 
+lsel,s,,,304 
+latt,5,,5,,,,5 
+lsel,s,,,305 
+latt,5,,5,,,,5 
+lsel,s,,,306 
+latt,5,,5,,,,5 
+lsel,s,,,307 
+latt,5,,5,,,,5 
+lsel,s,,,308 
+latt,5,,5,,,,5 
+lsel,s,,,309 
+latt,5,,5,,,,5 
+lsel,s,,,310 
+latt,5,,5,,,,5 
+lsel,s,,,311 
+latt,5,,5,,,,5 
+lsel,s,,,312 
+latt,5,,5,,,,5 
+lsel,s,,,313 
+latt,5,,5,,,,5 
+lsel,s,,,314 
+latt,5,,5,,,,5 
+lsel,s,,,315 
+latt,5,,5,,,,5 
+lsel,s,,,316 
+latt,5,,5,,,,5 
+
+! RigidBeam_9
+lsel,s,,,317 
+latt,5,,5,,,,5 
+lsel,s,,,318 
+latt,5,,5,,,,5 
+lsel,s,,,319 
+latt,5,,5,,,,5 
+lsel,s,,,320 
+latt,5,,5,,,,5 
+lsel,s,,,321 
+latt,5,,5,,,,5 
+lsel,s,,,322 
+latt,5,,5,,,,5 
+lsel,s,,,323 
+latt,5,,5,,,,5 
+lsel,s,,,324 
+latt,5,,5,,,,5 
+lsel,s,,,325 
+latt,5,,5,,,,5 
+lsel,s,,,326 
+latt,5,,5,,,,5 
+lsel,s,,,327 
+latt,5,,5,,,,5 
+lsel,s,,,328 
+latt,5,,5,,,,5 
+lsel,s,,,329 
+latt,5,,5,,,,5 
+lsel,s,,,330 
+latt,5,,5,,,,5 
+
+! RigidBeam_10
+lsel,s,,,331 
+latt,5,,5,,,,5 
+lsel,s,,,332 
+latt,5,,5,,,,5 
+lsel,s,,,333 
+latt,5,,5,,,,5 
+lsel,s,,,334 
+latt,5,,5,,,,5 
+lsel,s,,,335 
+latt,5,,5,,,,5 
+lsel,s,,,336 
+latt,5,,5,,,,5 
+lsel,s,,,337 
+latt,5,,5,,,,5 
+lsel,s,,,338 
+latt,5,,5,,,,5 
+lsel,s,,,339 
+latt,5,,5,,,,5 
+lsel,s,,,340 
+latt,5,,5,,,,5 
+lsel,s,,,341 
+latt,5,,5,,,,5 
+lsel,s,,,342 
+latt,5,,5,,,,5 
+lsel,s,,,343 
+latt,5,,5,,,,5 
+lsel,s,,,344 
+latt,5,,5,,,,5 
+
+! RigidBeam_11
+lsel,s,,,345 
+latt,5,,5,,,,5 
+lsel,s,,,346 
+latt,5,,5,,,,5 
+lsel,s,,,347 
+latt,5,,5,,,,5 
+lsel,s,,,348 
+latt,5,,5,,,,5 
+lsel,s,,,349 
+latt,5,,5,,,,5 
+lsel,s,,,350 
+latt,5,,5,,,,5 
+lsel,s,,,351 
+latt,5,,5,,,,5 
+lsel,s,,,352 
+latt,5,,5,,,,5 
+lsel,s,,,353 
+latt,5,,5,,,,5 
+lsel,s,,,354 
+latt,5,,5,,,,5 
+lsel,s,,,355 
+latt,5,,5,,,,5 
+lsel,s,,,356 
+latt,5,,5,,,,5 
+lsel,s,,,357 
+latt,5,,5,,,,5 
+lsel,s,,,358 
+latt,5,,5,,,,5 
+
+! RigidBeam_12
+lsel,s,,,359 
+latt,5,,5,,,,5 
+lsel,s,,,360 
+latt,5,,5,,,,5 
+lsel,s,,,361 
+latt,5,,5,,,,5 
+lsel,s,,,362 
+latt,5,,5,,,,5 
+lsel,s,,,363 
+latt,5,,5,,,,5 
+lsel,s,,,364 
+latt,5,,5,,,,5 
+lsel,s,,,365 
+latt,5,,5,,,,5 
+lsel,s,,,366 
+latt,5,,5,,,,5 
+lsel,s,,,367 
+latt,5,,5,,,,5 
+lsel,s,,,368 
+latt,5,,5,,,,5 
+lsel,s,,,369 
+latt,5,,5,,,,5 
+lsel,s,,,370 
+latt,5,,5,,,,5 
+lsel,s,,,371 
+latt,5,,5,,,,5 
+lsel,s,,,372 
+latt,5,,5,,,,5 
+

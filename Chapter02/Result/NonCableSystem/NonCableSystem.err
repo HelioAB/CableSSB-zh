@@ -1,0 +1,13 @@
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       16:16:36
+
+ *** WARNING ***                         CP =       7.500   TIME= 16:17:27
+ /POST is not a recognized POST1 command, abbreviation, or macro.        
+  This command will be ignored.                                          
+
+ *** ERROR ***                           CP =       7.516   TIME= 16:17:27
+ Data file CableStayedBridge_01.db does not exist for RESUME.            
+
+ *** WARNING ***                         CP =       8.781   TIME= 16:17:54
+ /POST is not a recognized POST1 command, abbreviation, or macro.        
+  This command will be ignored.                                          
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       16:18:36

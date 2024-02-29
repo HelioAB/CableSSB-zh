@@ -1,0 +1,135 @@
+/BATCH  
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       16:16:38
+/input,menust,tmp,''
+/GRA,POWER
+/GST,ON
+/PLO,INFO,3
+/GRO,CURL,ON
+/CPLANE,1   
+/REPLOT,RESIZE  
+WPSTYLE,,,,,,,,0
+finish  
+/clear  
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       16:16:49
+/input,start,ans,'D:\ANSYS 2022 R2\ANSYS Student\v222\ANSYS\apdl\'  
+/prep7  
+*set,g,9.806
+acel,,,g  !重力加速度，设为Z方向, m/s^2   
+/input,defElementType,mac,,,0      !1. 定义单元类型   
+/input,defMaterial,mac,,,0         !2. 定义材料属性   
+/input,defSection,mac,,,0     !3. 定义截面数据
+/input,defReal,mac,,,0       !4. 定义实常数
+/input,defKeyPoint,mac,,,0     !5. 定义关键点  
+/input,defLine,mac,,,0      !6. 定义线   
+/input,defLineAttribution,mac,,,0           !7. 定义Line的属性 
+/input,defLineMesh,mac,,0                   !8. 划分单元
+/input,defConstraint,mac,,,0    !9. 定义约束
+/input,defLoad,mac,,,0      !10. 定义荷载   
+/input,defCoupling,mac,,,0                  !11. 定义耦合   
+save,NonCableSystem,db  
+finish  
+! 分析与求解选项设置   
+/input,defSolve,mac,,,0                     !12. 求解选项设置与求解
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       16:16:52
+/POST1  
+FINISH  
+/SOL
+FINISH  
+/POST1  
+SET,LAST
+! /post,1   
+resume,CableStayedBridge_01,db  
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       16:17:31
+set,1,last  
+! 画图
+! 单元坐标系y方向的弯矩   
+etable,Myi,smisc,2  
+etable,Myj,smisc,15 
+plls,Myi,Myj
+/DIST, 1 ,0.924021,1
+/REP,FAST   
+/DIST, 1 ,0.924021,1
+/REP,FAST   
+/DIST, 1 ,0.924021,1
+/REP,FAST   
+/DIST, 1 ,0.924021,1
+/REP,FAST   
+/DIST, 1 ,0.924021,1
+/REP,FAST   
+/DIST, 1 ,0.924021,1
+/REP,FAST   
+/DIST, 1 ,0.924021,1
+/REP,FAST   
+/DIST, 1 ,0.924021,1
+/REP,FAST   
+! /post,1   
+resume,NonCableSystem,db
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       16:17:54
+set,1,last  
+! 画图
+! 单元坐标系y方向的弯矩   
+etable,Myi,smisc,2  
+etable,Myj,smisc,15 
+plls,Myi,Myj
+/DIST, 1 ,0.924021,1
+/REP,FAST   
+/DIST, 1 ,0.924021,1
+/REP,FAST   
+/DIST, 1 ,0.924021,1
+/REP,FAST   
+/DIST, 1 ,0.924021,1
+/REP,FAST   
+/DIST, 1 ,0.924021,1
+/REP,FAST   
+/DIST, 1 ,0.924021,1
+/REP,FAST   
+/DIST, 1 ,0.924021,1
+/REP,FAST   
+/DIST, 1 ,0.924021,1
+/REP,FAST   
+/DIST, 1 ,0.924021,1
+/REP,FAST   
+/DIST, 1 ,0.924021,1
+/REP,FAST   
+/DIST, 1 ,0.924021,1
+/REP,FAST   
+/DIST, 1 ,1.082226,1
+/REP,FAST   
+/DIST, 1 ,1.082226,1
+/REP,FAST   
+/DIST, 1 ,1.082226,1
+/REP,FAST   
+/DIST, 1 ,1.082226,1
+/REP,FAST   
+/DIST, 1 ,1.082226,1
+/REP,FAST   
+/DIST, 1 ,1.082226,1
+/REP,FAST   
+/DIST, 1 ,1.082226,1
+/REP,FAST   
+/DIST, 1 ,1.082226,1
+/REP,FAST   
+/DIST, 1 ,1.082226,1
+/REP,FAST   
+/DIST, 1 ,1.082226,1
+/REP,FAST   
+/DIST, 1 ,1.082226,1
+/REP,FAST   
+/DIST, 1 ,1.082226,1
+/REP,FAST   
+/DIST, 1 ,0.924021,1
+/REP,FAST   
+FINISH  
+! /EXIT,NOSAV   
+/BATCH  
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       16:18:37
+/input,menust,tmp,''
+/GRA,POWER
+/GST,ON
+/PLO,INFO,3
+/GRO,CURL,ON
+/CPLANE,1   
+/REPLOT,RESIZE  
+WPSTYLE,,,,,,,,0
+FINISH  
+! /EXIT,NOSAV   
