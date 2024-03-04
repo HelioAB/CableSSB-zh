@@ -11,15 +11,17 @@ function [P_tower_x,P_tower_y,P_tower_z,P_girder_x,P_girder_y,P_girder_z] = getP
     sign_girder_tension = -sign_tower_tension;
 
     P_girder_z = abs(P_girder_z) .* sign_girder_tension(:,3)';% 可以检查输入的P_girder_z与输出的P_girder_z是否负号一致，来检查本函数输出的符号正确性
-    P_w_k = -w .* obj.getUnstressedLengthByForce(P_tower_z_k);
-    P_girder_y = abs((P_girder_z + P_w_k/2) .* delta_y ./ delta_z) .* sign_tower_tension(:,2)';
-    P_girder_x = abs((P_girder_z + P_w_k/2) .* delta_x ./ delta_z) .* sign_tower_tension(:,1)';
+    P_w_k = -w .* obj.getUnstressedLengthByForce(P_cable_z_k);
+    P_girder_y = abs((P_w_k/2 + P_girder_z) .* delta_y ./ delta_z) .* sign_tower_tension(:,2)';
+    P_girder_x = abs((P_w_k/2 + P_girder_z) .* delta_x ./ delta_z) .* sign_tower_tension(:,1)';
 
-    P_tower_z = abs(P_girder_z + P_w_k) .* sign_tower_tension(:,3)';
-    P_tower_y = -P_girder_y;
-    P_tower_x = -P_girder_x;
+    P_tower_z = abs(P_tower_z_k) .* sign_tower_tension(:,3)';
+    P_tower_y = 
+    P_tower_x = 
     
-    obj.InternalForce = sqrt((P_girder_x).^2 + (P_girder_y).^2 + (P_girder_z + P_w_k/2).^2);
+
+    
+    obj.InternalForce = sqrt(((abs(P_girder_x)+abs(P_tower_x))./2).^2 + ((abs(P_girder_y)+abs(P_tower_y))./2).^2 + ((abs(P_girder_z)+abs(P_tower_z))./2).^2);
     obj.UnstressedLength = obj.getUnstressedLengthByForce(P_tower_z);
     obj.Strain = obj.getStrain;
     obj.Params.P_girder_x = P_girder_x;% 存储StayedCable在梁端的受力

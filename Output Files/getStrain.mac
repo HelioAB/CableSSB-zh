@@ -1,0 +1,15 @@
+allsel
+etable,Stress,LS,1
+*dim,arr_stress,array,92
+*do,i,1,92
+    *get,arr_stress(i),elem,i,etab,Stress
+*enddo
+
+*create,datawrite.mac
+*cfopen,Strain,txt
+*vwrite,arr_stress(1)
+%20.8e
+*cfclos
+*end
+
+/input,datawrite,mac,,,0

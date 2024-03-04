@@ -18,7 +18,8 @@ function Output  = findShape(obj,P_x,P_y,P_z)
         obj.Params.q = q;
         obj.Params.E = E;
     end
-
+    
+    % 执行找形程序
     if ~isempty(obj.Algo_ShapeFinding)
         % 这里的P_x,P_y,P_z都是作用在cable上的施力，坐标满足整体坐标系
         Output = obj.Algo_ShapeFinding.action(obj.Params,P_x,P_y,P_z);

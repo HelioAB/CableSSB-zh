@@ -1,0 +1,4 @@
+*cfopen,Strain,txt
+*vwrite,arr_strain(1)
+%20.8e
+*cfclos

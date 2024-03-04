@@ -1,0 +1,103 @@
+lsel,none 
+cm,l_selected,line
+
+! Cable_1 
+l,1,2 ! Matlab中Line对象编号: 1; Ansys中line编号1 
+l,2,3 ! Matlab中Line对象编号: 2; Ansys中line编号2 
+l,3,4 ! Matlab中Line对象编号: 3; Ansys中line编号3 
+l,4,5 ! Matlab中Line对象编号: 4; Ansys中line编号4 
+l,5,6 ! Matlab中Line对象编号: 5; Ansys中line编号5 
+l,6,7 ! Matlab中Line对象编号: 6; Ansys中line编号6 
+l,7,8 ! Matlab中Line对象编号: 7; Ansys中line编号7 
+l,8,9 ! Matlab中Line对象编号: 8; Ansys中line编号8 
+l,9,10 ! Matlab中Line对象编号: 9; Ansys中line编号9 
+l,10,11 ! Matlab中Line对象编号: 10; Ansys中line编号10 
+l,11,12 ! Matlab中Line对象编号: 11; Ansys中line编号11 
+l,12,13 ! Matlab中Line对象编号: 12; Ansys中line编号12 
+l,13,14 ! Matlab中Line对象编号: 13; Ansys中line编号13 
+l,14,15 ! Matlab中Line对象编号: 14; Ansys中line编号14 
+l,15,16 ! Matlab中Line对象编号: 15; Ansys中line编号15 
+l,16,17 ! Matlab中Line对象编号: 16; Ansys中line编号16 
+l,17,18 ! Matlab中Line对象编号: 17; Ansys中line编号17 
+l,18,19 ! Matlab中Line对象编号: 18; Ansys中line编号18 
+l,19,20 ! Matlab中Line对象编号: 19; Ansys中line编号19 
+l,20,21 ! Matlab中Line对象编号: 20; Ansys中line编号20 
+l,21,22 ! Matlab中Line对象编号: 21; Ansys中line编号21 
+l,22,23 ! Matlab中Line对象编号: 22; Ansys中line编号22 
+l,23,24 ! Matlab中Line对象编号: 23; Ansys中line编号23 
+l,24,25 ! Matlab中Line对象编号: 24; Ansys中line编号24 
+l,25,26 ! Matlab中Line对象编号: 25; Ansys中line编号25 
+l,26,27 ! Matlab中Line对象编号: 26; Ansys中line编号26 
+l,27,28 ! Matlab中Line对象编号: 27; Ansys中line编号27 
+l,28,29 ! Matlab中Line对象编号: 28; Ansys中line编号28 
+l,29,30 ! Matlab中Line对象编号: 29; Ansys中line编号29 
+l,30,31 ! Matlab中Line对象编号: 30; Ansys中line编号30 
+l,31,32 ! Matlab中Line对象编号: 31; Ansys中line编号31 
+l,32,33 ! Matlab中Line对象编号: 32; Ansys中line编号32 
+l,33,34 ! Matlab中Line对象编号: 33; Ansys中line编号33 
+l,34,35 ! Matlab中Line对象编号: 34; Ansys中line编号34 
+l,35,36 ! Matlab中Line对象编号: 35; Ansys中line编号35 
+l,36,37 ! Matlab中Line对象编号: 36; Ansys中line编号36 
+l,37,38 ! Matlab中Line对象编号: 37; Ansys中line编号37 
+l,38,39 ! Matlab中Line对象编号: 38; Ansys中line编号38 
+l,39,40 ! Matlab中Line对象编号: 39; Ansys中line编号39 
+l,40,41 ! Matlab中Line对象编号: 40; Ansys中line编号40 
+l,41,42 ! Matlab中Line对象编号: 41; Ansys中line编号41 
+l,42,43 ! Matlab中Line对象编号: 42; Ansys中line编号42 
+l,43,44 ! Matlab中Line对象编号: 43; Ansys中line编号43 
+l,44,45 ! Matlab中Line对象编号: 44; Ansys中line编号44 
+l,45,46 ! Matlab中Line对象编号: 45; Ansys中line编号45 
+l,46,47 ! Matlab中Line对象编号: 46; Ansys中line编号46 
+l,47,48 ! Matlab中Line对象编号: 47; Ansys中line编号47 
+l,48,49 ! Matlab中Line对象编号: 48; Ansys中line编号48 
+l,49,50 ! Matlab中Line对象编号: 49; Ansys中line编号49 
+l,50,51 ! Matlab中Line对象编号: 50; Ansys中line编号50 
+l,51,52 ! Matlab中Line对象编号: 51; Ansys中line编号51 
+l,52,53 ! Matlab中Line对象编号: 52; Ansys中line编号52 
+l,53,54 ! Matlab中Line对象编号: 53; Ansys中line编号53 
+l,54,55 ! Matlab中Line对象编号: 54; Ansys中line编号54 
+l,55,56 ! Matlab中Line对象编号: 55; Ansys中line编号55 
+l,56,57 ! Matlab中Line对象编号: 56; Ansys中line编号56 
+l,57,58 ! Matlab中Line对象编号: 57; Ansys中line编号57 
+l,58,59 ! Matlab中Line对象编号: 58; Ansys中line编号58 
+l,59,60 ! Matlab中Line对象编号: 59; Ansys中line编号59 
+l,60,61 ! Matlab中Line对象编号: 60; Ansys中line编号60 
+l,61,62 ! Matlab中Line对象编号: 61; Ansys中line编号61 
+l,62,63 ! Matlab中Line对象编号: 62; Ansys中line编号62 
+l,63,64 ! Matlab中Line对象编号: 63; Ansys中line编号63 
+l,64,65 ! Matlab中Line对象编号: 64; Ansys中line编号64 
+l,65,66 ! Matlab中Line对象编号: 65; Ansys中line编号65 
+l,66,67 ! Matlab中Line对象编号: 66; Ansys中line编号66 
+l,67,68 ! Matlab中Line对象编号: 67; Ansys中line编号67 
+l,68,69 ! Matlab中Line对象编号: 68; Ansys中line编号68 
+l,69,70 ! Matlab中Line对象编号: 69; Ansys中line编号69 
+l,70,71 ! Matlab中Line对象编号: 70; Ansys中line编号70 
+l,71,72 ! Matlab中Line对象编号: 71; Ansys中line编号71 
+l,72,73 ! Matlab中Line对象编号: 72; Ansys中line编号72 
+l,73,74 ! Matlab中Line对象编号: 73; Ansys中line编号73 
+l,74,75 ! Matlab中Line对象编号: 74; Ansys中line编号74 
+l,75,76 ! Matlab中Line对象编号: 75; Ansys中line编号75 
+l,76,77 ! Matlab中Line对象编号: 76; Ansys中line编号76 
+l,77,78 ! Matlab中Line对象编号: 77; Ansys中line编号77 
+l,78,79 ! Matlab中Line对象编号: 78; Ansys中line编号78 
+l,79,80 ! Matlab中Line对象编号: 79; Ansys中line编号79 
+l,80,81 ! Matlab中Line对象编号: 80; Ansys中line编号80 
+l,81,82 ! Matlab中Line对象编号: 81; Ansys中line编号81 
+l,82,83 ! Matlab中Line对象编号: 82; Ansys中line编号82 
+l,83,84 ! Matlab中Line对象编号: 83; Ansys中line编号83 
+l,84,85 ! Matlab中Line对象编号: 84; Ansys中line编号84 
+l,85,86 ! Matlab中Line对象编号: 85; Ansys中line编号85 
+l,86,87 ! Matlab中Line对象编号: 86; Ansys中line编号86 
+l,87,88 ! Matlab中Line对象编号: 87; Ansys中line编号87 
+l,88,89 ! Matlab中Line对象编号: 88; Ansys中line编号88 
+l,89,90 ! Matlab中Line对象编号: 89; Ansys中line编号89 
+l,90,91 ! Matlab中Line对象编号: 90; Ansys中line编号90 
+l,91,92 ! Matlab中Line对象编号: 91; Ansys中line编号91 
+l,92,93 ! Matlab中Line对象编号: 92; Ansys中line编号92 
+lsel,all 
+cmsel,u,l_selected 
+cm,Line_Cable_1,line 
+lsel,all 
+cm,l_selected,line 
+allsel 
+

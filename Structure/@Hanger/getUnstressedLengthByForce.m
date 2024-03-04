@@ -7,6 +7,7 @@ function unstressed_length = getUnstressedLengthByForce(obj,P_cable_z)
     A = obj.Section.Area;
     w = obj.Material.MaterialData.gamma .* A; % 每延米自重
     E = obj.Material.MaterialData.E;
-
+    
     unstressed_length = stressed_length ./ (1+(P_cable_z-0.5.*w.*stressed_length)./(abs(delta_z)./stressed_length.*E.*A));
+
 end

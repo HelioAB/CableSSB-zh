@@ -1,0 +1,7 @@
+! 材料名称: 主缆cable 
+! 作用于以下Structure: Cable_1
+mp,Ex,9,2.050000E+11 
+mp,prxy,9,3.000000E-01 
+mp,dens,9,8.005303E+03 
+mp,alpx,9,1.200000E-05 
+

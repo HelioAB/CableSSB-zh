@@ -1,4 +1,4 @@
-function [P_cable_x,P_cable_y,P_cable_z,P_girder_x,P_girder_y,P_girder_z] = getP(obj,P_girder_z)
+function [P_cable_x,P_cable_y,P_cable_z,P_girder_x,P_girder_y,P_girder_z] = test_getP(obj,P_girder_z)
     arguments
         obj
         P_girder_z {mustBeNumeric(P_girder_z)}

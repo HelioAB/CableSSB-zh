@@ -1,0 +1,11 @@
+!Constraint Name: A点约束
+allsel $ ksel,s,,,1 $ nslk,s $ d,all,Ux,0.000000
+allsel $ ksel,s,,,1 $ nslk,s $ d,all,Uy,0.000000
+allsel $ ksel,s,,,1 $ nslk,s $ d,all,Uz,0.000000
+
+!Constraint Name: B点约束
+allsel $ ksel,s,,,93 $ nslk,s $ d,all,Ux,0.000000
+allsel $ ksel,s,,,93 $ nslk,s $ d,all,Uy,0.000000
+allsel $ ksel,s,,,93 $ nslk,s $ d,all,Uz,0.000000
+
+allsel

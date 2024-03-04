@@ -197,7 +197,6 @@ function build(obj)
     P_h_z = P_z+zeros(1,count_hanger); % 初始吊杆力（吊杆和斜拉索竖向力平分加劲梁自重）zhengfangxiang
     P_h_y = -P_h_z*abs((CoordA_cable1(2)-offset1(2))/(CoordA_cable1(3)-offset1(3)));
     P_h_x = zeros(size(P_h_z));
-    assignin("base","P_z",P_z)
     
     Z_Om = 2.45; % 主缆跨中点Z
     obj.Params.P_girder_z_MainSpan = P_h_z;

@@ -1,0 +1,104 @@
+allsel 
+esel,none 
+cm,e_selected,elem
+
+! Cable_1
+lesize,1,,,1 $ lmesh,1
+lesize,2,,,1 $ lmesh,2
+lesize,3,,,1 $ lmesh,3
+lesize,4,,,1 $ lmesh,4
+lesize,5,,,1 $ lmesh,5
+lesize,6,,,1 $ lmesh,6
+lesize,7,,,1 $ lmesh,7
+lesize,8,,,1 $ lmesh,8
+lesize,9,,,1 $ lmesh,9
+lesize,10,,,1 $ lmesh,10
+lesize,11,,,1 $ lmesh,11
+lesize,12,,,1 $ lmesh,12
+lesize,13,,,1 $ lmesh,13
+lesize,14,,,1 $ lmesh,14
+lesize,15,,,1 $ lmesh,15
+lesize,16,,,1 $ lmesh,16
+lesize,17,,,1 $ lmesh,17
+lesize,18,,,1 $ lmesh,18
+lesize,19,,,1 $ lmesh,19
+lesize,20,,,1 $ lmesh,20
+lesize,21,,,1 $ lmesh,21
+lesize,22,,,1 $ lmesh,22
+lesize,23,,,1 $ lmesh,23
+lesize,24,,,1 $ lmesh,24
+lesize,25,,,1 $ lmesh,25
+lesize,26,,,1 $ lmesh,26
+lesize,27,,,1 $ lmesh,27
+lesize,28,,,1 $ lmesh,28
+lesize,29,,,1 $ lmesh,29
+lesize,30,,,1 $ lmesh,30
+lesize,31,,,1 $ lmesh,31
+lesize,32,,,1 $ lmesh,32
+lesize,33,,,1 $ lmesh,33
+lesize,34,,,1 $ lmesh,34
+lesize,35,,,1 $ lmesh,35
+lesize,36,,,1 $ lmesh,36
+lesize,37,,,1 $ lmesh,37
+lesize,38,,,1 $ lmesh,38
+lesize,39,,,1 $ lmesh,39
+lesize,40,,,1 $ lmesh,40
+lesize,41,,,1 $ lmesh,41
+lesize,42,,,1 $ lmesh,42
+lesize,43,,,1 $ lmesh,43
+lesize,44,,,1 $ lmesh,44
+lesize,45,,,1 $ lmesh,45
+lesize,46,,,1 $ lmesh,46
+lesize,47,,,1 $ lmesh,47
+lesize,48,,,1 $ lmesh,48
+lesize,49,,,1 $ lmesh,49
+lesize,50,,,1 $ lmesh,50
+lesize,51,,,1 $ lmesh,51
+lesize,52,,,1 $ lmesh,52
+lesize,53,,,1 $ lmesh,53
+lesize,54,,,1 $ lmesh,54
+lesize,55,,,1 $ lmesh,55
+lesize,56,,,1 $ lmesh,56
+lesize,57,,,1 $ lmesh,57
+lesize,58,,,1 $ lmesh,58
+lesize,59,,,1 $ lmesh,59
+lesize,60,,,1 $ lmesh,60
+lesize,61,,,1 $ lmesh,61
+lesize,62,,,1 $ lmesh,62
+lesize,63,,,1 $ lmesh,63
+lesize,64,,,1 $ lmesh,64
+lesize,65,,,1 $ lmesh,65
+lesize,66,,,1 $ lmesh,66
+lesize,67,,,1 $ lmesh,67
+lesize,68,,,1 $ lmesh,68
+lesize,69,,,1 $ lmesh,69
+lesize,70,,,1 $ lmesh,70
+lesize,71,,,1 $ lmesh,71
+lesize,72,,,1 $ lmesh,72
+lesize,73,,,1 $ lmesh,73
+lesize,74,,,1 $ lmesh,74
+lesize,75,,,1 $ lmesh,75
+lesize,76,,,1 $ lmesh,76
+lesize,77,,,1 $ lmesh,77
+lesize,78,,,1 $ lmesh,78
+lesize,79,,,1 $ lmesh,79
+lesize,80,,,1 $ lmesh,80
+lesize,81,,,1 $ lmesh,81
+lesize,82,,,1 $ lmesh,82
+lesize,83,,,1 $ lmesh,83
+lesize,84,,,1 $ lmesh,84
+lesize,85,,,1 $ lmesh,85
+lesize,86,,,1 $ lmesh,86
+lesize,87,,,1 $ lmesh,87
+lesize,88,,,1 $ lmesh,88
+lesize,89,,,1 $ lmesh,89
+lesize,90,,,1 $ lmesh,90
+lesize,91,,,1 $ lmesh,91
+lesize,92,,,1 $ lmesh,92
+esel,all 
+cmsel,u,e_selected 
+cm,Elem_Cable_1,elem 
+esel,all 
+cm,e_selected,elem 
+allsel
+
