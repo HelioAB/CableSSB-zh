@@ -73,7 +73,7 @@ function [X,Y,Z,Epsilon_Init,S,H,alpha,optim_var,F_x] = Algo_Catenary3D_MainSpan
     init_var;
 
 %     options = optimoptions('fmincon','Display','iter-detailed','Algorithm','sqp','ObjectiveLimit',1e-10); % 展示迭代过程
-    options = optimoptions('fmincon','Display','none','ObjectiveLimit',1e-8); % 展示迭代过程
+    options = optimoptions('fmincon','Display','iter-detailed','ObjectiveLimit',1e-6); % 展示迭代过程
     
     % 2.2 调用fmincon函数
     % 为什么不用fminimax、fgoalattain等多目标优化程序？因为这些程序对初始点敏感，而fmincon会自己重新选点
