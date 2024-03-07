@@ -47,7 +47,11 @@ function [X,Y,Z,Epsilon_Init,S,H,alpha,optim_var,F_x] = Algo_Catenary3D_MainSpan
     %% 1. 优化问题参数的设置
     % 1.1 设计变量初值的设定
     % 水平力的初始值H通过抛物线确定，a1初始值为0。
-    init_var = Init_var(Params);
+    if isempty(Params.Init_var)
+        init_var = Init_var(Params);
+    else
+        init_var = Params.Init_var;
+    end
     
     % 1.2 设置线性约束
     % 线性不等式约束 Ax <= b
@@ -235,7 +239,7 @@ function var = Init_var(Params)
     if n_hanger == 0
         alpha1 = 0; % 没有吊杆的情况
     elseif n_hanger == 1
-        alpha1 = atan(sum(P_hanger_y)/sum(P_hanger_z)); % 有吊杆的情况
+        alpha1 = atan(P_hanger_y/P_hanger_z); % 有吊杆的情况
     elseif n_hanger >= 2
         alpha1 = atan(sum(P_hanger_y)/sum(P_hanger_z)); % 有吊杆的情况
     end

@@ -1,5 +1,7 @@
 classdef Hanger < Structure
     properties
+        IPoint
+        JPoint
         InternalForce
         UnstressedLength
         Strain
@@ -17,7 +19,9 @@ classdef Hanger < Structure
             end
             obj = obj@Structure(section,material);
 
-            if ~isempty(IPoint)
+            if ~isempty(IPoint) && ~isempty(JPoint)
+                obj.IPoint = IPoint;
+                obj.JPoint = JPoint;
                 obj.Line = Line([],IPoint,JPoint);
                 uni_point = unique([IPoint,JPoint]);
                 newpoint = uni_point.findUnrecord();

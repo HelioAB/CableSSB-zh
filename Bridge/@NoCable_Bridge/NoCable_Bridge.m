@@ -33,7 +33,7 @@ classdef NoCable_Bridge < Bridge
         optimBendingStrainEnergy(obj,options)
         OnlyCableBridge = getOnlyCableBridge(obj)
         
-        solveCableShape(obj)
+        solveCableShape(obj,Pz)
         xx_solveInitialStrain(obj)
         x_solveInitialStrain(obj)
         solveInitialStrain(obj)

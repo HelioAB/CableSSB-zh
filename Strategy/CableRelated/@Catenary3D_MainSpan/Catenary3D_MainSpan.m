@@ -22,8 +22,9 @@ classdef Catenary3D_MainSpan < ShapeFinding
                                       'l_span','';...
                                       'coord_A','';...
                                       'coord_B','';...
-                                      'hOm',''};
-            try
+                                      'hOm','';...
+                                      'Init_var',''};
+            try % 必填参数
                 % 参数转换： Params中存储的各种参数转换到Params_converted中
                 % Params是主程序中存储起来的，其参数名及其解释在变量InputParamsDescription中
                 % Params_converted是obj.AlgoHandle需要输入的参数名
@@ -60,6 +61,8 @@ classdef Catenary3D_MainSpan < ShapeFinding
                 Params_converted.coord_A        = Params.coord_A;
                 Params_converted.coord_B        = Params.coord_B;
                 Params_converted.hOm            = Params.hOm;
+                
+
 
             catch ME
                 if strcmp(ME.identifier,'MATLAB:nonExistentField')
@@ -71,14 +74,22 @@ classdef Catenary3D_MainSpan < ShapeFinding
                     error(['未定义','参数 "',unknown_param,'" 。','所有需要输入的参数及其解释存储在工作区的Input_Params_Description中，请核对。'])
                 end
             end
+            % 可选参数
+            if isfield(Params,'Init_var')
+                Params_converted.Init_var       = Params.Init_var;
+            else
+                Params_converted.Init_var       = [];
+            end
+            
 
             
         end
         function Output = action(obj,Params,P_x,P_y,P_z)
             % 本方法只负责计算出各种参数，并放在Output中
             [Params,P_x,P_y,P_z] = obj.InputParamsAdaptor(Params,P_x,P_y,P_z);
-
+            
             [X,Y,Z,Epsilon_Init,S,H,alpha,x,F_x] = obj.AlgoHandle(Params,P_x,P_y,P_z);% 这里得到的X,Y,Z均为以0点为第一个点，所以需要把XYZ变换
+
             [X,Y,Z] = obj.moveToPosition(Params,X,Y,Z);
 
             % 需要把所有Algo输出的东西全部放在Output这个struct里面，因为不同的Algo可能输出不同的东西
