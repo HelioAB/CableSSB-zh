@@ -1,4 +1,4 @@
-function [cable,Output] = buildMainSpanCable(obj,CoordA,CoordB,L,index_hanger,P_h_x,P_h_y,P_h_z,Z_Om,section,material,element_type,division_num,Algo_ShapeFinding,options)
+function [cable,Output] = buildMainSpanCable(obj,CoordA,CoordB,L,index_hanger,P_h_x,P_h_y,P_h_z,z_Om,section,material,element_type,division_num,Algo_ShapeFinding,options)
     arguments
         obj
         CoordA
@@ -8,7 +8,7 @@ function [cable,Output] = buildMainSpanCable(obj,CoordA,CoordB,L,index_hanger,P_
         P_h_x
         P_h_y
         P_h_z
-        Z_Om
+        z_Om
         section
         material
         element_type = Link10
@@ -34,11 +34,10 @@ function [cable,Output] = buildMainSpanCable(obj,CoordA,CoordB,L,index_hanger,P_
     [P_x,P_y,P_z] = cable.P(index_hanger,P_h_x,P_h_y,P_h_z);
     cable.addConnectPoint(cable.ForcePoint);
     % 设置其他需要的参数
-    cable.Params.hOm = Z_Om;
+    cable.Params.z_Om = z_Om;
     % 设置找形方法
     cable.Algo_ShapeFinding = Algo_ShapeFinding;
     % 找形
     Output = cable.findShape(P_x,P_y,P_z);
-    
     
 end

@@ -1,3 +1,4 @@
+%
 clear
 clc
 
@@ -30,7 +31,7 @@ obj.Params.P_girder_z_MainSpan = P_h_z;
 [cable1,Output_MS] = obj.buildMainSpanCable(CoordA_cable1,CoordB_cable1,L,index_hanger,P_h_x,P_h_y,P_h_z,Z_Om,Sec_cable,Mat_cable,ET_cable);
 
 maincable = obj.StructureList{1};
-
+%}
 
 % 定义荷载
 cable_hanger_points = maincable.Point(index_hanger);
@@ -46,6 +47,9 @@ constraint1 = obj.addConstraint(maincable.PointA,support_DoF,zeros(1,length(supp
 constraint2 = obj.addConstraint(maincable.PointB,support_DoF,zeros(1,length(support_DoF)),'Name','B点约束');
 
 obj.plot
+
+
+%
 obj.OutputMethod = OutputToAnsys(obj,"AnsysPath","C:\Program Files\ANSYS Inc\ANSYS Student\v232\ansys\bin\winx64\MAPDL.exe", ...
                                      "JobName","OnlyCable", ...
                                      "MacFilePath","C:\Users\11440\Desktop\usage\Susp V.4\CableSSB-zh\Output Files\main.mac", ...
@@ -53,9 +57,10 @@ obj.OutputMethod = OutputToAnsys(obj,"AnsysPath","C:\Program Files\ANSYS Inc\ANS
                                      "WorkPath","C:\Users\11440\Desktop\usage\Susp V.4\CableSSB-zh\Output Files");
 obj.output
 
-format default
+%{
 inputmethod = InputFromTXT("C:\Users\11440\Desktop\usage\Susp V.4\CableSSB-zh\Output Files\Strain.txt")
 inputmethod.action(92)
 ansys_stress = inputmethod.RawData;
 matlab_stress = maincable.Strain .* maincable.Material.MaterialData.E;
 relative_err = (ansys_stress-matlab_stress) ./ matlab_stress *100 % 百分比表示
+%}

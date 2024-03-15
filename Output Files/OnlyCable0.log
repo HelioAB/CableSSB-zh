@@ -1,5 +1,5 @@
 /BATCH  
-/COM,ANSYS RELEASE 2023 R2           BUILD 23.2      UP20230531       17:19:57
+/COM,ANSYS RELEASE 2023 R2           BUILD 23.2      UP20230531       15:19:19
 /input,menust,tmp,''
 /GRA,POWER
 /GST,ON
@@ -9,146 +9,31 @@
 /REPLOT,RESIZE  
 WPSTYLE,,,,,,,,0
 main
-/COM,ANSYS RELEASE 2023 R2           BUILD 23.2      UP20230531       17:20:02
+/COM,ANSYS RELEASE 2023 R2           BUILD 23.2      UP20230531       15:19:21
 /POST1  
 SET,LAST
-*create,datawrite.mac   
-allsel  
-ETABLE,LSTRAIN,LS,1 
-*dim,arr_strain,array,92
-*DO,i,1,92  
-    *get,arr_strain(i),elem,i,etab,LSTRAIN  
-*ENDDO  
-*cfopen,ddStrain,txt
-*VWRITE,arr_strain(1)   
-%20.8e  
-*cfclos 
-*end
-datawrite   
-*status,arr_strain  
-*status,arr_strain  
-allsel  
-etable,LSTRAIN,LS,1 
-*dim,arr_strain,array,92
-*do,i,1,92  
-*get,arr_strain(i),elem,i,etab,LSTRAIN  
-*enddo  
-*status,arr_strain  
-*create,datawrite.mac   
-allsel  
-etable,LSTRAIN,LS,1 
-*dim,arr_strain,array,92
-*do,i,1,92  
-    *get,arr_strain(i),elem,i,etab,LSTRAIN  
-*enddo  
-*cfopen,ddStrain,txt
-*vwrite,arr_strain(1)   
-%20.8e  
-*cfclos 
-datawrite   
-*create,datawrite.mac   
-allsel  
-etable,LSTRAIN,LS,1 
-*dim,arr_strain,array,92
-*do,i,1,92  
-    *get,arr_strain(i),elem,i,etab,LSTRAIN  
-*enddo  
-*cfopen,ddStrain,txt
-*vwrite,arr_strain(1)   
-%20.8e  
-*cfclos 
-*end
-datawrite   
-*create,datawrite.mac   
-allsel  
-etable,LSTRAIN,LS,1 
-*dim,arr_strain,array,92
-*do,i,1,92  
-    *get,arr_strain(i),elem,i,etab,LSTRAIN  
-*enddo  
-*cfopen,ddStrain,txt
-*vwrite,arr_strain(1)   
-%20.8e  
-*cfclos 
-*end
-datawrite   
-*create,datawrite.mac   
-allsel  
-etable,LSTRAIN,LS,1 
-*dim,arr_strain,array,92
-*do,i,1,92  
-    *get,arr_strain(i),elem,i,etab,LSTRAIN  
-*enddo  
-*cfopen,ddStrain,mac
-*vwrite,arr_strain(1)   
-%20.8e  
-*cfclos 
-*end
-datawrite   
-allsel  
-etable,LSTRAIN,LS,1 
-*dim,arr_strain,array,92,1  
-*do,i,1,92  
-*get,arr_strain(i,1),elem,i,etab,LSTRAIN
-*enddo  
-*create,datawrite.mac   
-*cfopen,ddStrain,mac
-*vwrite,arr_strain(1,1) 
-%20.8e  
-*cfclos 
-*end
-datawrite   
-allsel  
-etable,LSTRAIN,LS,1 
-*dim,arr_strain,array,92,1  
-*do,i,1,92  
-*get,arr_strain(i,1),elem,i,etab,LSTRAIN
-*enddo  
-*create,datawrite.mac   
-*cfopen,ddStrain,mac
-*vwrite,arr_strain(1,1) 
-%20.8e  
-*cfclos 
-*end
-/input,datawrite,mac,,,0
-allsel  
-etable,LSTRAIN,LS,1 
-*dim,arr_strain,array,92
-*do,i,1,92  
-*get,arr_strain(i),elem,i,etab,LSTRAIN  
-*enddo  
-*create,datawrite.mac   
-*cfopen,Strain,txt  
-*vwrite,arr_strain(1)   
-%20.8e  
-*cfclos 
-*end
-/input,datawrite,mac,,,0
-allsel  
-etable,LSTRAIN,LS,1 
-*dim,arr_strain,array,92
-*do,i,1,92  
-*get,arr_strain(i),elem,i,etab,LSTRAIN  
-*enddo  
-*create,datawrite.mac   
-*cfopen,Strain,txt  
-*vwrite,arr_strain(1)   
-%20.8e  
-*cfclos 
-*end
-/input,datawrite,mac,,,0
-allsel  
-etable,LSTRAIN,LS,1 
-*dim,arr_strain,array,92
-*do,i,1,92  
-*get,arr_strain(i),elem,i,etab,LSTRAIN  
-*enddo  
-*create,datawrite.mac   
-*cfopen,Strain,txt  
-*vwrite,arr_strain(1)   
-%20.8e  
-*cfclos 
-*end
-/input,datawrite,mac,,,0
+PLDISP,1
+/USER,  1   
+/FOC,   1,   347.989309892    ,  -11.1786155725    ,  -25.5684608967
+/REPLO  
+/VIEW,  1, -0.207896142275    , -0.613846814123    ,  0.761558456600
+/ANG,   1,   5.88623379825  
+/REPLO  
+/VIEW,  1, -0.212678426198    , -0.901437736500    ,  0.377064840900
+/ANG,   1,   18.0245144333  
+/REPLO  
+/VIEW,  1, -0.962763068949    , -0.126278122693    ,  0.239042064910
+/ANG,   1,   38.9439662682  
+/REPLO  
+/DIST, 1 ,0.924021,1
+/REP,FAST   
+/DIST, 1 ,0.924021,1
+/REP,FAST   
+/DIST, 1 ,0.924021,1
+/REP,FAST   
+/VIEW,  1, -0.959532230142    ,  0.175857773025    ,  0.219936224813
+/ANG,   1,   38.7319274700  
+/REPLO  
+getStrain   
 FINISH  
 ! /EXIT,NOSAV   

@@ -1,4 +1,4 @@
-function [X,Y,Z,Epsilon_Init,S,H,alpha,optim_var] = Algo_Catenary3D_SideSpan(Params,P_x,P_y,P_z)
+function [X,Y,Z,Epsilon_Init,S,H,alpha,a,optim_var] = Algo_Catenary3D_SideSpan(Params,P_x,P_y,P_z)
 % 输入:
 %             Params是一个struct数据,里面存储了以下需要的参数:
 %             Params.n              = n;            % 计算节点数，不包括两个塔顶IP点
@@ -12,11 +12,11 @@ function [X,Y,Z,Epsilon_Init,S,H,alpha,optim_var] = Algo_Catenary3D_SideSpan(Par
 %             Params.m              = ceil(n/2);    % 跨中节点编号, ceil(n/2)
 %             Params.l_span         = l_span;       % 跨径，单位m
 %             Params.Li             = Li;           % 每段悬链线的水平投影长度组成的向量，向量长度n+1
-%             Params.d0             = (y_B-y_A);    % y_A：A点的横桥向坐标；y_B:B点的横桥向坐标
 %             Params.l_girder_seg   = mean(L);      % 每个节段的平均长度，仅用于初始化线形，不需要太精确。在初始化线形中用来计算一个节段的主梁的自重
-%             Params.y_d_m          = (y_A+y_B)/2;  % 主缆中点横桥向坐标，仅用于初始化线形，不需要太精确
-%             Params.hA             = hA            % 主缆A点的高度
-%             Params.hB             = hB            % 主缆B点的高度
+%             Params.y_A            = y_A;
+%             Params.y_B            = y_B;
+%             Params.z_A            = z_A            % 主缆A点的高度
+%             Params.z_B            = z_B            % 主缆B点的高度
 %             Params.F_x            = F_x;          % 主缆水平力的顺桥向分力,由主跨找形程序生成,保证边跨和中跨的F_x相同,单位N
 %             P_x                   = -P_x;         % 所有计算节点的x方向（顺桥向）力，全局坐标系的-X方向为正，向量长度n，单位N
 %             P_y                   = -P_y;
@@ -85,7 +85,7 @@ function [X,Y,Z,Epsilon_Init,S,H,alpha,optim_var] = Algo_Catenary3D_SideSpan(Par
     % 当n=100时,SQP: fval=1.04; 内点法: fval=1.4e-9
 
     %% 3. 生成悬链线各节点坐标XYZ位置、水平力H、无应力长度S、初应变ε
-    [Xi,Yi,Zi,H,alpha,S,Epsilon_Init] = Seg_catenary(q_cable,n,Li,P_x,P_y,P_z,optim_var,E_cable,A_cable,F_x); 
+    [Xi,Yi,Zi,H,alpha,a,S,Epsilon_Init] = Seg_catenary(q_cable,n,Li,P_x,P_y,P_z,optim_var,E_cable,A_cable,F_x); 
     
     % 初始化坐标向量
     X = zeros([1,length(Xi)+1]);
@@ -101,7 +101,7 @@ function [X,Y,Z,Epsilon_Init,S,H,alpha,optim_var] = Algo_Catenary3D_SideSpan(Par
 end
 
 %% 一端悬链线的各种参数计算
-function [Xi,Yi,Zi,H,alpha,S,Epsilon_Init] = Seg_catenary(q_cable,n,Li,P_x,P_y,P_z,var,E_cable,A_cable,F_x)
+function [Xi,Yi,Zi,H,alpha,a,S,Epsilon_Init] = Seg_catenary(q_cable,n,Li,P_x,P_y,P_z,var,E_cable,A_cable,F_x)
     % 输入:
     arguments
         q_cable {mustBeNumeric} % 
@@ -195,31 +195,29 @@ function f = ObjectFun(var,Params)
     P_z = Params.P_z;
     E_cable = Params.E_cable;
     A_cable = Params.A_cable;
-    hA = Params.hA;
-    hB = Params.hB;
-    d0 = Params.d0;
-    m = Params.m;
+    y_A = Params.y_A;
+    y_B = Params.y_B;
+    z_A = Params.z_A;
+    z_B = Params.z_B;
     F_x = Params.F_x;
     
     [Xi,Yi,Zi,H,alpha] = Seg_catenary(q_cable,n,Li,P_x,P_y,P_z,var,E_cable,A_cable,F_x); 
-    f1 = sum(Zi)-(hA-hB); % 为什么不是hB-hA? 因为h的方向与z的方向相反
+    f1 = sum(Zi)-(z_B-z_A);
 
     f2 = sum(abs(H.*cos(alpha)-F_x));
 
-    f3 = sum(Yi) - d0; % d0 = y_B - y_A而不是y_A - y_B
+    f3 = sum(Yi) - (y_B - y_A);
     f = f1^2 + f2^2 + f3^2; % 目标函数
 end
 
 %% 初始化线形
 function var = Init_var(Params)
     n_hanger = Params.n_hanger;
-    y_d_m = Params.y_d_m;
+    y_A = Params.y_A;
+    y_B = Params.y_B;
+    y_d_m = (y_A+y_B)/2;
     l_span = Params.l_span;
-    hA = Params.hA;
-    hB = Params.hB;
     q_cable = Params.q_cable;
-    P_hanger_z = Params.P_hanger_z;
-    l_girder_seg = Params.l_girder_seg;
     F_x = Params.F_x;
 
 

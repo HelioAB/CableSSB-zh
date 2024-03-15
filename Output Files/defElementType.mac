@@ -1,7 +1,7 @@
 ! 单元名称：Link10 
 ! 作用于以下Structure: Cable_1
-et,9,Link10 
-keyopt,9,2,2 
-keyopt,9,3,0
+et,32,Link10 
+keyopt,32,2,2 
+keyopt,32,3,0
 
 
