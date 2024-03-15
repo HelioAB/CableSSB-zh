@@ -1,4 +1,6 @@
 function data_container = solveCableShape(obj,Pz)
+    % Pz是所有设计竖向力的汇总，包括了斜拉索处的设计竖向力
+
     % 1. 寻找那些需要被求解的Cable对象及其Hanger对象，对称的主缆仅操作其中之一的主缆（破坏了对称性，因此需要第5步的恢复对称性）
     ReplaceCables = obj.ReplacedCable;
     Index_SeletedCables = true(1,length(ReplaceCables));
@@ -30,6 +32,8 @@ function data_container = solveCableShape(obj,Pz)
             Z_B_0 = [HangerBottomPoints.Z];
         
             P_girder_z = zeros(1,length(X_B_0));
+
+            % 从所有设计竖向力的汇总Pz中，提取出与吊索相关的设计竖向力P_girder_z
             for j=1:length(X)
                 index = abs(X(j)-X_B_0) < 1e-5;
                 P_girder_z(index) = Pz(j);
@@ -52,19 +56,14 @@ function data_container = solveCableShape(obj,Pz)
             nonlcon = [];
             
             options = optimoptions('fmincon','Display','iter-detailed','ObjectiveLimit',5e-2,'DiffMinChange',0.01);
-            [optim_var,fval,exitflag,output] = fmincon(ObjFunc,Y_0,A,b,Aeq,beq,lb,ub,nonlcon,options);
+            fmincon(ObjFunc,Y_0,A,b,Aeq,beq,lb,ub,nonlcon,options);
             
     % 5. 恢复主缆的对称性
             cable.resumeSymmetrical;
+    % 6. 恢复吊索力
+            hanger.getP(P_girder_z);
         end
     end
-    % 6. 斜拉索索力
-    for i=1:length(obj.ReplacedStayedCable)
-        stayed_cable = obj.ReplacedStayedCable(i);
-        P_girder_z = obj.getGirderPz(stayed_cable,X,Pz);
-        stayed_cable.getP(P_girder_z);
-    end
-    
 end
 function MSE = MSE_Y(Y_0,cable,hanger,P_girder_z,w,X_T_0,Z_T_0,X_B_0,Y_B_0,Z_B_0,data_container)
     HangerTopPoints = hanger.findCablePoint();

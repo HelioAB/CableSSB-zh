@@ -5,7 +5,6 @@ function [bridge_findState,U_final] = optimBendingStrainEnergy(obj)
 
         X = obj.getSortedGirderPointXCoord([obj.findStructureByClass('Hanger'),obj.findStructureByClass('StayedCable')]);
         bridge_findState = obj.getNonCableBridge(X);
-        assignin("base","bridge_findState",bridge_findState)
         fun = @(Pz) ObjFun(bridge_findState,X,Pz,overall_dir);
         x0 = obj.getAverageGirderWeight + zeros(1,length(X));
         A = [];
@@ -58,10 +57,6 @@ function U = ObjFun(bridge_findState,X,Pz,overall_dir)
         % 计算总弯曲应变能
         U = U + computeBendingStrainEnergy(L,E,I,M_i,M_j);
     end
-    format longEng
-    U
-    format default
-    Pz
     % 保存结果
     bridge_findState.Iteration_Result.(['Iter_',num2str(i)]) = struct;
     bridge_findState.Iteration_Result.(['Iter_',num2str(i)]).Iteration = i;

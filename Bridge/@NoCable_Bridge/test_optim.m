@@ -56,18 +56,6 @@ output_method = OutputToAnsys(bridge_state,"JobName",'NonCableModel',...
 bridge_state.OutputMethod = output_method;
 bridge_state.output
 
-% % 辅助墩固定节点
-% num_constraint_point = [103,128];
-% num_node = num_constraint_point(1);
-% Point2Node = bridge_state.FiniteElementModel.Maps.Point2Node;
-% Node2Element = bridge_state.FiniteElementModel.Maps.Node2Element;
-% Map_Element = bridge_state.FiniteElementModel.Maps.Element;
-% num_element = Node2Element(Point2Node(num_node));
-% element = Map_Element(num_element(1));
-% element.AnsysForceResult
-% % [fig,ax] = bridge_state.plot;
-% %  bridge_state.FiniteElementModel.plotBendingMoment('Figure',fig,'Axis',ax);
-
 max_iter = bridge_state.Iter_Optimization;
 Pz = bridge_state.Result_Iteration.Iter_Pz(max_iter);
 bridge_state.solveCableShape(Pz);
