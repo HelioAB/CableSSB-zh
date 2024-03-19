@@ -44,8 +44,7 @@ function output_str = outputLineAttribution(obj)
             else
                 num_kpoint = num2str(kpoint.Num); % 因为Ansys中KeyPoint是可以定义编号的（与Line不同），所以可以直接使用Matlab中的KeyPoint的编号
             end
-            output_str = [output_str,sprintf(['lsel,s,,,%d \n' ...
-                                              'latt,%d,%d,%d,,%s \n'],Map_convert(line(j).Num),structure.Material.Num,Map_convert(line(j).Num),structure.ElementType.Num,num_kpoint)];
+            output_str = [output_str,sprintf(['lsel,s,,,%d $ latt,%d,%d,%d,,%s \n'],Map_convert(line(j).Num),structure.Material.Num,Map_convert(line(j).Num),structure.ElementType.Num,num_kpoint)];
         end
         output_str = [output_str,newline];
 
@@ -61,8 +60,7 @@ function output_str = outputLineAttribution(obj)
             else
                 num_kpoint = num2str(kpoint.Num);
             end
-            output_str = [output_str,sprintf(['lsel,s,,,%d \n' ...
-                                              'latt,%d,,%d,,%s,,%d \n'],Map_convert(line(j).Num),structure.Material.Num,structure.ElementType.Num,num_kpoint,structure.Section(j).Num)];
+            output_str = [output_str,sprintf(['lsel,s,,,%d $ latt,%d,,%d,,%s,,%d \n'],Map_convert(line(j).Num),structure.Material.Num,structure.ElementType.Num,num_kpoint,structure.Section(j).Num)];
         end
         output_str = [output_str,newline];
     end

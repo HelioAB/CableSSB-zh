@@ -62,9 +62,7 @@ function data_container = solveCableShape(obj,Pz)
             cable_symmetried = cable.resumeSymmetrical;
     % 6. 恢复吊索力
             hanger.getP(P_girder_z);
-
             hanger_symmetried = cable_symmetried.findConnectStructureByClass('Hanger');
-            hanger_symmetried.getP(P_girder_z);
         end
     end
 end
