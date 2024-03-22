@@ -2,12 +2,22 @@ classdef NoCable_Bridge < Bridge
     properties
         OriginalBridge
         FiniteElementModel
+        % 注：前面带Replaced的Structure对象cell，代表被隐藏起来的。没有带Replaced的Structure对象cell，是可以被plot和output的
+        % 其实应该把它们设置为private的属性，直接操作它们是不安全的，但是为了节约时间，这里不开发操作这些的方法
+        % 梁塔系统
+        ReplacedGirder
+        ReplacedTower
+        ReplacedRigidBeam
+        ReplacedPier
+        % 缆索系统
         ReplacedCable
         ReplacedHanger
         ReplacedStayedCable
-        ReplacedPier
+        % 
         DeletedConstraint
         DeletedCoupling
+        DeletedLoad = {}
+
         XCoordOfPz
     end
     properties % 迭代结果
@@ -18,7 +28,9 @@ classdef NoCable_Bridge < Bridge
     methods
         function obj = NoCable_Bridge(bridge)
             obj = obj@Bridge;
-            obj.OriginalBridge = bridge;
+            if nargin
+                obj.OriginalBridge = bridge;
+            end
         end
         build(obj)
 
@@ -33,10 +45,12 @@ classdef NoCable_Bridge < Bridge
         optimBendingStrainEnergy(obj,options)
         OnlyCableBridge = getOnlyCableBridge(obj)
         
-        solveCableShape(obj,Pz)
+        Y_final = solveCableShape(obj,Pz,Y_0)
         xx_solveInitialStrain(obj)
         x_solveInitialStrain(obj)
         solveInitialStrain(obj)
+
+        output_str = outputAnsysIPC(obj,num_elem)
     end
     methods(Static,Hidden) % 用于测试的函数
         test_PointForceVSNodeForce

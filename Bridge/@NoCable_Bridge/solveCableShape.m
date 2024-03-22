@@ -1,4 +1,9 @@
-function data_container = solveCableShape(obj,Pz)
+function Y_final = solveCableShape(obj,Pz,Y_0)
+    arguments
+        obj
+        Pz
+        Y_0 = []
+    end
     % Pz是所有设计竖向力的汇总，包括了斜拉索处的设计竖向力
 
     % 1. 寻找那些需要被求解的Cable对象及其Hanger对象，对称的主缆仅操作其中之一的主缆（破坏了对称性，因此需要第5步的恢复对称性）
@@ -11,9 +16,7 @@ function data_container = solveCableShape(obj,Pz)
         end
     end
     SelectedCables = ReplaceCables(Index_SeletedCables);
-    
-    % 数据存储在 data_container 中
-    data_container = DataContainer();
+
     X = obj.XCoordOfPz;
     
     for i=1:length(SelectedCables)
@@ -41,7 +44,7 @@ function data_container = solveCableShape(obj,Pz)
 
             w = hanger_clone.Material.MaterialData.gamma .* hanger_clone.Section.Area; % 每延米自重
             
-            ObjFunc = @(Y) MSE_Y(Y,cable,hanger_clone,P_girder_z,w,X_T_0,Z_T_0,X_B_0,Y_B_0,Z_B_0,data_container);
+            ObjFunc = @(Y) MSE_Y(Y,cable,hanger_clone,P_girder_z,w,X_T_0,Z_T_0,X_B_0,Y_B_0,Z_B_0);
             A = [];
             b = [];
             Aeq = [];
@@ -52,11 +55,13 @@ function data_container = solveCableShape(obj,Pz)
                 lb(j) = min([Y_B_0,0]);
                 ub(j) = max([Y_B_0,0]);
             end
-            Y_0 = (lb + ub)/2;
+            if isempty(Y_0)% 初始值拟定
+                Y_0 = (lb + ub)/2;
+            end
             nonlcon = [];
             
             options = optimoptions('fmincon','Display','iter-detailed','ObjectiveLimit',5e-2,'DiffMinChange',0.01);
-            fmincon(ObjFunc,Y_0,A,b,Aeq,beq,lb,ub,nonlcon,options);
+            Y_final = fmincon(ObjFunc,Y_0,A,b,Aeq,beq,lb,ub,nonlcon,options);
             
     % 5. 恢复主缆的对称性
             cable_symmetried = cable.resumeSymmetrical;
@@ -68,7 +73,7 @@ function data_container = solveCableShape(obj,Pz)
         end
     end
 end
-function MSE = MSE_Y(Y_0,cable,hanger,P_girder_z,w,X_T_0,Z_T_0,X_B_0,Y_B_0,Z_B_0,data_container)
+function MSE = MSE_Y(Y_0,cable,hanger,P_girder_z,w,X_T_0,Z_T_0,X_B_0,Y_B_0,Z_B_0)
     HangerTopPoints = hanger.findCablePoint();
     for i=1:length(HangerTopPoints)
         HangerTopPoints(i).Y = Y_0(i);

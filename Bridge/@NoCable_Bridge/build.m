@@ -9,15 +9,15 @@ function build(obj)
         obj.(props_from{i}) = obj.OriginalBridge.(props_from{i});
     end
     % 提取出 Hanger、Cable、StayedCable、Pier
-    func = @(structure) [structure]; % function_handle，通过cellfun将cell转换为对象数组
+    array2cell = @(structure) [structure]; % function_handle，通过cellfun将cell转换为对象数组
     [hanger_list,index_hanger] = obj.findStructureByClass('Hanger');
-    obj.ReplacedHanger = cellfun(func,hanger_list);
+    obj.ReplacedHanger = cellfun(array2cell,hanger_list);
     [cable_list,index_cable] = obj.findStructureByClass('Cable');
-    obj.ReplacedCable = cellfun(func,cable_list);
+    obj.ReplacedCable = cellfun(array2cell,cable_list);
     [stayedcable_list,index_stayedcable] = obj.findStructureByClass('StayedCable');
-    obj.ReplacedStayedCable = cellfun(func,stayedcable_list);
+    obj.ReplacedStayedCable = cellfun(array2cell,stayedcable_list);
     [pier_list,index_pier] = obj.findStructureByClass('Pier');
-    obj.ReplacedPier = cellfun(func,pier_list);
+    obj.ReplacedPier = cellfun(array2cell,pier_list);
 
     % 在bridge_findState中删除与 Hanger、Cable、StayedCable相关的和Pier:（并不是把对象完全删除了，而是把它们从*List属性中去除了）
     % Material、Section、ElementType、ElementDivision、Coupling、Load、Constraint
@@ -65,8 +65,8 @@ function build(obj)
     for i=1:length(deleted_coupling)
         DelCoupling = [DelCoupling,deleted_coupling{i}];
     end
-    obj.DeletedConstraint = DelConstraint;
-    obj.DeletedCoupling = DelCoupling;
+    obj.DeletedConstraint = DelConstraint.unique();
+    obj.DeletedCoupling = DelCoupling.unique();
 
     % 使用Constraint代替原来Pier的Coupling
     for i=1:length(coupling_Pier)
