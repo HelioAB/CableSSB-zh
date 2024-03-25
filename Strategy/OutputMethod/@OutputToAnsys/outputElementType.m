@@ -1,4 +1,8 @@
-function output_str = outputElementType(obj)
+function output_str = outputElementType(obj,fileName)
+    arguments
+        obj
+        fileName = 'defElementType.mac'
+    end
     element_type_list = obj.OutputObj.ElementTypeList;
     unique_element_type_list = uniqueCell(element_type_list);
     len = length(unique_element_type_list);
@@ -27,7 +31,7 @@ function output_str = outputElementType(obj)
         output_str = [output_str,element_type.outputElementType(num),newline,newline];
     end
     % 输出到defElementType.mac
-    obj.outputAPDL(output_str,'defElementType.mac','w')
+    obj.outputAPDL(output_str,fileName,'w')
 end
 function [unique_cell,index] = uniqueCell(cell)
     % 如果一个Cell中装了有重复的对象，本函数将重复的对象去除

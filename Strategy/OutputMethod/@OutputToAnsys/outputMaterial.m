@@ -1,4 +1,8 @@
-function output_str = outputMaterial(obj)
+function output_str = outputMaterial(obj,fileName)
+    arguments
+        obj
+        fileName = 'defMaterial.mac'
+    end
     material_list = obj.OutputObj.MaterialList;
     unique_material_list = uniqueCell(material_list);
     len = length(unique_material_list);
@@ -40,7 +44,7 @@ function output_str = outputMaterial(obj)
         output_str = [output_str,newline];
     end
     % 输出到defMaterial.mac
-    obj.outputAPDL(output_str,'defMaterial.mac','w')
+    obj.outputAPDL(output_str,fileName,'w')
 end
 function [unique_cell,index] = uniqueCell(cell)
     % 如果一个Cell中装了有重复的对象，本函数将重复的对象去除

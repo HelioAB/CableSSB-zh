@@ -34,6 +34,7 @@ classdef OutputToAnsys < OutputTo
             obj.MacFilePath = OutputToAnsys.convertTextToChar(options.MacFilePath);
             obj.ResultFilePath = OutputToAnsys.convertTextToChar(options.ResultFilePath);
         end
+        clone(obj);
         action(obj);
         [status,cmdout] = runMac(obj,options)
         outputAPDL(obj,output_str,file_name,output_method)

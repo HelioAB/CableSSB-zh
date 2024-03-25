@@ -18,8 +18,7 @@ function RelatedObj = resumeSymmetrical(obj)
         RelatedObj.Params.P_y = -obj.Params.P_y;
 
         % 2. 复制对象的找形
-        RelatedObj.findShape(RelatedObj.Params.P_x,RelatedObj.Params.P_y,RelatedObj.Params.P_z)
-        disp('resumeSymmetrical called!')
+        RelatedObj.findShape(RelatedObj.Params.P_x,RelatedObj.Params.P_y,RelatedObj.Params.P_z);
     end
     
 end

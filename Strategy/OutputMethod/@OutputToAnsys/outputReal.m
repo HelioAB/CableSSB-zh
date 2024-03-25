@@ -1,4 +1,8 @@
-function output_str = outputReal(obj)
+function output_str = outputReal(obj,fileName)
+    arguments
+        obj
+        fileName = 'defReal.mac'
+    end
     element_type_list = obj.OutputObj.ElementTypeList;
     index_output_link_real = false(1,length(element_type_list));
     index_output_beam4_real = false(1,length(element_type_list));
@@ -47,7 +51,7 @@ function output_str = outputReal(obj)
 
     end
     % 输出到defMaterial.mac
-    outputAPDL(obj,output_str,'defReal.mac','w')
+    outputAPDL(obj,output_str,fileName,'w')
 end
 function output_str = outputLinkReal(Num_list,Area_list,Init_strain_list)
     % 1个LinkReal和1个Line对应

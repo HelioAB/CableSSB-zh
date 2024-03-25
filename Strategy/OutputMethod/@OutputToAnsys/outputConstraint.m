@@ -1,5 +1,8 @@
-function output_str = outputConstraint(obj)
-
+function output_str = outputConstraint(obj,fileName)
+    arguments
+        obj
+        fileName = 'defConstraint.mac'
+    end
     constraint_list = obj.OutputObj.ConstraintList;
     % 输出的APDL字符串
     output_str = '';
@@ -15,5 +18,5 @@ function output_str = outputConstraint(obj)
     end
     output_str = [output_str,'allsel',newline];
     % 输出到defConstraint.mac
-    obj.outputAPDL(output_str,'defConstraint.mac','w')
+    obj.outputAPDL(output_str,fileName,'w')
 end

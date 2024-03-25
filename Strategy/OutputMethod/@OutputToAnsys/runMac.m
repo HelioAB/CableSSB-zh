@@ -1,6 +1,7 @@
 function [status,cmdout] = runMac(obj,options)
     arguments
         obj
+        options.ComputingMode {mustBeMember(options.ComputingMode,{'Distributed','Shared-Memory'})} = 'Shared-Memory'
         options.AnsysExePath = obj.AnsysPath
         options.WorkPath = obj.WorkPath
         options.JobName = obj.JobName
@@ -18,8 +19,13 @@ function [status,cmdout] = runMac(obj,options)
     %       用Distributed Computing会生成JobName.out、JobName0.out、JobName1.out、JobName2.out等
     % 如果用Shared-Memory Parallel: '-lch -p ansys -smp -np 4 '
     %       用Shared-Memory Parallel只生成JobName.out
+    if strcmp(options.ComputingMode,'Distributed')
+        str_ComputingMode = '-lch -p ansys -dis -mpi INTELMPI -np 4 ';
+    else strcmp(options.ComputingMode,'Shared-Memory')
+        str_ComputingMode = '-lch -p ansys -smp -np 4 ';
+    end
     system_str = strcat([Ansys_exe_path,' '...
-                  '-lch -p ansys -smp -np 4 ' ... 
+                  str_ComputingMode ... 
                   '-dir ',work_path,' '...
                   '-j ',job_name,' '...
                   '-i ',APDL_file_path,' '...

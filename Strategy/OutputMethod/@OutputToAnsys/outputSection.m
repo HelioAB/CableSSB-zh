@@ -1,4 +1,8 @@
-function output_str = outputSection(obj)
+function output_str = outputSection(obj,fileName)
+    arguments
+        obj
+        fileName = 'defSection.mac'
+    end
     section_list = obj.OutputObj.SectionList;
     element_type_list = obj.OutputObj.ElementTypeList;
 
@@ -29,7 +33,7 @@ function output_str = outputSection(obj)
         output_str = [output_str,'!-------------------------',newline];
     end
     % 输出到defSection.mac
-    obj.outputAPDL(output_str,'defSection.mac','w')
+    obj.outputAPDL(output_str,fileName,'w')
 end
 function [unique_cell,index] = uniqueCell(cell)
     % 如果一个Cell中装了有重复的对象，本函数将重复的对象去除

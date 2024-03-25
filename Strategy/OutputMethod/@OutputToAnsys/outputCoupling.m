@@ -1,4 +1,8 @@
-function output_str = outputCoupling(obj)
+function output_str = outputCoupling(obj,fileName)
+    arguments
+        obj
+        fileName = 'defCoupling.mac'
+    end
     coupling_list = obj.OutputObj.CouplingList;
     % 输出的APDL字符串
     output_str = '';
@@ -24,7 +28,7 @@ function output_str = outputCoupling(obj)
         output_str = [output_str,cp_command];
     end
     % 输出到defCoupling.mac
-    obj.outputAPDL(output_str,'defCoupling.mac','w')
+    obj.outputAPDL(output_str,fileName,'w')
 end
 function [defNode_cell,undefNode_cell]= findNodeByKeyPoint(point)
     % 输入:Point对象数组

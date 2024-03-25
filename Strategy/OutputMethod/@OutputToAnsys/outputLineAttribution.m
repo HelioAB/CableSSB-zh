@@ -1,4 +1,8 @@
-function output_str = outputLineAttribution(obj)
+function output_str = outputLineAttribution(obj,fileName)
+    arguments
+        obj
+        fileName = 'defLineAttribution.mac'
+    end
     % Matlab中line编号转换到Ansys中的line编号
     Map_convert = obj.OutputObj.Params.Map_MatlabLine2AnsysLine; % 因为Ansys中不能直接定义line的编号，所以需要一个Matlab中Line编号到Ansys中Line编号的映射
     % 分离Link单元、Beam4单元、其他单元
@@ -65,5 +69,5 @@ function output_str = outputLineAttribution(obj)
         output_str = [output_str,newline];
     end
     % 输出output_str
-    obj.outputAPDL(output_str,'defLineAttribution.mac','w')
+    obj.outputAPDL(output_str,fileName,'w')
 end

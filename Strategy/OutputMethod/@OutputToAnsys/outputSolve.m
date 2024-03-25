@@ -1,6 +1,7 @@
-function output_str = outputSolve(obj,options)
+function output_str = outputSolve(obj,fileName,options)
     arguments
         obj
+        fileName = 'defSolve.mac'
         options.nlgeom {mustBeMember(options.nlgeom,{'off','on'})} = 'off'
         options.sstif {mustBeMember(options.sstif,{'off','on'})} = 'off'
         options.nsubst (1,3) {mustBeNumeric} = [0,0,0]
@@ -18,5 +19,5 @@ function output_str = outputSolve(obj,options)
                           'wrfull,%d',newline,...
                           'solve',newline,...
                           'finish'],options.save,options.nlgeom,options.sstif,options.nsubst(1),options.nsubst(2),options.nsubst(3),options.wrfull);
-    obj.outputAPDL(output_str,'defSolve.mac','w')
+    obj.outputAPDL(output_str,fileName,'w')
 end

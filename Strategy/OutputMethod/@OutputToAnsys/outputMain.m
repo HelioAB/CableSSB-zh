@@ -1,6 +1,7 @@
-function output_str = outputMain(obj,options)
+function output_str = outputMain(obj,fileName,options)
     arguments
         obj
+        fileName = 'main.mac'
         options.flag_Load = true
         options.flag_Solve = true
     end
@@ -12,9 +13,11 @@ function output_str = outputMain(obj,options)
     end
 
     if options.flag_Solve
-        output_solve_str = '/input,defSolve,mac,,,0                     !12. 求解选项设置与求解';
+        output_solve_str = ['/input,defSolve,mac,,,0                     !12. 求解选项设置与求解',newline,...
+                             sprintf('save,%s,db',[obj.JobName,'Result']),newline];
     else
-        output_solve_str = '! /input,defSolve,mac,,,0                     !12. 求解选项设置与求解';
+        output_solve_str = ['! /input,defSolve,mac,,,0                     !12. 求解选项设置与求解',newline,...
+                             sprintf('! save,%s,db',[obj.JobName,'Result']),newline];
     end
 
     output_str = ['finish $ /clear',newline,newline,...
@@ -34,7 +37,7 @@ function output_str = outputMain(obj,options)
                   sprintf('save,%s,db',obj.JobName),newline,...
                   'finish',newline,newline,...
                   '! 分析与求解选项设置',newline,...
-                  output_solve_str,newline,...
-                  sprintf('save,%s,db',[obj.JobName,'Result']),newline];
-    obj.outputAPDL(output_str,'main.mac','w');
+                  output_solve_str];
+                  
+    obj.outputAPDL(output_str,fileName,'w');
 end

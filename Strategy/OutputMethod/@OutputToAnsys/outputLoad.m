@@ -1,8 +1,12 @@
-function output_str = outputLoad(obj)
-
+function output_str = outputLoad(obj,fileName,Map_outputedAppliedPosition)
+    arguments
+        obj
+        fileName = 'defLoad.mac'
+        Map_outputedAppliedPosition = containers.Map('KeyType','char','ValueType','any');
+    end
     load_list = obj.OutputObj.LoadList;
 
-    Map_outputedAppliedPosition = containers.Map('KeyType','char','ValueType','any');
+    
 
     % 计数，用于注释中
     count_UniformLoad = 0;
@@ -65,7 +69,7 @@ function output_str = outputLoad(obj)
         output_str = [output_str,'allsel',newline,'!-----------------------------------------------------------------------------------------------',newline];                 
     end
     % 输出到defSection.mac
-    obj.outputAPDL(output_str,'defLoad.mac','w')
+    obj.outputAPDL(output_str,fileName,'w')
 end
 
 function output_str = outputDistributedLoad(cm_elemt,key_loadface,value_i,value_j,offset_i,offset_j)
