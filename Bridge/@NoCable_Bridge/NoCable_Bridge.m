@@ -33,6 +33,7 @@ classdef NoCable_Bridge < Bridge
             end
         end
         build(obj)
+        new_obj = clone(obj)
 
         Load_HangerForce = replaceHangerByForce(obj,X,Pz_Hanger) % 吊索作用在主梁上的力
         Load_StayedCableForce = replaceStayedCableByForce(obj,X,Pz_StayedCable) % 斜拉索作用在主梁和桥塔上的力

@@ -37,8 +37,10 @@ function Y_final = solveCableShape(obj,Pz,Y_0)
             P_girder_z = zeros(1,length(X_B_0));
 
             % 从所有设计竖向力的汇总Pz中，提取出与吊索相关的设计竖向力P_girder_z
+            
             for j=1:length(X)
                 index = abs(X(j)-X_B_0) < 1e-5;
+
                 P_girder_z(index) = Pz(j);
             end
 
@@ -60,7 +62,7 @@ function Y_final = solveCableShape(obj,Pz,Y_0)
             end
             nonlcon = [];
             
-            options = optimoptions('fmincon','Display','iter-detailed','ObjectiveLimit',5e-2,'DiffMinChange',0.01);
+            options = optimoptions('fmincon','Display','None','ObjectiveLimit',5e-2,'DiffMinChange',0.01);
             Y_final = fmincon(ObjFunc,Y_0,A,b,Aeq,beq,lb,ub,nonlcon,options);
             
     % 5. 恢复主缆的对称性

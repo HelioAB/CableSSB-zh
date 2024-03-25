@@ -9,9 +9,8 @@ function optimBendingStrainEnergy(obj,options)
     end
     % 显示进度
     disp('Is optimizing the Bending Strain Energy...')
-    % 初始弯曲应变能
+    % Pz和X一一对应
     X = obj.OriginalBridge.getSortedGirderPointXCoord([obj.OriginalBridge.findStructureByClass('Hanger'),obj.OriginalBridge.findStructureByClass('StayedCable')]);
-    
     % 初始化需要存储记录的参数
     obj.isOptimizing = true;
     obj.Iter_Optimization = options.Initial_Iter;
@@ -21,9 +20,9 @@ function optimBendingStrainEnergy(obj,options)
     % 优化参数设置
     fun = @(Pz) ObjFun(Pz,X,obj);
     if isempty(obj.Result_Iteration.Iter_Pz) % 如果在此之前还未进行优化
-        x0 = obj.getAverageGirderWeight + zeros(1,length(X));
+        Pz_0 = obj.getAverageGirderWeight + zeros(1,length(X));
     else % 如果继续之前的进行优化
-        x0 = options.Initial_Iter_Pz(options.Initial_Iter);
+        Pz_0 = options.Initial_Iter_Pz(options.Initial_Iter);
     end
     A = [];
     b = [];
@@ -35,11 +34,11 @@ function optimBendingStrainEnergy(obj,options)
     options = optimoptions('fmincon', ...
                            'Display','iter-detailed', ...
                            'DiffMinChange',options.DiffMinChange, ...
-                           'MaxFunctionEvaluations',(length(x0)+1)*options.MaxIter, ...
+                           'MaxFunctionEvaluations',(length(Pz_0)+1)*options.MaxIter, ...
                            'PlotFcn', 'optimplotfval'); % 最小步长设置为1kN,每次优化有进行100个迭代
     
     % 优化
-    [Pz_final,U_final] = fmincon(fun,x0,A,b,Aeq,beq,lb,ub,nonlcon,options);
+    [Pz_final,U_final] = fmincon(fun,Pz_0,A,b,Aeq,beq,lb,ub,nonlcon,options);
     obj.isOptimizing = false;
     obj.FiniteElementModel.TempResult = rmfield(obj.FiniteElementModel.TempResult,'computingDisplacement');
 end
