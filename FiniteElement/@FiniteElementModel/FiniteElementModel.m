@@ -45,6 +45,8 @@ classdef FiniteElementModel < handle
         NaN_Node = checkNaNDisplacement(obj,ElementArray)
         NaN_Node = computeDisplacement(obj) % 计算Ansys导出[K]{u}={RHS}
         NaN_Node = completeDisplacement(obj) % 补全因为Constraint和Coupling而消去的位移
+
+        new_obj = clone(obj)
         
         
         ElementArray = getElementByStructure(obj,StructureList)

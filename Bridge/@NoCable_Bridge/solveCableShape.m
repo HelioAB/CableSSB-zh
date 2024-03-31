@@ -45,8 +45,8 @@ function Y_final = solveCableShape(obj,Pz,Y_0)
             end
 
             w = hanger_clone.Material.MaterialData.gamma .* hanger_clone.Section.Area; % 每延米自重
-            
-            ObjFunc = @(Y) MSE_Y(Y,cable,hanger_clone,P_girder_z,w,X_T_0,Z_T_0,X_B_0,Y_B_0,Z_B_0);
+            data_container = DataContainer();
+            ObjFunc = @(Y) MSE_Y(Y,cable,hanger_clone,P_girder_z,w,X_T_0,Z_T_0,X_B_0,Y_B_0,Z_B_0,data_container);
             A = [];
             b = [];
             Aeq = [];
@@ -62,7 +62,7 @@ function Y_final = solveCableShape(obj,Pz,Y_0)
             end
             nonlcon = [];
             
-            options = optimoptions('fmincon','Display','None','ObjectiveLimit',5e-2,'DiffMinChange',0.01);
+            options = optimoptions('fmincon','Display','none','ObjectiveLimit',5e-2,'DiffMinChange',0.01);
             Y_final = fmincon(ObjFunc,Y_0,A,b,Aeq,beq,lb,ub,nonlcon,options);
             
     % 5. 恢复主缆的对称性
@@ -72,10 +72,15 @@ function Y_final = solveCableShape(obj,Pz,Y_0)
 
             hanger_symmetried = cable_symmetried.findConnectStructureByClass('Hanger');
             hanger_symmetried.getP(P_girder_z);
+        else
+            [P_x,P_y,P_z] = cable.P(false(1,length(cable.Point)-2),[],[],[]);
+            cable.Params.F_x = data_container.Data.Result_FindShape.F_x;
+            cable.findShape(P_x,P_y,P_z);
+            cable.resumeSymmetrical;
         end
     end
 end
-function MSE = MSE_Y(Y_0,cable,hanger,P_girder_z,w,X_T_0,Z_T_0,X_B_0,Y_B_0,Z_B_0)
+function MSE = MSE_Y(Y_0,cable,hanger,P_girder_z,w,X_T_0,Z_T_0,X_B_0,Y_B_0,Z_B_0,data_container)
     HangerTopPoints = hanger.findCablePoint();
     for i=1:length(HangerTopPoints)
         HangerTopPoints(i).Y = Y_0(i);
@@ -100,7 +105,7 @@ function MSE = MSE_Y(Y_0,cable,hanger,P_girder_z,w,X_T_0,Z_T_0,X_B_0,Y_B_0,Z_B_0
     Params = cable.Params;
     Params.Init_var = cable.Result_ShapeFinding.x;
     cable.Params = Params;
-    cable.findShape(P_x,P_y,P_z);
+    data_container.Data.Result_FindShape = cable.findShape(P_x,P_y,P_z);
     cablePoints = cable.Point;
     HangerTopPoints = cablePoints([false,cable.Params.Index_Hanger,false]);
     Y_HangerTop_after = [HangerTopPoints.Y];

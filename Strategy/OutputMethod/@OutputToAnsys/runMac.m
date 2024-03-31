@@ -21,7 +21,7 @@ function [status,cmdout] = runMac(obj,options)
     %       用Shared-Memory Parallel只生成JobName.out
     if strcmp(options.ComputingMode,'Distributed')
         str_ComputingMode = '-lch -p ansys -dis -mpi INTELMPI -np 4 ';
-    else strcmp(options.ComputingMode,'Shared-Memory')
+    elseif strcmp(options.ComputingMode,'Shared-Memory')
         str_ComputingMode = '-lch -p ansys -smp -np 4 ';
     end
     system_str = strcat([Ansys_exe_path,' '...

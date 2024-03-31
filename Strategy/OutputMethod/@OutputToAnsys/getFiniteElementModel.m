@@ -26,7 +26,7 @@ function FE_model = getFiniteElementModel(obj)
 
     % 运行APDL，使得上以上的导出需求能够被Ansys执行
     deleteFile([obj.JobName,'.lock'],obj.WorkPath); % 删除了.lock文件，本次运行的结果才会覆盖上次运行的结果
-    obj.runMac;
+    obj.runMac('ComputingMode','Shared-Memory');
 
     % 在工作路径下新建文件夹Info，将所有需要的信息都装到这个文件夹中
     % 忽略"文件已经存在"的警告信息
@@ -49,6 +49,7 @@ function FE_model = getFiniteElementModel(obj)
     movefile(GlobalStiffness_file,Info_folder)
     movefile(GlobalStiffness_mapping_file,Info_folder)
 
+
     % 更新文件位置
     Node_file = FilePathAfterMove(Node_file,Info_folder); 
     Element_file = FilePathAfterMove(Element_file,Info_folder);
@@ -56,6 +57,7 @@ function FE_model = getFiniteElementModel(obj)
     ElementStiffness_file = FilePathAfterMove(ElementStiffness_file,Info_folder);
     GlobalStiffness_file = FilePathAfterMove(GlobalStiffness_file,Info_folder);
     GlobalStiffness_mapping_file = FilePathAfterMove(GlobalStiffness_mapping_file,Info_folder);
+
 
     % 导入的部分使用InputFrom方法
     inputNode = InputFromTXT(Node_file);
@@ -65,6 +67,7 @@ function FE_model = getFiniteElementModel(obj)
     inputGlobalStiffness = InputAnsysGlobalStiffnessMatrix(GlobalStiffness_file);
     inputMapping = InputAnsysMapping(GlobalStiffness_mapping_file);
 
+
     % 从InputFrom中获得数据，并创建Node对象和Element对象
     inputNode.action(4); % 4列数据，所以需要输入参数4
     inputElement.action(4);
@@ -72,6 +75,7 @@ function FE_model = getFiniteElementModel(obj)
     inputElementStiffness.action;
     inputGlobalStiffness.action;
     inputMapping.action;
+
     % 建立FiniteElementModel对象
     % BridgeModel
     BridgeModel = obj.OutputObj;
@@ -150,10 +154,12 @@ function FE_model = getFiniteElementModel(obj)
 
     % 创建FiniteElementModel对象
     FE_model = FiniteElementModel(BridgeModel,Nodes,Elements,Maps);
-
+    
     % 存储总刚、RHS
-    FE_model.StiffnessMatrix = inputGlobalStiffness.StiffMatrix;
-    FE_model.RHS = inputGlobalStiffness.RHS;
+    if exist(GlobalStiffness_file,'file') && exist(GlobalStiffness_mapping_file,'file')
+        FE_model.StiffnessMatrix = inputGlobalStiffness.StiffMatrix;
+        FE_model.RHS = inputGlobalStiffness.RHS;
+    end
 
 end
 
@@ -183,9 +189,6 @@ function [Main_MacFile,ElementStiffness_file] = outputMain(obj)
 
     % 导出 KeyPoint -> Node的映射，存储在 KeyPoint2Node.txt
     output_str = [output_str,'/input,getKeyPoint2Node,mac,,,0',newline];
-
-    % 导出 Line -> Element的映射，存储在 Line2Element.txt
-    output_str = [output_str,'/input,getLine2Element,mac,,,0',newline];
 
     % 导出 单刚和作用力向量,存储在 ElementStiffness.out
     output_str = [output_str,'/debug,-1,,,1',newline,...

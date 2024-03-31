@@ -57,8 +57,8 @@ function output_str = outputLinkReal(Num_list,Area_list,Init_strain_list)
     % 1个LinkReal和1个Line对应
     len = length(Num_list);
     output_str = '';
-    for i = 1:len
-        output_str = [output_str,sprintf('r,%d,%.6e,%.6e \n',Num_list(i),Area_list(i),Init_strain_list(i))];
+    for j = 1:len
+        output_str = [output_str,sprintf('r,%d,%.6e,%.6e \n',Num_list(j),Area_list(j),Init_strain_list(j))];
     end
 end
 function output_str = outputBeam4Real(Num_list,Sec_list)
