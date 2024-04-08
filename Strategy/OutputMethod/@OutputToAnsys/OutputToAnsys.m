@@ -34,7 +34,7 @@ classdef OutputToAnsys < OutputTo
             obj.MacFilePath = OutputToAnsys.convertTextToChar(options.MacFilePath);
             obj.ResultFilePath = OutputToAnsys.convertTextToChar(options.ResultFilePath);
         end
-        clone(obj);
+        new_obj = clone(obj);
         action(obj);
         [status,cmdout] = runMac(obj,options)
         outputAPDL(obj,output_str,file_name,output_method)
@@ -58,6 +58,9 @@ classdef OutputToAnsys < OutputTo
         % 输出获取Ansys中某些数据的命令流，输入参数：obj,quaryObj,DAtaBasePath 输出参数：ResultFilePath
         FiniteElementModel = getFiniteElementModel(obj)
         ResultFilePath = getBendingStrainEnergy(obj,structure,DataBasePath)
+        [Ux,Uy,Uz] = getDisplacement(obj,points,name_DataBase)
+        [num_elements,num_INode,num_JNode,Fxi,Fxj,Myi,Myj,Mzi,Mzj] = getInternalForce(obj,lines,LinkOrBeam,name_DataBase,Map_MatlabLine2AnsysElem)
+
     end
     methods(Static)
         function workspace_path = createWorkSpace(NewFolderName,ParentFolder)

@@ -22,7 +22,7 @@ count_hanger = 22;
 offset = [0,15,-110];
 P_z = -weight/count_hanger/4; % 主跨加劲梁girder1的总重被主跨的StayedCable平分
 P_h_z = P_z + zeros(1,count_hanger) + 0.1*P_z*rand(1,count_hanger); % 初始吊杆力（吊杆和斜拉索竖向力平分加劲梁自重）
-P_h_y = -P_h_z*abs((CoordA_cable1(2)-offset(2))/(CoordA_cable1(3)-offset(3))) + abs(0.2*P_h_z.*rand(size(P_h_z)));
+P_h_y = zeros(size(P_h_z));
 P_h_x = zeros(size(P_h_z));
 
 Z_Om = -100; % 主缆跨中点Z
@@ -46,7 +46,7 @@ support_DoF = {'Ux','Uy','Uz'};
 constraint1 = obj.addConstraint(maincable.PointA,support_DoF,zeros(1,length(support_DoF)),'Name','A点约束');
 constraint2 = obj.addConstraint(maincable.PointB,support_DoF,zeros(1,length(support_DoF)),'Name','B点约束');
 
-obj.plot
+% obj.plot
 
 
 %
@@ -55,7 +55,7 @@ obj.OutputMethod = OutputToAnsys(obj,"AnsysPath","C:\Program Files\ANSYS Inc\ANS
                                      "MacFilePath","C:\Users\11440\Desktop\usage\Susp V.4\CableSSB-zh\Output Files\main.mac", ...
                                      "ResultFilePath","C:\Users\11440\Desktop\usage\Susp V.4\CableSSB-zh\Output Files\result.out", ...
                                      "WorkPath","C:\Users\11440\Desktop\usage\Susp V.4\CableSSB-zh\Output Files");
-obj.output
+% obj.output
 
 %{
 inputmethod = InputFromTXT("C:\Users\11440\Desktop\usage\Susp V.4\CableSSB-zh\Output Files\Strain.txt")
@@ -64,3 +64,4 @@ ansys_stress = inputmethod.RawData;
 matlab_stress = maincable.Strain .* maincable.Material.MaterialData.E;
 relative_err = (ansys_stress-matlab_stress) ./ matlab_stress *100 % 百分比表示
 %}
+x = cable1.Result_ShapeFinding.x;

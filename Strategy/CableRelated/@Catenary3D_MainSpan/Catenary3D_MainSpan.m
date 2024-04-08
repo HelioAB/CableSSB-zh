@@ -95,6 +95,11 @@ classdef Catenary3D_MainSpan < ShapeFinding
             else
                 Params_converted.Init_var       = [];
             end
+            if isfield(Params,'ObjectiveLimit')
+                Params_converted.ObjectiveLimit       = Params.ObjectiveLimit;
+            else
+                Params_converted.ObjectiveLimit       = [];
+            end
             
         end
         function Output = action(obj,Params,P_x,P_y,P_z)
@@ -102,8 +107,9 @@ classdef Catenary3D_MainSpan < ShapeFinding
             [Params_converted,P_x_converted,P_y_converted,P_z_converted] = obj.InputParamsAdaptor(Params,P_x,P_y,P_z);
             
             % AlgoHandle
+            warning('off','MATLAB:singularMatrix')
             [X,Y,Z,Epsilon_Init,S,H,alpha,a,x,F_x] = obj.AlgoHandle(Params_converted,P_x_converted,P_y_converted,P_z_converted);% 这里得到的X,Y,Z均为以0点为第一个点，所以需要把XYZ变换
-            
+            warning('on','MATLAB:singularMatrix')
             % 将AlgoHandle的内部参数转换为外部参数
             [X,Y,Z] = obj.moveToPosition(Params,X,Y,Z);
 

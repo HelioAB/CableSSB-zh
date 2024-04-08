@@ -255,10 +255,12 @@ function build(obj)
     %% 耦合 Coupling
 
     % 自锚耦合
-%     anchor1_masterpoint = anchor1.findPoint('Index','X','descend',2);
-%     anchor2_masterpoint = anchor2.findPoint('Index','X','descend',2);
-%     CP_selfanchor_1 = obj.addCoupling(anchor1_masterpoint,[cable3.PointA,cable4.PointA],{'Ux','Uy','Uz'},'Name','自锚耦合1');
-%     CP_selfanchor_2 = obj.addCoupling(anchor2_masterpoint,[cable5.PointB,cable6.PointB],{'Ux','Uy','Uz'},'Name','自锚耦合2');
+    if obj.SelfAnchored
+        anchor1_masterpoint = anchor1.Point.findPointByRange(cable3.PointA.X,[],[]);
+        anchor2_masterpoint = anchor2.Point.findPointByRange(cable5.PointB.X,[],[]);
+        CP_selfanchor_1 = obj.addCoupling(anchor1_masterpoint,[cable3.PointA,cable4.PointA],{'Ux','Uy','Uz'},'Name','自锚耦合1');
+        CP_selfanchor_2 = obj.addCoupling(anchor2_masterpoint,[cable5.PointB,cable6.PointB],{'Ux','Uy','Uz'},'Name','自锚耦合2');
+    end
 
     % Tower和Girder之间的耦合
     tower1_masterpoint = tower1.Point.findPointByRange([],0,-19.15);
@@ -301,14 +303,16 @@ function build(obj)
     constraint6 = obj.addConstraint(girder3_PierPoint,support_DoF_2,zeros(1,length(support_DoF_2)),'Name','辅助墩处加劲梁约束2');
 
     % 主缆地锚固结
-    support_DoF_5 = {'Ux','Uy','Uz'};
-    support_DoF_6 = {'Ux','Uy','Uz'};
-    support_DoF_7 = {'Ux','Uy','Uz'};
-    support_DoF_8 = {'Ux','Uy','Uz'};
-    constraint7 = obj.addConstraint(cable3.PointA,support_DoF_5,zeros(1,length(support_DoF_5)),'Name','地锚固结1');
-    constraint8 = obj.addConstraint(cable4.PointA,support_DoF_6,zeros(1,length(support_DoF_6)),'Name','地锚固结2');
-    constraint9 = obj.addConstraint(cable5.PointB,support_DoF_7,zeros(1,length(support_DoF_7)),'Name','地锚固结3');
-    constraint10 = obj.addConstraint(cable6.PointB,support_DoF_8,zeros(1,length(support_DoF_8)),'Name','地锚固结4');
+    if ~obj.SelfAnchored
+        support_DoF_5 = {'Ux','Uy','Uz'};
+        support_DoF_6 = {'Ux','Uy','Uz'};
+        support_DoF_7 = {'Ux','Uy','Uz'};
+        support_DoF_8 = {'Ux','Uy','Uz'};
+        constraint7 = obj.addConstraint(cable3.PointA,support_DoF_5,zeros(1,length(support_DoF_5)),'Name','地锚固结1');
+        constraint8 = obj.addConstraint(cable4.PointA,support_DoF_6,zeros(1,length(support_DoF_6)),'Name','地锚固结2');
+        constraint9 = obj.addConstraint(cable5.PointB,support_DoF_7,zeros(1,length(support_DoF_7)),'Name','地锚固结3');
+        constraint10 = obj.addConstraint(cable6.PointB,support_DoF_8,zeros(1,length(support_DoF_8)),'Name','地锚固结4');
+    end
     
     % 跨中X向约束
     support_DoF_3 = {'Ux'};

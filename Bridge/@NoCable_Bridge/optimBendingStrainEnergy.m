@@ -4,9 +4,9 @@ function optimBendingStrainEnergy(obj,options)
         options.MaxIter = 10
         options.DiffMinChange = 1e3
         options.ifSymmetric = true
-        options.Initial_Iter (1,1) {mustBeNumeric} = 0 % 修改options的各个参数，可以继续之前的优化
-        options.Initial_Iter_U {mustBeA(options.Initial_Iter_U,'containers.Map')} = containers.Map('KeyType','double','ValueType','any')
-        options.Initial_Iter_Pz {mustBeA(options.Initial_Iter_Pz,'containers.Map')} = containers.Map('KeyType','double','ValueType','any')
+        options.Iter (1,1) {mustBeNumeric} = 0 % 修改options的各个参数，可以继续之前的优化
+        options.Map_Iter_U {mustBeA(options.Map_Iter_U,'containers.Map')} = containers.Map('KeyType','double','ValueType','any')
+        options.Map_Iter_Pz {mustBeA(options.Map_Iter_Pz,'containers.Map')} = containers.Map('KeyType','double','ValueType','any')
     end
     % 显示进度
     disp('Is optimizing the Bending Strain Energy...')
@@ -14,15 +14,15 @@ function optimBendingStrainEnergy(obj,options)
     X = obj.OriginalBridge.getSortedGirderPointXCoord([obj.OriginalBridge.findStructureByClass('Hanger'),obj.OriginalBridge.findStructureByClass('StayedCable')]);
     % 初始化需要存储记录的参数
     obj.isOptimizing = true;
-    obj.Iter_Optimization = options.Initial_Iter;
-    obj.Result_Iteration.Iter_U = options.Initial_Iter_U;
-    obj.Result_Iteration.Iter_Pz = options.Initial_Iter_Pz;
+    obj.Iter_Optimization = options.Iter;
+    obj.Result_Iteration.Map_Iter_U = options.Map_Iter_U;
+    obj.Result_Iteration.Map_Iter_Pz = options.Map_Iter_Pz;
     
     % 转换设计变量
-    if isempty(obj.Result_Iteration.Iter_Pz) % 如果在此之前还未进行优化
+    if isempty(obj.Result_Iteration.Map_Iter_Pz) % 如果在此之前还未进行优化
         Pz_0 = obj.getAverageGirderWeight + zeros(1,length(X));
     else % 如果继续之前的进行优化
-        Pz_0 = options.Initial_Iter_Pz(options.Initial_Iter);
+        Pz_0 = options.Map_Iter_Pz(options.Iter);
     end
     obj.Result_Iteration.ifSymmetric = options.ifSymmetric;
     if options.ifSymmetric
@@ -68,7 +68,8 @@ function U = ObjFun(Pz,X,obj)
     obj.LoadList = {}; % 修改obj.LoadList，而不是使用obj.addLoad，避免记录Load对象
     Load_Hanger = obj.replaceHangerByForce(X,Pz);
     Load_StayedCable = obj.replaceStayedCableByForce(X,Pz);
-    obj.LoadList = [Load_Hanger,Load_StayedCable];
+    Load_Cable = obj.replaceCableByForce(X,Pz);
+    obj.LoadList = [Load_Hanger,Load_StayedCable,Load_Cable];
     obj.replaceRHSByLoad;
     obj.FiniteElementModel.computeDisplacement; % 求解整体坐标系下的节点位移
     obj.FiniteElementModel.completeDisplacement; % 补全因Constraint、Coupling而删去的方程
@@ -77,8 +78,8 @@ function U = ObjFun(Pz,X,obj)
     
     % 存储结果
     obj.Iter_Optimization = obj.Iter_Optimization + 1; % 迭代次数
-    obj.Result_Iteration.Iter_U(obj.Iter_Optimization) = U; % 存储第obj.Iter_Optimization次的弯曲应变能结果
-    obj.Result_Iteration.Iter_Pz(obj.Iter_Optimization) = Pz; % 存储第obj.Iter_Optimization次的缆索竖向力结果
+    obj.Result_Iteration.Map_Iter_U(obj.Iter_Optimization) = U; % 存储第obj.Iter_Optimization次的弯曲应变能结果
+    obj.Result_Iteration.Map_Iter_Pz(obj.Iter_Optimization) = Pz; % 存储第obj.Iter_Optimization次的缆索竖向力结果
 end
 function [c,ceq,grad_c,grad_ceq] = NonliearControl(Pz,X,obj) % 非线性约束
     % c <= 0

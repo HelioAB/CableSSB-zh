@@ -1,6 +1,7 @@
 classdef NoCable_Bridge < Bridge
     properties
         OriginalBridge
+        SelfAnchored
         FiniteElementModel
         % 注：前面带Replaced的Structure对象cell，代表被隐藏起来的。没有带Replaced的Structure对象cell，是可以被plot和output的
         % 其实应该把它们设置为private的属性，直接操作它们是不安全的，但是为了节约时间，这里不开发操作这些的方法
@@ -37,7 +38,7 @@ classdef NoCable_Bridge < Bridge
 
         Load_HangerForce = replaceHangerByForce(obj,X,Pz_Hanger) % 吊索作用在主梁上的力
         Load_StayedCableForce = replaceStayedCableByForce(obj,X,Pz_StayedCable) % 斜拉索作用在主梁和桥塔上的力
-        Load_CableForce = replaceCableByForce(obj,X,Pz_Hanger) % 自锚主缆力、桥塔主缆力
+        Load_CableForce = replaceCableByForce(obj,X,Pz,replaceMethod)
         replaceRHSByLoad(obj)
 
         [Pz_girder,index]= getGirderPz(obj,structure,X,Pz) % 根据X排列的Pz，输出structure.getP(*)可以直接使用的Pz

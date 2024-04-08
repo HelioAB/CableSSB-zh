@@ -57,7 +57,7 @@ function output_str = outputLoad(obj,fileName,Map_outputedAppliedPosition)
                     load_type = strcat('F',Load_direction);
                     applied_value_j = convertValue(Map_outputedAppliedPosition,applied_point_j,Load_direction,applied_value_j);
                     % 输出apdl命令
-                    output_str = [output_str,sprintf('allsel $ ksel,s,,,%d $ nslk,s $ ',num_point)]; % 将line对应的elem组成组件
+                    output_str = [output_str,sprintf('ksel,s,,,%d $ nslk,s $ ',num_point)]; % 将line对应的elem组成组件
 %                     if j~=1
 %                         output_str = [output_str,sprintf('cmsel,a,%s,node',['Node_ConcentratedForce_',num2str(count_ConcentratedForce)]),newline];
 %                     end

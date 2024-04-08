@@ -31,6 +31,7 @@ classdef RigidBeam < Structure
                 end
             end
         end
+        points = findGirderPoint(obj)
     end
 end
 function mustBeEqualSize(a,b)

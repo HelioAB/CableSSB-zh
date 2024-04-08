@@ -1,15 +1,11 @@
 function girder_points = findGirderPoint(obj)
-    lines = obj.Line;
-    len_lines = length(lines);
-    girder_points = Point.empty;
-    girder_points(1,len_lines).Num = [];
-    for i=1:len_lines
-        ipoint = lines(i).IPoint;
-        jpoint = lines(i).JPoint;
-        if ipoint.Z < jpoint.Z
-            girder_points(i) = ipoint;
-        else
-            girder_points(i) = jpoint;
+    connect_table = obj.ConnectPoint_Table;
+    sz = size(connect_table);
+    girder_points = [];
+    
+    for i=1:sz(1)
+        if isa(connect_table{i,2},'RigidBeam')
+            girder_points = connect_table{i,1};
         end
     end
 end

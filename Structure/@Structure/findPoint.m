@@ -58,4 +58,4 @@ function point_list = findPointByIndex(obj,component,index,direction)
     else
         point_list = Point.empty;
     end
-end 
+end

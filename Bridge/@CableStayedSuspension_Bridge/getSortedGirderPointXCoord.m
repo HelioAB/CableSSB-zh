@@ -5,8 +5,13 @@ function [X,sorted_point] = getSortedGirderPointXCoord(obj,StrucutreList)
         mustBeA(StrucutreList{i},{'StayedCable','Hanger'})
         point = [point,StrucutreList{i}.findGirderPoint];
     end
-    sorted_point = point.sort('X');
-    coord_sorted_point = sorted_point.Coord;
-    x_sorted_point = coord_sorted_point(:,1)';
-    X = uniquetol(x_sorted_point,1e-5);
+    if ~isempty(point)
+        sorted_point = point.sort('X');
+        coord_sorted_point = sorted_point.Coord;
+        x_sorted_point = coord_sorted_point(:,1)';
+        X = uniquetol(x_sorted_point,1e-5);
+    else
+        X = [];
+        sorted_point = [];
+    end
 end

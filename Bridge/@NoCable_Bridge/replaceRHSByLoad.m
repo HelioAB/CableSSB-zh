@@ -6,6 +6,9 @@ function replaceRHSByLoad(obj)
     Node2DoFEquation = obj.FiniteElementModel.Maps.Node2DoFEquation;
     RHS = obj.FiniteElementModel.RHS;
     
+    assignin('base',"AppliedPoints",AppliedPoints)
+    assignin('base',"num_points",num_points)
+    assignin('base',"Point2Node",Point2Node)
     for i=1:length(num_points)
         num_nodes = Point2Node(num_points(i));
         row_equation = Node2DoFEquation(num_nodes);

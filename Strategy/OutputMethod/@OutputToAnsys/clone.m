@@ -6,4 +6,5 @@ function new_obj = clone(obj)
     new_obj.JobName = obj.JobName;
     new_obj.MacFilePath = obj.MacFilePath;
     new_obj.ResultFilePath = obj.ResultFilePath;
+    new_obj.Params = obj.Params;
 end

@@ -1,4 +1,7 @@
 classdef CableStayedSuspension_Bridge < Bridge
+    properties
+        SelfAnchored = false
+    end
     methods
         build(obj)
         solveHangerTopCoord(obj,hanger,Pz_Hanger) % 根据已知吊杆力，求解吊杆上端的空间位置（注意，固定竖向吊杆力时，不一定有解）

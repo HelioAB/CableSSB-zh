@@ -1,15 +1,10 @@
 function cable_points = findCablePoint(obj)
-    lines = obj.Line;
-    len_lines = length(lines);
-    cable_points = Point.empty;
-    cable_points(1,len_lines).Num = [];
-    for i=1:len_lines
-        ipoint = lines(i).IPoint;
-        jpoint = lines(i).JPoint;
-        if ipoint.Z > jpoint.Z
-            cable_points(i) = ipoint;
-        else
-            cable_points(i) = jpoint;
+    connect_table = obj.ConnectPoint_Table;
+    sz = size(connect_table);
+    cable_points = [];
+    for i=1:sz(1)
+        if isa(connect_table{i,2},'Cable')
+            cable_points = connect_table{i,1};
         end
     end
 end

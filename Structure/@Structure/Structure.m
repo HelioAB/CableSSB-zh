@@ -141,6 +141,7 @@ classdef Structure < dynamicprops
         num = NewPointNum(obj)
         merge(obj,tolerance)
         point_list = findPoint(obj,SearchingMethod,Component,Direction,ByValue)
+        index = findPointIndex(obj,points)
         line_list = findLineByCenterCoord(obj,component,direction)
         structure_list = findConnectStructureByClass(obj,class_name)
         [Norm_x,Norm_y,Norm_z]=getElementSystem(obj,tol)
