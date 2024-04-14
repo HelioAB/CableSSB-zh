@@ -11,6 +11,7 @@ classdef Bridge < handle
         OutputMethod
         InputMethod
         Params = struct
+        Information = struct
     end
     methods
         function obj = Bridge()
@@ -31,7 +32,7 @@ classdef Bridge < handle
         plotContraint(obj,fig,ax)
         plotLoad(obj,fig,ax,scale)
         [fig,ax] = plotStructure(obj,fig,ax)
-        [fig,ax] = plot(obj)
+        [fig,ax] = plot(obj,options)
         %% 
         addToList(obj,ListClassName,value)
         updateList(obj,ListName,Value)

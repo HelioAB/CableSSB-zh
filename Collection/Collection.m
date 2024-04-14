@@ -11,6 +11,7 @@ classdef Collection < handle
         updateObjList()
         sortObjList()
         isempty()
-        Num
+        Num()
+        deleteAll()
     end
 end

@@ -9,5 +9,6 @@ classdef ArrayCollection < Collection
         [sorted_objlist,Index] = sortObjList(obj,PropertyName)
         num = Num(obj)
         tf = isempty(obj)
+        deleteAll(obj)
     end
 end

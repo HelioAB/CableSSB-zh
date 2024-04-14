@@ -10,5 +10,6 @@ classdef CellCollection < Collection
         [sorted_objlist,Index] = sortObjList(obj)
         num = Num(obj)
         tf = isempty(obj)
+        deleteAll(obj)
     end
 end
