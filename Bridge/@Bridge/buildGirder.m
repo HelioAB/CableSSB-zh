@@ -14,7 +14,7 @@ function girder = buildGirder(obj,CoordA,CoordB,L,section,material,element_type,
     girder.ElementType = element_type;
     girder.ElementDivisionNum = division_num;
     girder.record;
-    section.record;
+    section.unique.record;
     material.record;
     element_type.record;
 

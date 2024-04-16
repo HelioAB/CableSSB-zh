@@ -15,7 +15,7 @@ function hanger = buildHanger(obj,IPoint,JPoint,IStructure,JStructure,section,ma
     hanger.ElementType = element_type;
     hanger.ElementDivisionNum = division_num;
     hanger.record;
-    section.record;
+    section.unique.record;
     material.record;
     element_type.record;
 

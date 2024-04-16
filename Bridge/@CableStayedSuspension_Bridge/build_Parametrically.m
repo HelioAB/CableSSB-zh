@@ -4,19 +4,24 @@ function build_Parametrically(obj,options)
         options.Ratio_SideMainSpan = 1
         options.Sag = 102.35
         options.Count_CrossCable = 3
-        options.Length_HangerSpan %
-        options.Area_MainCable
-        options.Count_Pier %
-        options.Stiffness_Axial_Global %
-        options.Stiffness_Axial_StayedCable %
-        options.Stiffness_Axial_Suspension %
-        options.Stiffness_Axial_Combination %
-        options.Stiffness_Bending_Global %
-        options.Stiffness_Bending_StayedCable %
-        options.Stiffness_Bending_Suspension %
-        options.Stiffness_Bending_Combination %
-        options.Stiffness_Bending_MainSpan %
-        options.Stiffness_Bending_SideSpan %
+
+        options.Length_HangerSpan = []
+        options.Area_MainCable = [] % 这个参数是配合Length_HangerSpan的变化
+
+        options.Count_Pier = []
+        
+        options.IfGravityRelated_GirderArea = true;% 改变加劲梁面积时，是否同时改变加劲梁重力，true则同时改变重力，false则不改变重力
+        % options.GirderArea_StayedCable = []
+        % options.GirderArea_Suspension = []
+        % options.GirderArea_Combination = []
+        options.GirderArea_MainSpan = 6.3676%
+        options.GirderArea_SideSpan = 9.0342%
+   
+        options.GirderStiffness_Bending_StayedCable = []%
+        options.GirderStiffness_Bending_Suspension = []%
+        options.GirderStiffness_Bending_Combination = []%
+        options.GirderStiffness_Bending_MainSpan = 190.1827%
+        options.GirderStiffness_Bending_SideSpan = 190.1827%
     end
     disp('Is building a Cable-Stayed Suspension Bridge...')
     %% 参数赋值
@@ -29,49 +34,111 @@ function build_Parametrically(obj,options)
     % 交叉索数
     count_crosscable = options.Count_CrossCable;
     % 吊跨比
-
+    if ~isemty(options.Length_HangerSpan)
+        count_crosscable = 0;% 研究Length_HangerSpan时，交叉索数必须为0
+        if ~isemty(options.Area_MainCable)
+        else
+        end
+    end
     % 主缆面积
 
     % 加劲梁轴向刚度
+    if options.IfGravityRelated_GirderArea
+        Area_MainSpan_Girder = options.GirderArea_MainSpan;
+        Area_SideSpan_Girder = options.GirderArea_SideSpan;
+    else
+        error('暂时未开发「加劲梁截面面积改变时自重不变」的情况')
+    end
 
-    % 
+    % 加劲梁竖向抗弯刚度
+    % 整体、主跨、边跨
+    Iyy_MainSpan_Girder = options.GirderStiffness_Bending_MainSpan;
+    Iyy_SideSpan_Girder = options.GirderStiffness_Bending_SideSpan;
+    % 斜拉部分、悬索部分
+    if isempty(options.GirderStiffness_Bending_StayedCable) && isempty(options.GirderStiffness_Bending_Suspension)
+        flag_Iyy_SeperatedSystem = false;
+    elseif ~isempty(options.GirderStiffness_Bending_StayedCable) && ~isempty(options.GirderStiffness_Bending_Suspension)
+        flag_Iyy_SeperatedSystem = true;
+        Iyy_StayedCable_Girder = options.GirderStiffness_Bending_StayedCable;
+        Iyy_Suspension_Girder = options.GirderStiffness_Bending_Suspension;
+    else
+        error('若要为斜拉部分、悬索部分、结合端的竖向抗弯刚度赋值，则需要为它们同时赋值')
+    end
+    % 结合段
+    if isempty(options.GirderStiffness_Bending_Combination)
+        Iyy_Combination_Girder = (Iyy_StayedCable_Girder + Iyy_Suspension_Girder)/2;
+    else
+        Iyy_Combination_Girder = options.GirderStiffness_Bending_Combination;
+    end
+
 
     %% 加劲梁与锚碇
     % 单位：N, m
     % 方向：X：顺桥向；Y：横桥向；Z:竖向。XYZ坐标系满足右手系
     % 定义：截面、材料、单元类型
-    girder1_sectiondata = UserSection(6.3676,20,190.1827,193,36,8); % 定义截面数据，UserSection是用户自定义截面数据，User(A,Ixx,Iyy,Izz,TKy,TKz) ，单位: m
-    girder1_materialdata = MaterialData_Q345; % 定义材料属性，MaterialData_Q345为内置的Q345钢的材料属性，单位: N, m
-    Sec_girder1 = Section('主跨主梁Girder',girder1_sectiondata); % 定义截面，后面在定义后面的结构时，使用这里定义的Sec_girder。这里的截面名称'主梁Girder'会出现在Ansys宏文件的注释中，方便检查
-    Mat_girder1 = Material('主跨主梁Girder',girder1_materialdata); % 定义材料，后面在定义后面的结构时，使用这里定义的Mat_girder。
     ET_girder1 = Beam188; % 单元类型选择为Ansys中的Beam188单元。
+    girder1_materialdata = MaterialData_Q345; % 定义材料属性，MaterialData_Q345为内置的Q345钢的材料属性，单位: N, m
+    Mat_girder1 = Material('主跨主梁Girder',girder1_materialdata); % 定义材料，后面在定义后面的结构时，使用这里定义的Mat_girder。
     
     % 主跨加劲梁
     L = seg_mainspan*ones(1,92); % 该段加劲梁的分段情况，只需要输入每一段的正确比例就可以
     CoordA_girder1 = [157.2,0,-4.2]; % 加劲梁左端点A的位置，"左"代表 X向数值更小的方向。
     CoordB_girder1 = [CoordA_girder1(1)+sum(L),CoordA_girder1(2),CoordA_girder1(3)]; % 加劲梁右端点B的位置
-    girder1 = obj.buildGirder(CoordA_girder1,CoordB_girder1,L,Sec_girder1,Mat_girder1,ET_girder1); % 根据比例L，对CoordA和CoordB线性插值
+    if flag_Iyy_SeperatedSystem
+        girder1_sectiondata_suspension = UserSection(Area_MainSpan_Girder,20,Iyy_Suspension_Girder,193,36,8);
+        girder1_sectiondata_stayedcable = UserSection(Area_MainSpan_Girder,20,Iyy_StayedCable_Girder,193,36,8);
+        girder1_sectiondata_combination = UserSection(Area_MainSpan_Girder,20,Iyy_Combination_Girder,193,36,8);
+        Sec_gitder1_suspension = Section('主跨主梁Girder-Suspension部分',girder1_sectiondata_suspension);
+        Sec_girder1_stayedcable = Section('主跨主梁Girder-StayedCable部分',girder1_sectiondata_stayedcable);
+        Sec_girder1_combination = Section('主跨主梁Girder-Combination部分',girder1_sectiondata_combination);
+
+        girder1 = obj.buildGirder(CoordA_girder1,CoordB_girder1,L,Sec_gitder1_suspension,Mat_girder1,ET_girder1); % 根据比例L，对CoordA和CoordB线性插值
+        Sec_girder1_stayedcable.record;
+        Sec_girder1_combination.record;
+    else      
+        girder1_sectiondata = UserSection(6.3676,20,Iyy_MainSpan_Girder,193,36,8); % 定义截面数据，UserSection是用户自定义截面数据，User(A,Ixx,Iyy,Izz,TKy,TKz) ，单位: m
+
+        Sec_girder1 = Section('主跨主梁Girder',girder1_sectiondata); % 定义截面
+        girder1 = obj.buildGirder(CoordA_girder1,CoordB_girder1,L,Sec_girder1,Mat_girder1,ET_girder1); % 根据比例L，对CoordA和CoordB线性插值
+    end
     
     Point_Hanger_girder1 = girder1.findPoint('Interval','X','ascend',[(31-2*count_crosscable)*seg_mainspan,2*seg_mainspan+zeros(1,15+2*count_crosscable)]); % 'ascend'时按X正方向距离PointA的距离，寻找girder1的点。这些点是吊索作用点
     Point_Hanger_girder1 = Point_Hanger_girder1.sort('X');% 按X正方向的顺序排列
     index_Hanger_girder1 = girder1.findPointIndex(Point_Hanger_girder1);
 
-    Point_StayedCable_girder1_1 = girder1.findPoint('Interval','X','ascend',[4*seg_mainspan,2*seg_mainspan+zeros(1,13)]); % 这些点是靠近PointA的斜拉索作用点
-    Point_StayedCable_girder1_2 = girder1.findPoint('Interval','X','descend',[4*seg_mainspan,2*seg_mainspan+zeros(1,13)]); % 这些点是靠近PointB的斜拉索作用点
-    Point_StayedCable_girder1_1  = Point_StayedCable_girder1_1.sort('X');
-    Point_StayedCable_girder1_2 = Point_StayedCable_girder1_2.sort('X');
+    Point_StayedCable1_girder1 = girder1.findPoint('Interval','X','ascend',[4*seg_mainspan,2*seg_mainspan+zeros(1,13)]); % 这些点是靠近PointA的斜拉索作用点
+    Point_StayedCable2_girder1 = girder1.findPoint('Interval','X','descend',[4*seg_mainspan,2*seg_mainspan+zeros(1,13)]); % 这些点是靠近PointB的斜拉索作用点
+    Point_StayedCable1_girder1  = Point_StayedCable1_girder1.sort('X');
+    Point_StayedCable2_girder1 = Point_StayedCable2_girder1.sort('X');
+    Point_StayedCable_girder1 = [Point_StayedCable1_girder1,Point_StayedCable2_girder1];
+    index_StayedCable_girder1 = girder1.findPointIndex(Point_StayedCable_girder1);
     
-    % 边跨加劲梁
-    girder2_sectiondata = UserSection(9.0342,20,190.1827,193,36,8); % 定义截面数据，UserSection是用户自定义截面数据，User(A,Ixx,Iyy,Izz,TKy,TKz) ，单位: m
+    [index_Hanger_lines,index_StayedCable1_lines,index_StayedCable2_lines,index_Combination_lines,index_Other_lines] = findMainSpanDivisionIndex(girder1,Point_Hanger_girder1,Point_StayedCable1_girder1,Point_StayedCable2_girder1);
+    if flag_Iyy_SeperatedSystem
+        girder1.Section(index_Hanger_lines) = Sec_gitder1_suspension;
+        girder1.Section(index_StayedCable1_lines) = Sec_girder1_stayedcable;
+        girder1.Section(index_StayedCable2_lines) = Sec_girder1_stayedcable;
+        girder1.Section(index_Combination_lines) = Sec_girder1_combination;
+        girder1.Section(index_Other_lines) = Sec_girder1_combination;
+    end
+    
+    % 边跨加劲梁       
+    if flag_Iyy_SeperatedSystem
+        girder2_sectiondata = UserSection(Area_SideSpan_Girder,20,Iyy_StayedCable_Girder,193,36,8); % 定义截面数据，UserSection是用户自定义截面数据，User(A,Ixx,Iyy,Izz,TKy,TKz) ，单位: m
+        Name_Section = '边跨主梁Girder-StayedCable部分';
+    else
+        girder2_sectiondata = UserSection(Area_SideSpan_Girder,20,Iyy_SideSpan_Girder,193,36,8); % 定义截面数据，UserSection是用户自定义截面数据，User(A,Ixx,Iyy,Izz,TKy,TKz) ，单位: m
+        Name_Section = '边跨主梁Girder';
+    end
+    Sec_girder2 = Section(Name_Section,girder2_sectiondata); % 定义截面，后面在定义后面的结构时，使用这里定义的Sec_girder。这里的截面名称'主梁Girder'会出现在Ansys宏文件的注释中，方便检查
     girder2_materialdata = MaterialData_Q345; % 定义材料属性，MaterialData_Q345为内置的Q345钢的材料属性，单位: N, m
-    Sec_girder2 = Section('边跨主梁Girder',girder2_sectiondata); % 定义截面，后面在定义后面的结构时，使用这里定义的Sec_girder。这里的截面名称'主梁Girder'会出现在Ansys宏文件的注释中，方便检查
     Mat_girder2 = Material('边跨主梁Girder',girder2_materialdata); % 定义材料，后面在定义后面的结构时，使用这里定义的Mat_girder。
     ET_girder2 = Beam188; % 单元类型选择为Ansys中的Beam188单元。
 
     % 边跨1加劲梁
     L = seg_sidespan_1+zeros(1,21);
     CoordA_girder2 = [CoordA_girder1(1)-sum(L),CoordA_girder1(2),CoordA_girder1(3)];
-    CoordB_girder2 = CoordA_girder1;
+    CoordB_girder2 = CoordA_girder1;    
     girder2 = obj.buildGirder(CoordA_girder2,CoordB_girder2,L,Sec_girder2,Mat_girder2,ET_girder2);
     
     Point_StayedCable_girder2 = girder2.findPoint('Interval','X','descend',[4*seg_sidespan_1,2*seg_sidespan_1+zeros(1,4),seg_sidespan_1+zeros(1,9)]).sort('X');
@@ -170,10 +237,10 @@ function build_Parametrically(obj,options)
     rigidbeam_1 = obj.buildRigidBeamByOffset(Point_Hanger_girder1,girder1,offset1,Sec_rigidbeam,Mat_rigidbeam,ET_rigidbeam);
     rigidbeam_2 = obj.buildRigidBeamByOffset(Point_Hanger_girder1,girder1,offset2,Sec_rigidbeam,Mat_rigidbeam,ET_rigidbeam);
     % girder1 与 StayedCable 之间的RigidBeam
-    rigidbeam_3 = obj.buildRigidBeamByOffset(Point_StayedCable_girder1_1,girder1,offset1,Sec_rigidbeam,Mat_rigidbeam,ET_rigidbeam);
-    rigidbeam_4 = obj.buildRigidBeamByOffset(Point_StayedCable_girder1_1,girder1,offset2,Sec_rigidbeam,Mat_rigidbeam,ET_rigidbeam);
-    rigidbeam_5 = obj.buildRigidBeamByOffset(Point_StayedCable_girder1_2,girder1,offset1,Sec_rigidbeam,Mat_rigidbeam,ET_rigidbeam);
-    rigidbeam_6 = obj.buildRigidBeamByOffset(Point_StayedCable_girder1_2,girder1,offset2,Sec_rigidbeam,Mat_rigidbeam,ET_rigidbeam);
+    rigidbeam_3 = obj.buildRigidBeamByOffset(Point_StayedCable1_girder1,girder1,offset1,Sec_rigidbeam,Mat_rigidbeam,ET_rigidbeam);
+    rigidbeam_4 = obj.buildRigidBeamByOffset(Point_StayedCable1_girder1,girder1,offset2,Sec_rigidbeam,Mat_rigidbeam,ET_rigidbeam);
+    rigidbeam_5 = obj.buildRigidBeamByOffset(Point_StayedCable2_girder1,girder1,offset1,Sec_rigidbeam,Mat_rigidbeam,ET_rigidbeam);
+    rigidbeam_6 = obj.buildRigidBeamByOffset(Point_StayedCable2_girder1,girder1,offset2,Sec_rigidbeam,Mat_rigidbeam,ET_rigidbeam);
     % girder2 与 StayedCable 之间的RigidBeam
     rigidbeam_7 = obj.buildRigidBeamByOffset(Point_StayedCable_girder2,girder2,offset1,Sec_rigidbeam,Mat_rigidbeam,ET_rigidbeam);
     rigidbeam_8 = obj.buildRigidBeamByOffset(Point_StayedCable_girder2,girder2,offset2,Sec_rigidbeam,Mat_rigidbeam,ET_rigidbeam);
@@ -382,4 +449,63 @@ function build_Parametrically(obj,options)
     
     %% 设置输出方式
     obj.OutputMethod = OutputToAnsys(obj);
+end
+function [index_Hanger_lines,index_StayedCable1_lines,index_StayedCable2_lines,index_Combination_lines,index_Other_lines] = findMainSpanDivisionIndex(girderobj,Point_Hanger_girder,Point_StayedCable1_girder,Point_StayedCable2_girder)
+    % 将
+    lines_girder1 = girderobj.Line;
+    IPoint_girder1 = [lines_girder1.IPoint];
+    JPoint_girder1 = [lines_girder1.JPoint];
+    X_IPoint_girder1 = [IPoint_girder1.X];
+    X_JPoint_girder1 = [JPoint_girder1.X];
+    PointA_Hanger_girder1 = Point_Hanger_girder(1);
+    PointB_Hanger_girder1 = Point_Hanger_girder(end);
+    PointB_StayedCable1_girder1 = Point_StayedCable1_girder(end);
+    PointA_StayedCable2_girder1 = Point_StayedCable2_girder(1);
+    index_Hanger_lines = false(1,length(lines_girder1));
+    index_StayedCable1_lines = false(1,length(lines_girder1));
+    index_StayedCable2_lines = false(1,length(lines_girder1));
+    index_Combination_lines = false(1,length(lines_girder1));
+    index_Other_lines = false(1,length(lines_girder1));
+    isInHanegrSpan = false;    
+    for i=1:length(lines_girder1)
+        XRange_line = [min(X_IPoint_girder1(i),X_JPoint_girder1(i)),max(X_IPoint_girder1(i),X_JPoint_girder1(i))];
+        if (PointA_Hanger_girder1.X >= XRange_line(1)) && (PointA_Hanger_girder1.X < XRange_line(2)) % 左边端吊索点位于该line范围内
+            isInHanegrSpan = true;
+        end
+        if (PointB_Hanger_girder1.X >= XRange_line(1)) && (PointB_Hanger_girder1.X < XRange_line(2)) % 有边端吊索点位于该line范围内
+            isInHanegrSpan = false;
+        end
+        if isInHanegrSpan
+            index_Hanger_lines(i) = true;
+        end
+    end
+    isInStayedCable1 = true;    
+    for i=1:length(lines_girder1)
+        XRange_line = [min(X_IPoint_girder1(i),X_JPoint_girder1(i)),max(X_IPoint_girder1(i),X_JPoint_girder1(i))];
+        if (PointB_StayedCable1_girder1.X >= XRange_line(1)) && (PointB_StayedCable1_girder1.X < XRange_line(2)) % 左边端吊索点位于该line范围内
+            isInStayedCable1 = false;
+        end
+        if isInStayedCable1
+            index_StayedCable1_lines(i) = true;
+        end
+    end
+    isInStayedCable1 = false;    
+    for i=1:length(lines_girder1)
+        XRange_line = [min(X_IPoint_girder1(i),X_JPoint_girder1(i)),max(X_IPoint_girder1(i),X_JPoint_girder1(i))];
+        if (PointA_StayedCable2_girder1.X >= XRange_line(1)) && (PointA_StayedCable2_girder1.X < XRange_line(2)) % 左边端吊索点位于该line范围内
+            isInStayedCable1 = true;
+        end
+        if isInStayedCable1
+            index_StayedCable2_lines(i) = true;
+        end
+    end
+    for i=1:length(lines_girder1)
+        if index_Hanger_lines(i) && index_StayedCable1_lines(i) % 既是Hanger，又是StayedCable1
+            index_Combination_lines(i) = true;
+        elseif index_Hanger_lines(i) && index_StayedCable2_lines(i) % 既是Hanger，又是StayedCable2
+            index_Combination_lines(i) = true;
+        elseif ~(index_Hanger_lines(i)) && ~(index_StayedCable1_lines(i)) && ~(index_StayedCable2_lines(i))  % 既不是Hanger，又不是StayedCable1
+            index_Other_lines(i) = true;
+        end
+    end
 end

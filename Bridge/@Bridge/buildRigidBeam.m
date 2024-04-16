@@ -15,7 +15,7 @@ function rigid_beam = buildRigidBeam(obj,IPoint,JPoint,IStructure,JStructure,sec
     rigid_beam.ElementType = element_type;
     rigid_beam.ElementDivisionNum = division_num;
     rigid_beam.record;
-    section.record;
+    section.unique.record;
     material.record;
     element_type.record;
 

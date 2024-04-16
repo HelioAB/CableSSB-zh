@@ -22,7 +22,7 @@ function tower = buildTowerByInput(obj,InputMethod,functionhandle_findRefPoint,C
     tower.ElementType = element_type;
     tower.ElementDivisionNum = division_num;
     tower.record;
-    section.record;
+    section.unique.record;
     material.record;
     element_type.record;
 

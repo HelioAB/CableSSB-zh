@@ -56,10 +56,13 @@ classdef OutputToAnsys < OutputTo
         outputReasonalStateOptim(obj)
 
         % 输出获取Ansys中某些数据的命令流，输入参数：obj,quaryObj,DAtaBasePath 输出参数：ResultFilePath
+        Nodes = getNodeByNumElements(obj,Num_Elems)
         FiniteElementModel = getFiniteElementModel(obj)
         ResultFilePath = getBendingStrainEnergy(obj,structure,DataBasePath)
         [Ux,Uy,Uz] = getDisplacement(obj,points,name_DataBase)
         [num_elements,num_INode,num_JNode,Fxi,Fxj,Myi,Myj,Mzi,Mzj] = getInternalForce(obj,lines,LinkOrBeam,name_DataBase,Map_MatlabLine2AnsysElem)
+        OutputMethod_clone = analyzeInfluenceLine(obj,num_GirderNodes,value_Force)
+        Result = getInfluenceLineResult(obj,NameCell,NumElementOrNodeCell,VariableTypeCell,LinkOrBeamCell)
 
     end
     methods(Static)

@@ -22,7 +22,7 @@ function pier = buildPierByInput(obj,InputMethod,functionhandle_findRefPoint,Coo
     pier.ElementType = element_type;
     pier.ElementDivisionNum = division_num;
     pier.record;
-    section.record;
+    section.unique.record;
     material.record;
     element_type.record;
 

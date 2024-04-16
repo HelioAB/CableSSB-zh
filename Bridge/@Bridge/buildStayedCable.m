@@ -15,7 +15,7 @@ function stayed_cable = buildStayedCable(obj,IPoint,JPoint,IStructure,JStructure
     stayed_cable.ElementType = element_type;
     stayed_cable.ElementDivisionNum = division_num;
     stayed_cable.record;
-    section.record;
+    section.unique.record;
     material.record;
     element_type.record;
     

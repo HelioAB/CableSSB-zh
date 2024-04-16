@@ -48,4 +48,11 @@ function [Ux,Uy,Uz] = getDisplacement(obj,points,name_DataBase)
     Ux = data(:,1)';
     Uy = data(:,2)';
     Uz = data(:,3)';
+
+    % 将生成的结果文件更换文件夹
+    dir_Result = fullfile(OutputMethod_clone.WorkPath,filesep,'Result_Displacement');
+    if ~exist(dir_Result,'dir')
+        mkdir(dir_Result)
+    end
+    movefile(fullfile(OutputMethod_clone.WorkPath,'Displacement.txt'),dir_Result)
 end

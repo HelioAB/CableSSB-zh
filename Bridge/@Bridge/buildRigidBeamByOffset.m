@@ -16,7 +16,7 @@ function rigid_beam = buildRigidBeamByOffset(obj,FromPoint,FromStructure,Offset,
     rigid_beam.ElementType = element_type;
     rigid_beam.ElementDivisionNum = division_num;
     rigid_beam.record;
-    section.record;
+    section.unique.record;
     material.record;
     element_type.record;
 

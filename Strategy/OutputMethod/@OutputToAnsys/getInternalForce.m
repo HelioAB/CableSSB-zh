@@ -80,7 +80,7 @@ function [num_elements,num_INode,num_JNode,Fxi,Fxj,Myi,Myj,Mzi,Mzj] = getInterna
     dataFilePath = fullfile(OutputMethod_clone.WorkPath,'InternalForce.txt');
     fileID = fopen(dataFilePath, 'r');
     data = readmatrix(dataFilePath);
-    fclose(fileID);
+    fclose(fileID);   
 
     % 分解数据
     num_elements = data(:,1)';
@@ -92,4 +92,11 @@ function [num_elements,num_INode,num_JNode,Fxi,Fxj,Myi,Myj,Mzi,Mzj] = getInterna
     Myj = data(:,7)';
     Mzi = data(:,8)';
     Mzj = data(:,9)';
+
+    % 将生成的结果文件更换文件夹
+    dir_Result = fullfile(OutputMethod_clone.WorkPath,filesep,'Result_InternalForce');
+    if ~exist(dir_Result,'dir')
+        mkdir(dir_Result)
+    end
+    movefile(fullfile(OutputMethod_clone.WorkPath,'InternalForce.txt'),dir_Result)
 end

@@ -21,7 +21,7 @@ function girder = buildGirderByInput(obj,InputMethod,functionhandle_findRefPoint
     girder.ElementType = element_type;
     girder.ElementDivisionNum = division_num;
     girder.record;
-    section.record;
+    section.unique.record;
     material.record;
     element_type.record;
 

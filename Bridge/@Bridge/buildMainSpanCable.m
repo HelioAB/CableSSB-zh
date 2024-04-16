@@ -24,7 +24,7 @@ function [cable,Output] = buildMainSpanCable(obj,CoordA,CoordB,L,index_hanger,P_
     cable.ElementType = element_type;
     cable.ElementDivisionNum = division_num;
     cable.record;
-    section.record;
+    section.unique.record;
     material.record;
     element_type.record;
     %

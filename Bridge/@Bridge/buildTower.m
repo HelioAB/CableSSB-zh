@@ -14,7 +14,7 @@ function tower = buildTower(obj,CoordBottom,CoordTop,L,section,material,element_
     tower.ElementType = element_type;
     tower.ElementDivisionNum = division_num;
     tower.record;
-    section.record;
+    section.unique.record;
     material.record;
     element_type.record;
 

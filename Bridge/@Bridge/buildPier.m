@@ -14,7 +14,7 @@ function pier = buildPier(obj,CoordBottom,CoordTop,L,section,material,element_ty
     pier.ElementType = element_type;
     pier.ElementDivisionNum = division_num;
     pier.record;
-    section.record;
+    section.unique.record;
     material.record;
     element_type.record;
 
