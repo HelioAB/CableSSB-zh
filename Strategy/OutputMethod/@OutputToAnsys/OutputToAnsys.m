@@ -61,8 +61,8 @@ classdef OutputToAnsys < OutputTo
         ResultFilePath = getBendingStrainEnergy(obj,structure,DataBasePath)
         [Ux,Uy,Uz] = getDisplacement(obj,points,name_DataBase)
         [num_elements,num_INode,num_JNode,Fxi,Fxj,Myi,Myj,Mzi,Mzj] = getInternalForce(obj,lines,LinkOrBeam,name_DataBase,Map_MatlabLine2AnsysElem)
-        OutputMethod_clone = analyzeInfluenceLine(obj,num_GirderNodes,value_Force)
-        Result = getInfluenceLineResult(obj,NameCell,NumElementOrNodeCell,VariableTypeCell,LinkOrBeamCell)
+        [OutputMethod_clone,num_GirderNodes] = analyzeInfluenceLine(obj,num_GirderNodes,value_Force)
+        data = getInfluenceLineResult(obj,OutputMethodObj_analyzeInfluenceLine,num_GirderNodes,num_MonitoredNodes,num_MonitoredElems_Link,num_MonitoredElems_Beam)
 
     end
     methods(Static)

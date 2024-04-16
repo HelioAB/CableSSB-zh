@@ -33,4 +33,10 @@ function [status,cmdout] = runMac(obj,options)
                   '-b -l en-us -s read' ...
                   '-m 2300 -db 1024']);
     [status,cmdout] = system(system_str);
+
+    % 删除lock文件
+    lock_file_path = fullfile(obj.WorkPath,strcat(options.JobName,'.lock'));
+    if exist(lock_file_path,'file')
+        delete(lock_file_path);
+    end
 end

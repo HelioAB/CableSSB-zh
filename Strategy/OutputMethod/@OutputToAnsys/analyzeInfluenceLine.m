@@ -1,18 +1,14 @@
-function OutputMethod_clone = analyzeInfluenceLine(obj,num_GirderNodes,value_Force)
+function [OutputMethod_clone,num_GirderNodes] = analyzeInfluenceLine(obj,num_GirderNodes,value_Force)
     arguments
         obj
         num_GirderNodes (1,:) {mustBeNumeric} = []
         value_Force (1,1) {mustBeNumeric} = 1e6
     end
-    OutputMethod_clone = obj.clone();
-    OutputMethod_clone.JobName = fullfile('InfluenceLine');
-    OutputMethod_clone.MacFilePath = fullfile(OutputMethod_clone.WorkPath,'analyzeInfluenceLine.mac');
-    OutputMethod_clone.ResultFilePath = fullfile(OutputMethod_clone.WorkPath,'Result_analyzeInfluenceLine.out');
-
     % 获取加劲梁上的所有Node
     if isempty(num_GirderNodes)
-        Map_Line2Elem = OutputMethod_clone.Params.Map_MatlabLine2AnsysElem;
-        girders = OutputMethod_clone.findStructureByClass('Girder');
+        bridgeobj = obj.OutputObj;
+        Map_Line2Elem = bridgeobj.Params.Map_MatlabLine2AnsysElem;
+        girders = bridgeobj.findStructureByClass('Girder');
         num_elems = [];
         for i=1:length(girders)
             girder = girders{i};
@@ -22,10 +18,14 @@ function OutputMethod_clone = analyzeInfluenceLine(obj,num_GirderNodes,value_For
                 num_elems = [num_elems,Map_Line2Elem(num_lines(j))];
             end
         end
-        nodes = OutputMethod_clone.OutputMethod.getNodeByNumElements(num_elems);
+        nodes = obj.getNodeByNumElements(num_elems);
         num_GirderNodes = [nodes.sort('X').Num];
     end
 
+    OutputMethod_clone = obj.clone();
+    OutputMethod_clone.JobName = fullfile('analyzeInfluenceLine');
+    OutputMethod_clone.MacFilePath = fullfile(OutputMethod_clone.WorkPath,'analyzeInfluenceLine.mac');
+    OutputMethod_clone.ResultFilePath = fullfile(OutputMethod_clone.WorkPath,'Result_analyzeInfluenceLine.out');
     output_str = ['/solu',newline,...
                     sprintf('resume,%s,db',obj.JobName),newline,...
                     'antype,static',newline,...
@@ -46,5 +46,6 @@ function OutputMethod_clone = analyzeInfluenceLine(obj,num_GirderNodes,value_For
                     sprintf('save,%s,db',OutputMethod_clone.JobName)];
     OutputMethod_clone.outputAPDL(output_str,'analyzeInfluenceLine.mac','w')
     % 运行宏文件
+    
     OutputMethod_clone.runMac("ComputingMode","Distributed")
 end
