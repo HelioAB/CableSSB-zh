@@ -56,6 +56,7 @@ classdef Bridge < handle
         name = getName(obj,ListClassName)
         % 输出
         output(obj)
+        
         % 其他
         weight = getGirderWeight(obj,GirderList)
         setForceTo(obj,StructureCell,P_Bottom_Z)
