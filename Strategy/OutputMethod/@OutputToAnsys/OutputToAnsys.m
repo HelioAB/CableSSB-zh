@@ -60,8 +60,8 @@ classdef OutputToAnsys < OutputTo
         [nodes,index_inodes,index_jnodes] = getNodeByNumElements(obj,Num_Elems)
         FiniteElementModel = getFiniteElementModel(obj)
         ResultFilePath = getBendingStrainEnergy(obj,structure,DataBasePath)
-        [Ux,Uy,Uz] = getDisplacement(obj,points,name_DataBase)
-        [num_elements,num_INode,num_JNode,Fxi,Fxj,Myi,Myj,Mzi,Mzj] = getInternalForce(obj,lines,LinkOrBeam,name_DataBase,Map_MatlabLine2AnsysElem)
+        data = getDisplacement(obj,num_MonitoredNodes)
+        data = getInternalForce(obj,num_MonitoredElems_Link,num_MonitoredElems_Beam)
         [OutputMethod_clone,num_GirderNodes] = analyzeInfluenceLine(obj,num_GirderNodes,value_Force)
         data = getInfluenceLineResult(obj,OutputMethodObj_analyzeInfluenceLine,num_GirderNodes,num_MonitoredNodes,num_MonitoredElems_Link,num_MonitoredElems_Beam)
 

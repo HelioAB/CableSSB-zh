@@ -1,0 +1,572 @@
+lsel,none
+cm,l_selected,line
+numstr,line,1
+
+! Girder_1 
+l,1,2 ! Matlab中Line对象编号: 1; Ansys中line编号1 
+l,2,3 ! Matlab中Line对象编号: 2; Ansys中line编号2 
+l,3,4 ! Matlab中Line对象编号: 3; Ansys中line编号3 
+l,4,5 ! Matlab中Line对象编号: 4; Ansys中line编号4 
+l,5,6 ! Matlab中Line对象编号: 5; Ansys中line编号5 
+l,6,7 ! Matlab中Line对象编号: 6; Ansys中line编号6 
+l,7,8 ! Matlab中Line对象编号: 7; Ansys中line编号7 
+l,8,9 ! Matlab中Line对象编号: 8; Ansys中line编号8 
+l,9,10 ! Matlab中Line对象编号: 9; Ansys中line编号9 
+l,10,11 ! Matlab中Line对象编号: 10; Ansys中line编号10 
+l,11,12 ! Matlab中Line对象编号: 11; Ansys中line编号11 
+l,12,13 ! Matlab中Line对象编号: 12; Ansys中line编号12 
+l,13,14 ! Matlab中Line对象编号: 13; Ansys中line编号13 
+l,14,15 ! Matlab中Line对象编号: 14; Ansys中line编号14 
+l,15,16 ! Matlab中Line对象编号: 15; Ansys中line编号15 
+l,16,17 ! Matlab中Line对象编号: 16; Ansys中line编号16 
+l,17,18 ! Matlab中Line对象编号: 17; Ansys中line编号17 
+l,18,19 ! Matlab中Line对象编号: 18; Ansys中line编号18 
+l,19,20 ! Matlab中Line对象编号: 19; Ansys中line编号19 
+l,20,21 ! Matlab中Line对象编号: 20; Ansys中line编号20 
+l,21,22 ! Matlab中Line对象编号: 21; Ansys中line编号21 
+l,22,23 ! Matlab中Line对象编号: 22; Ansys中line编号22 
+l,23,24 ! Matlab中Line对象编号: 23; Ansys中line编号23 
+l,24,25 ! Matlab中Line对象编号: 24; Ansys中line编号24 
+l,25,26 ! Matlab中Line对象编号: 25; Ansys中line编号25 
+l,26,27 ! Matlab中Line对象编号: 26; Ansys中line编号26 
+l,27,28 ! Matlab中Line对象编号: 27; Ansys中line编号27 
+l,28,29 ! Matlab中Line对象编号: 28; Ansys中line编号28 
+l,29,30 ! Matlab中Line对象编号: 29; Ansys中line编号29 
+l,30,31 ! Matlab中Line对象编号: 30; Ansys中line编号30 
+l,31,32 ! Matlab中Line对象编号: 31; Ansys中line编号31 
+l,32,33 ! Matlab中Line对象编号: 32; Ansys中line编号32 
+l,33,34 ! Matlab中Line对象编号: 33; Ansys中line编号33 
+l,34,35 ! Matlab中Line对象编号: 34; Ansys中line编号34 
+l,35,36 ! Matlab中Line对象编号: 35; Ansys中line编号35 
+l,36,37 ! Matlab中Line对象编号: 36; Ansys中line编号36 
+l,37,38 ! Matlab中Line对象编号: 37; Ansys中line编号37 
+l,38,39 ! Matlab中Line对象编号: 38; Ansys中line编号38 
+l,39,40 ! Matlab中Line对象编号: 39; Ansys中line编号39 
+l,40,41 ! Matlab中Line对象编号: 40; Ansys中line编号40 
+l,41,42 ! Matlab中Line对象编号: 41; Ansys中line编号41 
+l,42,43 ! Matlab中Line对象编号: 42; Ansys中line编号42 
+l,43,44 ! Matlab中Line对象编号: 43; Ansys中line编号43 
+l,44,45 ! Matlab中Line对象编号: 44; Ansys中line编号44 
+l,45,46 ! Matlab中Line对象编号: 45; Ansys中line编号45 
+l,46,47 ! Matlab中Line对象编号: 46; Ansys中line编号46 
+l,47,48 ! Matlab中Line对象编号: 47; Ansys中line编号47 
+l,48,49 ! Matlab中Line对象编号: 48; Ansys中line编号48 
+l,49,50 ! Matlab中Line对象编号: 49; Ansys中line编号49 
+l,50,51 ! Matlab中Line对象编号: 50; Ansys中line编号50 
+l,51,52 ! Matlab中Line对象编号: 51; Ansys中line编号51 
+l,52,53 ! Matlab中Line对象编号: 52; Ansys中line编号52 
+l,53,54 ! Matlab中Line对象编号: 53; Ansys中line编号53 
+l,54,55 ! Matlab中Line对象编号: 54; Ansys中line编号54 
+l,55,56 ! Matlab中Line对象编号: 55; Ansys中line编号55 
+l,56,57 ! Matlab中Line对象编号: 56; Ansys中line编号56 
+l,57,58 ! Matlab中Line对象编号: 57; Ansys中line编号57 
+l,58,59 ! Matlab中Line对象编号: 58; Ansys中line编号58 
+l,59,60 ! Matlab中Line对象编号: 59; Ansys中line编号59 
+l,60,61 ! Matlab中Line对象编号: 60; Ansys中line编号60 
+l,61,62 ! Matlab中Line对象编号: 61; Ansys中line编号61 
+l,62,63 ! Matlab中Line对象编号: 62; Ansys中line编号62 
+l,63,64 ! Matlab中Line对象编号: 63; Ansys中line编号63 
+l,64,65 ! Matlab中Line对象编号: 64; Ansys中line编号64 
+l,65,66 ! Matlab中Line对象编号: 65; Ansys中line编号65 
+l,66,67 ! Matlab中Line对象编号: 66; Ansys中line编号66 
+l,67,68 ! Matlab中Line对象编号: 67; Ansys中line编号67 
+l,68,69 ! Matlab中Line对象编号: 68; Ansys中line编号68 
+l,69,70 ! Matlab中Line对象编号: 69; Ansys中line编号69 
+l,70,71 ! Matlab中Line对象编号: 70; Ansys中line编号70 
+l,71,72 ! Matlab中Line对象编号: 71; Ansys中line编号71 
+l,72,73 ! Matlab中Line对象编号: 72; Ansys中line编号72 
+l,73,74 ! Matlab中Line对象编号: 73; Ansys中line编号73 
+l,74,75 ! Matlab中Line对象编号: 74; Ansys中line编号74 
+l,75,76 ! Matlab中Line对象编号: 75; Ansys中line编号75 
+l,76,77 ! Matlab中Line对象编号: 76; Ansys中line编号76 
+l,77,78 ! Matlab中Line对象编号: 77; Ansys中line编号77 
+l,78,79 ! Matlab中Line对象编号: 78; Ansys中line编号78 
+l,79,80 ! Matlab中Line对象编号: 79; Ansys中line编号79 
+l,80,81 ! Matlab中Line对象编号: 80; Ansys中line编号80 
+l,81,82 ! Matlab中Line对象编号: 81; Ansys中line编号81 
+l,82,83 ! Matlab中Line对象编号: 82; Ansys中line编号82 
+l,83,84 ! Matlab中Line对象编号: 83; Ansys中line编号83 
+l,84,85 ! Matlab中Line对象编号: 84; Ansys中line编号84 
+l,85,86 ! Matlab中Line对象编号: 85; Ansys中line编号85 
+l,86,87 ! Matlab中Line对象编号: 86; Ansys中line编号86 
+l,87,88 ! Matlab中Line对象编号: 87; Ansys中line编号87 
+l,88,89 ! Matlab中Line对象编号: 88; Ansys中line编号88 
+l,89,90 ! Matlab中Line对象编号: 89; Ansys中line编号89 
+l,90,91 ! Matlab中Line对象编号: 90; Ansys中line编号90 
+l,91,92 ! Matlab中Line对象编号: 91; Ansys中line编号91 
+l,92,93 ! Matlab中Line对象编号: 92; Ansys中line编号92 
+lsel,all 
+cmsel,u,l_selected 
+cm,Line_Girder_1,line 
+lsel,all 
+cm,l_selected,line 
+allsel 
+
+! Girder_2 
+l,94,95 ! Matlab中Line对象编号: 93; Ansys中line编号93 
+l,95,96 ! Matlab中Line对象编号: 94; Ansys中line编号94 
+l,96,97 ! Matlab中Line对象编号: 95; Ansys中line编号95 
+l,97,98 ! Matlab中Line对象编号: 96; Ansys中line编号96 
+l,98,99 ! Matlab中Line对象编号: 97; Ansys中line编号97 
+l,99,100 ! Matlab中Line对象编号: 98; Ansys中line编号98 
+l,100,101 ! Matlab中Line对象编号: 99; Ansys中line编号99 
+l,101,102 ! Matlab中Line对象编号: 100; Ansys中line编号100 
+l,102,103 ! Matlab中Line对象编号: 101; Ansys中line编号101 
+l,103,104 ! Matlab中Line对象编号: 102; Ansys中line编号102 
+l,104,105 ! Matlab中Line对象编号: 103; Ansys中line编号103 
+l,105,106 ! Matlab中Line对象编号: 104; Ansys中line编号104 
+l,106,107 ! Matlab中Line对象编号: 105; Ansys中line编号105 
+l,107,108 ! Matlab中Line对象编号: 106; Ansys中line编号106 
+l,108,109 ! Matlab中Line对象编号: 107; Ansys中line编号107 
+l,109,110 ! Matlab中Line对象编号: 108; Ansys中line编号108 
+l,110,111 ! Matlab中Line对象编号: 109; Ansys中line编号109 
+l,111,112 ! Matlab中Line对象编号: 110; Ansys中line编号110 
+l,112,113 ! Matlab中Line对象编号: 111; Ansys中line编号111 
+l,113,114 ! Matlab中Line对象编号: 112; Ansys中line编号112 
+l,114,1 ! Matlab中Line对象编号: 113; Ansys中line编号113 
+lsel,all 
+cmsel,u,l_selected 
+cm,Line_Girder_2,line 
+lsel,all 
+cm,l_selected,line 
+allsel 
+
+! Girder_3 
+l,93,117 ! Matlab中Line对象编号: 114; Ansys中line编号114 
+l,117,118 ! Matlab中Line对象编号: 115; Ansys中line编号115 
+l,118,119 ! Matlab中Line对象编号: 116; Ansys中line编号116 
+l,119,120 ! Matlab中Line对象编号: 117; Ansys中line编号117 
+l,120,121 ! Matlab中Line对象编号: 118; Ansys中line编号118 
+l,121,122 ! Matlab中Line对象编号: 119; Ansys中line编号119 
+l,122,123 ! Matlab中Line对象编号: 120; Ansys中line编号120 
+l,123,124 ! Matlab中Line对象编号: 121; Ansys中line编号121 
+l,124,125 ! Matlab中Line对象编号: 122; Ansys中line编号122 
+l,125,126 ! Matlab中Line对象编号: 123; Ansys中line编号123 
+l,126,127 ! Matlab中Line对象编号: 124; Ansys中line编号124 
+l,127,128 ! Matlab中Line对象编号: 125; Ansys中line编号125 
+l,128,129 ! Matlab中Line对象编号: 126; Ansys中line编号126 
+l,129,130 ! Matlab中Line对象编号: 127; Ansys中line编号127 
+l,130,131 ! Matlab中Line对象编号: 128; Ansys中line编号128 
+l,131,132 ! Matlab中Line对象编号: 129; Ansys中line编号129 
+l,132,133 ! Matlab中Line对象编号: 130; Ansys中line编号130 
+l,133,134 ! Matlab中Line对象编号: 131; Ansys中line编号131 
+l,134,135 ! Matlab中Line对象编号: 132; Ansys中line编号132 
+l,135,136 ! Matlab中Line对象编号: 133; Ansys中line编号133 
+l,136,137 ! Matlab中Line对象编号: 134; Ansys中line编号134 
+lsel,all 
+cmsel,u,l_selected 
+cm,Line_Girder_3,line 
+lsel,all 
+cm,l_selected,line 
+allsel 
+
+! Girder_4 
+l,138,139 ! Matlab中Line对象编号: 135; Ansys中line编号135 
+l,139,94 ! Matlab中Line对象编号: 136; Ansys中line编号136 
+lsel,all 
+cmsel,u,l_selected 
+cm,Line_Girder_4,line 
+lsel,all 
+cm,l_selected,line 
+allsel 
+
+! Girder_5 
+l,137,142 ! Matlab中Line对象编号: 137; Ansys中line编号137 
+l,142,143 ! Matlab中Line对象编号: 138; Ansys中line编号138 
+lsel,all 
+cmsel,u,l_selected 
+cm,Line_Girder_5,line 
+lsel,all 
+cm,l_selected,line 
+allsel 
+
+! Tower_1 
+l,144,145 ! Matlab中Line对象编号: 139; Ansys中line编号139 
+l,145,146 ! Matlab中Line对象编号: 140; Ansys中line编号140 
+l,146,153 ! Matlab中Line对象编号: 141; Ansys中line编号141 
+l,147,148 ! Matlab中Line对象编号: 142; Ansys中line编号142 
+l,148,149 ! Matlab中Line对象编号: 143; Ansys中line编号143 
+l,149,144 ! Matlab中Line对象编号: 144; Ansys中line编号144 
+l,150,152 ! Matlab中Line对象编号: 145; Ansys中line编号145 
+l,151,152 ! Matlab中Line对象编号: 146; Ansys中line编号146 
+l,152,167 ! Matlab中Line对象编号: 147; Ansys中line编号147 
+l,153,154 ! Matlab中Line对象编号: 148; Ansys中line编号148 
+l,154,151 ! Matlab中Line对象编号: 149; Ansys中line编号149 
+l,154,150 ! Matlab中Line对象编号: 150; Ansys中line编号150 
+l,155,147 ! Matlab中Line对象编号: 151; Ansys中line编号151 
+l,156,150 ! Matlab中Line对象编号: 152; Ansys中line编号152 
+l,157,158 ! Matlab中Line对象编号: 153; Ansys中line编号153 
+l,158,164 ! Matlab中Line对象编号: 154; Ansys中line编号154 
+l,159,160 ! Matlab中Line对象编号: 155; Ansys中line编号155 
+l,151,159 ! Matlab中Line对象编号: 156; Ansys中line编号156 
+l,160,156 ! Matlab中Line对象编号: 157; Ansys中line编号157 
+l,161,162 ! Matlab中Line对象编号: 158; Ansys中line编号158 
+l,162,163 ! Matlab中Line对象编号: 159; Ansys中line编号159 
+l,163,155 ! Matlab中Line对象编号: 160; Ansys中line编号160 
+l,164,165 ! Matlab中Line对象编号: 161; Ansys中line编号161 
+l,165,166 ! Matlab中Line对象编号: 162; Ansys中line编号162 
+l,166,161 ! Matlab中Line对象编号: 163; Ansys中line编号163 
+lsel,all 
+cmsel,u,l_selected 
+cm,Line_Tower_1,line 
+lsel,all 
+cm,l_selected,line 
+allsel 
+
+! Tower_2 
+l,168,169 ! Matlab中Line对象编号: 164; Ansys中line编号164 
+l,169,170 ! Matlab中Line对象编号: 165; Ansys中line编号165 
+l,170,177 ! Matlab中Line对象编号: 166; Ansys中line编号166 
+l,171,172 ! Matlab中Line对象编号: 167; Ansys中line编号167 
+l,172,173 ! Matlab中Line对象编号: 168; Ansys中line编号168 
+l,173,168 ! Matlab中Line对象编号: 169; Ansys中line编号169 
+l,174,176 ! Matlab中Line对象编号: 170; Ansys中line编号170 
+l,175,176 ! Matlab中Line对象编号: 171; Ansys中line编号171 
+l,176,191 ! Matlab中Line对象编号: 172; Ansys中line编号172 
+l,177,178 ! Matlab中Line对象编号: 173; Ansys中line编号173 
+l,178,175 ! Matlab中Line对象编号: 174; Ansys中line编号174 
+l,178,174 ! Matlab中Line对象编号: 175; Ansys中line编号175 
+l,179,171 ! Matlab中Line对象编号: 176; Ansys中line编号176 
+l,180,174 ! Matlab中Line对象编号: 177; Ansys中line编号177 
+l,181,182 ! Matlab中Line对象编号: 178; Ansys中line编号178 
+l,182,188 ! Matlab中Line对象编号: 179; Ansys中line编号179 
+l,183,184 ! Matlab中Line对象编号: 180; Ansys中line编号180 
+l,175,183 ! Matlab中Line对象编号: 181; Ansys中line编号181 
+l,184,180 ! Matlab中Line对象编号: 182; Ansys中line编号182 
+l,185,186 ! Matlab中Line对象编号: 183; Ansys中line编号183 
+l,186,187 ! Matlab中Line对象编号: 184; Ansys中line编号184 
+l,187,179 ! Matlab中Line对象编号: 185; Ansys中line编号185 
+l,188,189 ! Matlab中Line对象编号: 186; Ansys中line编号186 
+l,189,190 ! Matlab中Line对象编号: 187; Ansys中line编号187 
+l,190,185 ! Matlab中Line对象编号: 188; Ansys中line编号188 
+lsel,all 
+cmsel,u,l_selected 
+cm,Line_Tower_2,line 
+lsel,all 
+cm,l_selected,line 
+allsel 
+
+! RigidBeam_1 
+l,26,192 ! Matlab中Line对象编号: 189; Ansys中line编号189 
+l,28,193 ! Matlab中Line对象编号: 190; Ansys中line编号190 
+l,30,194 ! Matlab中Line对象编号: 191; Ansys中line编号191 
+l,32,195 ! Matlab中Line对象编号: 192; Ansys中line编号192 
+l,34,196 ! Matlab中Line对象编号: 193; Ansys中line编号193 
+l,36,197 ! Matlab中Line对象编号: 194; Ansys中line编号194 
+l,38,198 ! Matlab中Line对象编号: 195; Ansys中line编号195 
+l,40,199 ! Matlab中Line对象编号: 196; Ansys中line编号196 
+l,42,200 ! Matlab中Line对象编号: 197; Ansys中line编号197 
+l,44,201 ! Matlab中Line对象编号: 198; Ansys中line编号198 
+l,46,202 ! Matlab中Line对象编号: 199; Ansys中line编号199 
+l,48,203 ! Matlab中Line对象编号: 200; Ansys中line编号200 
+l,50,204 ! Matlab中Line对象编号: 201; Ansys中line编号201 
+l,52,205 ! Matlab中Line对象编号: 202; Ansys中line编号202 
+l,54,206 ! Matlab中Line对象编号: 203; Ansys中line编号203 
+l,56,207 ! Matlab中Line对象编号: 204; Ansys中line编号204 
+l,58,208 ! Matlab中Line对象编号: 205; Ansys中line编号205 
+l,60,209 ! Matlab中Line对象编号: 206; Ansys中line编号206 
+l,62,210 ! Matlab中Line对象编号: 207; Ansys中line编号207 
+l,64,211 ! Matlab中Line对象编号: 208; Ansys中line编号208 
+l,66,212 ! Matlab中Line对象编号: 209; Ansys中line编号209 
+l,68,213 ! Matlab中Line对象编号: 210; Ansys中line编号210 
+lsel,all 
+cmsel,u,l_selected 
+cm,Line_RigidBeam_1,line 
+lsel,all 
+cm,l_selected,line 
+allsel 
+
+! RigidBeam_2 
+l,26,214 ! Matlab中Line对象编号: 211; Ansys中line编号211 
+l,28,215 ! Matlab中Line对象编号: 212; Ansys中line编号212 
+l,30,216 ! Matlab中Line对象编号: 213; Ansys中line编号213 
+l,32,217 ! Matlab中Line对象编号: 214; Ansys中line编号214 
+l,34,218 ! Matlab中Line对象编号: 215; Ansys中line编号215 
+l,36,219 ! Matlab中Line对象编号: 216; Ansys中line编号216 
+l,38,220 ! Matlab中Line对象编号: 217; Ansys中line编号217 
+l,40,221 ! Matlab中Line对象编号: 218; Ansys中line编号218 
+l,42,222 ! Matlab中Line对象编号: 219; Ansys中line编号219 
+l,44,223 ! Matlab中Line对象编号: 220; Ansys中line编号220 
+l,46,224 ! Matlab中Line对象编号: 221; Ansys中line编号221 
+l,48,225 ! Matlab中Line对象编号: 222; Ansys中line编号222 
+l,50,226 ! Matlab中Line对象编号: 223; Ansys中line编号223 
+l,52,227 ! Matlab中Line对象编号: 224; Ansys中line编号224 
+l,54,228 ! Matlab中Line对象编号: 225; Ansys中line编号225 
+l,56,229 ! Matlab中Line对象编号: 226; Ansys中line编号226 
+l,58,230 ! Matlab中Line对象编号: 227; Ansys中line编号227 
+l,60,231 ! Matlab中Line对象编号: 228; Ansys中line编号228 
+l,62,232 ! Matlab中Line对象编号: 229; Ansys中line编号229 
+l,64,233 ! Matlab中Line对象编号: 230; Ansys中line编号230 
+l,66,234 ! Matlab中Line对象编号: 231; Ansys中line编号231 
+l,68,235 ! Matlab中Line对象编号: 232; Ansys中line编号232 
+lsel,all 
+cmsel,u,l_selected 
+cm,Line_RigidBeam_2,line 
+lsel,all 
+cm,l_selected,line 
+allsel 
+
+! RigidBeam_3 
+l,5,236 ! Matlab中Line对象编号: 233; Ansys中line编号233 
+l,7,237 ! Matlab中Line对象编号: 234; Ansys中line编号234 
+l,9,238 ! Matlab中Line对象编号: 235; Ansys中line编号235 
+l,11,239 ! Matlab中Line对象编号: 236; Ansys中line编号236 
+l,13,240 ! Matlab中Line对象编号: 237; Ansys中line编号237 
+l,15,241 ! Matlab中Line对象编号: 238; Ansys中line编号238 
+l,17,242 ! Matlab中Line对象编号: 239; Ansys中line编号239 
+l,19,243 ! Matlab中Line对象编号: 240; Ansys中line编号240 
+l,21,244 ! Matlab中Line对象编号: 241; Ansys中line编号241 
+l,23,245 ! Matlab中Line对象编号: 242; Ansys中line编号242 
+l,25,246 ! Matlab中Line对象编号: 243; Ansys中line编号243 
+l,27,247 ! Matlab中Line对象编号: 244; Ansys中line编号244 
+l,29,248 ! Matlab中Line对象编号: 245; Ansys中line编号245 
+l,31,249 ! Matlab中Line对象编号: 246; Ansys中line编号246 
+lsel,all 
+cmsel,u,l_selected 
+cm,Line_RigidBeam_3,line 
+lsel,all 
+cm,l_selected,line 
+allsel 
+
+! RigidBeam_4 
+l,5,250 ! Matlab中Line对象编号: 247; Ansys中line编号247 
+l,7,251 ! Matlab中Line对象编号: 248; Ansys中line编号248 
+l,9,252 ! Matlab中Line对象编号: 249; Ansys中line编号249 
+l,11,253 ! Matlab中Line对象编号: 250; Ansys中line编号250 
+l,13,254 ! Matlab中Line对象编号: 251; Ansys中line编号251 
+l,15,255 ! Matlab中Line对象编号: 252; Ansys中line编号252 
+l,17,256 ! Matlab中Line对象编号: 253; Ansys中line编号253 
+l,19,257 ! Matlab中Line对象编号: 254; Ansys中line编号254 
+l,21,258 ! Matlab中Line对象编号: 255; Ansys中line编号255 
+l,23,259 ! Matlab中Line对象编号: 256; Ansys中line编号256 
+l,25,260 ! Matlab中Line对象编号: 257; Ansys中line编号257 
+l,27,261 ! Matlab中Line对象编号: 258; Ansys中line编号258 
+l,29,262 ! Matlab中Line对象编号: 259; Ansys中line编号259 
+l,31,263 ! Matlab中Line对象编号: 260; Ansys中line编号260 
+lsel,all 
+cmsel,u,l_selected 
+cm,Line_RigidBeam_4,line 
+lsel,all 
+cm,l_selected,line 
+allsel 
+
+! RigidBeam_5 
+l,63,264 ! Matlab中Line对象编号: 261; Ansys中line编号261 
+l,65,265 ! Matlab中Line对象编号: 262; Ansys中line编号262 
+l,67,266 ! Matlab中Line对象编号: 263; Ansys中line编号263 
+l,69,267 ! Matlab中Line对象编号: 264; Ansys中line编号264 
+l,71,268 ! Matlab中Line对象编号: 265; Ansys中line编号265 
+l,73,269 ! Matlab中Line对象编号: 266; Ansys中line编号266 
+l,75,270 ! Matlab中Line对象编号: 267; Ansys中line编号267 
+l,77,271 ! Matlab中Line对象编号: 268; Ansys中line编号268 
+l,79,272 ! Matlab中Line对象编号: 269; Ansys中line编号269 
+l,81,273 ! Matlab中Line对象编号: 270; Ansys中line编号270 
+l,83,274 ! Matlab中Line对象编号: 271; Ansys中line编号271 
+l,85,275 ! Matlab中Line对象编号: 272; Ansys中line编号272 
+l,87,276 ! Matlab中Line对象编号: 273; Ansys中line编号273 
+l,89,277 ! Matlab中Line对象编号: 274; Ansys中line编号274 
+lsel,all 
+cmsel,u,l_selected 
+cm,Line_RigidBeam_5,line 
+lsel,all 
+cm,l_selected,line 
+allsel 
+
+! RigidBeam_6 
+l,63,278 ! Matlab中Line对象编号: 275; Ansys中line编号275 
+l,65,279 ! Matlab中Line对象编号: 276; Ansys中line编号276 
+l,67,280 ! Matlab中Line对象编号: 277; Ansys中line编号277 
+l,69,281 ! Matlab中Line对象编号: 278; Ansys中line编号278 
+l,71,282 ! Matlab中Line对象编号: 279; Ansys中line编号279 
+l,73,283 ! Matlab中Line对象编号: 280; Ansys中line编号280 
+l,75,284 ! Matlab中Line对象编号: 281; Ansys中line编号281 
+l,77,285 ! Matlab中Line对象编号: 282; Ansys中line编号282 
+l,79,286 ! Matlab中Line对象编号: 283; Ansys中line编号283 
+l,81,287 ! Matlab中Line对象编号: 284; Ansys中line编号284 
+l,83,288 ! Matlab中Line对象编号: 285; Ansys中line编号285 
+l,85,289 ! Matlab中Line对象编号: 286; Ansys中line编号286 
+l,87,290 ! Matlab中Line对象编号: 287; Ansys中line编号287 
+l,89,291 ! Matlab中Line对象编号: 288; Ansys中line编号288 
+lsel,all 
+cmsel,u,l_selected 
+cm,Line_RigidBeam_6,line 
+lsel,all 
+cm,l_selected,line 
+allsel 
+
+! RigidBeam_7 
+l,94,292 ! Matlab中Line对象编号: 289; Ansys中line编号289 
+l,95,293 ! Matlab中Line对象编号: 290; Ansys中line编号290 
+l,96,294 ! Matlab中Line对象编号: 291; Ansys中line编号291 
+l,97,295 ! Matlab中Line对象编号: 292; Ansys中line编号292 
+l,98,296 ! Matlab中Line对象编号: 293; Ansys中line编号293 
+l,99,297 ! Matlab中Line对象编号: 294; Ansys中line编号294 
+l,100,298 ! Matlab中Line对象编号: 295; Ansys中line编号295 
+l,101,299 ! Matlab中Line对象编号: 296; Ansys中line编号296 
+l,102,300 ! Matlab中Line对象编号: 297; Ansys中line编号297 
+l,103,301 ! Matlab中Line对象编号: 298; Ansys中line编号298 
+l,105,302 ! Matlab中Line对象编号: 299; Ansys中line编号299 
+l,107,303 ! Matlab中Line对象编号: 300; Ansys中line编号300 
+l,109,304 ! Matlab中Line对象编号: 301; Ansys中line编号301 
+l,111,305 ! Matlab中Line对象编号: 302; Ansys中line编号302 
+lsel,all 
+cmsel,u,l_selected 
+cm,Line_RigidBeam_7,line 
+lsel,all 
+cm,l_selected,line 
+allsel 
+
+! RigidBeam_8 
+l,94,306 ! Matlab中Line对象编号: 303; Ansys中line编号303 
+l,95,307 ! Matlab中Line对象编号: 304; Ansys中line编号304 
+l,96,308 ! Matlab中Line对象编号: 305; Ansys中line编号305 
+l,97,309 ! Matlab中Line对象编号: 306; Ansys中line编号306 
+l,98,310 ! Matlab中Line对象编号: 307; Ansys中line编号307 
+l,99,311 ! Matlab中Line对象编号: 308; Ansys中line编号308 
+l,100,312 ! Matlab中Line对象编号: 309; Ansys中line编号309 
+l,101,313 ! Matlab中Line对象编号: 310; Ansys中line编号310 
+l,102,314 ! Matlab中Line对象编号: 311; Ansys中line编号311 
+l,103,315 ! Matlab中Line对象编号: 312; Ansys中line编号312 
+l,105,316 ! Matlab中Line对象编号: 313; Ansys中line编号313 
+l,107,317 ! Matlab中Line对象编号: 314; Ansys中line编号314 
+l,109,318 ! Matlab中Line对象编号: 315; Ansys中line编号315 
+l,111,319 ! Matlab中Line对象编号: 316; Ansys中line编号316 
+lsel,all 
+cmsel,u,l_selected 
+cm,Line_RigidBeam_8,line 
+lsel,all 
+cm,l_selected,line 
+allsel 
+
+! RigidBeam_9 
+l,120,320 ! Matlab中Line对象编号: 317; Ansys中line编号317 
+l,122,321 ! Matlab中Line对象编号: 318; Ansys中line编号318 
+l,124,322 ! Matlab中Line对象编号: 319; Ansys中line编号319 
+l,126,323 ! Matlab中Line对象编号: 320; Ansys中line编号320 
+l,128,324 ! Matlab中Line对象编号: 321; Ansys中line编号321 
+l,129,325 ! Matlab中Line对象编号: 322; Ansys中line编号322 
+l,130,326 ! Matlab中Line对象编号: 323; Ansys中line编号323 
+l,131,327 ! Matlab中Line对象编号: 324; Ansys中line编号324 
+l,132,328 ! Matlab中Line对象编号: 325; Ansys中line编号325 
+l,133,329 ! Matlab中Line对象编号: 326; Ansys中line编号326 
+l,134,330 ! Matlab中Line对象编号: 327; Ansys中line编号327 
+l,135,331 ! Matlab中Line对象编号: 328; Ansys中line编号328 
+l,136,332 ! Matlab中Line对象编号: 329; Ansys中line编号329 
+l,137,333 ! Matlab中Line对象编号: 330; Ansys中line编号330 
+lsel,all 
+cmsel,u,l_selected 
+cm,Line_RigidBeam_9,line 
+lsel,all 
+cm,l_selected,line 
+allsel 
+
+! RigidBeam_10 
+l,120,334 ! Matlab中Line对象编号: 331; Ansys中line编号331 
+l,122,335 ! Matlab中Line对象编号: 332; Ansys中line编号332 
+l,124,336 ! Matlab中Line对象编号: 333; Ansys中line编号333 
+l,126,337 ! Matlab中Line对象编号: 334; Ansys中line编号334 
+l,128,338 ! Matlab中Line对象编号: 335; Ansys中line编号335 
+l,129,339 ! Matlab中Line对象编号: 336; Ansys中line编号336 
+l,130,340 ! Matlab中Line对象编号: 337; Ansys中line编号337 
+l,131,341 ! Matlab中Line对象编号: 338; Ansys中line编号338 
+l,132,342 ! Matlab中Line对象编号: 339; Ansys中line编号339 
+l,133,343 ! Matlab中Line对象编号: 340; Ansys中line编号340 
+l,134,344 ! Matlab中Line对象编号: 341; Ansys中line编号341 
+l,135,345 ! Matlab中Line对象编号: 342; Ansys中line编号342 
+l,136,346 ! Matlab中Line对象编号: 343; Ansys中line编号343 
+l,137,347 ! Matlab中Line对象编号: 344; Ansys中line编号344 
+lsel,all 
+cmsel,u,l_selected 
+cm,Line_RigidBeam_10,line 
+lsel,all 
+cm,l_selected,line 
+allsel 
+
+! RigidBeam_11 
+l,153,348 ! Matlab中Line对象编号: 345; Ansys中line编号345 
+l,146,349 ! Matlab中Line对象编号: 346; Ansys中line编号346 
+l,145,350 ! Matlab中Line对象编号: 347; Ansys中line编号347 
+l,144,351 ! Matlab中Line对象编号: 348; Ansys中line编号348 
+l,149,352 ! Matlab中Line对象编号: 349; Ansys中line编号349 
+l,148,353 ! Matlab中Line对象编号: 350; Ansys中line编号350 
+l,147,354 ! Matlab中Line对象编号: 351; Ansys中line编号351 
+l,155,355 ! Matlab中Line对象编号: 352; Ansys中line编号352 
+l,163,356 ! Matlab中Line对象编号: 353; Ansys中line编号353 
+l,162,357 ! Matlab中Line对象编号: 354; Ansys中line编号354 
+l,161,358 ! Matlab中Line对象编号: 355; Ansys中line编号355 
+l,166,359 ! Matlab中Line对象编号: 356; Ansys中line编号356 
+l,165,360 ! Matlab中Line对象编号: 357; Ansys中line编号357 
+l,164,361 ! Matlab中Line对象编号: 358; Ansys中line编号358 
+lsel,all 
+cmsel,u,l_selected 
+cm,Line_RigidBeam_11,line 
+lsel,all 
+cm,l_selected,line 
+allsel 
+
+! RigidBeam_12 
+l,153,362 ! Matlab中Line对象编号: 359; Ansys中line编号359 
+l,146,363 ! Matlab中Line对象编号: 360; Ansys中line编号360 
+l,145,364 ! Matlab中Line对象编号: 361; Ansys中line编号361 
+l,144,365 ! Matlab中Line对象编号: 362; Ansys中line编号362 
+l,149,366 ! Matlab中Line对象编号: 363; Ansys中line编号363 
+l,148,367 ! Matlab中Line对象编号: 364; Ansys中line编号364 
+l,147,368 ! Matlab中Line对象编号: 365; Ansys中line编号365 
+l,155,369 ! Matlab中Line对象编号: 366; Ansys中line编号366 
+l,163,370 ! Matlab中Line对象编号: 367; Ansys中line编号367 
+l,162,371 ! Matlab中Line对象编号: 368; Ansys中line编号368 
+l,161,372 ! Matlab中Line对象编号: 369; Ansys中line编号369 
+l,166,373 ! Matlab中Line对象编号: 370; Ansys中line编号370 
+l,165,374 ! Matlab中Line对象编号: 371; Ansys中line编号371 
+l,164,375 ! Matlab中Line对象编号: 372; Ansys中line编号372 
+lsel,all 
+cmsel,u,l_selected 
+cm,Line_RigidBeam_12,line 
+lsel,all 
+cm,l_selected,line 
+allsel 
+
+! RigidBeam_13 
+l,177,376 ! Matlab中Line对象编号: 373; Ansys中line编号373 
+l,170,377 ! Matlab中Line对象编号: 374; Ansys中line编号374 
+l,169,378 ! Matlab中Line对象编号: 375; Ansys中line编号375 
+l,168,379 ! Matlab中Line对象编号: 376; Ansys中line编号376 
+l,173,380 ! Matlab中Line对象编号: 377; Ansys中line编号377 
+l,172,381 ! Matlab中Line对象编号: 378; Ansys中line编号378 
+l,171,382 ! Matlab中Line对象编号: 379; Ansys中line编号379 
+l,179,383 ! Matlab中Line对象编号: 380; Ansys中line编号380 
+l,187,384 ! Matlab中Line对象编号: 381; Ansys中line编号381 
+l,186,385 ! Matlab中Line对象编号: 382; Ansys中line编号382 
+l,185,386 ! Matlab中Line对象编号: 383; Ansys中line编号383 
+l,190,387 ! Matlab中Line对象编号: 384; Ansys中line编号384 
+l,189,388 ! Matlab中Line对象编号: 385; Ansys中line编号385 
+l,188,389 ! Matlab中Line对象编号: 386; Ansys中line编号386 
+lsel,all 
+cmsel,u,l_selected 
+cm,Line_RigidBeam_13,line 
+lsel,all 
+cm,l_selected,line 
+allsel 
+
+! RigidBeam_14 
+l,177,390 ! Matlab中Line对象编号: 387; Ansys中line编号387 
+l,170,391 ! Matlab中Line对象编号: 388; Ansys中line编号388 
+l,169,392 ! Matlab中Line对象编号: 389; Ansys中line编号389 
+l,168,393 ! Matlab中Line对象编号: 390; Ansys中line编号390 
+l,173,394 ! Matlab中Line对象编号: 391; Ansys中line编号391 
+l,172,395 ! Matlab中Line对象编号: 392; Ansys中line编号392 
+l,171,396 ! Matlab中Line对象编号: 393; Ansys中line编号393 
+l,179,397 ! Matlab中Line对象编号: 394; Ansys中line编号394 
+l,187,398 ! Matlab中Line对象编号: 395; Ansys中line编号395 
+l,186,399 ! Matlab中Line对象编号: 396; Ansys中line编号396 
+l,185,400 ! Matlab中Line对象编号: 397; Ansys中line编号397 
+l,190,401 ! Matlab中Line对象编号: 398; Ansys中line编号398 
+l,189,402 ! Matlab中Line对象编号: 399; Ansys中line编号399 
+l,188,403 ! Matlab中Line对象编号: 400; Ansys中line编号400 
+lsel,all 
+cmsel,u,l_selected 
+cm,Line_RigidBeam_14,line 
+lsel,all 
+cm,l_selected,line 
+allsel 
+

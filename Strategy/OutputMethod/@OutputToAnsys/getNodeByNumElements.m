@@ -24,7 +24,7 @@ function [Nodes,index_INodes,index_JNodes] = getNodeByNumElements(obj,Num_Elems)
                     '    Z_JNode(i) = NZ(Num_JNode(i))',newline,...
                     '*enddo',newline,newline,...
                     '! 导出数据',newline,...
-                    '*cfopen,Nodes,txt',newline,...
+                    '*cfopen,Num_Nodes,txt',newline,...
                     '*vwrite,Num_INode(1),X_INode(1),Y_INode(1),Z_INode(1),Num_JNode(1),X_JNode(1),Y_JNode(1),Z_JNode(1)',newline,...
                     '(8E20.8)',newline,...
                     '*cfclos'];
@@ -36,7 +36,7 @@ function [Nodes,index_INodes,index_JNodes] = getNodeByNumElements(obj,Num_Elems)
     OutputMethod_clone.runMac("ComputingMode","Distributed")
 
     % 导入数据
-    dataFilePath = fullfile(OutputMethod_clone.WorkPath,'Nodes.txt');
+    dataFilePath = fullfile(OutputMethod_clone.WorkPath,'Num_Nodes.txt');
     fileID = fopen(dataFilePath, 'r');
     data = readmatrix(dataFilePath);
     fclose(fileID);
@@ -65,9 +65,9 @@ function [Nodes,index_INodes,index_JNodes] = getNodeByNumElements(obj,Num_Elems)
     index_JNodes = Nodes.findIndexByNum(num_JNode);
 
     % 将生成的结果文件更换文件夹
-    dir_Result = fullfile(OutputMethod_clone.WorkPath,filesep,'Nodes');
+    dir_Result = fullfile(OutputMethod_clone.WorkPath,filesep,'Num_Nodes');
     if ~exist(dir_Result,'dir')
         mkdir(dir_Result)
     end
-    movefile(fullfile(OutputMethod_clone.WorkPath,'Nodes.txt'),dir_Result)
+    movefile(fullfile(OutputMethod_clone.WorkPath,'Num_Nodes.txt'),dir_Result)
 end

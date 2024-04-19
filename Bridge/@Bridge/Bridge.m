@@ -62,6 +62,9 @@ classdef Bridge < handle
         setForceTo(obj,StructureCell,P_Bottom_Z)
         count = getLineCountOfClass(obj,StructureClass)
         [AppliedPoints,XForce,YForce,ZForce] = getConcentratedForcecInfo(obj)
+        elems_beam = getAllBeams(obj)
+        elems_link = getAllLinks(obj)
+        nodes = getAllNodes(obj)
         %clone
         new_bridge = clone(obj)
 

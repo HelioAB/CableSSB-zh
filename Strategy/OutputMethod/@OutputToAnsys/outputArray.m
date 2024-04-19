@@ -13,8 +13,10 @@ function output_str = outputArray(obj,array,array_name)
         output_str = [output_str,sprintf('%s(%d)=',array_name,(i-1)*18+1)];
         if i~=num_array
             count_end = 18;
-        else
+        elseif length_end_array ~= 0
             count_end = length_end_array;
+        elseif length_end_array == 0
+            count_end = 18;
         end
         for j=1:count_end
             output_str = [output_str,num2str(array((i-1)*18+j)),','];

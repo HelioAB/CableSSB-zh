@@ -54,7 +54,7 @@ function build_Parametrically(obj,options)
     % 整体、主跨、边跨
     Iyy_MainSpan_Girder = options.GirderStiffness_Bending_MainSpan;
     Iyy_SideSpan_Girder = options.GirderStiffness_Bending_SideSpan;
-    % 斜拉部分、悬索部分
+    % 斜拉部分、悬索部分、结合段
     if isempty(options.GirderStiffness_Bending_StayedCable) && isempty(options.GirderStiffness_Bending_Suspension)
         flag_Iyy_SeperatedSystem = false;
     elseif ~isempty(options.GirderStiffness_Bending_StayedCable) && ~isempty(options.GirderStiffness_Bending_Suspension)
@@ -69,9 +69,10 @@ function build_Parametrically(obj,options)
     else
         error('若要为斜拉部分、悬索部分、结合端的竖向抗弯刚度赋值，则需要为它们同时赋值')
     end
-    % 结合段
-    
 
+    % 主跨和边跨数量确定
+    obj.StructureCell_MainSpan = cell(1,1);
+    obj.StructureCell_SideSpan = cell(1,2);
 
     %% 加劲梁与锚碇
     % 单位：N, m
@@ -102,6 +103,7 @@ function build_Parametrically(obj,options)
         Sec_girder1 = Section('主跨主梁Girder',girder1_sectiondata); % 定义截面
         girder1 = obj.buildGirder(CoordA_girder1,CoordB_girder1,L,Sec_girder1,Mat_girder1,ET_girder1); % 根据比例L，对CoordA和CoordB线性插值
     end
+    obj.addToSpan('MainSpan',1,girder1);
     
     Point_Hanger_girder1 = girder1.findPoint('Interval','X','ascend',[(31-2*count_crosscable)*seg_mainspan,2*seg_mainspan+zeros(1,15+2*count_crosscable)]); % 'ascend'时按X正方向距离PointA的距离，寻找girder1的点。这些点是吊索作用点
     Point_Hanger_girder1 = Point_Hanger_girder1.sort('X');% 按X正方向的顺序排列
@@ -141,7 +143,8 @@ function build_Parametrically(obj,options)
     CoordA_girder2 = [CoordA_girder1(1)-sum(L),CoordA_girder1(2),CoordA_girder1(3)];
     CoordB_girder2 = CoordA_girder1;    
     girder2 = obj.buildGirder(CoordA_girder2,CoordB_girder2,L,Sec_girder2,Mat_girder2,ET_girder2);
-    
+    obj.addToSpan('SideSpan',1,girder2);
+
     Point_StayedCable_girder2 = girder2.findPoint('Interval','X','descend',[4*seg_sidespan_1,2*seg_sidespan_1+zeros(1,4),seg_sidespan_1+zeros(1,9)]).sort('X');
     
     % 边跨2加劲梁
@@ -149,6 +152,7 @@ function build_Parametrically(obj,options)
     CoordA_girder3 = CoordB_girder1;
     CoordB_girder3 = [CoordB_girder1(1)+sum(L),CoordB_girder1(2),CoordB_girder1(3)];
     girder3 = obj.buildGirder(CoordA_girder3,CoordB_girder3,L,Sec_girder2,Mat_girder2,ET_girder2);
+    obj.addToSpan('SideSpan',2,girder3);
      
     Point_StayedCable_girder3 = girder3.findPoint('Interval','X','ascend',[4*seg_sidespan_2,2*seg_sidespan_2+zeros(1,4),seg_sidespan_2+zeros(1,9)]).sort('X');
     
@@ -165,12 +169,14 @@ function build_Parametrically(obj,options)
     CoordA_anchor1 = [CoordA_girder2(1)-sum(L),CoordA_girder2(2),CoordA_girder2(3)];
     CoordB_anchor1 = CoordA_girder2;
     anchor1 = obj.buildGirder(CoordA_anchor1,CoordB_anchor1,L,Sec_anchor,Mat_anchor,ET_anchor);
+    obj.addToSpan('SideSpan',1,anchor1);
     
     % 边跨2锚碇
     L = [seg_sidespan_2,20];
     CoordA_anchor2 = CoordB_girder3;
     CoordB_anchor2 = [CoordB_girder3(1)+sum(L),CoordB_girder3(2),CoordB_girder3(3)];
     anchor2 = obj.buildGirder(CoordA_anchor2,CoordB_anchor2,L,Sec_anchor,Mat_anchor,ET_anchor);
+    obj.addToSpan('SideSpan',2,anchor2);
     
     % 将加劲梁和锚碇在交点处融合在一起
     girder = [anchor1,girder2,girder1,girder3,anchor2];% 这个对象数组的前后顺序就是X方向的顺序。
@@ -194,12 +200,16 @@ function build_Parametrically(obj,options)
     tower1 = obj.buildTowerByInput(Method_Creating,fun_handle,Coord_MoveTo_tower1,Sec_tower,Mat_tower,ET_tower);
     Point_MainCable_tower1 = tower1.findPoint("Index","Z","descend",2).sort('Z'); % 主缆索鞍点,按Z正方向排列
     Point_StayedCable_tower1 = tower1.findPoint("Index","Z","descend",3:16).sort('Z'); % 斜拉索锚固位置（还要经过刚臂转化到斜拉索上）
+    obj.addToSpan('MainSpan',1,tower1);
+    obj.addToSpan('SideSpan',1,tower1);
     
     % 桥塔2
     Coord_MoveTo_tower2 = [CoordB_girder1(1),CoordB_girder1(2),CoordB_girder1(3)-82.8];
     tower2 = obj.buildTowerByInput(Method_Creating,fun_handle,Coord_MoveTo_tower2,Sec_tower,Mat_tower,ET_tower);
     Point_MainCable_tower2 = tower2.findPoint("Index","Z","descend",2).sort('Z');
     Point_StayedCable_tower2 = tower2.findPoint("Index","Z","descend",3:16).sort('Z');
+    obj.addToSpan('MainSpan',1,tower2);
+    obj.addToSpan('SideSpan',2,tower2);
     
     %% 辅助墩
 %     % 定义：截面、材料、单元类型
@@ -237,25 +247,45 @@ function build_Parametrically(obj,options)
     offset2 = [0,-14.25,4.2];
     rigidbeam_1 = obj.buildRigidBeamByOffset(Point_Hanger_girder1,girder1,offset1,Sec_rigidbeam,Mat_rigidbeam,ET_rigidbeam);
     rigidbeam_2 = obj.buildRigidBeamByOffset(Point_Hanger_girder1,girder1,offset2,Sec_rigidbeam,Mat_rigidbeam,ET_rigidbeam);
+    obj.addToSpan('MainSpan',1,rigidbeam_1);
+    obj.addToSpan('MainSpan',1,rigidbeam_2);
     % girder1 与 StayedCable 之间的RigidBeam
     rigidbeam_3 = obj.buildRigidBeamByOffset(Point_StayedCable1_girder1,girder1,offset1,Sec_rigidbeam,Mat_rigidbeam,ET_rigidbeam);
     rigidbeam_4 = obj.buildRigidBeamByOffset(Point_StayedCable1_girder1,girder1,offset2,Sec_rigidbeam,Mat_rigidbeam,ET_rigidbeam);
     rigidbeam_5 = obj.buildRigidBeamByOffset(Point_StayedCable2_girder1,girder1,offset1,Sec_rigidbeam,Mat_rigidbeam,ET_rigidbeam);
     rigidbeam_6 = obj.buildRigidBeamByOffset(Point_StayedCable2_girder1,girder1,offset2,Sec_rigidbeam,Mat_rigidbeam,ET_rigidbeam);
+    obj.addToSpan('MainSpan',1,rigidbeam_3);
+    obj.addToSpan('MainSpan',1,rigidbeam_4);
+    obj.addToSpan('MainSpan',1,rigidbeam_5);
+    obj.addToSpan('MainSpan',1,rigidbeam_6);
     % girder2 与 StayedCable 之间的RigidBeam
     rigidbeam_7 = obj.buildRigidBeamByOffset(Point_StayedCable_girder2,girder2,offset1,Sec_rigidbeam,Mat_rigidbeam,ET_rigidbeam);
     rigidbeam_8 = obj.buildRigidBeamByOffset(Point_StayedCable_girder2,girder2,offset2,Sec_rigidbeam,Mat_rigidbeam,ET_rigidbeam);
+    obj.addToSpan('SideSpan',1,rigidbeam_7);
+    obj.addToSpan('SideSpan',1,rigidbeam_8);
     % girder3 与 StayedCable 之间的RigidBeam
     rigidbeam_9 = obj.buildRigidBeamByOffset(Point_StayedCable_girder3,girder3,offset1,Sec_rigidbeam,Mat_rigidbeam,ET_rigidbeam);
     rigidbeam_10 = obj.buildRigidBeamByOffset(Point_StayedCable_girder3,girder3,offset2,Sec_rigidbeam,Mat_rigidbeam,ET_rigidbeam);
+    obj.addToSpan('SideSpan',2,rigidbeam_9);
+    obj.addToSpan('SideSpan',2,rigidbeam_10);
+    
     % tower1 与 StayedCable 之间的RigidBeam，均为按Z正方向排列
     offset3 = [0,2.44,0];
     offset4 = [0,-2.44,0];
     rigidbeam_11 = obj.buildRigidBeamByOffset(Point_StayedCable_tower1,tower1,offset3,Sec_rigidbeam,Mat_rigidbeam,ET_rigidbeam);
     rigidbeam_12 = obj.buildRigidBeamByOffset(Point_StayedCable_tower1,tower1,offset4,Sec_rigidbeam,Mat_rigidbeam,ET_rigidbeam);
+    obj.addToSpan('MainSpan',1,rigidbeam_11);
+    obj.addToSpan('SideSpan',1,rigidbeam_11);
+    obj.addToSpan('MainSpan',1,rigidbeam_12);
+    obj.addToSpan('SideSpan',1,rigidbeam_12);
+
     % tower2 与 StayedCable 之间的RigidBeam
     rigidbeam_13 = obj.buildRigidBeamByOffset(Point_StayedCable_tower2,tower2,offset3,Sec_rigidbeam,Mat_rigidbeam,ET_rigidbeam);
     rigidbeam_14 = obj.buildRigidBeamByOffset(Point_StayedCable_tower2,tower2,offset4,Sec_rigidbeam,Mat_rigidbeam,ET_rigidbeam);
+    obj.addToSpan('MainSpan',1,rigidbeam_13);
+    obj.addToSpan('SideSpan',2,rigidbeam_13);
+    obj.addToSpan('MainSpan',1,rigidbeam_14);
+    obj.addToSpan('SideSpan',2,rigidbeam_14);
     
     % 所有RigidBeam在建立时，给自己和被连接的Structure对象添加Connect Point,详情在rigidbeam.ConnectPoint_Table
     % 关于自己的ConnectPoint留出来做接口，用以连接还未建立的StayedCable和Hanger
@@ -272,15 +302,23 @@ function build_Parametrically(obj,options)
     % girder1 与 tower1 之间的 StayedCable
     stayedcable_1 = obj.buildStayedCable(rigidbeam_3.ConnectPoint,rigidbeam_11.ConnectPoint,rigidbeam_3,rigidbeam_11,Sec_stayedcable,Mat_stayedcable,ET_stayedcable);
     stayedcable_2 = obj.buildStayedCable(rigidbeam_4.ConnectPoint,rigidbeam_12.ConnectPoint,rigidbeam_4,rigidbeam_12,Sec_stayedcable,Mat_stayedcable,ET_stayedcable);
+    obj.addToSpan('MainSpan',1,stayedcable_1);
+    obj.addToSpan('MainSpan',1,stayedcable_2);
     % girder1 与 tower2 之间的 StayedCable
     stayedcable_3 = obj.buildStayedCable(rigidbeam_5.ConnectPoint,rigidbeam_13.ConnectPoint.reverse,rigidbeam_5,rigidbeam_13,Sec_stayedcable,Mat_stayedcable,ET_stayedcable);
     stayedcable_4 = obj.buildStayedCable(rigidbeam_6.ConnectPoint,rigidbeam_14.ConnectPoint.reverse,rigidbeam_6,rigidbeam_14,Sec_stayedcable,Mat_stayedcable,ET_stayedcable);
+    obj.addToSpan('MainSpan',1,stayedcable_3);
+    obj.addToSpan('MainSpan',1,stayedcable_4);
     % girder2 与 tower1 之间的 StayedCable
     stayedcable_5 = obj.buildStayedCable(rigidbeam_7.ConnectPoint,rigidbeam_11.ConnectPoint.reverse,rigidbeam_7,rigidbeam_11,Sec_stayedcable,Mat_stayedcable,ET_stayedcable);
     stayedcable_6 = obj.buildStayedCable(rigidbeam_8.ConnectPoint,rigidbeam_12.ConnectPoint.reverse,rigidbeam_8,rigidbeam_12,Sec_stayedcable,Mat_stayedcable,ET_stayedcable);
+    obj.addToSpan('SideSpan',1,stayedcable_5);
+    obj.addToSpan('SideSpan',1,stayedcable_6);
     % girder3 与 tower2 之间的 StayedCable
     stayedcable_7 = obj.buildStayedCable(rigidbeam_9.ConnectPoint,rigidbeam_13.ConnectPoint,rigidbeam_9,rigidbeam_13,Sec_stayedcable,Mat_stayedcable,ET_stayedcable);
     stayedcable_8 = obj.buildStayedCable(rigidbeam_10.ConnectPoint,rigidbeam_14.ConnectPoint,rigidbeam_10,rigidbeam_14,Sec_stayedcable,Mat_stayedcable,ET_stayedcable);
+    obj.addToSpan('SideSpan',2,stayedcable_7);
+    obj.addToSpan('SideSpan',2,stayedcable_8);
     
     
     %% Cable
@@ -309,6 +347,8 @@ function build_Parametrically(obj,options)
     
     [cable1,Output_MS] = obj.buildMainSpanCable(CoordA_cable1,CoordB_cable1,L,index_hanger,P_h_x,P_h_y,P_h_z,Z_Om,Sec_cable,Mat_cable,ET_cable);
     cable2 = obj.symmetrizeCable(cable1); 
+    obj.addToSpan('MainSpan',1,cable1);
+    obj.addToSpan('MainSpan',1,cable2);
     
     % 边跨1主缆
     CoordA_cable2 = [CoordA_girder2(1)-seg_sidespan_1,CoordA_girder2(2)+16,CoordA_girder2(3)];
@@ -322,6 +362,8 @@ function build_Parametrically(obj,options)
     
     cable3 = obj.buildSideSpanCable(CoordA_cable2,CoordB_cable2,L,index_hanger,P_h_x,P_h_y,P_h_z,F_x,Sec_cable,Mat_cable,ET_cable);
     cable4 = obj.symmetrizeCable(cable3);
+    obj.addToSpan('SideSpan',1,cable3);
+    obj.addToSpan('SideSpan',1,cable4);
     
     % 边跨2主缆
     CoordA_cable3 = CoordB_cable1;
@@ -335,6 +377,8 @@ function build_Parametrically(obj,options)
     
     cable5 = obj.buildSideSpanCable(CoordA_cable3,CoordB_cable3,L,index_hanger,P_h_x,P_h_y,P_h_z,F_x,Sec_cable,Mat_cable,ET_cable);
     cable6 = obj.symmetrizeCable(cable5);
+    obj.addToSpan('SideSpan',2,cable5);
+    obj.addToSpan('SideSpan',2,cable6);
     
     cable_PositiveY = [cable3,cable1,cable5];
     cable_NegativeY = [cable4,cable2,cable6];
@@ -350,6 +394,8 @@ function build_Parametrically(obj,options)
     
     hanger_1 = obj.buildHanger(rigidbeam_1.ConnectPoint,cable1.ConnectPoint,rigidbeam_1,cable1,Sec_hanger,Mat_hanger,ET_hanger);
     hanger_2 = obj.buildHanger(rigidbeam_2.ConnectPoint,cable2.ConnectPoint,rigidbeam_2,cable2,Sec_hanger,Mat_hanger,ET_hanger);
+    obj.addToSpan('MainSpan',1,hanger_1);
+    obj.addToSpan('MainSpan',1,hanger_2);
     
     %% 赋予斜拉索和吊杆初始力
     stayedcable_list = obj.findStructureByClass('StayedCable');

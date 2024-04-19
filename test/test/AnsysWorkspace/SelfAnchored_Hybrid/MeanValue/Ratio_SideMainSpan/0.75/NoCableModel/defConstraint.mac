@@ -1,0 +1,40 @@
+!Constraint Name: 塔底固结1
+allsel $ ksel,s,,,167 $ nslk,s $ d,all,Ux,0.000000
+allsel $ ksel,s,,,167 $ nslk,s $ d,all,Uy,0.000000
+allsel $ ksel,s,,,167 $ nslk,s $ d,all,Uz,0.000000
+allsel $ ksel,s,,,167 $ nslk,s $ d,all,Rotx,0.000000
+allsel $ ksel,s,,,167 $ nslk,s $ d,all,Roty,0.000000
+allsel $ ksel,s,,,167 $ nslk,s $ d,all,Rotz,0.000000
+
+!Constraint Name: 塔底固结2
+allsel $ ksel,s,,,191 $ nslk,s $ d,all,Ux,0.000000
+allsel $ ksel,s,,,191 $ nslk,s $ d,all,Uy,0.000000
+allsel $ ksel,s,,,191 $ nslk,s $ d,all,Uz,0.000000
+allsel $ ksel,s,,,191 $ nslk,s $ d,all,Rotx,0.000000
+allsel $ ksel,s,,,191 $ nslk,s $ d,all,Roty,0.000000
+allsel $ ksel,s,,,191 $ nslk,s $ d,all,Rotz,0.000000
+
+!Constraint Name: 梁端约束1
+allsel $ ksel,s,,,138 $ nslk,s $ d,all,Uy,0.000000
+allsel $ ksel,s,,,138 $ nslk,s $ d,all,Uz,0.000000
+allsel $ ksel,s,,,138 $ nslk,s $ d,all,Rotx,0.000000
+
+!Constraint Name: 梁端约束2
+allsel $ ksel,s,,,143 $ nslk,s $ d,all,Uy,0.000000
+allsel $ ksel,s,,,143 $ nslk,s $ d,all,Uz,0.000000
+allsel $ ksel,s,,,143 $ nslk,s $ d,all,Rotx,0.000000
+
+!Constraint Name: 辅助墩处加劲梁约束1
+allsel $ ksel,s,,,103 $ nslk,s $ d,all,Uy,0.000000
+allsel $ ksel,s,,,103 $ nslk,s $ d,all,Uz,0.000000
+allsel $ ksel,s,,,103 $ nslk,s $ d,all,Rotx,0.000000
+
+!Constraint Name: 辅助墩处加劲梁约束2
+allsel $ ksel,s,,,128 $ nslk,s $ d,all,Uy,0.000000
+allsel $ ksel,s,,,128 $ nslk,s $ d,all,Uz,0.000000
+allsel $ ksel,s,,,128 $ nslk,s $ d,all,Rotx,0.000000
+
+!Constraint Name: 跨中点X向固定
+allsel $ ksel,s,,,47 $ nslk,s $ d,all,Ux,0.000000
+
+allsel
