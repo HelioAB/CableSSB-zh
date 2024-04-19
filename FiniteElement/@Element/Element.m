@@ -35,32 +35,49 @@ classdef Element < DataRecord
                 % 参数验证
                 mustBeInteger(Num);
                 mustBePositive(Num);
-                mustBeA(INode,'Node')
-                mustBeA(JNode,'Node')
-                mustBeA(KNode,'Node')
-                mustBeEqualSize(INode,JNode)
-                mustBeEqualSize(INode,KNode)
-                len = length(INode);
-                if ~isempty(Num)
-                    mustBeEqualSize(INode,Num)
-                else
-                    Num = Element.MaxNum()+[1:len];
-                end
-                % 创建对象数组
-                obj(1,len) = Element();
-                for i = 1:len
-                    obj(1,i).Num = Num(1,i);
-                    obj(1,i).INode = INode(1,i);
-                    obj(1,i).JNode = JNode(1,i);
-                    knode = KNode(1,i);
-                    if ~isempty(knode.Num) % KNode.Num可能为空
-                        obj(1,i).KNode = knode;
+                if ~isempty(KNode)
+                    mustBeA(INode,'Node')
+                    mustBeA(JNode,'Node')
+                    mustBeA(KNode,'Node')
+                    mustBeEqualSize(INode,JNode)
+                    mustBeEqualSize(INode,KNode)
+                    len = length(INode);
+                    if ~isempty(Num)
+                        mustBeEqualSize(INode,Num)
+                    else
+                        Num = Element.MaxNum()+[1:len];
                     end
-                end
+                    % 创建对象数组
+                    obj(1,len) = Element();
+                    for i = 1:len
+                        obj(1,i).Num = Num(1,i);
+                        obj(1,i).INode = INode(1,i);
+                        obj(1,i).JNode = JNode(1,i);
+                        obj(1,i).KNode = KNode(1,i);
+                    end
+                else
+                    mustBeA(INode,'Node')
+                    mustBeA(JNode,'Node')
+                    mustBeEqualSize(INode,JNode)
+                    len = length(INode);
+                    if ~isempty(Num)
+                        mustBeEqualSize(INode,Num)
+                    else
+                        Num = Element.MaxNum()+[1:len];
+                    end
+                    % 创建对象数组
+                    obj(1,len) = Element();
+                    for i = 1:len
+                        obj(1,i).Num = Num(1,i);
+                        obj(1,i).INode = INode(1,i);
+                        obj(1,i).JNode = JNode(1,i);
+                    end
+                end                
             else
                 obj.Num = [];
                 obj.INode = [];
                 obj.JNode = [];
+                obj.KNode = [];
             end
         end
         
@@ -102,7 +119,8 @@ classdef Element < DataRecord
         [delta_x,delta_y,delta_z] = DeltaLength(obj) % IJ节点的坐标差分
         [Norm_x,Norm_y,Norm_z] = getLocalCoordSystem(obj,tol) % 单元坐标系x、y、z在整体坐标系下的方向向量
         [Comp_x,Comp_y,Comp_z] = getLocalCoordSystemComponent(obj,GlobalDirection,tol) % 给定一个大小和方向direction（1*3数值向量），获得在单元坐标系的各个分量
-    
+        coord_centerpoint = getCenterPointCoord(obj)
+        sorted_elems = sortedByCenterPoint(obj,Direction)
     end
     methods(Static)
         function collection = Collection()

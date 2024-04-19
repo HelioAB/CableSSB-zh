@@ -8,10 +8,21 @@ function obj_list = findObjByNum(obj,num)
         obj_list = obj.empty(0,len);
         obj_list(len).Num = [];
         map = obj.getMap;
-        key = cell2mat(keys(map));
-        for i=1:len
-            if any(num(i)==key)
-                obj_list(1,i) = map(num(i));
+        if ~isempty(map)
+            key = cell2mat(keys(map));
+            for i=1:len
+                if any(num(i)==key)
+                    obj_list(1,i) = map(num(i));
+                end
+            end
+        else
+            uni_objs = obj.unique();
+            num_objs = [uni_objs.Num];
+            obj_list = obj.empty(0,len);
+            obj_list(len).Num = [];
+            for i=1:len
+                index = num_objs == num(i);
+                obj_list(i) = uni_objs(index);
             end
         end
     else

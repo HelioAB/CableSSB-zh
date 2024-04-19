@@ -3,7 +3,7 @@ import rhinoscriptsyntax as rs
 import xlrd
 
 # 打开Excel文件
-workbook = xlrd.open_workbook(r'C:\Users\Heli\Desktop\Coord_Points.xls')
+workbook = xlrd.open_workbook(r'C:\Users\Heli\Desktop\LayerInformation.xls')
 
 # 选择工作表
 sheet_Coord = workbook.sheet_by_name('Coordination')

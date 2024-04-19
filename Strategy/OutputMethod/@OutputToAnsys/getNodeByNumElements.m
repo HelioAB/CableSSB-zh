@@ -1,4 +1,4 @@
-function nodes = getNodeByNumElements(obj,Num_Elems)
+function [Nodes,index_INodes,index_JNodes] = getNodeByNumElements(obj,Num_Elems)
     OutputMethod_clone = obj.clone();
     str_num_elems = OutputMethod_clone.outputArray(Num_Elems,'num_elems');
     output_str = ['/post1',newline,...
@@ -56,11 +56,13 @@ function nodes = getNodeByNumElements(obj,Num_Elems)
     Z_Nodes = [Z_INode,Z_JNode];
 
     [uni_num_Nodes,index] = unique(num_Nodes);
-    uni_X_INode = X_Nodes(index);
-    uni_Y_INode = Y_Nodes(index);
-    uni_Z_INode = Z_Nodes(index);
+    uni_X_Node = X_Nodes(index);
+    uni_Y_Node = Y_Nodes(index);
+    uni_Z_Node = Z_Nodes(index);
 
-    nodes = Node(uni_num_Nodes,uni_X_INode,uni_Y_INode,uni_Z_INode);
+    Nodes = Node(uni_num_Nodes,uni_X_Node,uni_Y_Node,uni_Z_Node);
+    index_INodes = Nodes.findIndexByNum(num_INode);
+    index_JNodes = Nodes.findIndexByNum(num_JNode);
 
     % 将生成的结果文件更换文件夹
     dir_Result = fullfile(OutputMethod_clone.WorkPath,filesep,'Nodes');

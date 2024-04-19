@@ -2,7 +2,7 @@ function point_handle = plot(obj,S,C,options)
     arguments
         % 均为MATLAB中默认的参数值
         obj
-        S = 5
+        S = 2
         C = 'k'
         options.Figure {mustBeA(options.Figure,'matlab.ui.Figure')} = figure
         options.Axis {mustBeA(options.Axis,'matlab.graphics.axis.Axes')} = axes

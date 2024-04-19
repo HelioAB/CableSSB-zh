@@ -10,6 +10,8 @@ classdef Structure < dynamicprops
         Params
         NewPoint
         NewLine
+        Element
+        Node
 
         % 关于这个Structure对象与其他Structure对象有什么关系，处于什么位置
         ForcePoint % Point属性当中，受外力（不包括ConnectPoint）非零的点，Point对象

@@ -56,7 +56,8 @@ classdef OutputToAnsys < OutputTo
         outputReasonalStateOptim(obj)
 
         % 输出获取Ansys中某些数据的命令流，输入参数：obj,quaryObj,DAtaBasePath 输出参数：ResultFilePath
-        Nodes = getNodeByNumElements(obj,Num_Elems)
+        [nodes,elements] = getAllNodesAndAllElements(obj)
+        [nodes,index_inodes,index_jnodes] = getNodeByNumElements(obj,Num_Elems)
         FiniteElementModel = getFiniteElementModel(obj)
         ResultFilePath = getBendingStrainEnergy(obj,structure,DataBasePath)
         [Ux,Uy,Uz] = getDisplacement(obj,points,name_DataBase)

@@ -5,7 +5,7 @@ function build_Parametrically(obj,options)
         options.Sag = 102.35
         options.Count_CrossCable = 3
 
-        options.Length_HangerSpan = []
+        options.Count_Hanger = []
         options.Area_MainCable = [] % 这个参数是配合Length_HangerSpan的变化
 
         options.Count_Pier = []

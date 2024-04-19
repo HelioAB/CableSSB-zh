@@ -70,10 +70,11 @@ classdef Line < DataRecord
         merge(obj,tolerance)
         disconnected_point = disconnect(obj,connect_point)
         [I_flag,J_flag] = locatePoint(obj,point)
-        centerpoint = getCenterPointCoord(obj)
+        coord_centerpoint = getCenterPointCoord(obj)
         [Norm_x,Norm_y,Norm_z] = getLocalCoordSystem(obj,tol)
         [Comp_x,Comp_y,Comp_z] = getLocalCoordSystemComponent(obj,GlobalDirection,tol) % 给定一个大小和方向direction（1*3数值向量），获得在局部坐标系的各个分量
         plotLocalCoordSystem(obj,OriginCoord,options)
+        
     end
 
 
