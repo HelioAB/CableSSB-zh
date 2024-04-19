@@ -7,18 +7,15 @@ function [OutputMethod_clone,num_GirderNodes] = analyzeInfluenceLine(obj,num_Gir
     % 获取加劲梁上的所有Node
     if isempty(num_GirderNodes)
         bridgeobj = obj.OutputObj;
-        Map_Line2Elem = bridgeobj.Params.Map_MatlabLine2AnsysElem;
         girders = bridgeobj.findStructureByClass('Girder');
-        num_elems = [];
+        elems = [];
         for i=1:length(girders)
             girder = girders{i};
-            line = girder.Line;
-            num_lines = [line.Num];
-            for j=1:length(num_lines)
-                num_elems = [num_elems,Map_Line2Elem(num_lines(j))];
-            end
+            elems = [elems,girder.Element];
         end
-        nodes = obj.getNodeByNumElements(num_elems);
+        inodes = elems.INode;
+        jnodes = elems.JNode;
+        nodes = [inodes,jnodes];
         num_GirderNodes = [nodes.sort('X').Num];
     end
 

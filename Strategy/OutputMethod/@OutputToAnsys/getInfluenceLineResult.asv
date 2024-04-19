@@ -31,20 +31,14 @@ function data = getInfluenceLineResult(obj,OutputMethodObj_analyzeInfluenceLine,
     OutputMethod_clone.ResultFilePath = fullfile(OutputMethod_clone.WorkPath,'Result_getInfluenceLine.out');
     OutputMethod_clone.runMac("ComputingMode","Distributed");
 
-    % 导入数据    
-    data = struct;
-    data.num_GirderNodes = num_GirderNodes;
-    data.num_MonitoredNodes = num_MonitoredNodes;
-    data.num_MonitoredElems_Link = num_MonitoredElems_Link;
-    data.num_MonitoredElems_Beam = num_MonitoredElems_Beam;
-
-    % 存储检测的对象    
+    % 导入数据
     filenames = {'InfluenceLine_Deformation_X','InfluenceLine_Deformation_Y','InfluenceLine_Deformation_Z',...
                  'InfluenceLine_Fx_link',...
                  'InfluenceLine_Fxi_beam','InfluenceLine_Fxj_beam','InfluenceLine_Myi_beam','InfluenceLine_Myj_beam'};
     columns = [length(num_MonitoredNodes),length(num_MonitoredNodes),length(num_MonitoredNodes),...
                length(num_MonitoredElems_Link),...
                length(num_MonitoredElems_Beam),length(num_MonitoredElems_Beam),length(num_MonitoredElems_Beam),length(num_MonitoredElems_Beam)];
+    data = struct;
     for i=1:length(filenames)
         filename = filenames{i};
         dataFilePath = fullfile(OutputMethod_clone.WorkPath,[filename,'.txt']);
@@ -52,20 +46,20 @@ function data = getInfluenceLineResult(obj,OutputMethodObj_analyzeInfluenceLine,
         data.(strrep(filename,'InfluenceLine_','')) = readmatrix(dataFilePath,'Range',[1,1,length(num_GirderNodes),columns(i)]);
         fclose(fileID);
     end
-        
+    % 导入
+    
+    
     % 生成存储结果文件的文件夹
     dir_Result = fullfile(OutputMethod_clone.WorkPath,filesep,'Result_InfluenceLine');
     if ~exist(dir_Result,'dir')
         mkdir(dir_Result)
     end
-
     % 存储结果文件原始数据
     for i=1:length(filenames)
         filename = filenames{i};
         dataFilePath = fullfile(OutputMethod_clone.WorkPath,[filename,'.txt']);
         movefile(dataFilePath,dir_Result)
     end
-    
     % 存储结果变量
     save(fullfile(dir_Result,'ResultData.mat'),"data");
 

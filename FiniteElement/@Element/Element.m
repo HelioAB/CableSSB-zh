@@ -120,7 +120,7 @@ classdef Element < DataRecord
         [Norm_x,Norm_y,Norm_z] = getLocalCoordSystem(obj,tol) % 单元坐标系x、y、z在整体坐标系下的方向向量
         [Comp_x,Comp_y,Comp_z] = getLocalCoordSystemComponent(obj,GlobalDirection,tol) % 给定一个大小和方向direction（1*3数值向量），获得在单元坐标系的各个分量
         coord_centerpoint = getCenterPointCoord(obj)
-        sorted_elems = sortedByCenterPoint(obj,Direction)
+        sorted_elems = sortByCenterPoint(obj,Direction)
     end
     methods(Static)
         function collection = Collection()

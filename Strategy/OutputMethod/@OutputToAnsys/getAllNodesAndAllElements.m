@@ -1,4 +1,5 @@
 function [nodes,elements] = getAllNodesAndAllElements(obj)
+    disp('is getting all Nodes and all elements...')
     bridgeobj = obj.OutputObj;
     Map_MatlabLine2AnsysElement = bridgeobj.Params.Map_MatlabLine2AnsysElem;
 

@@ -1,4 +1,4 @@
-function sorted_elems = sortedByCenterPoint(obj,Direction)
+function sorted_elems = sortByCenterPoint(obj,Direction)
     arguments
         obj
         Direction {mustBeMember(Direction,{'X','Y','Z'})}
@@ -12,5 +12,6 @@ function sorted_elems = sortedByCenterPoint(obj,Direction)
         case 'Z'
             sort_ref_coord = coord_center(:,3);
     end
-    
+    [~,index] = sort(sort_ref_coord);
+    sorted_elems = obj(index);
 end

@@ -5,7 +5,7 @@ function build_Parametrically(obj,options)
         options.Sag = 102.35
         options.Count_CrossCable = 3
 
-        options.Count_Hanger = []
+        options.Length_HangerSpan = []
         options.Area_MainCable = [] % 这个参数是配合Length_HangerSpan的变化
 
         options.Count_Pier = []
@@ -34,9 +34,9 @@ function build_Parametrically(obj,options)
     % 交叉索数
     count_crosscable = options.Count_CrossCable;
     % 吊跨比
-    if ~isemty(options.Length_HangerSpan)
+    if ~isempty(options.Length_HangerSpan)
         count_crosscable = 0;% 研究Length_HangerSpan时，交叉索数必须为0
-        if ~isemty(options.Area_MainCable)
+        if ~isempty(options.Area_MainCable)
         else
         end
     end
@@ -61,15 +61,16 @@ function build_Parametrically(obj,options)
         flag_Iyy_SeperatedSystem = true;
         Iyy_StayedCable_Girder = options.GirderStiffness_Bending_StayedCable;
         Iyy_Suspension_Girder = options.GirderStiffness_Bending_Suspension;
+        if isempty(options.GirderStiffness_Bending_Combination)
+            Iyy_Combination_Girder = (Iyy_StayedCable_Girder + Iyy_Suspension_Girder)/2;
+        else
+            Iyy_Combination_Girder = options.GirderStiffness_Bending_Combination;
+        end
     else
         error('若要为斜拉部分、悬索部分、结合端的竖向抗弯刚度赋值，则需要为它们同时赋值')
     end
     % 结合段
-    if isempty(options.GirderStiffness_Bending_Combination)
-        Iyy_Combination_Girder = (Iyy_StayedCable_Girder + Iyy_Suspension_Girder)/2;
-    else
-        Iyy_Combination_Girder = options.GirderStiffness_Bending_Combination;
-    end
+    
 
 
     %% 加劲梁与锚碇
