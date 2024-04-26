@@ -1,6 +1,1398 @@
-/COM,ANSYS RELEASE 2023 R2           BUILD 23.2      UP20230531       23:17:43
-/COM,ANSYS RELEASE 2023 R2           BUILD 23.2      UP20230531       23:22:13
-/COM,ANSYS RELEASE 2023 R2           BUILD 23.2      UP20230531       23:33:15
+/COM,ANSYS RELEASE 2023 R2           BUILD 23.2      UP20230531       14:57:30
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 865 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 691 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 876 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 692 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 877 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 693 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 878 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 694 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 879 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 695 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 880 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 696 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 886 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 697 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 887 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 698 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 888 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 699 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 889 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 700 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 890 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 701 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 891 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 702 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 892 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 703 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 893 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 704 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 894 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 705 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 895 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 706 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 911 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 707 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 912 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 708 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 913 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 709 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 914 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 710 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 915 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 711 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 916 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 712 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 917 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 713 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 918 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 714 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 919 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 715 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 920 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 716 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 921 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 717 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 922 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 718 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 923 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 719 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 924 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 720 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 925 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 731 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 926 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 732 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 927 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 733 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 928 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 734 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 929 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 735 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 930 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 736 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 931 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 737 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 932 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 738 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 933 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 739 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 934 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 740 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 935 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 751 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 936 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 752 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 937 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 753 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 938 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 754 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 939 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 755 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 940 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 761 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 762 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 763 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 764 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 765 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 766 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 767 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 768 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 769 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 770 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 786 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 787 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 788 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 789 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 790 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 791 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 792 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 793 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 794 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 795 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 796 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 797 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 798 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 799 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 800 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 801 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 802 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 803 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 804 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 805 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 806 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 807 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 808 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 809 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 810 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 811 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 812 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 813 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 814 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 815 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 816 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 817 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 818 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 819 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 820 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 821 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 822 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 823 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 824 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 825 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 826 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 827 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 828 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 829 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 830 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 831 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 832 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 833 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 834 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 835 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 836 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 837 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 838 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 839 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 840 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 841 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 842 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 843 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 844 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 845 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 856 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 857 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 858 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 859 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 860 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 861 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 862 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 863 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The orientation node of element 864 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.703   TIME= 14:57:32
+ The model data was checked and there were errors found.                 
+  Please check output or errors file (                                   
+ C:\Users\11440\Desktop\usage\Susp                                       
+ V.4\CableSSB-zh\test\test\AnsysWorkspace\SelfAnchored_Hybrid\MeanValue\ 
+ \Ratio_SideMainSpan\0.75\NoCableModel\NoCableModel.err ) for messages.  
+/COM,ANSYS RELEASE 2023 R2           BUILD 23.2      UP20230531       15:12:20
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 691 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 865 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 692 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 876 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 693 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 877 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 694 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 878 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 695 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 879 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 696 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 880 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 697 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 886 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 698 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 887 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 699 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 888 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 700 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 889 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 701 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 890 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 702 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 891 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 703 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 892 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 704 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 893 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 705 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 894 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 706 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 895 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 707 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 911 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 708 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 912 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 709 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 913 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 710 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 914 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 711 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 915 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 712 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 916 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 713 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 917 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 714 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 918 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 715 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 919 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 716 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 920 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 717 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 921 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 718 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 922 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 719 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 923 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 720 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 924 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 731 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 925 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 732 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 926 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 733 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 927 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 734 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 928 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 735 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 929 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 736 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 930 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 737 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 931 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 738 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 932 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 739 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 933 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 740 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 934 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 751 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 935 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 752 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 936 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 753 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 937 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 754 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 938 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 755 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 939 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 761 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 940 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 762 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 763 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 764 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 765 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 766 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 767 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 768 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 769 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 770 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 786 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 787 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 788 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 789 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 790 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 791 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 792 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 793 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 794 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 795 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 796 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 797 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 798 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 799 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 800 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 801 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 802 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 803 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 804 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 805 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 806 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 807 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 808 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 809 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 810 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 811 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 812 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 813 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 814 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 815 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 816 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 817 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 818 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 819 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 820 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 821 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 822 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 823 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 824 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 825 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 826 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 827 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 828 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 829 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 830 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 831 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 832 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 833 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 834 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 835 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 836 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 837 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 838 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 839 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 840 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 841 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 842 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 843 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 844 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 845 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 856 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 857 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 858 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 859 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 860 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 861 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 862 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 863 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The orientation node of element 864 is co-linear with the first two     
+ nodes.                                                                  
+
+ *** ERROR ***                           CP =       0.547   TIME= 15:12:22
+ The model data was checked and there were errors found.                 
+  Please check output or errors file (                                   
+ C:\Users\11440\Desktop\usage\Susp                                       
+ V.4\CableSSB-zh\test\test\AnsysWorkspace\SelfAnchored_Hybrid\MeanValue\ 
+ \Ratio_SideMainSpan\0.75\NoCableModel\NoCableModel.err ) for messages.  
+/COM,ANSYS RELEASE 2023 R2           BUILD 23.2      UP20230531       15:23:09
+/COM,ANSYS RELEASE 2023 R2           BUILD 23.2      UP20230531       15:29:01
+/COM,ANSYS RELEASE 2023 R2           BUILD 23.2      UP20230531       15:32:34
+/COM,ANSYS RELEASE 2023 R2           BUILD 23.2      UP20230531       15:44:48
+/COM,ANSYS RELEASE 2023 R2           BUILD 23.2      UP20230531       15:45:55
+/COM,ANSYS RELEASE 2023 R2           BUILD 23.2      UP20230531       15:58:09
+/COM,ANSYS RELEASE 2023 R2           BUILD 23.2      UP20230531       16:00:57
+/COM,ANSYS RELEASE 2023 R2           BUILD 23.2      UP20230531       16:06:25
+/COM,ANSYS RELEASE 2023 R2           BUILD 23.2      UP20230531       16:07:00
 /COM,ANSYS RELEASE 2023 R2           BUILD 23.2      UP20230531       23:34:49
-/COM,ANSYS RELEASE 2023 R2           BUILD 23.2      UP20230531       23:45:41
-/COM,ANSYS RELEASE 2023 R2           BUILD 23.2      UP20230531       00:15:18
+/COM,ANSYS RELEASE 2023 R2           BUILD 23.2      UP20230531       23:40:12
+/COM,ANSYS RELEASE 2023 R2           BUILD 23.2      UP20230531       00:00:32
+/COM,ANSYS RELEASE 2023 R2           BUILD 23.2      UP20230531       00:44:50
+/COM,ANSYS RELEASE 2023 R2           BUILD 23.2      UP20230531       16:48:32
+/COM,ANSYS RELEASE 2023 R2           BUILD 23.2      UP20230531       20:28:42
+/COM,ANSYS RELEASE 2023 R2           BUILD 23.2      UP20230531       20:29:16
+/COM,ANSYS RELEASE 2023 R2           BUILD 23.2      UP20230531       21:45:17
+/COM,ANSYS RELEASE 2023 R2           BUILD 23.2      UP20230531       21:53:48
+/COM,ANSYS RELEASE 2023 R2           BUILD 23.2      UP20230531       11:11:18
+/COM,ANSYS RELEASE 2023 R2           BUILD 23.2      UP20230531       18:00:40
+/COM,ANSYS RELEASE 2023 R2           BUILD 23.2      UP20230531       18:01:47
+/COM,ANSYS RELEASE 2023 R2           BUILD 23.2      UP20230531       08:50:42

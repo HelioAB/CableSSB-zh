@@ -10,6 +10,7 @@ classdef Bridge < handle
         LoadList
         OutputMethod
         InputMethod
+        InfluenceLine = struct
         Params = struct
         Information = struct
     end
@@ -27,11 +28,12 @@ classdef Bridge < handle
             obj.InputMethod = struct;
         end
         build(obj)
+        tf = isempty(obj)
         %% plot画图相关
         plotCoupling(obj,fig,ax)
         plotContraint(obj,fig,ax)
         plotLoad(obj,fig,ax,scale)
-        [fig,ax] = plotStructure(obj,fig,ax)
+        [fig,ax] = plotStructure(obj,fig,ax,options)
         [fig,ax] = plot(obj,options)
         %% 
         addToList(obj,ListClassName,value)
@@ -55,13 +57,13 @@ classdef Bridge < handle
         % 获取Bridge中某个List中所有元素的Name
         name = getName(obj,ListClassName)
         % 输出
-        output(obj)
+        output(obj,options)
         
         % 其他
         weight = getGirderWeight(obj,GirderList)
         setForceTo(obj,StructureCell,P_Bottom_Z)
         count = getLineCountOfClass(obj,StructureClass)
-        [AppliedPoints,XForce,YForce,ZForce] = getConcentratedForcecInfo(obj)
+        [AppliedPoints,XForce,YForce,ZForce] = getConcentratedForceInfo(obj)
         elems_beam = getAllBeams(obj)
         elems_link = getAllLinks(obj)
         nodes = getAllNodes(obj)

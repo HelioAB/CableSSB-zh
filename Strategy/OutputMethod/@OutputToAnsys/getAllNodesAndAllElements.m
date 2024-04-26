@@ -16,10 +16,11 @@ function [nodes,elements] = getAllNodesAndAllElements(obj)
         num_structure_elems{i} = cell2mat(num_elems);
     end
     num_all_elems = unique(num_all_elems);
-    [nodes,index_inodes,index_jnodes] = obj.getNodeByNumElements(num_all_elems);
-    inodes = nodes(index_inodes);
-    jnodes = nodes(index_jnodes);
-    elements = Element(num_all_elems,inodes,jnodes);
+    [inodes,jnodes,knodes] = obj.getNodesByNumElements(num_all_elems);
+    
+    all_nodes = [inodes,jnodes,knodes];
+    nodes = all_nodes.unique();
+    elements = Element(num_all_elems,inodes,jnodes,knodes);
     % 为每个structure赋予Element属性和Node属性
     for i=1:length(structures)
         structure = structures{i};

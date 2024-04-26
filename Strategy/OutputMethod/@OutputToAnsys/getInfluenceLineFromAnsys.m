@@ -1,4 +1,4 @@
-function data = getInfluenceLineResult(obj,OutputMethodObj_analyzeInfluenceLine,num_GirderNodes,num_MonitoredNodes,num_MonitoredElems_Link,num_MonitoredElems_Beam) % 获取影响线结果，前提是已经使用analyzeInfluenceLine()进行分析
+function data = getInfluenceLineFromAnsys(obj,OutputMethodObj_analyzeInfluenceLine,num_GirderNodes,num_MonitoredNodes,num_MonitoredElems_Link,num_MonitoredElems_Beam) % 获取影响线结果，前提是已经使用analyzeInfluenceLine()进行分析
     arguments
         obj
         OutputMethodObj_analyzeInfluenceLine {mustBeA(OutputMethodObj_analyzeInfluenceLine,'OutputToAnsys')}

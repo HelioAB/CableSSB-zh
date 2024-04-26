@@ -111,7 +111,7 @@
   INITIAL DIRECTORY = C:\Users\11440\Desktop\usage\Susp V.4\CableSSB-zh\test\test\AnsysWorkspace\SelfAnchored_Hybrid\MeanValue\Ratio_SideMainSpan\0.75\OriginalModel
 
  RELEASE= 2023 R2              BUILD= 23.2      UP20230531   VERSION=WINDOWS x64 
- CURRENT JOBNAME=getNumNodes3  00:16:55  APR 20, 2024 CP=      0.047
+ CURRENT JOBNAME=getNumNodes3  08:52:44  APR 26, 2024 CP=      0.000
 
 
  ***** END OF INPUT ENCOUNTERED *****
@@ -136,7 +136,7 @@
  |                                                                             |
  |-----------------------------------------------------------------------------|
  |                                                                             |
- |        CP Time      (sec) =          0.109       Time  =  00:16:56          |
- |        Elapsed Time (sec) =          3.000       Date  =  04/20/2024        |
+ |        CP Time      (sec) =          0.016       Time  =  08:52:45          |
+ |        Elapsed Time (sec) =          3.000       Date  =  04/26/2024        |
  |                                                                             |
  *-----------------------------------------------------------------------------*

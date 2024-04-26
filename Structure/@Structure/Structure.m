@@ -148,6 +148,7 @@ classdef Structure < dynamicprops
         structure_list = findConnectStructureByClass(obj,class_name)
         [Norm_x,Norm_y,Norm_z]=getElementSystem(obj,tol)
         system_handle = plotElementSystem(obj,tol,options)
+        kpoint = setKPoint(obj,X,Y,Z)
     end
 
 

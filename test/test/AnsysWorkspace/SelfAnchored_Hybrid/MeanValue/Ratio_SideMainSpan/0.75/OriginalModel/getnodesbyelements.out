@@ -111,7 +111,7 @@
   INITIAL DIRECTORY = C:\Users\11440\Desktop\usage\Susp V.4\CableSSB-zh\test\test\AnsysWorkspace\SelfAnchored_Hybrid\MeanValue\Ratio_SideMainSpan\0.75\OriginalModel
 
  RELEASE= 2023 R2              BUILD= 23.2      UP20230531   VERSION=WINDOWS x64 
- CURRENT JOBNAME=getNumNodes0  00:16:55  APR 20, 2024 CP=      0.031
+ CURRENT JOBNAME=getNumNodes0  08:52:44  APR 26, 2024 CP=      0.000
 
      1  /post1  
      2  resume,OriginalModel,db 
@@ -209,28 +209,38 @@
     94      
     95  *dim,Num_INode,array,count_elems,1  
     96  *dim,Num_JNode,array,count_elems,1  
-    97  *dim,X_INode,array,count_elems,1
-    98  *dim,Y_INode,array,count_elems,1
-    99  *dim,Z_INode,array,count_elems,1
-   100  *dim,X_JNode,array,count_elems,1
-   101  *dim,Y_JNode,array,count_elems,1
-   102  *dim,Z_JNode,array,count_elems,1
-   103  *do,i,1,count_elems 
-   104      *get,Num_INode(i),Elem,num_elems(i),Node,1  
-   105      X_INode(i) = NX(Num_INode(i))   
-   106      Y_INode(i) = NY(Num_INode(i))   
-   107      Z_INode(i) = NZ(Num_INode(i))   
-   108      *get,Num_JNode(i),Elem,num_elems(i),Node,2  
-   109      X_JNode(i) = NX(Num_JNode(i))   
-   110      Y_JNode(i) = NY(Num_JNode(i))   
-   111      Z_JNode(i) = NZ(Num_JNode(i))   
-   112  *enddo  
-   113      
-   114  ! 导出数据  
-   115  *cfopen,Num_Nodes,txt   
-   116  *vwrite,Num_INode(1),X_INode(1),Y_INode(1),Z_INode(1),Num_JNode(1),X_JNode(1),Y_JNode(1),Z_JNode(1) 
-   117  (8E20.8)
-   118  *cfclos 
+    97  *dim,Num_KNode,array,count_elems,1  
+    98  *dim,X_INode,array,count_elems,1
+    99  *dim,Y_INode,array,count_elems,1
+   100  *dim,Z_INode,array,count_elems,1
+   101  *dim,X_JNode,array,count_elems,1
+   102  *dim,Y_JNode,array,count_elems,1
+   103  *dim,Z_JNode,array,count_elems,1
+   104  *dim,X_KNode,array,count_elems,1
+   105  *dim,Y_KNode,array,count_elems,1
+   106  *dim,Z_KNode,array,count_elems,1
+   107  *do,i,1,count_elems 
+   108      Num_INode(i) = NELEM(num_elems(i),1)
+   109      X_INode(i) = NX(Num_INode(i))   
+   110      Y_INode(i) = NY(Num_INode(i))   
+   111      Z_INode(i) = NZ(Num_INode(i))   
+   112      Num_JNode(i) = NELEM(num_elems(i),2)
+   113      X_JNode(i) = NX(Num_JNode(i))   
+   114      Y_JNode(i) = NY(Num_JNode(i))   
+   115      Z_JNode(i) = NZ(Num_JNode(i))   
+   116      Num_KNode(i) = NELEM(num_elems(i),3)
+   117      *if,Num_KNode(i),NE,0,then  
+   118          X_KNode(i) = NX(Num_KNode(i))   
+   119          Y_KNode(i) = NY(Num_KNode(i))   
+   120          Z_KNode(i) = NZ(Num_KNode(i))   
+   121      *endif  
+   122  *enddo  
+   123      
+   124  ! 导出数据  
+   125  *cfopen,Num_Nodes,txt   
+   126  *vwrite,Num_INode(1),X_INode(1),Y_INode(1),Z_INode(1),Num_JNode(1),X_JNode(1),Y_JNode(1),Z_JNode(1),Num_KNode(1),X_KNode(1),Y_KNode(1),Z_KNode(1)   
+   127  (12E20.8)   
+   128  *cfclos 
 
  RUN SETUP PROCEDURE FROM FILE= C:\Program Files\ANSYS Inc\ANSYS Student\v232\ANSYS\apdl\start.ans
 
@@ -238,7 +248,7 @@
 
  *** MAPDL - ENGINEERING ANALYSIS SYSTEM  RELEASE 2023 R2          23.2     ***
  Ansys Mechanical Enterprise Academic Student      
- 01055371  VERSION=WINDOWS x64   00:16:55  APR 20, 2024 CP=      0.094
+ 01055371  VERSION=WINDOWS x64   08:52:45  APR 26, 2024 CP=      0.109
 
                                                                                
 
@@ -246,7 +256,7 @@
 
           ***** MAPDL RESULTS INTERPRETATION (POST1) *****
 
- *** NOTE ***                            CP =       0.094   TIME= 00:16:55
+ *** NOTE ***                            CP =       0.109   TIME= 08:52:45
  Reading results into the database (SET command) will update the current 
  displacement and force boundary conditions in the database with the     
  values from the results file for that load set.  Note that any          
@@ -259,14 +269,14 @@
 
  TITLE =                                                                       
  ANALYSIS TYPE =  STATIC (STEADY-STATE)
-       673 KEYPOINTS DEFINED     MAX KEYPOINT NUMBER =            681
+       675 KEYPOINTS DEFINED     MAX KEYPOINT NUMBER =           1455
        828 LINES DEFINED         MAX LINE NUMBER =                828
-         8 ELEM TYPES DEFINED    MAX ELEM TYPE NUMBER =             8
+         8 ELEM TYPES DEFINED    MAX ELEM TYPE NUMBER =            40
       1580 ELEMENTS DEFINED      MAX ELEMENT NUMBER =            1580
-      1425 NODES DEFINED         MAX NODE NUMBER =               1425
-         8 MATERIALS DEFINED     MAX MATERIAL NUMBER =              8
+      2657 NODES DEFINED         MAX NODE NUMBER =               2657
+         8 MATERIALS DEFINED     MAX MATERIAL NUMBER =             40
        428 REAL CONSTS DEFINED   MAX REAL CONST NUMBER =          828
-         5 SECTIONS DEFINED      MAX SECTION NUMBER =               5
+         5 SECTIONS DEFINED      MAX SECTION NUMBER =              37
          0 COORD SYS DEFINED     MAX COORD SYS NUMBER =             0
         18 COUPLING EQNS DEFINED MAX COUPLING EQN NUMBER =         18
  
@@ -994,6 +1004,9 @@
  SET PARAMETER DIMENSIONS ON  NUM_JNODE
   TYPE=ARRA  DIMENSIONS=     1580        1        1
 
+ SET PARAMETER DIMENSIONS ON  NUM_KNODE
+  TYPE=ARRA  DIMENSIONS=     1580        1        1
+
  SET PARAMETER DIMENSIONS ON  X_INODE TYPE=ARRA  DIMENSIONS=  1580     1     1
 
  SET PARAMETER DIMENSIONS ON  Y_INODE TYPE=ARRA  DIMENSIONS=  1580     1     1
@@ -1006,23 +1019,36 @@
 
  SET PARAMETER DIMENSIONS ON  Z_JNODE TYPE=ARRA  DIMENSIONS=  1580     1     1
 
+ SET PARAMETER DIMENSIONS ON  X_KNODE TYPE=ARRA  DIMENSIONS=  1580     1     1
+
+ SET PARAMETER DIMENSIONS ON  Y_KNODE TYPE=ARRA  DIMENSIONS=  1580     1     1
+
+ SET PARAMETER DIMENSIONS ON  Z_KNODE TYPE=ARRA  DIMENSIONS=  1580     1     1
+
  *DO LOOP ON PARAMETER= I FROM  1.0000     TO  1580.0     BY  1.0000    
 
- *GET  NUM_INODE  FROM  ELEM         1  ITEM=NODE 1         VALUE=  1.00000000    
+ PARAMETER NUM_INODE(I) =     1.000000000    
 
- PARAMETER X_INODE(I) =     157.2000000    
+ PARAMETER X_INODE(I) =     0.000000000    
 
  PARAMETER Y_INODE(I) =     0.000000000    
 
- PARAMETER Z_INODE(I) =    -4.200000000    
+ PARAMETER Z_INODE(I) =     0.000000000    
 
- *GET  NUM_JNODE  FROM  ELEM         1  ITEM=NODE 2         VALUE=  3.00000000    
+ PARAMETER NUM_JNODE(I) =     3.000000000    
 
- PARAMETER X_JNODE(I) =     158.7000000    
+ PARAMETER X_JNODE(I) =     1.500000000    
 
  PARAMETER Y_JNODE(I) =     0.000000000    
 
- PARAMETER Z_JNODE(I) =    -4.200000000    
+ PARAMETER Z_JNODE(I) =     0.000000000    
+
+ PARAMETER NUM_KNODE(I) =     0.000000000    
+
+ *IF  Num_KNode(i)                      ( =   0.00000     )  NE  
+      0                                 ( =   0.00000     )  THEN    
+
+ *ENDIF
 
  *ENDDO  INDEX= I                               
 
@@ -1045,7 +1071,7 @@
 +--------------------- M A P D L   S T A T I S T I C S ------------------------+
 
 Release: 2023 R2            Build: 23.2       Update: UP20230531   Platform: WINDOWS x64 
-Date Run: 04/20/2024   Time: 00:16     Process ID: 16756
+Date Run: 04/26/2024   Time: 08:52     Process ID: 10616
 Operating System: Windows 11  (Build: 22631)
 
 Processor Model: 12th Gen Intel(R) Core(TM) i5-12500H
@@ -1077,18 +1103,18 @@ Input File: C:\Users\11440\Desktop\usage\Susp V.4\CableSSB-zh\test\test\AnsysWor
      2               HelioHonorV14   C:\Users\11440\Desktop\usage\Susp V.4\CableSSB-zh\test\test\AnsysWorkspace\SelfAnchored_Hybrid\MeanValue\Ratio_SideMainSpan\0.75\OriginalModel
      3               HelioHonorV14   C:\Users\11440\Desktop\usage\Susp V.4\CableSSB-zh\test\test\AnsysWorkspace\SelfAnchored_Hybrid\MeanValue\Ratio_SideMainSpan\0.75\OriginalModel
  
-Latency time from master to core     1 =    2.459 microseconds
-Latency time from master to core     2 =    5.147 microseconds
-Latency time from master to core     3 =    5.383 microseconds
+Latency time from master to core     1 =    2.316 microseconds
+Latency time from master to core     2 =    5.084 microseconds
+Latency time from master to core     3 =    5.253 microseconds
  
-Communication speed from master to core     1 = 10005.88 MB/sec
-Communication speed from master to core     2 =  6782.36 MB/sec
-Communication speed from master to core     3 =  6506.92 MB/sec
+Communication speed from master to core     1 =  9676.68 MB/sec
+Communication speed from master to core     2 =  6646.84 MB/sec
+Communication speed from master to core     3 =  7060.03 MB/sec
 
 Total CPU time for main thread                    :        0.3 seconds
 Total CPU time summed for all threads             :        0.2 seconds
 
-Elapsed time spent obtaining a license            :        1.2 seconds
+Elapsed time spent obtaining a license            :        1.1 seconds
 Elapsed time spent pre-processing model (/PREP7)  :        0.0 seconds
 Elapsed time spent solution - preprocessing       :        0.0 seconds
 Elapsed time spent computing solution             :        0.0 seconds
@@ -1098,7 +1124,7 @@ Elapsed time spent post-processing model (/POST1) :        0.0 seconds
 
 Sum of disk space used on all processes            :        0.0 MB
 
-Sum of memory used on all processes               :       23.0 MB
+Sum of memory used on all processes               :       24.0 MB
 Sum of memory allocated on all processes          :     2832.0 MB
 Physical memory available                         :         16 GB
 Total amount of I/O written to disk               :        0.0 GB
@@ -1118,13 +1144,13 @@ Total amount of I/O read from disk                :        0.0 GB
  |-----------------------------------------------------------------------------|
  |                                                                             |
  |  Database Requested(-db)     1024 MB     Scratch Memory Requested   1024 MB |
- |  Max Database Used(Master)      3 MB     Max Scratch Used(Master)      5 MB |
+ |  Max Database Used(Master)      4 MB     Max Scratch Used(Master)      5 MB |
  |  Max Database Used(Workers)     1 MB     Max Scratch Used(Workers)     4 MB |
- |  Sum Database Used(All)         6 MB     Sum Scratch Used(All)        17 MB |
+ |  Sum Database Used(All)         7 MB     Sum Scratch Used(All)        17 MB |
  |                                                                             |
  |-----------------------------------------------------------------------------|
  |                                                                             |
- |        CP Time      (sec) =          0.172       Time  =  00:16:56          |
- |        Elapsed Time (sec) =          3.000       Date  =  04/20/2024        |
+ |        CP Time      (sec) =          0.250       Time  =  08:52:45          |
+ |        Elapsed Time (sec) =          3.000       Date  =  04/26/2024        |
  |                                                                             |
  *-----------------------------------------------------------------------------*

@@ -15,6 +15,8 @@ function nodes = getAllNodes(obj)
     end
     inodes = [elems.INode];
     jnodes = [elems.JNode];
-    nodes = [inodes,jnodes];
+    knodes = [elems.KNode];
+    knodes = knodes.unique();
+    nodes = [inodes,jnodes,knodes];
     nodes = nodes.unique();    
 end

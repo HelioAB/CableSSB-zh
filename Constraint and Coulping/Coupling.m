@@ -3,7 +3,7 @@ classdef Coupling < DataRecord
         Name
         MasterPoint
         SlavePoint
-        DoF
+        DoFs
     end
     methods
         function obj = Coupling(MasterPoint,SlavePoint,dof)
@@ -32,15 +32,15 @@ classdef Coupling < DataRecord
                 obj.Name = '';
                 obj.MasterPoint = MasterPoint;
                 obj.SlavePoint = SlavePoint;
-                obj.DoF = convertDoF(dof);
+                obj.DoFs = convertDoF(dof);
             end
         end
         function [point_hande,line_handle] = plot(obj,S,C,options)
             arguments
                 % 均为MATLAB中默认的参数值
                 obj (1,1)
-                S = 36
-                C = 'g'
+                S = 12
+                C = [0,149,182]/255
                 options.Figure {mustBeA(options.Figure,'matlab.ui.Figure')} = figure
                 options.Axis {mustBeA(options.Axis,'matlab.graphics.axis.Axes')} = axes
             end
@@ -57,7 +57,7 @@ classdef Coupling < DataRecord
             end
             line = Line([],master_point_list,slave_point);
             line_handle = line.plot("Color",C,"Figure",options.Figure,"Axis",options.Axis);
-            point_hande = point.plot(S,C,"Figure",options.Figure,"Axis",options.Axis);
+            point_hande = point.plot(S,C,'Filled',true,"Figure",options.Figure,"Axis",options.Axis);
             view(3);
         end
     end

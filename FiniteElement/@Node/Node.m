@@ -47,7 +47,7 @@ classdef Node < DataRecord
             end
         end
         coord = Coord(obj)
-        point_handle = plot(obj,S,C,options)
+        [fig,ax] = plot(obj,S,C,options)
     end
     methods(Static)
         function collection = Collection()

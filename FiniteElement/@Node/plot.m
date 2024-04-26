@@ -1,4 +1,4 @@
-function point_handle = plot(obj,S,C,options)
+function [fig,ax] = plot(obj,S,C,options)
     arguments
         % 均为MATLAB中默认的参数值
         obj
@@ -11,4 +11,7 @@ function point_handle = plot(obj,S,C,options)
     figure(options.Figure)
     point_handle = scatter3(options.Axis,[obj.X],[obj.Y],[obj.Z],S,C);
     view(3);
+
+    fig = options.Figure;
+    ax = options.Axis;
 end

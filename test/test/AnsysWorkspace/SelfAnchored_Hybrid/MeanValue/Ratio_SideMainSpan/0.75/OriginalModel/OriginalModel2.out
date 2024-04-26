@@ -96,25 +96,20 @@
 
           *****  MAPDL COMMAND LINE ARGUMENTS  *****
   INITIAL JOBNAME              = OriginalModel                                                                                                                                                                                                                                           
-  BATCH MODE REQUESTED (-b)    = LIST
-  INPUT FILE COPY MODE (-c)    = COPY
   DISTRIBUTED MEMORY PARALLEL REQUESTED
        4 PARALLEL PROCESSES REQUESTED WITH SINGLE THREAD PER PROCESS
     TOTAL OF     4 CORES REQUESTED
   MPI OPTION                   = INTELMPI
-  INPUT FILE NAME              = CONIN$
-  OUTPUT FILE NAME             = C:\Users\11440\Desktop\usage\Susp V.4\CableSSB-zh\test\test\AnsysWorkspace\SelfAnchored_Hybrid\MeanValue\Ratio_SideMainSpan\0.75\OriginalModel\OriginalModel2.out
-  START-UP FILE MODE           = READ  
-  STOP FILE MODE               = READ  
+  START-UP FILE MODE           = NOREAD
+  STOP FILE MODE               = NOREAD
+  GRAPHICS DEVICE REQUESTED    = win32   
+  GRAPHICAL ENTRY              = YES   
   LANGUAGE                     = en-us               
-  DATABASE SIZE REQUESTED (MB) = 1           
   INITIAL DIRECTORY = C:\Users\11440\Desktop\usage\Susp V.4\CableSSB-zh\test\test\AnsysWorkspace\SelfAnchored_Hybrid\MeanValue\Ratio_SideMainSpan\0.75\OriginalModel
 
  RELEASE= 2023 R2              BUILD= 23.2      UP20230531   VERSION=WINDOWS x64 
- CURRENT JOBNAME=OriginalModel2  00:43:14  APR 20, 2024 CP=      0.031
+ CURRENT JOBNAME=OriginalModel2  17:59:46  APR 26, 2024 CP=      0.031
 
-
- ***** END OF INPUT ENCOUNTERED *****
 
 
  NUMBER OF WARNING MESSAGES ENCOUNTERED=          0
@@ -136,7 +131,7 @@
  |                                                                             |
  |-----------------------------------------------------------------------------|
  |                                                                             |
- |        CP Time      (sec) =          0.078       Time  =  00:43:14          |
- |        Elapsed Time (sec) =          2.000       Date  =  04/20/2024        |
+ |        CP Time      (sec) =          0.203       Time  =  18:01:50          |
+ |        Elapsed Time (sec) =        126.000       Date  =  04/26/2024        |
  |                                                                             |
  *-----------------------------------------------------------------------------*

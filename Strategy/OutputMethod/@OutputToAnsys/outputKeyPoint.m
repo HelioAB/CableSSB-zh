@@ -15,14 +15,21 @@ function output_str = outputKeyPoint(obj,fileName,Map_OutputedPoint,bool_outputC
     end
     for i=1:length(structure_list)
         structure = structure_list{i};
-        key_point = structure.Point;
+        ij_points = structure.Point;
+        k_points = [structure.Line.KPoint];
+        if ~isempty(k_points)
+            k_points = k_points.unique();
+        else
+            k_points = [];
+        end
+        key_points = [ij_points,k_points];
         output_str = [output_str,sprintf(['! ',structure.Name,' \n'])];
-        for j = 1:length(key_point)
-            if isKey(Map_OutputedPoint,key_point(j).Num)
+        for j = 1:length(key_points)
+            if isKey(Map_OutputedPoint,key_points(j).Num)
                 continue
             else
-                output_str = [output_str,sprintf('k,%d,%f,%f,%f \n',key_point(j).Num,key_point(j).X,key_point(j).Y,key_point(j).Z)];
-                Map_OutputedPoint(key_point(j).Num) = key_point(j);
+                output_str = [output_str,sprintf('k,%d,%f,%f,%f \n',key_points(j).Num,key_points(j).X,key_points(j).Y,key_points(j).Z)];
+                Map_OutputedPoint(key_points(j).Num) = key_points(j);
             end
         end
         if bool_outputCM

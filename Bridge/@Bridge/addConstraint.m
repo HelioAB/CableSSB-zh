@@ -1,12 +1,12 @@
-function constraint = addConstraint(obj,ConstraintPoint,DoF,Value,options)
+function constraint = addConstraint(obj,ConstraintPoint,DoFs,Value,options)
     arguments
         obj
         ConstraintPoint
-        DoF
+        DoFs
         Value
         options.Name {mustBeText} = ''
     end
-    constraint = Constraint(ConstraintPoint,DoF,Value);
+    constraint = Constraint(ConstraintPoint,DoFs,Value);
     constraint.record;
     obj.addToList('Constraint',constraint);
     constraint_count = length(obj.ConstraintList);

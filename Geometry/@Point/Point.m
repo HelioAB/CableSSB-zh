@@ -47,7 +47,7 @@ classdef Point < DataRecord
         end
         edit(obj,PropertyName,ChangeTo)
         newobj = clone(obj) % 需要重载
-        point_handle = plot(obj,S,C,options)
+        [fig,ax] = plot(obj,S,C,options)
         moveTo(obj,coord)
         translate(obj,difference)
         symmetrize(obj,symmetric_point,normal_vector_direction)
@@ -58,6 +58,7 @@ classdef Point < DataRecord
         [point_list,index_list] = findPointByCoord(obj,X,Y,Z,tolerance)
         [point,index] = findPointByRange(obj,XRange,YRange,ZRange,tolerance)
         InterpolatedPoints = interpolatePoints(obj,options)
+        sortedPoints = sortByDistance(obj,reference)
     end
     methods(Static)
         function collection = Collection()

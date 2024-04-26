@@ -1,4 +1,4 @@
-function [AppliedPoints,XForce,YForce,ZForce] = getConcentratedForcecInfo(obj)
+function [AppliedPoints,XForce,YForce,ZForce] = getConcentratedForceInfo(obj)
     load_list = obj.LoadList;
     AppliedPoints = [];
     for i=1:length(load_list)

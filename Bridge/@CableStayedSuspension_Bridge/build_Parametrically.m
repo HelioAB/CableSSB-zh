@@ -84,7 +84,8 @@ function build_Parametrically(obj,options)
     
     % 主跨加劲梁
     L = seg_mainspan*ones(1,92); % 该段加劲梁的分段情况，只需要输入每一段的正确比例就可以
-    CoordA_girder1 = [157.2,0,-4.2]; % 加劲梁左端点A的位置，"左"代表 X向数值更小的方向。
+    % CoordA_girder1 = [157.2,0,-4.2]; % 加劲梁左端点A的位置，"左"代表 X向数值更小的方向。
+    CoordA_girder1 = [0,0,0]; % 加劲梁左端点A的位置，"左"代表 X向数值更小的方向。
     CoordB_girder1 = [CoordA_girder1(1)+sum(L),CoordA_girder1(2),CoordA_girder1(3)]; % 加劲梁右端点B的位置
     if flag_Iyy_SeperatedSystem
         girder1_sectiondata_suspension = UserSection(Area_MainSpan_Girder,20,Iyy_Suspension_Girder,193,36,8);
@@ -198,6 +199,8 @@ function build_Parametrically(obj,options)
     fun_handle = @(tower) tower.findPoint('Index','Z','ascend',1);% 寻找参考点的方法，输入tower对象，输出参考点
     Coord_MoveTo_tower1 = [CoordA_girder1(1),CoordA_girder1(2),CoordA_girder1(3)-82.8];% 塔根位置
     tower1 = obj.buildTowerByInput(Method_Creating,fun_handle,Coord_MoveTo_tower1,Sec_tower,Mat_tower,ET_tower);
+    PointTop_tower1 = tower1.PointTop;
+    tower1.setKPoint(PointTop_tower1.X,PointTop_tower1.Y,PointTop_tower1.Z);
     Point_MainCable_tower1 = tower1.findPoint("Index","Z","descend",2).sort('Z'); % 主缆索鞍点,按Z正方向排列
     Point_StayedCable_tower1 = tower1.findPoint("Index","Z","descend",3:16).sort('Z'); % 斜拉索锚固位置（还要经过刚臂转化到斜拉索上）
     obj.addToSpan('MainSpan',1,tower1);
@@ -206,6 +209,8 @@ function build_Parametrically(obj,options)
     % 桥塔2
     Coord_MoveTo_tower2 = [CoordB_girder1(1),CoordB_girder1(2),CoordB_girder1(3)-82.8];
     tower2 = obj.buildTowerByInput(Method_Creating,fun_handle,Coord_MoveTo_tower2,Sec_tower,Mat_tower,ET_tower);
+    PointTop_tower2 = tower2.PointBottom;
+    tower2.setKPoint(PointTop_tower2.X,PointTop_tower2.Y,PointTop_tower2.Z);
     Point_MainCable_tower2 = tower2.findPoint("Index","Z","descend",2).sort('Z');
     Point_StayedCable_tower2 = tower2.findPoint("Index","Z","descend",3:16).sort('Z');
     obj.addToSpan('MainSpan',1,tower2);
@@ -414,8 +419,10 @@ function build_Parametrically(obj,options)
     end
 
     % Tower和Girder之间的耦合
-    tower1_masterpoint = tower1.Point.findPointByRange([],0,-19.15);
-    tower2_masterpoint = tower2.Point.findPointByRange([],0,-19.15);
+    tower1_points_Y0 = tower1.Point.findPointByRange([],0,[]).sortByDistance(girder1.PointA);
+    tower1_masterpoint = tower1_points_Y0(1);
+    tower2_points_Y0 = tower2.Point.findPointByRange([],0,[]).sortByDistance(girder1.PointB);
+    tower2_masterpoint = tower2_points_Y0(1);
     CP_tower1_girder = obj.addCoupling(tower1_masterpoint,girder1.PointA,{'Uy','Uz','Rotx'},'Name','塔梁耦合1');
     CP_tower2_girder = obj.addCoupling(tower2_masterpoint,girder1.PointB,{'Uy','Uz','Rotx'},'Name','塔梁耦合2');
 

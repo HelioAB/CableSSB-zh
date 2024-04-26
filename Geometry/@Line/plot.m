@@ -1,4 +1,4 @@
-function line_handle = plot(obj,options)
+function [fig,ax] = plot(obj,options)
     arguments
         obj
         options.Figure {mustBeA(options.Figure,'matlab.ui.Figure')} = figure
@@ -11,6 +11,9 @@ function line_handle = plot(obj,options)
     Y = [[IPoints.Y];[JPoints.Y]];
     Z = [[IPoints.Z];[JPoints.Z]];
     figure(options.Figure) % 将options.Figure设置为当前图窗
-    line_handle = plot3(options.Axis,X,Y,Z,'Color',options.Color);
+    plot3(options.Axis,X,Y,Z,'Color',options.Color);
     view(3);
+
+    fig = options.Figure;
+    ax = options.Axis;
 end

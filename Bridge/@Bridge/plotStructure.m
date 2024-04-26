@@ -1,8 +1,9 @@
-function [fig,ax] = plotStructure(obj,fig,ax)
+function [fig,ax] = plotStructure(obj,fig,ax,options)
     arguments
         obj
         fig = figure
         ax = axes
+        options.ifPlotPoints = true
     end
     structures = obj.StructureList;
     len = length(structures);
@@ -17,7 +18,9 @@ function [fig,ax] = plotStructure(obj,fig,ax)
         end
         figure(fig) % 将options.Figure设置为当前图窗
         hold(ax,'on')
-        points.plot('Figure',fig,'Axis',ax);
+        if options.ifPlotPoints
+            points.plot('Figure',fig,'Axis',ax);
+        end
         lines.plot('Figure',fig,'Axis',ax);
     end
 end

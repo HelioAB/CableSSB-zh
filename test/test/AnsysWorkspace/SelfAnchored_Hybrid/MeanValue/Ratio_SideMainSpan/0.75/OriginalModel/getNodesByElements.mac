@@ -94,25 +94,35 @@ num_elems(1567)=1567,1568,1569,1570,1571,1572,1573,1574,1575,1576,1577,1578,1579
 
 *dim,Num_INode,array,count_elems,1
 *dim,Num_JNode,array,count_elems,1
+*dim,Num_KNode,array,count_elems,1
 *dim,X_INode,array,count_elems,1
 *dim,Y_INode,array,count_elems,1
 *dim,Z_INode,array,count_elems,1
 *dim,X_JNode,array,count_elems,1
 *dim,Y_JNode,array,count_elems,1
 *dim,Z_JNode,array,count_elems,1
+*dim,X_KNode,array,count_elems,1
+*dim,Y_KNode,array,count_elems,1
+*dim,Z_KNode,array,count_elems,1
 *do,i,1,count_elems
-    *get,Num_INode(i),Elem,num_elems(i),Node,1
+    Num_INode(i) = NELEM(num_elems(i),1)
     X_INode(i) = NX(Num_INode(i))
     Y_INode(i) = NY(Num_INode(i))
     Z_INode(i) = NZ(Num_INode(i))
-    *get,Num_JNode(i),Elem,num_elems(i),Node,2
+    Num_JNode(i) = NELEM(num_elems(i),2)
     X_JNode(i) = NX(Num_JNode(i))
     Y_JNode(i) = NY(Num_JNode(i))
     Z_JNode(i) = NZ(Num_JNode(i))
+    Num_KNode(i) = NELEM(num_elems(i),3)
+    *if,Num_KNode(i),NE,0,then
+        X_KNode(i) = NX(Num_KNode(i))
+        Y_KNode(i) = NY(Num_KNode(i))
+        Z_KNode(i) = NZ(Num_KNode(i))
+    *endif
 *enddo
 
 ! 导出数据
 *cfopen,Num_Nodes,txt
-*vwrite,Num_INode(1),X_INode(1),Y_INode(1),Z_INode(1),Num_JNode(1),X_JNode(1),Y_JNode(1),Z_JNode(1)
-(8E20.8)
+*vwrite,Num_INode(1),X_INode(1),Y_INode(1),Z_INode(1),Num_JNode(1),X_JNode(1),Y_JNode(1),Z_JNode(1),Num_KNode(1),X_KNode(1),Y_KNode(1),Z_KNode(1)
+(12E20.8)
 *cfclos

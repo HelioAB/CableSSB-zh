@@ -119,6 +119,12 @@ num_elements_beam(1135)=1135,1136,1137,1138,1139,1140,1141,1142,1143,1144,1145,1
 *enddo
 *dim,Fxi_beam,array,count_elements_beam
 *dim,Fxj_beam,array,count_elements_beam
+*dim,Fyi_beam,array,count_elements_beam
+*dim,Fyj_beam,array,count_elements_beam
+*dim,Fzi_beam,array,count_elements_beam
+*dim,Fzj_beam,array,count_elements_beam
+*dim,Mxi_beam,array,count_elements_beam
+*dim,Mxj_beam,array,count_elements_beam
 *dim,Myi_beam,array,count_elements_beam
 *dim,Myj_beam,array,count_elements_beam
 *dim,Mzi_beam,array,count_elements_beam
@@ -128,6 +134,12 @@ allsel
 *do,i,1,count_elements_beam,1
     *get,Fxi_beam(i),Elem,num_elements_beam(i),Smisc,1
     *get,Fxj_beam(i),Elem,num_elements_beam(i),Smisc,14
+    *get,Fyi_beam(i),Elem,num_elements_beam(i),Smisc,6
+    *get,Fyj_beam(i),Elem,num_elements_beam(i),Smisc,19
+    *get,Fzi_beam(i),Elem,num_elements_beam(i),Smisc,5
+    *get,Fzj_beam(i),Elem,num_elements_beam(i),Smisc,18
+    *get,Mxi_beam(i),Elem,num_elements_beam(i),Smisc,4
+    *get,Mxj_beam(i),Elem,num_elements_beam(i),Smisc,17
     *get,Myi_beam(i),Elem,num_elements_beam(i),Smisc,2
     *get,Myj_beam(i),Elem,num_elements_beam(i),Smisc,15
     *get,Mzi_beam(i),Elem,num_elements_beam(i),Smisc,3
@@ -141,6 +153,6 @@ allsel
 *cfclos
 ! 导出数据（beam单元）
 *cfopen,InternalForce_beam,txt
-*vwrite,num_elements_beam(1),num_INode_beam(1),num_JNode_beam(1),Fxi_beam(1),Fxj_beam(1),Myi_beam(1),Myj_beam(1),Mzi_beam(1),Mzj_beam(1)
-(9E20.8)
+*vwrite,num_elements_beam(1),num_INode_beam(1),num_JNode_beam(1),Fxi_beam(1),Fxj_beam(1),Fyi_beam(1),Fyj_beam(1),Fzi_beam(1),Fzj_beam(1),Mxi_beam(1),Mxj_beam(1),Myi_beam(1),Myj_beam(1),Mzi_beam(1),Mzj_beam(1)
+(15E20.8)
 *cfclos

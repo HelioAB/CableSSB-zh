@@ -14,9 +14,9 @@ function output_str = outputCoupling(obj,fileName)
         cp_command = sprintf('!%s \n',coupling.Name);% 注释
             [defNode_cell,undefNode_cell] = findNodeByKeyPoint([coupling.MasterPoint,coupling.SlavePoint]);
             cp_command = [cp_command,strjoin(defNode_cell,'\n'),'\n','allsel \n'];
-        for j=1:length(coupling.DoF)
+        for j=1:length(coupling.DoFs)
             for k=1:count_command
-                cp_command = [cp_command,sprintf('cp,Next,%s,Node1',char(coupling.DoF(j)))];
+                cp_command = [cp_command,sprintf('cp,Next,%s,Node1',char(coupling.DoFs(j)))];
                 for m=1:count_mod
                     cp_command = strcat(cp_command,sprintf(',Node%d',m+1));
                 end

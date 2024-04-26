@@ -4,7 +4,8 @@ classdef Element < DataRecord
         JNode
         KNode
         StiffnessMatrix_GlobalCoord = zeros(12,12)
-        Force_GlobalCoord = nan(12,1) % 存储IJ节点力结果（Fx, Fy, Fz, Mx, My, Mz），整体坐标系下。如果还没有被计算出来，就是NaN向量
+        Force_GlobalCoord = nan(12,1) % 存储IJ节点力结果（Fxi, Fyi, Fzi, Mxi, Myi, Mzi, Fxj, Fyj, Fzj, Mxj, Myj, Mzj），整体坐标系下。如果还没有被计算出来，就是NaN向量
+        Force_LocalCoord
         Section
         Material
         ElementType
@@ -21,6 +22,7 @@ classdef Element < DataRecord
         %   2. INode和JNode的位移变化，使得Displacement、Force变化
         StiffnessMatrix = []% 接口：StiffnessMatrix_LocalCoord(obj)
         TransformMatrix = []% 接口：TransformMatrix_Global2Local(obj)
+        Force_LocalCoord_private = nan(12,1)
     end
     methods
         function obj = Element(Num,INode,JNode,KNode)
@@ -45,7 +47,7 @@ classdef Element < DataRecord
                     if ~isempty(Num)
                         mustBeEqualSize(INode,Num)
                     else
-                        Num = Element.MaxNum()+[1:len];
+                        Num = Element.MaxNum()+(1:len);
                     end
                     % 创建对象数组
                     obj(1,len) = Element();
@@ -101,9 +103,17 @@ classdef Element < DataRecord
             T = obj.TransformMatrix_Global2Local;
             vector = T*obj.Displacement_GlobalCoord;
         end
-        function vector = Force_LocalCoord(obj)
-            T = obj.TransformMatrix_Global2Local;
-            vector = T * obj.StiffnessMatrix_GlobalCoord * obj.Displacement_GlobalCoord;
+        function vector = get.Force_LocalCoord(obj)
+            if any(isnan(obj.Force_LocalCoord_private))
+                T = obj.TransformMatrix_Global2Local;
+                vector = T * obj.StiffnessMatrix_GlobalCoord * obj.Displacement_GlobalCoord;
+            else
+                vector = obj.Force_LocalCoord_private;
+            end
+            
+        end
+        function setForce_LocalCoord(obj,val)
+            obj.Force_LocalCoord_private = val;
         end
         function converted_vector = AnsysForceResult(obj)
             T = obj.TransformMatrix_Global2Local;
@@ -112,7 +122,7 @@ classdef Element < DataRecord
             converted_vector = [1,1,-1,1,1,-1,-1,-1,1,-1,-1,1]'.*vector;
             % 为什么要转换见：https://www.yuque.com/helios-library/qzyh8p/gfo3z59yrv9hymbu/edit?toc_node_uuid=8-1dC90ACEAr-FFx
         end
-        line_handle = plot(obj,options)
+        [fig,ax,X,Y,Z] = plot(obj,options)
         BendingStraintEnergy = getBendingStrainEnergy(obj)
         T = TransformMatrix_Global2Local(obj) % 坐标变换矩阵， T: Global_Coord -> Local_Coord
         len = ElementLength(obj) % 单元长度
@@ -120,7 +130,13 @@ classdef Element < DataRecord
         [Norm_x,Norm_y,Norm_z] = getLocalCoordSystem(obj,tol) % 单元坐标系x、y、z在整体坐标系下的方向向量
         [Comp_x,Comp_y,Comp_z] = getLocalCoordSystemComponent(obj,GlobalDirection,tol) % 给定一个大小和方向direction（1*3数值向量），获得在单元坐标系的各个分量
         coord_centerpoint = getCenterPointCoord(obj)
-        sorted_elems = sortByCenterPoint(obj,Direction)
+        [sorted_elems,index] = sortByCenterPoint(obj,Direction)
+        [index_INodeSmaller,index_JNodeSmaller,index_IJNodeSame] = ifINodeSmaller(obj,Direction)
+        % 后处理
+        [sorted_nodes,Displacement] = getNodeGlobalDisplacement(obj,type_elems,type_displacement)
+        [fig,ax] = plotNodeGlobalDisplacement(obj,Nodes,Displacement,type_nodes,options)
+        [ANodes,BNodes,InternalForce_A,InternalForce_B] = getBeamElementGlobalForce(obj,type_elems,type_force)
+        [fig,ax] = plotBeamElementGlobalForce(obj,ANodes,BNodes,InternalForce_A,InternalForce_B,type_elems,options)
     end
     methods(Static)
         function collection = Collection()

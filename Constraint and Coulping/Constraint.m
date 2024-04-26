@@ -2,7 +2,7 @@ classdef Constraint < DataRecord
     properties
         Name
         Point
-        DoF
+        DoFs
         Value
     end
     methods
@@ -17,7 +17,7 @@ classdef Constraint < DataRecord
                 obj.Num = Constraint.MaxNum+1;
                 obj.Name = '';
                 obj.Point = point;
-                obj.DoF = convertDoF(dof);
+                obj.DoFs = convertDoF(dof);
                 obj.Value = value;
             end
         end
@@ -30,28 +30,52 @@ classdef Constraint < DataRecord
         function point_handle = plot(obj,S,C,options)
             arguments
                 % 均为MATLAB中默认的参数值
-                obj
-                S = 36
-                C = 'r'
+                obj (1,1)
+                S = 20
+                C = [232,139,0]/255
+                options.LineWidth = 0.5
+                options.Filled (1,1) {mustBeNumericOrLogical} = true
+                options.MarkerType = 'o'
                 options.Figure {mustBeA(options.Figure,'matlab.ui.Figure')} = figure
                 options.Axis {mustBeA(options.Axis,'matlab.graphics.axis.Axes')} = axes
             end
+            dofs = obj.DoFs;
+            all_dofs = DoF.All;
+            index = false(1,6);
+            for i=1:6
+                index(i) = any(all_dofs(i)==dofs);
+            end
+            % 一般情况使用上三角'^'
+            options.MarkerType = '^';
+            % 仅有Ux，使用'>'
+            if index(1) && ~(index(2)||index(3)||index(4)||index(5)||index(6))
+                options.MarkerType = '>';
+            end
+            % 固结，使用'_'
+            if index(1)&&index(2)&&index(3)&&index(4)&&index(5)&&index(6)
+                S = 24;
+                options.Filled = false;
+                options.MarkerType = '_';
+                options.LineWidth = 2;
+            end
             % 其他参数通过访问对象point_handle的属性值修改
-            point = [obj.Point];
+            points = obj.Point;
             hold(options.Axis,'on')
-            point_handle = point.plot(S,C,"Figure",options.Figure,"Axis",options.Axis);
+            point_handle = points.plot(S,C,'LineWidth',options.LineWidth,...
+                                           'MarkerType',options.MarkerType,...
+                                           'Filled',options.Filled,...
+                                           "Figure",options.Figure,...
+                                           "Axis",options.Axis);
             view(3);
-            % 如何画出不同方向的DoF还需要再考虑
-            %
         end
     end
     methods(Static)
-        function obj = AllDoF(point,value)
+        function obj = AllDoFs(point,value)
             arguments
                 point (1,1) {mustBeA(point,'Point')}
                 value (1,7) {mustBeNumeric} = zeros(1,7)
             end
-            DoFs = {'Ux','Uy','Uz','Rotx','Roty','Rotz','Wrap'};
+            DoFs = {'Ux','Uy','Uz','Rotx','Roty','Rotz'};
             obj = Constraint(point,DoFs,value);
         end
         function obj = Uxyz(point,value)

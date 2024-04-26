@@ -8,25 +8,28 @@ classdef OutputToAnsys < OutputTo
         Params
         PostProcessingPath = struct
     end
-    properties(Constant)
-        ExampleParams =  struct('AnsysPath','D:\ANSYS 2022 R2\ANSYS Student\v222\commonfiles\launcherQT\source\..\..\..\ansys\bin\winx64\MAPDL.EXE',...
-                                'JobName','Bridge_01',...
-                                'WorkPath','C:\Users\Huawei\Desktop\Matlab OOP\Susp\Susp V.4\Output Files\test',...
-                                'MacFilePath','C:\Users\Huawei\Desktop\Matlab OOP\Susp\Susp V.4\Output Files\test\main.mac',...
-                                'ResultFilePath','C:\Users\Huawei\Desktop\Matlab OOP\Susp\Susp V.4\Output Files\test\result.out')
-    end
     methods
         function obj = OutputToAnsys(OutputObj,options)
             arguments
                 OutputObj = Bridge.empty
-                options.AnsysPath = OutputToAnsys.ExampleParams.AnsysPath
-                options.WorkPath = OutputToAnsys.ExampleParams.WorkPath
-                options.JobName = OutputToAnsys.ExampleParams.JobName
-                options.MacFilePath = OutputToAnsys.ExampleParams.MacFilePath
-                options.ResultFilePath = OutputToAnsys.ExampleParams.ResultFilePath
+                options.AnsysPath (1,:) {mustBeTextScalar} = 'C:\Program Files\ANSYS Inc\ANSYS Student\v232\ansys\bin\winx64\MAPDL.exe'
+                options.WorkPath (1,:) {mustBeTextScalar} = ''
+                options.JobName (1,:) {mustBeTextScalar} = 'JobName'
+                options.MacFilePath (1,:) {mustBeTextScalar} = ''
+                options.ResultFilePath (1,:) {mustBeTextScalar} = ''
             end
             % 继承
             obj = obj@OutputTo(OutputObj);
+            if isempty(options.WorkPath)
+                error('请输入Ansys分析的工作路径')
+            else
+                if isempty(options.MacFilePath)
+                    options.MacFilePath = fullfile(options.WorkPath,'main.mac');
+                end
+                if isempty(options.ResultFilePath)
+                    options.ResultFilePath = fullfile(options.WorkPath,'result.out');
+                end
+            end
             % 成员属性赋值
             obj.AnsysPath = OutputToAnsys.convertTextToChar(options.AnsysPath);
             obj.WorkPath = OutputToAnsys.convertTextToChar(options.WorkPath);
@@ -35,7 +38,7 @@ classdef OutputToAnsys < OutputTo
             obj.ResultFilePath = OutputToAnsys.convertTextToChar(options.ResultFilePath);
         end
         new_obj = clone(obj);
-        action(obj);
+        action(obj,options);
         [status,cmdout] = runMac(obj,options)
         outputAPDL(obj,output_str,file_name,output_method)
         output_str = outputConstraint(obj);
@@ -57,14 +60,15 @@ classdef OutputToAnsys < OutputTo
 
         % 输出获取Ansys中某些数据的命令流，输入参数：obj,quaryObj,DAtaBasePath 输出参数：ResultFilePath
         [nodes,elements] = getAllNodesAndAllElements(obj)
-        [nodes,index_inodes,index_jnodes] = getNodeByNumElements(obj,Num_Elems)
+        [inodes,jnodes,knodes] = getNodeByNumElements(obj,Num_Elems)
         FiniteElementModel = getFiniteElementModel(obj)
         ResultFilePath = getBendingStrainEnergy(obj,structure,DataBasePath)
-        data = getDisplacement(obj,num_MonitoredNodes)
-        data = getInternalForce(obj,num_MonitoredElems_Link,num_MonitoredElems_Beam)
+        data = getDisplacementFromAnsys(obj,num_MonitoredNodes)
+        data = getInternalForceFromAnsys(obj,num_MonitoredElems_Link,num_MonitoredElems_Beam)
         [OutputMethod_clone,num_GirderNodes] = analyzeInfluenceLine(obj,num_GirderNodes,value_Force)
-        data = getInfluenceLineResult(obj,OutputMethodObj_analyzeInfluenceLine,num_GirderNodes,num_MonitoredNodes,num_MonitoredElems_Link,num_MonitoredElems_Beam)
-
+        data = getInfluenceLineFromAnsys(obj,OutputMethodObj_analyzeInfluenceLine,num_GirderNodes,num_MonitoredNodes,num_MonitoredElems_Link,num_MonitoredElems_Beam)
+        bridgeobj = loadBridgeObj(obj,options)
+        [data,nodes,elems_link,elems_beam] = loadResults(obj,options)
     end
     methods(Static)
         function workspace_path = createWorkSpace(NewFolderName,ParentFolder)

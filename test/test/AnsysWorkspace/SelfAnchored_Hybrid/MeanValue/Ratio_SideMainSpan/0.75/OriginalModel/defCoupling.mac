@@ -1,7 +1,7 @@
 !自锚耦合1 
-ksel,s,kp,,139 $ nslk,s $ *get,Node1,node,,num,min
-ksel,s,kp,,590 $ nslk,s $ *get,Node2,node,,num,min
-ksel,s,kp,,613 $ nslk,s $ *get,Node3,node,,num,min
+ksel,s,kp,,332 $ nslk,s $ *get,Node1,node,,num,min
+ksel,s,kp,,785 $ nslk,s $ *get,Node2,node,,num,min
+ksel,s,kp,,808 $ nslk,s $ *get,Node3,node,,num,min
 allsel 
 cp,Next,Ux,Node1,Node2,Node3
 cp,Next,Uy,Node1,Node2,Node3
@@ -9,9 +9,9 @@ cp,Next,Uz,Node1,Node2,Node3
 Node1 = $ Node2 = $ Node3 =
 
 !自锚耦合2 
-ksel,s,kp,,142 $ nslk,s $ *get,Node1,node,,num,min
-ksel,s,kp,,658 $ nslk,s $ *get,Node2,node,,num,min
-ksel,s,kp,,681 $ nslk,s $ *get,Node3,node,,num,min
+ksel,s,kp,,335 $ nslk,s $ *get,Node1,node,,num,min
+ksel,s,kp,,853 $ nslk,s $ *get,Node2,node,,num,min
+ksel,s,kp,,876 $ nslk,s $ *get,Node3,node,,num,min
 allsel 
 cp,Next,Ux,Node1,Node2,Node3
 cp,Next,Uy,Node1,Node2,Node3
@@ -19,8 +19,8 @@ cp,Next,Uz,Node1,Node2,Node3
 Node1 = $ Node2 = $ Node3 =
 
 !塔梁耦合1 
-ksel,s,kp,,160 $ nslk,s $ *get,Node1,node,,num,min
-ksel,s,kp,,1 $ nslk,s $ *get,Node2,node,,num,min
+ksel,s,kp,,353 $ nslk,s $ *get,Node1,node,,num,min
+ksel,s,kp,,194 $ nslk,s $ *get,Node2,node,,num,min
 allsel 
 cp,Next,Uy,Node1,Node2
 cp,Next,Uz,Node1,Node2
@@ -28,8 +28,8 @@ cp,Next,Rotx,Node1,Node2
 Node1 = $ Node2 =
 
 !塔梁耦合2 
-ksel,s,kp,,184 $ nslk,s $ *get,Node1,node,,num,min
-ksel,s,kp,,93 $ nslk,s $ *get,Node2,node,,num,min
+ksel,s,kp,,378 $ nslk,s $ *get,Node1,node,,num,min
+ksel,s,kp,,286 $ nslk,s $ *get,Node2,node,,num,min
 allsel 
 cp,Next,Uy,Node1,Node2
 cp,Next,Uz,Node1,Node2
@@ -37,9 +37,9 @@ cp,Next,Rotx,Node1,Node2
 Node1 = $ Node2 =
 
 !主缆、塔耦合1 
-ksel,s,kp,,158 $ nslk,s $ *get,Node1,node,,num,min
-ksel,s,kp,,404 $ nslk,s $ *get,Node2,node,,num,min
-ksel,s,kp,,497 $ nslk,s $ *get,Node3,node,,num,min
+ksel,s,kp,,351 $ nslk,s $ *get,Node1,node,,num,min
+ksel,s,kp,,599 $ nslk,s $ *get,Node2,node,,num,min
+ksel,s,kp,,692 $ nslk,s $ *get,Node3,node,,num,min
 allsel 
 cp,Next,Ux,Node1,Node2,Node3
 cp,Next,Uy,Node1,Node2,Node3
@@ -47,9 +47,9 @@ cp,Next,Uz,Node1,Node2,Node3
 Node1 = $ Node2 = $ Node3 =
 
 !主缆、梁耦合2 
-ksel,s,kp,,182 $ nslk,s $ *get,Node1,node,,num,min
-ksel,s,kp,,496 $ nslk,s $ *get,Node2,node,,num,min
-ksel,s,kp,,589 $ nslk,s $ *get,Node3,node,,num,min
+ksel,s,kp,,376 $ nslk,s $ *get,Node1,node,,num,min
+ksel,s,kp,,691 $ nslk,s $ *get,Node2,node,,num,min
+ksel,s,kp,,784 $ nslk,s $ *get,Node3,node,,num,min
 allsel 
 cp,Next,Ux,Node1,Node2,Node3
 cp,Next,Uy,Node1,Node2,Node3

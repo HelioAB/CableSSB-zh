@@ -111,7 +111,7 @@
   INITIAL DIRECTORY = C:\Users\11440\Desktop\usage\Susp V.4\CableSSB-zh\test\test\AnsysWorkspace\SelfAnchored_Hybrid\MeanValue\Ratio_SideMainSpan\0.75\OriginalModel
 
  RELEASE= 2023 R2              BUILD= 23.2      UP20230531   VERSION=WINDOWS x64 
- CURRENT JOBNAME=OriginalModel0  00:43:10  APR 20, 2024 CP=      0.000
+ CURRENT JOBNAME=OriginalModel0  08:53:27  APR 26, 2024 CP=      0.016
 
      1  /post1  
      2  resume,OriginalModelResult,db   
@@ -234,31 +234,43 @@
    119  *enddo  
    120  *dim,Fxi_beam,array,count_elements_beam 
    121  *dim,Fxj_beam,array,count_elements_beam 
-   122  *dim,Myi_beam,array,count_elements_beam 
-   123  *dim,Myj_beam,array,count_elements_beam 
-   124  *dim,Mzi_beam,array,count_elements_beam 
-   125  *dim,Mzj_beam,array,count_elements_beam 
-   126  ! 提取内力（beam单元）  
-   127  allsel  
-   128  *do,i,1,count_elements_beam,1   
-   129      *get,Fxi_beam(i),Elem,num_elements_beam(i),Smisc,1  
-   130      *get,Fxj_beam(i),Elem,num_elements_beam(i),Smisc,14 
-   131      *get,Myi_beam(i),Elem,num_elements_beam(i),Smisc,2  
-   132      *get,Myj_beam(i),Elem,num_elements_beam(i),Smisc,15 
-   133      *get,Mzi_beam(i),Elem,num_elements_beam(i),Smisc,3  
-   134      *get,Mzj_beam(i),Elem,num_elements_beam(i),Smisc,16 
-   135  *enddo  
-   136      
-   137  ! 导出数据（link单元）  
-   138  *cfopen,InternalForce_link,txt  
-   139  *vwrite,num_elements_link(1),num_INode_link(1),num_JNode_link(1),Fx_link(1) 
-   140  (4E20.8)
-   141  *cfclos 
-   142  ! 导出数据（beam单元）  
-   143  *cfopen,InternalForce_beam,txt  
-   144  *vwrite,num_elements_beam(1),num_INode_beam(1),num_JNode_beam(1),Fxi_beam(1),Fxj_beam(1),Myi_beam(1),Myj_beam(1),Mzi_beam(1),Mzj_beam(1)
-   145  (9E20.8)
-   146  *cfclos 
+   122  *dim,Fyi_beam,array,count_elements_beam 
+   123  *dim,Fyj_beam,array,count_elements_beam 
+   124  *dim,Fzi_beam,array,count_elements_beam 
+   125  *dim,Fzj_beam,array,count_elements_beam 
+   126  *dim,Mxi_beam,array,count_elements_beam 
+   127  *dim,Mxj_beam,array,count_elements_beam 
+   128  *dim,Myi_beam,array,count_elements_beam 
+   129  *dim,Myj_beam,array,count_elements_beam 
+   130  *dim,Mzi_beam,array,count_elements_beam 
+   131  *dim,Mzj_beam,array,count_elements_beam 
+   132  ! 提取内力（beam单元）  
+   133  allsel  
+   134  *do,i,1,count_elements_beam,1   
+   135      *get,Fxi_beam(i),Elem,num_elements_beam(i),Smisc,1  
+   136      *get,Fxj_beam(i),Elem,num_elements_beam(i),Smisc,14 
+   137      *get,Fyi_beam(i),Elem,num_elements_beam(i),Smisc,6  
+   138      *get,Fyj_beam(i),Elem,num_elements_beam(i),Smisc,19 
+   139      *get,Fzi_beam(i),Elem,num_elements_beam(i),Smisc,5  
+   140      *get,Fzj_beam(i),Elem,num_elements_beam(i),Smisc,18 
+   141      *get,Mxi_beam(i),Elem,num_elements_beam(i),Smisc,4  
+   142      *get,Mxj_beam(i),Elem,num_elements_beam(i),Smisc,17 
+   143      *get,Myi_beam(i),Elem,num_elements_beam(i),Smisc,2  
+   144      *get,Myj_beam(i),Elem,num_elements_beam(i),Smisc,15 
+   145      *get,Mzi_beam(i),Elem,num_elements_beam(i),Smisc,3  
+   146      *get,Mzj_beam(i),Elem,num_elements_beam(i),Smisc,16 
+   147  *enddo  
+   148      
+   149  ! 导出数据（link单元）  
+   150  *cfopen,InternalForce_link,txt  
+   151  *vwrite,num_elements_link(1),num_INode_link(1),num_JNode_link(1),Fx_link(1) 
+   152  (4E20.8)
+   153  *cfclos 
+   154  ! 导出数据（beam单元）  
+   155  *cfopen,InternalForce_beam,txt  
+   156  *vwrite,num_elements_beam(1),num_INode_beam(1),num_JNode_beam(1),Fxi_beam(1),Fxj_beam(1),Fyi_beam(1),Fyj_beam(1),Fzi_beam(1),Fzj_beam(1),Mxi_beam(1),Mxj_beam(1),Myi_beam(1),Myj_beam(1),Mzi_beam(1),Mzj_beam(1)
+   157  (15E20.8)   
+   158  *cfclos 
 
  RUN SETUP PROCEDURE FROM FILE= C:\Program Files\ANSYS Inc\ANSYS Student\v232\ANSYS\apdl\start.ans
 
@@ -266,7 +278,7 @@
 
  *** MAPDL - ENGINEERING ANALYSIS SYSTEM  RELEASE 2023 R2          23.2     ***
  Ansys Mechanical Enterprise Academic Student      
- 01055371  VERSION=WINDOWS x64   00:43:11  APR 20, 2024 CP=      0.109
+ 01055371  VERSION=WINDOWS x64   08:53:29  APR 26, 2024 CP=      0.094
 
                                                                                
 
@@ -274,7 +286,7 @@
 
           ***** MAPDL RESULTS INTERPRETATION (POST1) *****
 
- *** NOTE ***                            CP =       0.109   TIME= 00:43:11
+ *** NOTE ***                            CP =       0.094   TIME= 08:53:29
  Reading results into the database (SET command) will update the current 
  displacement and force boundary conditions in the database with the     
  values from the results file for that load set.  Note that any          
@@ -287,14 +299,14 @@
 
  TITLE =                                                                       
  ANALYSIS TYPE =  STATIC (STEADY-STATE)
-       673 KEYPOINTS DEFINED     MAX KEYPOINT NUMBER =            681
+       675 KEYPOINTS DEFINED     MAX KEYPOINT NUMBER =           1455
        828 LINES DEFINED         MAX LINE NUMBER =                828
-         8 ELEM TYPES DEFINED    MAX ELEM TYPE NUMBER =             8
+         8 ELEM TYPES DEFINED    MAX ELEM TYPE NUMBER =            40
       1580 ELEMENTS DEFINED      MAX ELEMENT NUMBER =            1580
-      1425 NODES DEFINED         MAX NODE NUMBER =               1425
-         8 MATERIALS DEFINED     MAX MATERIAL NUMBER =              8
+      2657 NODES DEFINED         MAX NODE NUMBER =               2657
+         8 MATERIALS DEFINED     MAX MATERIAL NUMBER =             40
        428 REAL CONSTS DEFINED   MAX REAL CONST NUMBER =          828
-         5 SECTIONS DEFINED      MAX SECTION NUMBER =               5
+         5 SECTIONS DEFINED      MAX SECTION NUMBER =              37
          0 COORD SYS DEFINED     MAX COORD SYS NUMBER =             0
         18 COUPLING EQNS DEFINED MAX COUPLING EQN NUMBER =         18
  
@@ -523,9 +535,9 @@
 
  *DO LOOP ON PARAMETER= I FROM  1.0000     TO  428.00     BY  1.0000    
 
- *GET  NUM_INODE_LINK  FROM  ELEM      1153  ITEM=NODE 1         VALUE=  984.000000    
+ *GET  NUM_INODE_LINK  FROM  ELEM      1153  ITEM=NODE 1         VALUE=  1064.00000    
 
- *GET  NUM_JNODE_LINK  FROM  ELEM      1153  ITEM=NODE 2         VALUE=  1096.00000    
+ *GET  NUM_JNODE_LINK  FROM  ELEM      1153  ITEM=NODE 2         VALUE=  1176.00000    
 
  *ENDDO  INDEX= I                               
 
@@ -535,7 +547,7 @@
 
  *DO LOOP ON PARAMETER= I FROM  1.0000     TO  428.00     BY  1.0000    
 
- *GET  FX_LINK   FROM  ELEM      1153  ITEM=SMIS 1         VALUE=  3324727.00    
+ *GET  FX_LINK   FROM  ELEM      1153  ITEM=SMIS 1         VALUE=  3322050.75    
 
  *ENDDO  INDEX= I                               
 
@@ -1074,6 +1086,18 @@
 
  SET PARAMETER DIMENSIONS ON  FXJ_BEAM TYPE=ARRA  DIMENSIONS=  1152     1     1
 
+ SET PARAMETER DIMENSIONS ON  FYI_BEAM TYPE=ARRA  DIMENSIONS=  1152     1     1
+
+ SET PARAMETER DIMENSIONS ON  FYJ_BEAM TYPE=ARRA  DIMENSIONS=  1152     1     1
+
+ SET PARAMETER DIMENSIONS ON  FZI_BEAM TYPE=ARRA  DIMENSIONS=  1152     1     1
+
+ SET PARAMETER DIMENSIONS ON  FZJ_BEAM TYPE=ARRA  DIMENSIONS=  1152     1     1
+
+ SET PARAMETER DIMENSIONS ON  MXI_BEAM TYPE=ARRA  DIMENSIONS=  1152     1     1
+
+ SET PARAMETER DIMENSIONS ON  MXJ_BEAM TYPE=ARRA  DIMENSIONS=  1152     1     1
+
  SET PARAMETER DIMENSIONS ON  MYI_BEAM TYPE=ARRA  DIMENSIONS=  1152     1     1
 
  SET PARAMETER DIMENSIONS ON  MYJ_BEAM TYPE=ARRA  DIMENSIONS=  1152     1     1
@@ -1086,17 +1110,29 @@
 
  *DO LOOP ON PARAMETER= I FROM  1.0000     TO  1152.0     BY  1.0000    
 
- *GET  FXI_BEAM  FROM  ELEM         1  ITEM=SMIS 1         VALUE= -304073376.    
+ *GET  FXI_BEAM  FROM  ELEM         1  ITEM=SMIS 1         VALUE= -304120416.    
 
- *GET  FXJ_BEAM  FROM  ELEM         1  ITEM=SMIS 14        VALUE= -304073376.    
+ *GET  FXJ_BEAM  FROM  ELEM         1  ITEM=SMIS 14        VALUE= -304120576.    
 
- *GET  MYI_BEAM  FROM  ELEM         1  ITEM=SMIS 2         VALUE=  704433984.    
+ *GET  FYI_BEAM  FROM  ELEM         1  ITEM=SMIS 6         VALUE=  1.08463454    
 
- *GET  MYJ_BEAM  FROM  ELEM         1  ITEM=SMIS 15        VALUE=  704433984.    
+ *GET  FYJ_BEAM  FROM  ELEM         1  ITEM=SMIS 19        VALUE=  1.08316815    
 
- *GET  MZI_BEAM  FROM  ELEM         1  ITEM=SMIS 3         VALUE=  22.4303780    
+ *GET  FZI_BEAM  FROM  ELEM         1  ITEM=SMIS 5         VALUE= -25635556.0    
 
- *GET  MZJ_BEAM  FROM  ELEM         1  ITEM=SMIS 16        VALUE=  22.4303780    
+ *GET  FZJ_BEAM  FROM  ELEM         1  ITEM=SMIS 18        VALUE= -24893582.0    
+
+ *GET  MXI_BEAM  FROM  ELEM         1  ITEM=SMIS 4         VALUE=-0.178660572    
+
+ *GET  MXJ_BEAM  FROM  ELEM         1  ITEM=SMIS 17        VALUE=-0.178486869    
+
+ *GET  MYI_BEAM  FROM  ELEM         1  ITEM=SMIS 2         VALUE=  725490368.    
+
+ *GET  MYJ_BEAM  FROM  ELEM         1  ITEM=SMIS 15        VALUE=  687593536.    
+
+ *GET  MZI_BEAM  FROM  ELEM         1  ITEM=SMIS 3         VALUE= -105.430679    
+
+ *GET  MZJ_BEAM  FROM  ELEM         1  ITEM=SMIS 16        VALUE= -107.050362    
 
  *ENDDO  INDEX= I                               
 
@@ -1125,7 +1161,7 @@
 +--------------------- M A P D L   S T A T I S T I C S ------------------------+
 
 Release: 2023 R2            Build: 23.2       Update: UP20230531   Platform: WINDOWS x64 
-Date Run: 04/20/2024   Time: 00:43     Process ID: 8176
+Date Run: 04/26/2024   Time: 08:53     Process ID: 9652
 Operating System: Windows 11  (Build: 22631)
 
 Processor Model: 12th Gen Intel(R) Core(TM) i5-12500H
@@ -1157,16 +1193,16 @@ Input File: C:\Users\11440\Desktop\usage\Susp V.4\CableSSB-zh\test\test\AnsysWor
      2               HelioHonorV14   C:\Users\11440\Desktop\usage\Susp V.4\CableSSB-zh\test\test\AnsysWorkspace\SelfAnchored_Hybrid\MeanValue\Ratio_SideMainSpan\0.75\OriginalModel
      3               HelioHonorV14   C:\Users\11440\Desktop\usage\Susp V.4\CableSSB-zh\test\test\AnsysWorkspace\SelfAnchored_Hybrid\MeanValue\Ratio_SideMainSpan\0.75\OriginalModel
  
-Latency time from master to core     1 =    3.250 microseconds
-Latency time from master to core     2 =    5.831 microseconds
-Latency time from master to core     3 =    4.919 microseconds
+Latency time from master to core     1 =    2.455 microseconds
+Latency time from master to core     2 =    5.459 microseconds
+Latency time from master to core     3 =    5.352 microseconds
  
-Communication speed from master to core     1 = 11033.11 MB/sec
-Communication speed from master to core     2 =  8009.93 MB/sec
-Communication speed from master to core     3 =  6746.33 MB/sec
+Communication speed from master to core     1 =  9321.29 MB/sec
+Communication speed from master to core     2 =  6763.90 MB/sec
+Communication speed from master to core     3 =  7412.97 MB/sec
 
-Total CPU time for main thread                    :        0.2 seconds
-Total CPU time summed for all threads             :        0.1 seconds
+Total CPU time for main thread                    :        0.4 seconds
+Total CPU time summed for all threads             :        0.3 seconds
 
 Elapsed time spent obtaining a license            :        1.1 seconds
 Elapsed time spent pre-processing model (/PREP7)  :        0.0 seconds
@@ -1178,7 +1214,7 @@ Elapsed time spent post-processing model (/POST1) :        0.0 seconds
 
 Sum of disk space used on all processes            :        0.0 MB
 
-Sum of memory used on all processes               :       33.0 MB
+Sum of memory used on all processes               :       34.0 MB
 Sum of memory allocated on all processes          :     2832.0 MB
 Physical memory available                         :         16 GB
 Total amount of I/O written to disk               :        0.0 GB
@@ -1198,13 +1234,13 @@ Total amount of I/O read from disk                :        0.0 GB
  |-----------------------------------------------------------------------------|
  |                                                                             |
  |  Database Requested(-db)     1024 MB     Scratch Memory Requested   1024 MB |
- |  Max Database Used(Master)      9 MB     Max Scratch Used(Master)      9 MB |
+ |  Max Database Used(Master)     10 MB     Max Scratch Used(Master)      9 MB |
  |  Max Database Used(Workers)     1 MB     Max Scratch Used(Workers)     4 MB |
- |  Sum Database Used(All)        12 MB     Sum Scratch Used(All)        21 MB |
+ |  Sum Database Used(All)        13 MB     Sum Scratch Used(All)        21 MB |
  |                                                                             |
  |-----------------------------------------------------------------------------|
  |                                                                             |
- |        CP Time      (sec) =          0.141       Time  =  00:43:11          |
- |        Elapsed Time (sec) =          3.000       Date  =  04/20/2024        |
+ |        CP Time      (sec) =          0.297       Time  =  08:53:30          |
+ |        Elapsed Time (sec) =          5.000       Date  =  04/26/2024        |
  |                                                                             |
  *-----------------------------------------------------------------------------*

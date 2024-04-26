@@ -1,8 +1,9 @@
-function sorted_elems = sortByCenterPoint(obj,Direction)
+function [sorted_elems,index] = sortByCenterPoint(obj,Direction)
     arguments
         obj
         Direction {mustBeMember(Direction,{'X','Y','Z'})}
     end
+    % 通过elements的中心点位置进行排序
     coord_center = obj.getCenterPointCoord;
     switch Direction
         case 'X'

@@ -1,46 +1,51 @@
 ! 单元名称：Beam188 
 ! 作用于以下Structure: Girder_1
-et,1,Beam188
+et,9,Beam188 
+keyopt,9,3,2
 
 
 ! 单元名称：Beam188 
 ! 作用于以下Structure: Girder_2, Girder_3
-et,2,Beam188
+et,10,Beam188 
+keyopt,10,3,2
 
 
 ! 单元名称：Beam188 
 ! 作用于以下Structure: Girder_4, Girder_5
-et,3,Beam188
+et,11,Beam188 
+keyopt,11,3,2
 
 
 ! 单元名称：Beam188 
 ! 作用于以下Structure: Tower_1, Tower_2
-et,4,Beam188
+et,12,Beam188 
+keyopt,12,3,2
 
 
 ! 单元名称：Beam188 
 ! 作用于以下Structure: RigidBeam_1, RigidBeam_2, RigidBeam_3, RigidBeam_4, RigidBeam_5, RigidBeam_6, RigidBeam_7, RigidBeam_8, RigidBeam_9, RigidBeam_10, RigidBeam_11, RigidBeam_12, RigidBeam_13, RigidBeam_14
-et,5,Beam188
+et,13,Beam188 
+keyopt,13,3,2
 
 
 ! 单元名称：Link10 
 ! 作用于以下Structure: StayedCable_1, StayedCable_2, StayedCable_3, StayedCable_4, StayedCable_5, StayedCable_6, StayedCable_7, StayedCable_8
-et,6,Link10 
-keyopt,6,2,2 
-keyopt,6,3,0
+et,14,Link10 
+keyopt,14,2,2 
+keyopt,14,3,0
 
 
 ! 单元名称：Link10 
 ! 作用于以下Structure: Cable_1, Cable_2, Cable_3, Cable_4, Cable_5, Cable_6
-et,7,Link10 
-keyopt,7,2,2 
-keyopt,7,3,0
+et,15,Link10 
+keyopt,15,2,2 
+keyopt,15,3,0
 
 
 ! 单元名称：Link10 
 ! 作用于以下Structure: Hanger_1, Hanger_2
-et,8,Link10 
-keyopt,8,2,2 
-keyopt,8,3,0
+et,16,Link10 
+keyopt,16,2,2 
+keyopt,16,3,0
 
 
