@@ -2,6 +2,7 @@ function [data,nodes,elems_link,elems_beam] = loadResults(obj,options)
     arguments
         obj
         options.ResultType {mustBeMember(options.ResultType,{'Displacement','InternalForce','InfluenceLine'})}
+        options.ifReload = true
     end
     path_bridge = obj.WorkPath;
     if isempty(obj.OutputObj)
@@ -12,21 +13,28 @@ function [data,nodes,elems_link,elems_beam] = loadResults(obj,options)
     nodes = [];
     elems_link  = [];
     elems_beam = [];
-    if exist(path_result,'file')
-        result = load(path_result,'data');
-        data = result.data;
-    else
-        switch options.ResultType
-            case 'Displacement'
-                data = obj.getInternalForceFromAnsys([bridgeobj.getAllNodes.Num]);
-                nodes = allocateDisplacementToNodes(bridgeobj,result_Displacement);
-            case 'InternalForce'
+
+    switch options.ResultType
+        case 'Displacement'
+            if exist(path_result,'file') && ~options.ifReload
+                result = load(path_result,'data');
+                data = result.data;
+            else
+                data = obj.getDisplacementFromAnsys([bridgeobj.getAllNodes.Num]);
+            end
+            nodes = allocateDisplacementToNodes(bridgeobj,data);
+        case 'InternalForce'
+            if exist(path_result,'file') && ~options.ifReload
+                result = load(path_result,'data');
+                data = result.data;
+            else
                 data = obj.getInternalForceFromAnsys([bridgeobj.getAllLinks.Num],[bridgeobj.getAllBeams.Num]);
-                [elems_link,elems_beam] = allocateInternalForceToElement(bridgeobj,result_InternalForce);
-            case 'InfluenceLine'
-                %
-        end
+            end
+            [elems_link,elems_beam] = allocateInternalForceToElement(bridgeobj,data);
+        case 'InfluenceLine'
+            %
     end
+
 end
 function nodes = allocateDisplacementToNodes(bridgeobj,result_Displacement)
     nodes = bridgeobj.getAllNodes();

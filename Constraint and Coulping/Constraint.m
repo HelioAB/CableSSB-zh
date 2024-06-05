@@ -31,7 +31,7 @@ classdef Constraint < DataRecord
             arguments
                 % 均为MATLAB中默认的参数值
                 obj (1,1)
-                S = 20
+                S = 30
                 C = [232,139,0]/255
                 options.LineWidth = 0.5
                 options.Filled (1,1) {mustBeNumericOrLogical} = true
@@ -47,9 +47,9 @@ classdef Constraint < DataRecord
             end
             % 一般情况使用上三角'^'
             options.MarkerType = '^';
-            % 仅有Ux，使用'>'
+            % 仅有Ux，使用'<'
             if index(1) && ~(index(2)||index(3)||index(4)||index(5)||index(6))
-                options.MarkerType = '>';
+                options.MarkerType = '<';
             end
             % 固结，使用'_'
             if index(1)&&index(2)&&index(3)&&index(4)&&index(5)&&index(6)

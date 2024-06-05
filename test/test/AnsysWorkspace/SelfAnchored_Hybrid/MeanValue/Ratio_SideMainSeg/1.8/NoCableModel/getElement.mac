@@ -1,0 +1,17 @@
+allsel
+*get,MinNum_Elem,Elem,,Num,Min
+*get,MaxNum_Elem,Elem,,Num,Max
+*get,Count_Elem,Elem,,Count
+*dim,ElementInfo,array,Count_Elem,4
+*do,i,MinNum_Elem,MaxNum_Elem
+ElementInfo(i,1) = i
+ElementInfo(i,2) = NELEM(i,1)
+ElementInfo(i,3) = NELEM(i,2)
+ElementInfo(i,4) = NELEM(i,3)
+*enddo
+
+*cfopen,Element,txt
+*vwrite,ElementInfo(1,1),ElementInfo(1,2),ElementInfo(1,3),ElementInfo(1,4)
+%20I%20I%20I%20I
+*cfclos
+

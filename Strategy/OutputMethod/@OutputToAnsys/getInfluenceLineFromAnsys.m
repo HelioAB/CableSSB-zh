@@ -23,9 +23,10 @@ function data = getInfluenceLineFromAnsys(obj,OutputMethodObj_analyzeInfluenceLi
     end
 
     OutputMethod_clone = OutputMethodObj_analyzeInfluenceLine.clone();
-    
+    assignin("base","OutputMethod_clone",OutputMethod_clone)
     % 获取影响线的APDL
     output_str = getInfluenceStr(OutputMethod_clone,num_GirderNodes,num_MonitoredNodes,num_MonitoredElems_Link,num_MonitoredElems_Beam);
+    assignin("base",'output_str',output_str)
     OutputMethod_clone.outputAPDL(output_str,'getInfluenceLine.mac','w');
     OutputMethod_clone.MacFilePath = fullfile(OutputMethod_clone.WorkPath,'getInfluenceLine.mac');
     OutputMethod_clone.ResultFilePath = fullfile(OutputMethod_clone.WorkPath,'Result_getInfluenceLine.out');
@@ -38,7 +39,7 @@ function data = getInfluenceLineFromAnsys(obj,OutputMethodObj_analyzeInfluenceLi
     data.num_MonitoredElems_Link = num_MonitoredElems_Link;
     data.num_MonitoredElems_Beam = num_MonitoredElems_Beam;
 
-    % 存储检测的对象    
+    % 存储检测的对象
     filenames = {'InfluenceLine_Deformation_X','InfluenceLine_Deformation_Y','InfluenceLine_Deformation_Z',...
                  'InfluenceLine_Fx_link',...
                  'InfluenceLine_Fxi_beam','InfluenceLine_Fxj_beam','InfluenceLine_Myi_beam','InfluenceLine_Myj_beam'};
@@ -48,9 +49,11 @@ function data = getInfluenceLineFromAnsys(obj,OutputMethodObj_analyzeInfluenceLi
     for i=1:length(filenames)
         filename = filenames{i};
         dataFilePath = fullfile(OutputMethod_clone.WorkPath,[filename,'.txt']);
-        fileID = fopen(dataFilePath, 'r');
-        data.(strrep(filename,'InfluenceLine_','')) = readmatrix(dataFilePath,'Range',[1,1,length(num_GirderNodes),columns(i)]);
-        fclose(fileID);
+        if columns(i) ~= 0
+            data.(strrep(filename,'InfluenceLine_','')) = readmatrix(dataFilePath,'Range',[1,1,length(num_GirderNodes),columns(i)]);
+        else
+            data.(strrep(filename,'InfluenceLine_','')) = [];
+        end
     end
         
     % 生成存储结果文件的文件夹
@@ -62,7 +65,7 @@ function data = getInfluenceLineFromAnsys(obj,OutputMethodObj_analyzeInfluenceLi
     % 存储结果文件原始数据
     for i=1:length(filenames)
         filename = filenames{i};
-        dataFilePath = fullfile(OutputMethod_clone.WorkPath,[filename,'.txt']);
+        dataFilePath = fullfile(OutputMethod_clone.WorkPath,[filename,'.txt'])
         movefile(dataFilePath,dir_Result)
     end
     

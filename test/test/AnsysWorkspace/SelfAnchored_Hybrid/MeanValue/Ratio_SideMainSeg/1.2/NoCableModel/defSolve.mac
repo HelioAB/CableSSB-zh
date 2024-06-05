@@ -1,0 +1,11 @@
+/solu
+resume,NoCableModel,db
+antype,static
+nlgeom,off
+sstif,off
+nsubst,0,0,0
+time,1
+outres,all,all
+wrfull,1
+solve
+finish

@@ -75,6 +75,7 @@ classdef Girder < Structure
         point_A = PointA(obj)% PointA和PointB仅在仅有一条线时成立
         point_B = PointB(obj)
         point_center = PointCenter(obj)% 跨中点
+        span = Span(obj)
     end
 end
 function array = createLinearArray(from,to,L)

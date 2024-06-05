@@ -20,9 +20,7 @@ classdef OutputToAnsys < OutputTo
             end
             % 继承
             obj = obj@OutputTo(OutputObj);
-            if isempty(options.WorkPath)
-                error('请输入Ansys分析的工作路径')
-            else
+            if ~isempty(options.WorkPath)
                 if isempty(options.MacFilePath)
                     options.MacFilePath = fullfile(options.WorkPath,'main.mac');
                 end

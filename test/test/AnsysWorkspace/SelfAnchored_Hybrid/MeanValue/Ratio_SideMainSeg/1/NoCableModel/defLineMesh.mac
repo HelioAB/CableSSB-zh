@@ -1,0 +1,574 @@
+allsel
+esel,none 
+
+cm,e_selected,elem
+numstr,elem,1
+
+! Girder_1
+lesize,1,,,5 $ lmesh,1
+lesize,2,,,5 $ lmesh,2
+lesize,3,,,5 $ lmesh,3
+lesize,4,,,5 $ lmesh,4
+lesize,5,,,5 $ lmesh,5
+lesize,6,,,5 $ lmesh,6
+lesize,7,,,5 $ lmesh,7
+lesize,8,,,5 $ lmesh,8
+lesize,9,,,5 $ lmesh,9
+lesize,10,,,5 $ lmesh,10
+lesize,11,,,5 $ lmesh,11
+lesize,12,,,5 $ lmesh,12
+lesize,13,,,5 $ lmesh,13
+lesize,14,,,5 $ lmesh,14
+lesize,15,,,5 $ lmesh,15
+lesize,16,,,5 $ lmesh,16
+lesize,17,,,5 $ lmesh,17
+lesize,18,,,5 $ lmesh,18
+lesize,19,,,5 $ lmesh,19
+lesize,20,,,5 $ lmesh,20
+lesize,21,,,5 $ lmesh,21
+lesize,22,,,5 $ lmesh,22
+lesize,23,,,5 $ lmesh,23
+lesize,24,,,5 $ lmesh,24
+lesize,25,,,5 $ lmesh,25
+lesize,26,,,5 $ lmesh,26
+lesize,27,,,5 $ lmesh,27
+lesize,28,,,5 $ lmesh,28
+lesize,29,,,5 $ lmesh,29
+lesize,30,,,5 $ lmesh,30
+lesize,31,,,5 $ lmesh,31
+lesize,32,,,5 $ lmesh,32
+lesize,33,,,5 $ lmesh,33
+lesize,34,,,5 $ lmesh,34
+lesize,35,,,5 $ lmesh,35
+lesize,36,,,5 $ lmesh,36
+lesize,37,,,5 $ lmesh,37
+lesize,38,,,5 $ lmesh,38
+lesize,39,,,5 $ lmesh,39
+lesize,40,,,5 $ lmesh,40
+lesize,41,,,5 $ lmesh,41
+lesize,42,,,5 $ lmesh,42
+lesize,43,,,5 $ lmesh,43
+lesize,44,,,5 $ lmesh,44
+lesize,45,,,5 $ lmesh,45
+lesize,46,,,5 $ lmesh,46
+lesize,47,,,5 $ lmesh,47
+lesize,48,,,5 $ lmesh,48
+lesize,49,,,5 $ lmesh,49
+lesize,50,,,5 $ lmesh,50
+lesize,51,,,5 $ lmesh,51
+lesize,52,,,5 $ lmesh,52
+lesize,53,,,5 $ lmesh,53
+lesize,54,,,5 $ lmesh,54
+lesize,55,,,5 $ lmesh,55
+lesize,56,,,5 $ lmesh,56
+lesize,57,,,5 $ lmesh,57
+lesize,58,,,5 $ lmesh,58
+lesize,59,,,5 $ lmesh,59
+lesize,60,,,5 $ lmesh,60
+lesize,61,,,5 $ lmesh,61
+lesize,62,,,5 $ lmesh,62
+lesize,63,,,5 $ lmesh,63
+lesize,64,,,5 $ lmesh,64
+lesize,65,,,5 $ lmesh,65
+lesize,66,,,5 $ lmesh,66
+lesize,67,,,5 $ lmesh,67
+lesize,68,,,5 $ lmesh,68
+lesize,69,,,5 $ lmesh,69
+lesize,70,,,5 $ lmesh,70
+lesize,71,,,5 $ lmesh,71
+lesize,72,,,5 $ lmesh,72
+lesize,73,,,5 $ lmesh,73
+lesize,74,,,5 $ lmesh,74
+lesize,75,,,5 $ lmesh,75
+lesize,76,,,5 $ lmesh,76
+lesize,77,,,5 $ lmesh,77
+lesize,78,,,5 $ lmesh,78
+lesize,79,,,5 $ lmesh,79
+lesize,80,,,5 $ lmesh,80
+lesize,81,,,5 $ lmesh,81
+lesize,82,,,5 $ lmesh,82
+lesize,83,,,5 $ lmesh,83
+lesize,84,,,5 $ lmesh,84
+lesize,85,,,5 $ lmesh,85
+lesize,86,,,5 $ lmesh,86
+lesize,87,,,5 $ lmesh,87
+lesize,88,,,5 $ lmesh,88
+lesize,89,,,5 $ lmesh,89
+lesize,90,,,5 $ lmesh,90
+lesize,91,,,5 $ lmesh,91
+lesize,92,,,5 $ lmesh,92
+esel,all 
+cmsel,u,e_selected 
+cm,Elem_Girder_1,elem 
+esel,all 
+cm,e_selected,elem 
+allsel
+
+! Girder_2
+lesize,93,,,5 $ lmesh,93
+lesize,94,,,5 $ lmesh,94
+lesize,95,,,5 $ lmesh,95
+lesize,96,,,5 $ lmesh,96
+lesize,97,,,5 $ lmesh,97
+lesize,98,,,5 $ lmesh,98
+lesize,99,,,5 $ lmesh,99
+lesize,100,,,5 $ lmesh,100
+lesize,101,,,5 $ lmesh,101
+lesize,102,,,5 $ lmesh,102
+lesize,103,,,5 $ lmesh,103
+lesize,104,,,5 $ lmesh,104
+lesize,105,,,5 $ lmesh,105
+lesize,106,,,5 $ lmesh,106
+lesize,107,,,5 $ lmesh,107
+lesize,108,,,5 $ lmesh,108
+lesize,109,,,5 $ lmesh,109
+lesize,110,,,5 $ lmesh,110
+lesize,111,,,5 $ lmesh,111
+lesize,112,,,5 $ lmesh,112
+lesize,113,,,5 $ lmesh,113
+esel,all 
+cmsel,u,e_selected 
+cm,Elem_Girder_2,elem 
+esel,all 
+cm,e_selected,elem 
+allsel
+
+! Girder_3
+lesize,114,,,5 $ lmesh,114
+lesize,115,,,5 $ lmesh,115
+lesize,116,,,5 $ lmesh,116
+lesize,117,,,5 $ lmesh,117
+lesize,118,,,5 $ lmesh,118
+lesize,119,,,5 $ lmesh,119
+lesize,120,,,5 $ lmesh,120
+lesize,121,,,5 $ lmesh,121
+lesize,122,,,5 $ lmesh,122
+lesize,123,,,5 $ lmesh,123
+lesize,124,,,5 $ lmesh,124
+lesize,125,,,5 $ lmesh,125
+lesize,126,,,5 $ lmesh,126
+lesize,127,,,5 $ lmesh,127
+lesize,128,,,5 $ lmesh,128
+lesize,129,,,5 $ lmesh,129
+lesize,130,,,5 $ lmesh,130
+lesize,131,,,5 $ lmesh,131
+lesize,132,,,5 $ lmesh,132
+lesize,133,,,5 $ lmesh,133
+lesize,134,,,5 $ lmesh,134
+esel,all 
+cmsel,u,e_selected 
+cm,Elem_Girder_3,elem 
+esel,all 
+cm,e_selected,elem 
+allsel
+
+! Girder_4
+lesize,135,,,5 $ lmesh,135
+lesize,136,,,5 $ lmesh,136
+esel,all 
+cmsel,u,e_selected 
+cm,Elem_Girder_4,elem 
+esel,all 
+cm,e_selected,elem 
+allsel
+
+! Girder_5
+lesize,137,,,5 $ lmesh,137
+lesize,138,,,5 $ lmesh,138
+esel,all 
+cmsel,u,e_selected 
+cm,Elem_Girder_5,elem 
+esel,all 
+cm,e_selected,elem 
+allsel
+
+! Tower_1
+lesize,139,,,5 $ lmesh,139
+lesize,140,,,5 $ lmesh,140
+lesize,141,,,5 $ lmesh,141
+lesize,142,,,5 $ lmesh,142
+lesize,143,,,5 $ lmesh,143
+lesize,144,,,5 $ lmesh,144
+lesize,145,,,5 $ lmesh,145
+lesize,146,,,5 $ lmesh,146
+lesize,147,,,5 $ lmesh,147
+lesize,148,,,5 $ lmesh,148
+lesize,149,,,5 $ lmesh,149
+lesize,150,,,5 $ lmesh,150
+lesize,151,,,5 $ lmesh,151
+lesize,152,,,5 $ lmesh,152
+lesize,153,,,5 $ lmesh,153
+lesize,154,,,5 $ lmesh,154
+lesize,155,,,5 $ lmesh,155
+lesize,156,,,5 $ lmesh,156
+lesize,157,,,5 $ lmesh,157
+lesize,158,,,5 $ lmesh,158
+lesize,159,,,5 $ lmesh,159
+lesize,160,,,5 $ lmesh,160
+lesize,161,,,5 $ lmesh,161
+lesize,162,,,5 $ lmesh,162
+lesize,163,,,5 $ lmesh,163
+esel,all 
+cmsel,u,e_selected 
+cm,Elem_Tower_1,elem 
+esel,all 
+cm,e_selected,elem 
+allsel
+
+! Tower_2
+lesize,164,,,5 $ lmesh,164
+lesize,165,,,5 $ lmesh,165
+lesize,166,,,5 $ lmesh,166
+lesize,167,,,5 $ lmesh,167
+lesize,168,,,5 $ lmesh,168
+lesize,169,,,5 $ lmesh,169
+lesize,170,,,5 $ lmesh,170
+lesize,171,,,5 $ lmesh,171
+lesize,172,,,5 $ lmesh,172
+lesize,173,,,5 $ lmesh,173
+lesize,174,,,5 $ lmesh,174
+lesize,175,,,5 $ lmesh,175
+lesize,176,,,5 $ lmesh,176
+lesize,177,,,5 $ lmesh,177
+lesize,178,,,5 $ lmesh,178
+lesize,179,,,5 $ lmesh,179
+lesize,180,,,5 $ lmesh,180
+lesize,181,,,5 $ lmesh,181
+lesize,182,,,5 $ lmesh,182
+lesize,183,,,5 $ lmesh,183
+lesize,184,,,5 $ lmesh,184
+lesize,185,,,5 $ lmesh,185
+lesize,186,,,5 $ lmesh,186
+lesize,187,,,5 $ lmesh,187
+lesize,188,,,5 $ lmesh,188
+esel,all 
+cmsel,u,e_selected 
+cm,Elem_Tower_2,elem 
+esel,all 
+cm,e_selected,elem 
+allsel
+
+! RigidBeam_1
+lesize,189,,,1 $ lmesh,189
+lesize,190,,,1 $ lmesh,190
+lesize,191,,,1 $ lmesh,191
+lesize,192,,,1 $ lmesh,192
+lesize,193,,,1 $ lmesh,193
+lesize,194,,,1 $ lmesh,194
+lesize,195,,,1 $ lmesh,195
+lesize,196,,,1 $ lmesh,196
+lesize,197,,,1 $ lmesh,197
+lesize,198,,,1 $ lmesh,198
+lesize,199,,,1 $ lmesh,199
+lesize,200,,,1 $ lmesh,200
+lesize,201,,,1 $ lmesh,201
+lesize,202,,,1 $ lmesh,202
+lesize,203,,,1 $ lmesh,203
+lesize,204,,,1 $ lmesh,204
+lesize,205,,,1 $ lmesh,205
+lesize,206,,,1 $ lmesh,206
+lesize,207,,,1 $ lmesh,207
+lesize,208,,,1 $ lmesh,208
+lesize,209,,,1 $ lmesh,209
+lesize,210,,,1 $ lmesh,210
+esel,all 
+cmsel,u,e_selected 
+cm,Elem_RigidBeam_1,elem 
+esel,all 
+cm,e_selected,elem 
+allsel
+
+! RigidBeam_2
+lesize,211,,,1 $ lmesh,211
+lesize,212,,,1 $ lmesh,212
+lesize,213,,,1 $ lmesh,213
+lesize,214,,,1 $ lmesh,214
+lesize,215,,,1 $ lmesh,215
+lesize,216,,,1 $ lmesh,216
+lesize,217,,,1 $ lmesh,217
+lesize,218,,,1 $ lmesh,218
+lesize,219,,,1 $ lmesh,219
+lesize,220,,,1 $ lmesh,220
+lesize,221,,,1 $ lmesh,221
+lesize,222,,,1 $ lmesh,222
+lesize,223,,,1 $ lmesh,223
+lesize,224,,,1 $ lmesh,224
+lesize,225,,,1 $ lmesh,225
+lesize,226,,,1 $ lmesh,226
+lesize,227,,,1 $ lmesh,227
+lesize,228,,,1 $ lmesh,228
+lesize,229,,,1 $ lmesh,229
+lesize,230,,,1 $ lmesh,230
+lesize,231,,,1 $ lmesh,231
+lesize,232,,,1 $ lmesh,232
+esel,all 
+cmsel,u,e_selected 
+cm,Elem_RigidBeam_2,elem 
+esel,all 
+cm,e_selected,elem 
+allsel
+
+! RigidBeam_3
+lesize,233,,,1 $ lmesh,233
+lesize,234,,,1 $ lmesh,234
+lesize,235,,,1 $ lmesh,235
+lesize,236,,,1 $ lmesh,236
+lesize,237,,,1 $ lmesh,237
+lesize,238,,,1 $ lmesh,238
+lesize,239,,,1 $ lmesh,239
+lesize,240,,,1 $ lmesh,240
+lesize,241,,,1 $ lmesh,241
+lesize,242,,,1 $ lmesh,242
+lesize,243,,,1 $ lmesh,243
+lesize,244,,,1 $ lmesh,244
+lesize,245,,,1 $ lmesh,245
+lesize,246,,,1 $ lmesh,246
+esel,all 
+cmsel,u,e_selected 
+cm,Elem_RigidBeam_3,elem 
+esel,all 
+cm,e_selected,elem 
+allsel
+
+! RigidBeam_4
+lesize,247,,,1 $ lmesh,247
+lesize,248,,,1 $ lmesh,248
+lesize,249,,,1 $ lmesh,249
+lesize,250,,,1 $ lmesh,250
+lesize,251,,,1 $ lmesh,251
+lesize,252,,,1 $ lmesh,252
+lesize,253,,,1 $ lmesh,253
+lesize,254,,,1 $ lmesh,254
+lesize,255,,,1 $ lmesh,255
+lesize,256,,,1 $ lmesh,256
+lesize,257,,,1 $ lmesh,257
+lesize,258,,,1 $ lmesh,258
+lesize,259,,,1 $ lmesh,259
+lesize,260,,,1 $ lmesh,260
+esel,all 
+cmsel,u,e_selected 
+cm,Elem_RigidBeam_4,elem 
+esel,all 
+cm,e_selected,elem 
+allsel
+
+! RigidBeam_5
+lesize,261,,,1 $ lmesh,261
+lesize,262,,,1 $ lmesh,262
+lesize,263,,,1 $ lmesh,263
+lesize,264,,,1 $ lmesh,264
+lesize,265,,,1 $ lmesh,265
+lesize,266,,,1 $ lmesh,266
+lesize,267,,,1 $ lmesh,267
+lesize,268,,,1 $ lmesh,268
+lesize,269,,,1 $ lmesh,269
+lesize,270,,,1 $ lmesh,270
+lesize,271,,,1 $ lmesh,271
+lesize,272,,,1 $ lmesh,272
+lesize,273,,,1 $ lmesh,273
+lesize,274,,,1 $ lmesh,274
+esel,all 
+cmsel,u,e_selected 
+cm,Elem_RigidBeam_5,elem 
+esel,all 
+cm,e_selected,elem 
+allsel
+
+! RigidBeam_6
+lesize,275,,,1 $ lmesh,275
+lesize,276,,,1 $ lmesh,276
+lesize,277,,,1 $ lmesh,277
+lesize,278,,,1 $ lmesh,278
+lesize,279,,,1 $ lmesh,279
+lesize,280,,,1 $ lmesh,280
+lesize,281,,,1 $ lmesh,281
+lesize,282,,,1 $ lmesh,282
+lesize,283,,,1 $ lmesh,283
+lesize,284,,,1 $ lmesh,284
+lesize,285,,,1 $ lmesh,285
+lesize,286,,,1 $ lmesh,286
+lesize,287,,,1 $ lmesh,287
+lesize,288,,,1 $ lmesh,288
+esel,all 
+cmsel,u,e_selected 
+cm,Elem_RigidBeam_6,elem 
+esel,all 
+cm,e_selected,elem 
+allsel
+
+! RigidBeam_7
+lesize,289,,,1 $ lmesh,289
+lesize,290,,,1 $ lmesh,290
+lesize,291,,,1 $ lmesh,291
+lesize,292,,,1 $ lmesh,292
+lesize,293,,,1 $ lmesh,293
+lesize,294,,,1 $ lmesh,294
+lesize,295,,,1 $ lmesh,295
+lesize,296,,,1 $ lmesh,296
+lesize,297,,,1 $ lmesh,297
+lesize,298,,,1 $ lmesh,298
+lesize,299,,,1 $ lmesh,299
+lesize,300,,,1 $ lmesh,300
+lesize,301,,,1 $ lmesh,301
+lesize,302,,,1 $ lmesh,302
+esel,all 
+cmsel,u,e_selected 
+cm,Elem_RigidBeam_7,elem 
+esel,all 
+cm,e_selected,elem 
+allsel
+
+! RigidBeam_8
+lesize,303,,,1 $ lmesh,303
+lesize,304,,,1 $ lmesh,304
+lesize,305,,,1 $ lmesh,305
+lesize,306,,,1 $ lmesh,306
+lesize,307,,,1 $ lmesh,307
+lesize,308,,,1 $ lmesh,308
+lesize,309,,,1 $ lmesh,309
+lesize,310,,,1 $ lmesh,310
+lesize,311,,,1 $ lmesh,311
+lesize,312,,,1 $ lmesh,312
+lesize,313,,,1 $ lmesh,313
+lesize,314,,,1 $ lmesh,314
+lesize,315,,,1 $ lmesh,315
+lesize,316,,,1 $ lmesh,316
+esel,all 
+cmsel,u,e_selected 
+cm,Elem_RigidBeam_8,elem 
+esel,all 
+cm,e_selected,elem 
+allsel
+
+! RigidBeam_9
+lesize,317,,,1 $ lmesh,317
+lesize,318,,,1 $ lmesh,318
+lesize,319,,,1 $ lmesh,319
+lesize,320,,,1 $ lmesh,320
+lesize,321,,,1 $ lmesh,321
+lesize,322,,,1 $ lmesh,322
+lesize,323,,,1 $ lmesh,323
+lesize,324,,,1 $ lmesh,324
+lesize,325,,,1 $ lmesh,325
+lesize,326,,,1 $ lmesh,326
+lesize,327,,,1 $ lmesh,327
+lesize,328,,,1 $ lmesh,328
+lesize,329,,,1 $ lmesh,329
+lesize,330,,,1 $ lmesh,330
+esel,all 
+cmsel,u,e_selected 
+cm,Elem_RigidBeam_9,elem 
+esel,all 
+cm,e_selected,elem 
+allsel
+
+! RigidBeam_10
+lesize,331,,,1 $ lmesh,331
+lesize,332,,,1 $ lmesh,332
+lesize,333,,,1 $ lmesh,333
+lesize,334,,,1 $ lmesh,334
+lesize,335,,,1 $ lmesh,335
+lesize,336,,,1 $ lmesh,336
+lesize,337,,,1 $ lmesh,337
+lesize,338,,,1 $ lmesh,338
+lesize,339,,,1 $ lmesh,339
+lesize,340,,,1 $ lmesh,340
+lesize,341,,,1 $ lmesh,341
+lesize,342,,,1 $ lmesh,342
+lesize,343,,,1 $ lmesh,343
+lesize,344,,,1 $ lmesh,344
+esel,all 
+cmsel,u,e_selected 
+cm,Elem_RigidBeam_10,elem 
+esel,all 
+cm,e_selected,elem 
+allsel
+
+! RigidBeam_11
+lesize,345,,,1 $ lmesh,345
+lesize,346,,,1 $ lmesh,346
+lesize,347,,,1 $ lmesh,347
+lesize,348,,,1 $ lmesh,348
+lesize,349,,,1 $ lmesh,349
+lesize,350,,,1 $ lmesh,350
+lesize,351,,,1 $ lmesh,351
+lesize,352,,,1 $ lmesh,352
+lesize,353,,,1 $ lmesh,353
+lesize,354,,,1 $ lmesh,354
+lesize,355,,,1 $ lmesh,355
+lesize,356,,,1 $ lmesh,356
+lesize,357,,,1 $ lmesh,357
+lesize,358,,,1 $ lmesh,358
+esel,all 
+cmsel,u,e_selected 
+cm,Elem_RigidBeam_11,elem 
+esel,all 
+cm,e_selected,elem 
+allsel
+
+! RigidBeam_12
+lesize,359,,,1 $ lmesh,359
+lesize,360,,,1 $ lmesh,360
+lesize,361,,,1 $ lmesh,361
+lesize,362,,,1 $ lmesh,362
+lesize,363,,,1 $ lmesh,363
+lesize,364,,,1 $ lmesh,364
+lesize,365,,,1 $ lmesh,365
+lesize,366,,,1 $ lmesh,366
+lesize,367,,,1 $ lmesh,367
+lesize,368,,,1 $ lmesh,368
+lesize,369,,,1 $ lmesh,369
+lesize,370,,,1 $ lmesh,370
+lesize,371,,,1 $ lmesh,371
+lesize,372,,,1 $ lmesh,372
+esel,all 
+cmsel,u,e_selected 
+cm,Elem_RigidBeam_12,elem 
+esel,all 
+cm,e_selected,elem 
+allsel
+
+! RigidBeam_13
+lesize,373,,,1 $ lmesh,373
+lesize,374,,,1 $ lmesh,374
+lesize,375,,,1 $ lmesh,375
+lesize,376,,,1 $ lmesh,376
+lesize,377,,,1 $ lmesh,377
+lesize,378,,,1 $ lmesh,378
+lesize,379,,,1 $ lmesh,379
+lesize,380,,,1 $ lmesh,380
+lesize,381,,,1 $ lmesh,381
+lesize,382,,,1 $ lmesh,382
+lesize,383,,,1 $ lmesh,383
+lesize,384,,,1 $ lmesh,384
+lesize,385,,,1 $ lmesh,385
+lesize,386,,,1 $ lmesh,386
+esel,all 
+cmsel,u,e_selected 
+cm,Elem_RigidBeam_13,elem 
+esel,all 
+cm,e_selected,elem 
+allsel
+
+! RigidBeam_14
+lesize,387,,,1 $ lmesh,387
+lesize,388,,,1 $ lmesh,388
+lesize,389,,,1 $ lmesh,389
+lesize,390,,,1 $ lmesh,390
+lesize,391,,,1 $ lmesh,391
+lesize,392,,,1 $ lmesh,392
+lesize,393,,,1 $ lmesh,393
+lesize,394,,,1 $ lmesh,394
+lesize,395,,,1 $ lmesh,395
+lesize,396,,,1 $ lmesh,396
+lesize,397,,,1 $ lmesh,397
+lesize,398,,,1 $ lmesh,398
+lesize,399,,,1 $ lmesh,399
+lesize,400,,,1 $ lmesh,400
+esel,all 
+cmsel,u,e_selected 
+cm,Elem_RigidBeam_14,elem 
+esel,all 
+cm,e_selected,elem 
+allsel
+

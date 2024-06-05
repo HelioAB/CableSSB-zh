@@ -1,7 +1,7 @@
 function build_Parametrically(obj,options)
     arguments
         obj
-        options.Ratio_SideMainSpan = 1
+        options.Ratio_SideMainSeg = 1 % 边跨每个seg相对于主跨每个seg的比例，该参数越大，边跨越长
         options.Sag = 102.35
         options.Count_CrossCable = 3
 
@@ -16,7 +16,8 @@ function build_Parametrically(obj,options)
         % options.GirderArea_Combination = []
         options.GirderArea_MainSpan = 6.3676%
         options.GirderArea_SideSpan = 9.0342%
-   
+        
+        options.GirderStiffness_Bending_Total = []
         options.GirderStiffness_Bending_StayedCable = []%
         options.GirderStiffness_Bending_Suspension = []%
         options.GirderStiffness_Bending_Combination = []%
@@ -27,8 +28,8 @@ function build_Parametrically(obj,options)
     %% 参数赋值
     % 边中跨比
     seg_mainspan = 7.5;
-    seg_sidespan_1 = options.Ratio_SideMainSpan*seg_mainspan;
-    seg_sidespan_2 = options.Ratio_SideMainSpan*seg_mainspan;
+    seg_sidespan_1 = options.Ratio_SideMainSeg*seg_mainspan;
+    seg_sidespan_2 = options.Ratio_SideMainSeg*seg_mainspan;
     % 垂跨比
     sag = options.Sag;
     % 交叉索数
@@ -52,13 +53,18 @@ function build_Parametrically(obj,options)
 
     % 加劲梁竖向抗弯刚度
     % 整体、主跨、边跨
-    Iyy_MainSpan_Girder = options.GirderStiffness_Bending_MainSpan;
-    Iyy_SideSpan_Girder = options.GirderStiffness_Bending_SideSpan;
+    if isempty(options.GirderStiffness_Bending_Total)
+        Iyy_MainSpan_Girder = options.GirderStiffness_Bending_MainSpan;
+        Iyy_SideSpan_Girder = options.GirderStiffness_Bending_SideSpan;
+    else
+        Iyy_MainSpan_Girder = options.GirderStiffness_Bending_Total;
+        Iyy_SideSpan_Girder = options.GirderStiffness_Bending_Total;
+    end
     % 斜拉部分、悬索部分、结合段
     if isempty(options.GirderStiffness_Bending_StayedCable) && isempty(options.GirderStiffness_Bending_Suspension)
-        flag_Iyy_SeperatedSystem = false;
+        flag_Iyy_SuspensionOrStayedCable = false;
     elseif ~isempty(options.GirderStiffness_Bending_StayedCable) && ~isempty(options.GirderStiffness_Bending_Suspension)
-        flag_Iyy_SeperatedSystem = true;
+        flag_Iyy_SuspensionOrStayedCable = true;
         Iyy_StayedCable_Girder = options.GirderStiffness_Bending_StayedCable;
         Iyy_Suspension_Girder = options.GirderStiffness_Bending_Suspension;
         if isempty(options.GirderStiffness_Bending_Combination)
@@ -87,7 +93,7 @@ function build_Parametrically(obj,options)
     % CoordA_girder1 = [157.2,0,-4.2]; % 加劲梁左端点A的位置，"左"代表 X向数值更小的方向。
     CoordA_girder1 = [0,0,0]; % 加劲梁左端点A的位置，"左"代表 X向数值更小的方向。
     CoordB_girder1 = [CoordA_girder1(1)+sum(L),CoordA_girder1(2),CoordA_girder1(3)]; % 加劲梁右端点B的位置
-    if flag_Iyy_SeperatedSystem
+    if flag_Iyy_SuspensionOrStayedCable
         girder1_sectiondata_suspension = UserSection(Area_MainSpan_Girder,20,Iyy_Suspension_Girder,193,36,8);
         girder1_sectiondata_stayedcable = UserSection(Area_MainSpan_Girder,20,Iyy_StayedCable_Girder,193,36,8);
         girder1_sectiondata_combination = UserSection(Area_MainSpan_Girder,20,Iyy_Combination_Girder,193,36,8);
@@ -118,7 +124,7 @@ function build_Parametrically(obj,options)
     index_StayedCable_girder1 = girder1.findPointIndex(Point_StayedCable_girder1);
     
     [index_Hanger_lines,index_StayedCable1_lines,index_StayedCable2_lines,index_Combination_lines,index_Other_lines] = findMainSpanDivisionIndex(girder1,Point_Hanger_girder1,Point_StayedCable1_girder1,Point_StayedCable2_girder1);
-    if flag_Iyy_SeperatedSystem
+    if flag_Iyy_SuspensionOrStayedCable
         girder1.Section(index_Hanger_lines) = Sec_gitder1_suspension;
         girder1.Section(index_StayedCable1_lines) = Sec_girder1_stayedcable;
         girder1.Section(index_StayedCable2_lines) = Sec_girder1_stayedcable;
@@ -127,7 +133,7 @@ function build_Parametrically(obj,options)
     end
     
     % 边跨加劲梁       
-    if flag_Iyy_SeperatedSystem
+    if flag_Iyy_SuspensionOrStayedCable
         girder2_sectiondata = UserSection(Area_SideSpan_Girder,20,Iyy_StayedCable_Girder,193,36,8); % 定义截面数据，UserSection是用户自定义截面数据，User(A,Ixx,Iyy,Izz,TKy,TKz) ，单位: m
         Name_Section = '边跨主梁Girder-StayedCable部分';
     else
@@ -501,8 +507,6 @@ function build_Parametrically(obj,options)
     % MidSpanLoad_Y  = ConcentratedForce(girder1_MidspanPoint,"Y",[100,200]);
     % obj.addLoad(MidSpanLoad_Y,'Name','中跨跨中Y向集中荷载')
     
-    %% 设置输出方式
-    obj.OutputMethod = OutputToAnsys(obj);
 end
 function [index_Hanger_lines,index_StayedCable1_lines,index_StayedCable2_lines,index_Combination_lines,index_Other_lines] = findMainSpanDivisionIndex(girderobj,Point_Hanger_girder,Point_StayedCable1_girder,Point_StayedCable2_girder)
     % 将

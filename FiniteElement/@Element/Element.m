@@ -65,7 +65,7 @@ classdef Element < DataRecord
                     if ~isempty(Num)
                         mustBeEqualSize(INode,Num)
                     else
-                        Num = Element.MaxNum()+[1:len];
+                        Num = Element.MaxNum()+(1:len);
                     end
                     % 创建对象数组
                     obj(1,len) = Element();
@@ -134,9 +134,10 @@ classdef Element < DataRecord
         [index_INodeSmaller,index_JNodeSmaller,index_IJNodeSame] = ifINodeSmaller(obj,Direction)
         % 后处理
         [sorted_nodes,Displacement] = getNodeGlobalDisplacement(obj,type_elems,type_displacement)
-        [fig,ax] = plotNodeGlobalDisplacement(obj,Nodes,Displacement,type_nodes,options)
-        [ANodes,BNodes,InternalForce_A,InternalForce_B] = getBeamElementGlobalForce(obj,type_elems,type_force)
-        [fig,ax] = plotBeamElementGlobalForce(obj,ANodes,BNodes,InternalForce_A,InternalForce_B,type_elems,options)
+        [fig,ax] = plotNodeGlobalDisplacement(obj,Nodes,Displacement,type_displacement,options)
+        [ANodes_matrix,BNodes_matrix,InternalForce_A_matrix,InternalForce_B_matrix] = getBeamElementGlobalForce(obj,type_elems,type_force)
+        [fig,ax] = plotBeamElementGlobalForce(obj,ANodes_matrix,BNodes_matrix,InternalForce_A_matrix,InternalForce_B_matrix,type_elems,type_force,options)
+        [fig,ax] = plotBackgroundBridge(obj,constraints)
     end
     methods(Static)
         function collection = Collection()

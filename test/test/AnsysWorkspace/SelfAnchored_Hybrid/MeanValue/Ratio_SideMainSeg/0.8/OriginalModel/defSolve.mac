@@ -1,0 +1,11 @@
+/solu
+resume,OriginalModel,db
+antype,static
+nlgeom,on
+sstif,on
+nsubst,1,0,0
+time,1
+outres,all,all
+wrfull,0
+solve
+finish

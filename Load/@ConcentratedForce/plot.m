@@ -5,6 +5,8 @@ function arrow_handle = plot(obj,options)
         options.Scale {mustBeNumeric} = 1 % 通过plot中的可选参数Scale控制箭头的长短，而不是quiver3函数自带的Scale属性
         options.Figure {mustBeA(options.Figure,'matlab.ui.Figure')} = figure
         options.Axis {mustBeA(options.Axis,'matlab.graphics.axis.Axes')} = axes
+        options.LineWidth = []
+        options.Offset = []
     end
 %     for i=1:length(obj)
 %         application = obj(i).Application;

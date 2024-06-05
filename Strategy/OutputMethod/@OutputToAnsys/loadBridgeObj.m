@@ -1,7 +1,7 @@
 function bridgeobj = loadBridgeObj(obj,options)
     arguments
         obj
-        options.ifReplaceOutputObj = false
+        options.ifReplaceOutputObj = true
     end
     % 判断，如果是一个cell，就遍历cell中的所有；如果是char或string，就直接使用该变量
     path_bridge = obj.WorkPath;

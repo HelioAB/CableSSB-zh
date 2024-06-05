@@ -1,5 +1,0 @@
- *** ERROR ***
- Another ANSYS job with the same job name (OriginalModel) is already running in this
- directory or the OriginalModel.lock file has not been deleted from an abnormally
- terminated ANSYS run.  To disable this check, set the ANSYS_LOCK environment
- variable to OFF.

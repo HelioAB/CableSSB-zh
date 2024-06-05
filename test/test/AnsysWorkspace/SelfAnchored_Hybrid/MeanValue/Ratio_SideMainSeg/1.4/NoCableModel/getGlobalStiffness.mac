@@ -1,0 +1,4 @@
+/aux2
+file,NoCableModel,full
+hbmat,GlobalStiffness,txt,,ascii,stiffness,yes,yes
+finish

@@ -1,7 +1,7 @@
 function output(obj,options)
     arguments
         obj
-        options.ifSaveBridgeObj = false % 是否需要存储bridgeobj
+        options.ifSaveBridgeObj = true % 是否需要存储bridgeobj
         options.ifClearCollection = false % 是否需要清理Collection.ObjList
     end
     if isempty(obj.OutputMethod)

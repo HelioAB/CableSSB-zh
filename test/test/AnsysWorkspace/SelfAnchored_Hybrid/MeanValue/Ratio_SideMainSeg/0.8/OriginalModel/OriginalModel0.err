@@ -1,0 +1,75 @@
+/COM,ANSYS RELEASE 2023 R2           BUILD 23.2      UP20230531       23:09:16
+
+ *** WARNING ***                         CP =       0.781   TIME= 23:09:18
+ Coefficient ratio exceeds 1.0e8 - Check results.                        
+
+ *** WARNING ***                         CP =       0.969   TIME= 23:09:19
+ A reference moment value times the tolerance is used by the             
+ Newton-Raphson method for checking convergence.  The calculated         
+ reference MOMENT CONVERGENCE VALUE = 187543513 is less than a           
+ threshold.  This threshold is internally calculated.  You can           
+ overwrite it by specifying MINREF on the CNVTOL command.  Check         
+ results carefully.                                                      
+/COM,ANSYS RELEASE 2023 R2           BUILD 23.2      UP20230531       20:20:29
+
+ *** WARNING ***                         CP =       0.516   TIME= 20:20:33
+ Coefficient ratio exceeds 1.0e8 - Check results.                        
+
+ *** WARNING ***                         CP =       0.641   TIME= 20:20:33
+ A reference moment value times the tolerance is used by the             
+ Newton-Raphson method for checking convergence.  The calculated         
+ reference MOMENT CONVERGENCE VALUE = 286531783 is less than a           
+ threshold.  This threshold is internally calculated.  You can           
+ overwrite it by specifying MINREF on the CNVTOL command.  Check         
+ results carefully.                                                      
+/COM,ANSYS RELEASE 2023 R2           BUILD 23.2      UP20230531       20:30:38
+
+ *** WARNING ***                         CP =       0.656   TIME= 20:30:42
+ Coefficient ratio exceeds 1.0e8 - Check results.                        
+
+ *** WARNING ***                         CP =       0.875   TIME= 20:30:43
+ A reference moment value times the tolerance is used by the             
+ Newton-Raphson method for checking convergence.  The calculated         
+ reference MOMENT CONVERGENCE VALUE = 286531783 is less than a           
+ threshold.  This threshold is internally calculated.  You can           
+ overwrite it by specifying MINREF on the CNVTOL command.  Check         
+ results carefully.                                                      
+/COM,ANSYS RELEASE 2023 R2           BUILD 23.2      UP20230531       13:58:16
+
+ *** WARNING ***                         CP =       0.672   TIME= 13:58:19
+ Coefficient ratio exceeds 1.0e8 - Check results.                        
+
+ *** WARNING ***                         CP =       0.812   TIME= 13:58:19
+ A reference moment value times the tolerance is used by the             
+ Newton-Raphson method for checking convergence.  The calculated         
+ reference MOMENT CONVERGENCE VALUE = 187543513 is less than a           
+ threshold.  This threshold is internally calculated.  You can           
+ overwrite it by specifying MINREF on the CNVTOL command.  Check         
+ results carefully.                                                      
+/COM,ANSYS RELEASE 2023 R2           BUILD 23.2      UP20230531       14:05:04
+
+ *** WARNING ***                         CP =       0.688   TIME= 14:05:06
+ Coefficient ratio exceeds 1.0e8 - Check results.                        
+
+ *** WARNING ***                         CP =       0.797   TIME= 14:05:06
+ A reference moment value times the tolerance is used by the             
+ Newton-Raphson method for checking convergence.  The calculated         
+ reference MOMENT CONVERGENCE VALUE = 142089785 is less than a           
+ threshold.  This threshold is internally calculated.  You can           
+ overwrite it by specifying MINREF on the CNVTOL command.  Check         
+ results carefully.                                                      
+/COM,ANSYS RELEASE 2023 R2           BUILD 23.2      UP20230531       14:18:23
+/COM,ANSYS RELEASE 2023 R2           BUILD 23.2      UP20230531       15:40:20
+
+ *** WARNING ***                         CP =       0.719   TIME= 15:40:23
+ Coefficient ratio exceeds 1.0e8 - Check results.                        
+
+ *** WARNING ***                         CP =       0.781   TIME= 15:40:24
+ A reference moment value times the tolerance is used by the             
+ Newton-Raphson method for checking convergence.  The calculated         
+ reference MOMENT CONVERGENCE VALUE = 197468890 is less than a           
+ threshold.  This threshold is internally calculated.  You can           
+ overwrite it by specifying MINREF on the CNVTOL command.  Check         
+ results carefully.                                                      
+/COM,ANSYS RELEASE 2023 R2           BUILD 23.2      UP20230531       16:52:38
+/COM,ANSYS RELEASE 2023 R2           BUILD 23.2      UP20230531       16:52:42

@@ -1,0 +1,17 @@
+allsel
+*get,MinNum_Node,node,,Num,Min
+*get,MaxNum_Node,node,,Num,Max
+*get,Count_Node,node,,Count
+*dim,NodeInfo,array,Count_Node,4
+*do,i,MinNum_Node,MaxNum_Node
+   NodeInfo(i,1) = i
+   NodeInfo(i,2) = NX(i)
+   NodeInfo(i,3) = NY(i)
+   NodeInfo(i,4) = NZ(i)
+*enddo
+
+*cfopen,Node,txt
+*vwrite,NodeInfo(1,1),NodeInfo(1,2),NodeInfo(1,3),NodeInfo(1,4)
+%20I%20.8e%20.8e%20.8e
+*cfclos
+

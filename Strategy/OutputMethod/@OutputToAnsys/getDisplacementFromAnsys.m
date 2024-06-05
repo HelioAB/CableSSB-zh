@@ -35,18 +35,23 @@ function data = getDisplacementFromAnsys(obj,num_MonitoredNodes)
                 '*vwrite,Displacement_Ux(1),Displacement_Uy(1),Displacement_Uz(1),Displacement_Rotx(1),Displacement_Roty(1),Displacement_Rotz(1)',newline,...
                 '(6E20.8)',newline,...
                 '*cfclos',newline];
-    OutputMethod_clone.outputAPDL(output_str,'getDisplacement.mac','w')
+    OutputMethod_clone.outputAPDL(output_str,'getDisplacement.mac','w');
 
     % 修改OutputMethod属性值，并运行宏文件
     OutputMethod_clone.MacFilePath = fullfile(OutputMethod_clone.WorkPath,'getDisplacement.mac');
     OutputMethod_clone.ResultFilePath = fullfile(OutputMethod_clone.WorkPath,'getDisplacement.out');
-    OutputMethod_clone.runMac("ComputingMode","Distributed")
+    OutputMethod_clone.runMac("ComputingMode","Distributed");
+
+    % 将生成的结果文件更换文件夹
+    dir_Result = fullfile(OutputMethod_clone.WorkPath,filesep,'Result_Displacement');
+    if ~exist(dir_Result,'dir')
+        mkdir(dir_Result);
+    end
+    movefile(fullfile(OutputMethod_clone.WorkPath,'Displacement.txt'),dir_Result);
 
     % 数据导入MATLAB
-    dataFilePath = fullfile(OutputMethod_clone.WorkPath,'Displacement.txt');
-    fileID = fopen(dataFilePath, 'r');
+    dataFilePath = fullfile(dir_Result,'Displacement.txt');
     data = readmatrix(dataFilePath);
-    fclose(fileID);
 
     % 分解数据
     Ux = data(:,1)';
@@ -55,13 +60,6 @@ function data = getDisplacementFromAnsys(obj,num_MonitoredNodes)
     Rotx = data(:,4)';
     Roty = data(:,5)';
     Rotz = data(:,6)';
-
-    % 将生成的结果文件更换文件夹
-    dir_Result = fullfile(OutputMethod_clone.WorkPath,filesep,'Result_Displacement');
-    if ~exist(dir_Result,'dir')
-        mkdir(dir_Result)
-    end
-    movefile(fullfile(OutputMethod_clone.WorkPath,'Displacement.txt'),dir_Result)
 
     % 存储结果变量
     data = struct;

@@ -31,8 +31,8 @@ classdef Bridge < handle
         tf = isempty(obj)
         %% plot画图相关
         plotCoupling(obj,fig,ax)
-        plotContraint(obj,fig,ax)
-        plotLoad(obj,fig,ax,scale)
+        plotConstraint(obj,fig,ax)
+        plotLoad(obj,fig,ax,options)
         [fig,ax] = plotStructure(obj,fig,ax,options)
         [fig,ax] = plot(obj,options)
         %% 
@@ -60,10 +60,13 @@ classdef Bridge < handle
         output(obj,options)
         
         % 其他
+        [XLim,YLim,ZLim] = getXYZLim(obj)
         weight = getGirderWeight(obj,GirderList)
         setForceTo(obj,StructureCell,P_Bottom_Z)
         count = getLineCountOfClass(obj,StructureClass)
         [AppliedPoints,XForce,YForce,ZForce] = getConcentratedForceInfo(obj)
+        points = getAllPoints(obj)
+        lines = getAllLines(obj)
         elems_beam = getAllBeams(obj)
         elems_link = getAllLinks(obj)
         nodes = getAllNodes(obj)

@@ -18,9 +18,12 @@ classdef CableStayedSuspension_Bridge < Bridge
         [bridge_findState_final,U_final] = optimBendingStrainEnergy(obj)
         [Pz_girder,index]= getGirderPz(obj,structure,X,Pz)
         outputOptimMac(obj)
-        output(obj)
+        output(obj,options)
         LoadCase = getLoadCases(obj,num_LoadCase,value_LoadCase)
         removeLoadCase(obj,num_LoadCase)
+        [half_bridge,girder,tower,cable,stayedcable,hanger,rigidbeam,couplings,constraints] = getHalfBridge(obj,options)
+        span = getSpan(obj,SideOrMain,numSpan)
+        [structure_list,index] = findStructureByClassInSpan(obj,StructureClass,SideOrMain,numSpan)
     end
     methods(Static,Hidden)
         test_solveHangerTopCoord()

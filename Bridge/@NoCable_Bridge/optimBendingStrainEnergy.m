@@ -1,7 +1,7 @@
 function optimBendingStrainEnergy(obj,options)
     arguments
         obj
-        options.MaxIter = 10
+        options.MaxIter = 30
         options.DiffMinChange = 1e3
         options.ifSymmetric = true
         options.Iter (1,1) {mustBeNumeric} = 0 % 修改options的各个参数，可以继续之前的优化

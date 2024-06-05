@@ -4,8 +4,6 @@ function Y_final = solveCableShape(obj,Pz,Y_0)
         Pz
         Y_0 = []
     end
-    % Pz是所有设计竖向力的汇总，包括了斜拉索处的设计竖向力
-    length(Pz)
     % 1. 寻找那些需要被求解的Cable对象及其Hanger对象，对称的主缆仅操作其中之一的主缆（破坏了对称性，因此需要第5步的恢复对称性）
     ReplaceCables = obj.ReplacedCable;
     Index_SeletedCables = true(1,length(ReplaceCables));
@@ -101,8 +99,6 @@ function MSE = MSE_Y(Y_0,cable,hanger,P_girder_z,w,X_T_0,Z_T_0,X_B_0,Y_B_0,Z_B_0
     P_cable_y = -P_girder_y;
     P_cable_x = -P_girder_x;
 
-    assignin("base",'cable_inMSE',cable)
-    assignin("base","index_hanger",cable.Params.Index_Hanger)
     [P_x,P_y,P_z] = cable.P(cable.Params.Index_Hanger,-P_cable_x,-P_cable_y,-P_cable_z);
     Params = cable.Params;
     Params.Init_var = cable.Result_ShapeFinding.x;

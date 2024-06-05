@@ -8,23 +8,26 @@ function data = getInternalForceFromAnsys(obj,num_MonitoredElems_Link,num_Monito
     
     % 导出数据的宏文件
     output_str = getInternalForceStr(obj,OutputMethod_clone,num_MonitoredElems_Link,num_MonitoredElems_Beam);    
-    OutputMethod_clone.outputAPDL(output_str,'getInternalForce.mac','w')
+    OutputMethod_clone.outputAPDL(output_str,'getInternalForce.mac','w');
 
     % 运行宏文件
     OutputMethod_clone.MacFilePath = fullfile(OutputMethod_clone.WorkPath,'getInternalForce.mac');
     OutputMethod_clone.ResultFilePath = fullfile(OutputMethod_clone.WorkPath,'getInternalForce.out');
-    OutputMethod_clone.runMac("ComputingMode","Distributed")
+    OutputMethod_clone.runMac("ComputingMode","Distributed");
+
+    % 将生成的结果文件更换文件夹
+    dir_Result = fullfile(OutputMethod_clone.WorkPath,filesep,'Result_InternalForce');
+    if ~exist(dir_Result,'dir')
+        mkdir(dir_Result);
+    end
+    FilePath_Link = fullfile(OutputMethod_clone.WorkPath,'InternalForce_link.txt');
+    FilePath_Beam = fullfile(OutputMethod_clone.WorkPath,'InternalForce_beam.txt');
+    movefile(FilePath_Link,dir_Result);
+    movefile(FilePath_Beam,dir_Result);
 
     % 导入数据
-    link_dataFilePath = fullfile(OutputMethod_clone.WorkPath,'InternalForce_link.txt');
-    fileID = fopen(link_dataFilePath, 'r');
-    data_link = readmatrix(link_dataFilePath);
-    fclose(fileID);
-
-    beam_dataFilePath = fullfile(OutputMethod_clone.WorkPath,'InternalForce_beam.txt');
-    fileID = fopen(beam_dataFilePath, 'r');
-    data_beam = readmatrix(beam_dataFilePath);
-    fclose(fileID);   
+    data_link = readmatrix(fullfile(dir_Result,'InternalForce_link.txt'));
+    data_beam = readmatrix(fullfile(dir_Result,'InternalForce_beam.txt'));
 
     % 分解数据
     num_elements_link = data_link(:,1)';
@@ -48,13 +51,7 @@ function data = getInternalForceFromAnsys(obj,num_MonitoredElems_Link,num_Monito
     Mzi_beam = data_beam(:,14)';
     Mzj_beam = data_beam(:,15)';
 
-    % 将生成的结果文件更换文件夹
-    dir_Result = fullfile(OutputMethod_clone.WorkPath,filesep,'Result_InternalForce');
-    if ~exist(dir_Result,'dir')
-        mkdir(dir_Result)
-    end
-    movefile(fullfile(OutputMethod_clone.WorkPath,'InternalForce_link.txt'),dir_Result)
-    movefile(fullfile(OutputMethod_clone.WorkPath,'InternalForce_beam.txt'),dir_Result)
+    
 
     % 存储结果变量
     data = struct;

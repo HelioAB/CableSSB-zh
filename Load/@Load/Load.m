@@ -78,7 +78,7 @@ classdef Load < DataRecord
             Direction_list = {LoadList.Direction};
             Value_list = {LoadList.Value};
         end
-        function arrow = getArrow(apply_point,delta_X,delta_Y,delta_Z,color,fig,ax)
+        function arrow = getArrow(apply_point,delta_X,delta_Y,delta_Z,color,fig,ax,options)
             % 使用Matlab内置quiver3函数
             % delta_Coord的列数必须和apply_point相同
             arguments
@@ -89,11 +89,13 @@ classdef Load < DataRecord
                 color = 'm'
                 fig {mustBeA(fig,'matlab.ui.Figure')} = figure
                 ax {mustBeA(ax,'matlab.graphics.axis.Axes')} = axes
+                options.LineWidth = 1
+                options.Offset = [0,0,0]
             end
             % 箭头指向处坐标
-            end_X = [apply_point.X];
-            end_Y = [apply_point.Y];
-            end_Z = [apply_point.Z];
+            end_X = [apply_point.X] + options.Offset(1);
+            end_Y = [apply_point.Y] + options.Offset(2);
+            end_Z = [apply_point.Z] + options.Offset(3);
             % 箭尾处坐标
             start_X = end_X-delta_X;
             start_Y = end_Y-delta_Y;
@@ -103,6 +105,7 @@ classdef Load < DataRecord
             arrow = quiver3(ax,start_X,start_Y,start_Z,delta_X,delta_Y,delta_Z,'off');
             arrow.Color = color;
             arrow.MaxHeadSize  = 0.1;
+            arrow.LineWidth = options.LineWidth;
         end
         function collection = Collection()
             persistent Data 
