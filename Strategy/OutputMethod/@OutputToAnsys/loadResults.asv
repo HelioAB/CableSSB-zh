@@ -42,7 +42,7 @@ function [data,nodes,elems_link,elems_beam] = loadResults(obj,options)
 
 end
 function nodes = allocateDisplacementToNodes(bridgeobj,result_Displacement)
-    % checkResult(result_Displacement,bridgeobj.Information);
+    
     nodes = bridgeobj.getAllNodes();
     num_nodes = result_Displacement.num_nodes;
     Ux = result_Displacement.Ux;
@@ -61,7 +61,6 @@ function nodes = allocateDisplacementToNodes(bridgeobj,result_Displacement)
 end
 % 将InternaoForce赋予Element
 function [elems_link,elems_beam] = allocateInternalForceToElement(bridgeobj,result_InternalForce)
-    % checkResult(result_InternalForce,bridgeobj.Information);
     elems_link = bridgeobj.getAllLinks();
     num_elements_link = result_InternalForce.num_elements_link;
     Fxi_link = result_InternalForce.Fx_link;
@@ -103,11 +102,9 @@ function checkResult(result_struct,BridgeInformation)
     array_names = fieldnames(result_struct);
     for i=1:length(array_names)
         array_name = array_names{i};
-        array = result_struct.(array_name);
-        if any(any(isnan(array)))
-            warning('参数%s=%s的桥梁，其%s数据存在NaN \n',BridgeInformation.Name_Parameter,num2str(BridgeInformation.Value_Parameter),array_name);
-        else
-            fprintf('参数%s=%s的桥梁，其%s数据，你过关！\n',BridgeInformation.Name_Parameter,num2str(BridgeInformation.Value_Parameter),array_name);
+        array = result_struct.array_name;
+        if any(isnan(array))
+            warning('参数%s=%s的桥梁，其%s数据存在NaN',BridgeInformation.Name_Parameter,BridgeInformation.Value_Parameter,array_name);
         end
     end
 end

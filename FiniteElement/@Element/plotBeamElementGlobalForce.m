@@ -109,6 +109,8 @@ function [fig,ax] = plotBeamElementGlobalForce(obj,ANodes_matrix,BNodes_matrix,I
                     end
                     ax.XMinorTick = 'on';
                     ax.XLim = [min_X_Nodes,max_X_Nodes];
+                    assignin("base","min_InternalForce",min_InternalForce)
+                    assignin("base","max_InternalForce",max_InternalForce)
                     ax.ZLim = [min_InternalForce,max_InternalForce];
     
                 elseif strcmp(type_elems,'Tower')

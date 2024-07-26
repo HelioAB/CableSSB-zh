@@ -43,7 +43,7 @@ function bridge_findState = getNonCableBridge(obj,X,Pz)
         end
     end
 
-    bridge_findState.LoadList = {};
+    % bridge_findState.LoadList = {};
     % 集中荷载代替斜拉索作用: 作用在梁上、塔上
     for i=1:length(stayedcable_list)
         stayedcable_i = stayedcable_list{i};

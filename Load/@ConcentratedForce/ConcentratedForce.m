@@ -4,7 +4,7 @@ classdef ConcentratedForce< Load
             arguments
                 apply_point (1,:) {mustBeA(apply_point,{'Point'})} = Point.empty
                 direction {mustBeMember(direction,{'X','Y','Z','None'})} = 'None'
-                value {mustBeNumeric} = [] % 可能的输入：1. 输入一个数，表示所有作用点都是相同的力；2. 输入和作用点等长度的数
+                value {mustBeNumeric} = [] % 可能的输入：1. 输入一个数，表示所有作用点都是相同的力；2. 输入和作用点等数量的数
             end
             if ~isempty(apply_point)
                 converted_value = ConcentratedForce.convertValueSize(apply_point,value);

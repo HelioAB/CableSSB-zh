@@ -155,7 +155,7 @@ function build_Parametrically(bridge,options)
     Point_StayedCable_girder2 = girder2.findPoint('Interval','X','descend',[4*seg_sidespan_1,2*seg_sidespan_1+zeros(1,4),seg_sidespan_1+zeros(1,9)]).sort('X');
     
     % 边跨2加劲梁
-    L = seg_sidespan_2+zeros(1,22);
+    L = seg_sidespan_2+zeros(1,21);
     CoordA_girder3 = CoordB_girder1;
     CoordB_girder3 = [CoordB_girder1(1)+sum(L),CoordB_girder1(2),CoordB_girder1(3)];
     girder3 = bridge.buildGirder(CoordA_girder3,CoordB_girder3,L,Sec_girder2,Mat_girder2,ET_girder2);
@@ -189,7 +189,7 @@ function build_Parametrically(bridge,options)
 
     % 将加劲梁和锚碇在交点处融合在一起
     % girder = [anchor1,girder2,girder1,girder3,anchor2];% 这个对象数组的前后顺序就是X方向的顺序。
-    girder = [girder2,girder1,girder3];
+    girder = [girder2,girder1,girder3]
     girder.merge;
     
     %% 桥塔
@@ -365,8 +365,7 @@ function build_Parametrically(bridge,options)
     bridge.addToSpan('MainSpan',1,cable2);
     
     % 边跨1主缆
-
-    CoordA_cable2 = [CoordA_girder2(1),CoordA_girder2(2)+offset1(2),CoordA_girder2(3)];
+    CoordA_cable2 = [CoordA_girder2(1)-seg_sidespan_1,CoordA_girder2(2)+16,CoordA_girder2(3)];
     CoordB_cable2 = CoordA_cable1;
     L = seg_sidespan_1+zeros(1,22);
     index_hanger = false(1,21);
@@ -382,7 +381,7 @@ function build_Parametrically(bridge,options)
     
     % 边跨2主缆
     CoordA_cable3 = CoordB_cable1;
-    CoordB_cable3 = [CoordB_girder3(1),CoordB_girder3(2)+offset1(2),CoordB_girder3(3)];
+    CoordB_cable3 = [CoordB_girder3(1)+seg_sidespan_2,CoordB_girder3(2)+16,CoordB_girder3(3)];
     L = seg_sidespan_2+zeros(1,22);
     index_hanger = false(1,21);
     P_h_x = [];
@@ -422,8 +421,8 @@ function build_Parametrically(bridge,options)
 
     % 自锚耦合
     if bridge.SelfAnchored
-        anchor1_masterpoint = girder2.PointA;
-        anchor2_masterpoint = girder3.PointB;
+        anchor1_masterpoint = anchor1.Point.findPointByRange(cable3.PointA.X,[],[]);
+        anchor2_masterpoint = anchor2.Point.findPointByRange(cable5.PointB.X,[],[]);
         CP_selfanchor_1 = bridge.addCoupling(anchor1_masterpoint,[cable3.PointA,cable4.PointA],{'Ux','Uy','Uz'},'Name','自锚耦合1');
         CP_selfanchor_2 = bridge.addCoupling(anchor2_masterpoint,[cable5.PointB,cable6.PointB],{'Ux','Uy','Uz'},'Name','自锚耦合2');
     end
@@ -457,8 +456,8 @@ function build_Parametrically(bridge,options)
     % 梁端约束
     support_DoF_1 = {'Uy','Uz','Rotx'};
     support_DoF_2 = {'Uy','Uz','Rotx'};
-    constraint3 = bridge.addConstraint(girder2.PointA,support_DoF_1,zeros(1,length(support_DoF_1)),'Name','梁端约束1');
-    constraint4 = bridge.addConstraint(girder3.PointB,support_DoF_2,zeros(1,length(support_DoF_2)),'Name','梁端约束2');
+    constraint3 = bridge.addConstraint(anchor1.PointA,support_DoF_1,zeros(1,length(support_DoF_1)),'Name','梁端约束1');
+    constraint4 = bridge.addConstraint(anchor2.PointB,support_DoF_2,zeros(1,length(support_DoF_2)),'Name','梁端约束2');
     
     % 辅助墩墩底约束
 %     constraint5 = obj.addConstraint(pier1.PointBottom,all_DoF,zeros(1,length(all_DoF)),'Name','辅助墩固结1');
@@ -470,7 +469,7 @@ function build_Parametrically(bridge,options)
     constraint5 = bridge.addConstraint(girder2_PierPoint,support_DoF_2,zeros(1,length(support_DoF_2)),'Name','辅助墩处加劲梁约束1');
     constraint6 = bridge.addConstraint(girder3_PierPoint,support_DoF_2,zeros(1,length(support_DoF_2)),'Name','辅助墩处加劲梁约束2');
 
-    % 主缆地锚固
+    % 主缆地锚固结
     if ~bridge.SelfAnchored
         support_DoF_5 = {'Ux','Uy','Uz'};
         support_DoF_6 = {'Ux','Uy','Uz'};
@@ -510,12 +509,6 @@ function build_Parametrically(bridge,options)
     % girder1_MidspanPoint = girder1_XPoint([round(length(girder1_XPoint)/2),round(length(girder1_XPoint)/2)+1]);
     % MidSpanLoad_Y  = ConcentratedForce(girder1_MidspanPoint,"Y",[100,200]);
     % obj.addLoad(MidSpanLoad_Y,'Name','中跨跨中Y向集中荷载')
-
-    % 锚固区混凝土压重
-    AnchorAreaConcrete_Force = -1e7;
-    AnchorAreaConcrete_AppliedPosition = [girder2.PointA,girder3.PointB];
-    AnchorAreaConcrete_Load = ConcentratedForce(AnchorAreaConcrete_AppliedPosition,"Z",AnchorAreaConcrete_Force+zeros(size(AnchorAreaConcrete_AppliedPosition)));
-    bridge.addLoad(AnchorAreaConcrete_Load,'Name','锚固区混凝土压重');
     
 end
 function [index_Hanger_lines,index_StayedCable1_lines,index_StayedCable2_lines,index_Combination_lines,index_Other_lines] = findMainSpanDivisionIndex(girderobj,Point_Hanger_girder,Point_StayedCable1_girder,Point_StayedCable2_girder)

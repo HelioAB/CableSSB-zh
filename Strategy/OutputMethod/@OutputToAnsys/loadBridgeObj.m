@@ -7,7 +7,8 @@ function bridgeobj = loadBridgeObj(obj,options)
     path_bridge = obj.WorkPath;
     path_bridgeobj = fullfile(path_bridge,'BridgeObj.mat');
     if ~exist(path_bridgeobj,'file')
-        error('请调用OutputToAnsys.action(''ifSaveBridgeObj'',true)')
+        str_error = sprintf('没有找到%s',path_bridgeobj);
+        error(str_error);
     end
     loaded_data = load(path_bridgeobj,'bridge');
     bridgeobj = loaded_data.bridge;
